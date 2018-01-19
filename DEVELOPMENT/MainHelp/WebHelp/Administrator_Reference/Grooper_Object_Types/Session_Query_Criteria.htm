@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Session Query Criteria</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nSession Query Criteria");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Session Query Criteria<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Session Query Criteria</h1>
+Defines search criteria for session statistics.
+
+<br/><br/><b>Inherits from:</b> Connected Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Date Range</td>
+    <td><table>
+   <tr><td>Type: TimeRange, Default: All</td></tr>
+   <tr><td>Defines the date range for the activity start time. Can be one of the following values:<br />
+<ul>
+<li><b>All</b>: Includes all sessions, regardless of start time.
+</li>
+<li><b>Today</b>: Includes sessions started today.
+</li>
+<li><b>Yesterday</b>: Includes sessions started yesterday.
+</li>
+<li><b>MTD</b>: Includes sessions started between the beginning of the current month and today.
+</li>
+<li><b>LastMonth</b>: Includes sessions started last month.
+</li>
+<li><b>YTD</b>: Includes sessions started between the beginning of the current year and today.
+</li>
+<li><b>LastYear</b>: Includes sessions started last year.
+</li>
+<li><b>Custom</b>: Specify a specific start and/or end date.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Start Date</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When the date range is 'Custom', defines the starting date for included entries.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>End Date</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When the date range is 'Custom', defines the starting date for included entries.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Start Date</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The calculated start date, as defined by the Date Range property..
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>End Date</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The calculated end date, as defined by the Date Range property..
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Activity</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>If an activity is selected, only results for the selected activity will be returned.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

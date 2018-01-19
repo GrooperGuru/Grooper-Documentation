@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Instance</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nData Instance");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Data Instance<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Instance</h1>
+Defines an instance of text data on a document.
+
+A Data Instance represents a segment of text content within a document, and can represent anything from a single character to
+the entire content of a document.  Data Instance objects are the input to and the output from all ESP™ extraction operations, and
+also represent the format in which document metadata is stored by the <a href='../Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity.
+
+<p>DataInstances are created during the extraction process, when the raw OCR data for a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object is loaded, forming a <a href='../Data_Instance_Types/Document_Instance.htm'>DocumentInstance</a>
+which represents the entire content of the document.  When <a href='../Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> is performed, this root instance becomes the source from which all
+data elements at the root of the <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> will perform their extraction, and the extracted results will be saved as children of the
+<a href='../Data_Instance_Types/Document_Instance.htm'>DocumentInstance</a>.</p><p>Data Instance serves as the base class for </p>
+
+<h2>List of Data Instance Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.DataModel.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Document_Instance.htm'>Document Instance</a>
+</td>     <td>Represents the entire content of a document, and serves as the root of the DataInstance hierarchies generated by the <a href='../Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity. DocumentInstance objects may have <a href='../Data_Instance_Types/Field_Instance.htm'>FieldInstance</a>, <a href='../Data_Instance_Types/Table_Instance.htm'>TableInstance</a>, and <a href='../Data_Instance_Types/Section_Instance.htm'>SectionInstance</a> objects as children.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.FieldClass.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Field_Class_Instance.htm'>Field Class Instance</a>
+</td>     <td>Represent a DataInstance captured by a <a href='../Grooper_Node_Types/Data_Extraction/Field_Class.htm'>Field Class</a>.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.DataField.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Field_Instance.htm'>Field Instance</a>
+</td>     <td>Represents the value of a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> object.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.DataSection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Section_Instance.htm'>Section Instance</a>
+</td>     <td>Represents the value of a <a href='../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a> object.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.TableCellInstance.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Table_Cell_Instance.htm'>Table Cell Instance</a>
+</td>     <td>Represents the value of a table cell. TableCellInstance objects exist as children of a <a href='../Data_Instance_Types/Table_Row_Instance.htm'>TableRowInstance</a> object, and do not have children.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.DataTable.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Table_Instance.htm'>Table Instance</a>
+</td>     <td>Represents an instance of a <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> object on a document. A TableInstance exists as the child of a <a href='../Data_Instance_Types/Document_Instance.htm'>DocumentInstance</a> or <a href='../Data_Instance_Types/Section_Instance.htm'>SectionInstance</a>, and contains one or more <a href='../Data_Instance_Types/Table_Row_Instance.htm'>TableRowInstance</a> objects as children.
+</td>
+  </tr>
+  <tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.TableRowInstance.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Instance_Types/Table_Row_Instance.htm'>Table Row Instance</a>
+</td>     <td>Represents a table row in a <a href='../Data_Instance_Types/Table_Instance.htm'>TableInstance</a>.   TableRowInstance objects exist as children of <a href='../Data_Instance_Types/Table_Instance.htm'>TableInstance</a> object, and contain one or more TableCellInstance objects - one for each child TableColumn defined by the <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>DataTable</a>.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Data_Instance_Types/Text_Line_Instance.htm'>Text Line Instance</a></td>
+     <td>Represents a line of text.
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

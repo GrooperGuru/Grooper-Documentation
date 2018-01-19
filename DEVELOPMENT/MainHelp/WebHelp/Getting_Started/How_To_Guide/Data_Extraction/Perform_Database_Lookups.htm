@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Perform Database Lookups</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nData Extraction\nPerform Database Lookups");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Perform_Database_Lookups.htm\">Data Extraction<\/a> &gt; Perform Database Lookups<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Perform Database Lookups</h1>
+<p>Grooper provides a simple database lookup mechanism which requires no 
+ scripting. &#160;This feature is only useful in situations where the lookup 
+ is based on the value of a single field. &#160;More complex lookups should 
+ be implemented through <a href="../../Grooper_Concepts/Scripting.htm">scripting</a>.</p>
+<p>&#160;</p>
+<p>This exercise will assume we are using a Data Model with the fields 
+ shown below. &#160;The lookup will be performed on the PO Number field. 
+ &#160;If to matching database row is found, the PO Number field should 
+ display an error. &#160;If it is found, then the Vendor No field should 
+ be updated with the Vendor No from the database table.</p>
+<p>&#160;</p>
+<p><img src="Images/ValidateDate_DataModelExample.gif" alt="" style="border: none;" 
+		 border="0" /></p>
+<h2>Step 1: Create a Data Connection</h2>
+<ul style="list-style: disc;">
+	<li>In Grooper Administration, navigate to Infrastructure • Data Connections.</li>
+	<li>Create a new Data Connection object, configured to connect to the 
+	 database where the lookup data is stored.</li>
+	<li>Click the Test Connection button to test the connection. &#160;A 
+	 list of all tables in the database should now be displayed.</li>
+</ul>
+<h2>Step 2: Import a Reference to the Database Table</h2>
+<ul style="list-style: disc;">
+	<li>Select the table containing the lookup data, and click the 'Import 
+	 Command'.</li>
+	<li>Expand the Data Connection in the tree structure, and verify that 
+	 a new Database Table object has been created as a child of the Data 
+	 Connection object.</li>
+</ul>
+<h2>Step 3: Configure the PO Number Field</h2>
+<ul style="list-style: disc;">
+	<li>Expand the Data Model and navigate to the Field which will be used 
+	 as query criteria. &#160;In our example, this would be the PO Number 
+	 field.</li>
+	<li>Set the Database Table property of the Field to the Database Table 
+	 object created in Step 2.</li>
+	<li>Go to the Mappings Tab. &#160;Map the PO Number field and the Vendor 
+	 No fields to their corresponding fields in the database table.</li>
+</ul>
+<p>&#160;</p>
+<p>Database lookups should now be active, and can be tested using the Data 
+ Extraction Test Utility.</p>
+<h2>See Also</h2>
+<p>Data Extraction Test Utility</p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Infrastructure/Data_Connection.htm">Data 
+ Connection</a></p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Infrastructure/Database_Table.htm">Database 
+ Table</a></p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a></p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Field.htm">Data 
+ Field</a></p>
+<p>Mappings Tab</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

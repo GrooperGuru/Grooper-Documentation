@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Mail Link</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nContent Link Types\nMail Link");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Content_Link_Types.htm\">Content Link Types<\/a> &gt; Mail Link<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../images/TypeIcons/Grooper.Messaging.Mail.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Mail Link</h1></td>
+<table>
+</tr>
+</table>
+Defines a reference to an email on an IMAP mail server.
+
+<br/><br/><b>Inherits from:</b> <a href='Content_Link_Types.htm'>Content Link</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Mail Server Connection</td>
+  </tr>
+  <tr>    <td>Mail Server</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The host name or IP address of an IMAP mail server.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>User Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The user name to be used for logging in to the Mail Server. Note: The domain name may be required to access mailboxes. e.g. bis\grooperdemo.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Use SSL</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If true, the connection to the Mail Server will be established using SSL.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Port No</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 993</td></tr>
+   <tr><td>The port number on which the IMAP server is running. The default port number for an SSL-enabled IMAP server is 993.  With SSL disabled, the default port is 143. 
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Mail Item Info</td>
+  </tr>
+  <tr>    <td>Mailbox Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The mailbox name in which the mail item exists. If none is specified, the default mailbox associated with login user is assumed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Folder Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The folder in which the mail item exists.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Message ID</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The unique ID of the mail item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Linked MailMessage Info</td>
+  </tr>
+  <tr>    <td>Mailbox Account Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Returns the name of the mailbox account in which the message is stored.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Date Sent</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The date the mail message was sent.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>From</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The sender of the mail message.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>To</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The recipients of the mail message.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>CC</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The carbon copy recipients of the mail message.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Subject</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The subject of the mail message.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Content Link Standard Values</td>
+  </tr>
+  <tr>    <td>Full Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The full path to the linked object.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Object Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The name of the linked object.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The path to the linked object, minus the name.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Error Message</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>If set, indicates an error which occurred while attempting to access the remote object.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

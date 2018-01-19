@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>RectangleExF</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper\nRectangleExF");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "Grooper_Namespace_Reference.htm");
+document.write("<a href=\"BorderExF.htm\">Developer Reference<\/a> > <a href=\"BorderExF.htm\">Grooper<\/a> > RectangleExF<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>RectangleExF</h1>
+<p>Represents a rectangle using double-precision floating point coordinates.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper_Namespace_Reference.htm'>Grooper</a><br/><b>Inherits from:</b> GrooperObject<br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Area</td>
+     <td>Double</td>
+     <td>The area of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>AspectRatio</td>
+     <td>Double</td>
+     <td>Returns the aspect ratio of the rectangle, expressed in terms of width / height.
+</td>
+  </tr>
+  <tr>
+     <td>Bottom</td>
+     <td>Double</td>
+     <td>The bottom edge of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>BottomLeft</td>
+     <td>PointExF</td>
+     <td>The point forming the bottom left corner of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>BottomRight</td>
+     <td>PointExF</td>
+     <td>The point forming the bottom right corner of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Height</td>
+     <td>Double</td>
+     <td>The height of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns true if all coordinate values are 0.
+</td>
+  </tr>
+  <tr>
+     <td>Left</td>
+     <td>Double</td>
+     <td>The left edge of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Orientation</td>
+     <td>Double</td>
+     <td>Returns the orientation of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Right</td>
+     <td>Double</td>
+     <td>The right edge of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Size</td>
+     <td><a href='SizeExF.htm'>SizeExF</a></td>
+     <td>The size of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Top</td>
+     <td>Double</td>
+     <td>The top edge of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>TopLeft</td>
+     <td>PointExF</td>
+     <td>The point forming the top left corner of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>TopRight</td>
+     <td>PointExF</td>
+     <td>The point forming the top right corner of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>Width</td>
+     <td>Double</td>
+     <td>The width of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>X1</td>
+     <td>Double</td>
+     <td>The X value of point 1.
+</td>
+  </tr>
+  <tr>
+     <td>X2</td>
+     <td>Double</td>
+     <td>The X value of point 2.
+</td>
+  </tr>
+  <tr>
+     <td>Y1</td>
+     <td>Double</td>
+     <td>The Y value of point 1.
+</td>
+  </tr>
+  <tr>
+     <td>Y2</td>
+     <td>Double</td>
+     <td>The Y value of point 2.
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AbsoluteToRelative(AbsoluteRect As RectangleExF) As RectangleExF</td>
+     <td>Calculates the position of a rectangle relative to this one, using the center point of this rectangle as the origin.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>AbsoluteRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A rectangle, specified in relative coordinates around the origin (0,0).</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CloneScaled(FactorX As Double, FactorY As Double) As RectangleExF</td>
+     <td>Creates a new instance of this rectangle, scaled on the X and Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FactorX</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The scale factor for the X axis.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>FactorY</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The scale factor for the Y axis.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ContainsPoint(pt As PointExF) As Boolean</td>
+     <td>Returns true if the specified point is contained within this rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>pt</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: PointExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference point.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ContainsPoint(pt As PointEx) As Boolean</td>
+     <td>Returns true if the specified point is contained within this rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>pt</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: PointEx</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference point.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CopyFrom(Rect As RectangleExF)</td>
+     <td>Copies coordinate values from another rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Rect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The rectangle from which coordinates should be copied.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CorrectOrientation()</td>
+     <td>Corrects the orientation so that the rectangle is upright.
+</td>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Expand(Amount As Double)</td>
+     <td>Expands the rectangle on all sides by a specific amount.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Amount</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount by which to expand the rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Expand(AmountX As Double, AmountY As Double)</td>
+     <td>Expands the rectangle by differing amounts on the X and Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>AmountX</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount by which to expand the rectangle on the X axis.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AmountY</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount by which to expand the rectangle on the Y axis.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetCenterPoint() As PointExF</td>
+     <td>Returns the centerpoint of the rectangle.
+</td>
+  </tr>
+  <tr>
+     <td>GetDistanceX(RefRect As RectangleExF) As Double</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetDistanceY(RefRect As RectangleExF) As Double</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetExpandedRect(ExpandAmount As Double) As RectangleExF</td>
+     <td>Returns a new rectangle, exanded on all sides by the indicated amount.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ExpandAmount</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetIntersection(RefRect As RectangleExF) As RectangleExF</td>
+     <td>Returns a rectangle representing the intersection of this rectangle and a reference rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetOverlapPercentage(RefRect As RectangleExF) As Double</td>
+     <td>Returns the percentage by which this rectangle overlaps a reference rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetOverlapPercentageX(RefRect As RectangleExF) As Double</td>
+     <td>Returns the percentage by which this rectangle overlaps a reference rectangle on the X axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetOverlapPercentageY(RefRect As RectangleExF) As Double</td>
+     <td>Returns the percentage by which this rectangle overlaps a reference rectangle on the Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>GetUnion(RefRect As RectangleExF) As RectangleExF</td>
+     <td>Returns a rectangle representing the union of this rectangle and a reference rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Intersects(RefRect As RectangleExF) As Boolean</td>
+     <td>Returns true if this rectangle intersects with the specified reference rectangle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsHorizontalAligned(RefRect As RectangleExF) As Boolean</td>
+     <td>Returns true if this rectangle overlaps the reference rectangle on the X axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsVerticalAligned(RefRect As RectangleExF) As Boolean</td>
+     <td>Returns true if this rectangle overlaps the reference rectangle on the Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RefRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference rectangle.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Parse(TextValue As String) As RectangleExF</td>
+     <td>Creates a RectagleEx instance from a string. Max Size=52: (-12345.123456,-12345.123456):(-12345.123456,-12345.123456)
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>TextValue</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A string in the format generated by ToString(): "(X1,Y1):(X2,Y2)"</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>RelativeToAbsolute(RelativeRect As RectangleExF) As RectangleExF</td>
+     <td>Calculates the absolute position of a rectangle relative to this one, using the center point of this rectangle as the origin.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>RelativeRect</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: RectangleExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A rectangle, specified in relative coordinates around the origin (0,0).</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Rotate(Angle As Double)</td>
+     <td>Rotates the coordinate values around the origin by a specific angle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Angle</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The angle by which to rotate, in degrees.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>RotateAround(CenterPoint As PointExF, Angle As Double)</td>
+     <td>Rotates the coordinate values around a reference point by a specific angle.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>CenterPoint</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: PointExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The reference point which specifies the center of rotation.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Angle</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The angle by which to rotate, in degrees.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Round(Precision As Int32)</td>
+     <td>Rounds all coordinate values to a specific number of decimal places.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Precision</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of decimal places for the rounding operation.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Scale(Factor As Double)</td>
+     <td>Multiplies the coordinate values by a scale factor.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Factor</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The scale factor.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Scale(FactorX As Double, FactorY As Double)</td>
+     <td>Multiplies the coordinate values by differing X and Y scale factors.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FactorX</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The scale factor for the X axis.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>FactorY</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The scale factor for the Y axis.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToCells(CellsX As Int32, CellsY As Int32, CellOverlap As Double) As List`1</td>
+     <td>Divides this rectangle into an NxN matrix of cells and returns a list of rectangles representing the individual cell regions.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>CellsX</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of cells on the X plane.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>CellsY</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of cells on the Y plane.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>CellOverlap</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount, in inches, that each cell should overlap each other.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString(Precision As Int32) As String</td>
+     <td>Generates a string representation of the rectangle, rounded to a specific number of decimal places.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Precision</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of decimal places to include.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Generates a string representation of the rectangle, rounded to a specific number of decimal places.
+</td>
+  </tr>
+  <tr>
+     <td>ToWinRect() As Rectangle</td>
+     <td>Returns a .Net Rectangle object.
+</td>
+  </tr>
+  <tr>
+     <td>ToWinRectF() As RectangleF</td>
+     <td>Returns a .Net RectangleF object.
+</td>
+  </tr>
+  <tr>
+     <td>Translate(DistanceX As Double, DistanceY As Double)</td>
+     <td>Moves the rectangle by a specific amount on the X or Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>DistanceX</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount to move the rectangle on the X axis.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>DistanceY</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The amount to move the rectangle on the Y axis.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Translate(pt As PointExF)</td>
+     <td>Moves the rectangle by a specific amount on the X or Y axis.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>pt</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: PointExF</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A point specifying the X and Y values for the translation.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

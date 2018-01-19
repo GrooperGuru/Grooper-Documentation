@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Instance Objects</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nData Instance Objects");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Data Instance Objects<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Instances</h1>
+<p>A Data Instance is a data structure used to represent data elements 
+ extracted from a document using Grooper's <a href="Data_Extraction.htm">data 
+ extraction</a> capabilities. &#160;Data Instances are hierarchical in 
+ nature, and generally follow the structure of the Data Model they are 
+ associated with. &#160;For example, performing data extraction using the 
+ data model shown below at the left will generate a hierarchy of Data Instances 
+ similar to what is shown below at the right. &#160;Data Instances can 
+ be explored using the Instance 
+ Viewer control, available on the Instance Viewer tab of the Data 
+ Extraction Test Utility in Grooper Administration.</p>
+<table class="ObjectProperties" cellspacing="0" width="100%">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr>
+		<th>Data Model</th>
+		<th>Extraction Results Data Instance</th>
+	</tr>
+	<tr>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/DataInstances_InvoiceDataModel.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/DataInstances_InvoiceDataInstances.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</table>
+<p>The root Data Instance in the hierarchy represents the entire content 
+ of the document. &#160;Data elements extracted from the root of the document 
+ will perform their data extraction from the content of the parent element, 
+ generating Data Instances which are children of that element. &#160;</p>
+<p>At the Field 
+ level, each possible candidate for the field value is added as a child 
+ Data Instance of the field. &#160;For example, if a date field is being 
+ extracted, and two dates appear on the document, there will be two candidates 
+ added below the field data instance.</p>
+<h2>Complex Data Instances</h2>
+<p>In a more complex Data 
+ Model where Sections 
+ and Tables 
+ are used, the hierarchy of Data Instances essentially maps out the structure 
+ of the document into a hierarchy of sections, tables, table rows, and 
+ fields, as shown below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" style="border-collapse: separate; border-collapse: separate;" 
+		 cellspacing="0" width="100%" border="1">
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<tr>
+		<th>Data Model</th>
+		<th>Extraction Results</th>
+		<th>Data Instance Hierarchy</th>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><img src="images/DataInstances_TransciptsDataModel.jpg" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="images/DataInstances_TranscriptIndexPanel.jpg" class="ScreenShot" alt="" border="0" /></p></td>
+		<td><img src="images/DataInstances_TranscriptDataInstance.gif" alt="" style="border: none;" border="0" /></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>As mentioned previously, the root of the Data Instance hierarchy represents 
+ the entire content of the document. &#160;Sections, 
+ Tables, 
+ and Fields 
+ at the root of the Data 
+ Model perform their extraction from the content of the parent element, 
+ which is the entire content of the document.</p>
+<p>&#160;</p>
+<p>As Sections 
+ are identified and extracted, the content for each Section 
+ becomes the source from which its child data elements are extracted. &#160;In 
+ the case of the Section &quot;Semester 1&quot; above, the content extracted 
+ for this section is shown below. &#160;The &quot;Year&quot;, &quot;Semester&quot;, 
+ and &quot;GPA&quot; fields and the &quot;Courses&quot; table which are 
+ children of the section use only this content as the source for their 
+ data extraction, eliminating the rest of the document content from consideration. 
+ &#160;</p>
+<p>&#160;</p>
+<p><img src="images/DataInstances_SectionContent.gif" alt="" style="border: none;" border="0" /></p>
+<p>&#160;</p>
+<p>Likewise, each individual table row within the &quot;Courses&quot; table 
+ serves as the source from which the table column values &quot;Course No&quot;, 
+ &quot;Course Title&quot;, and &quot;Grade&quot; are extracted.</p>
+<p>&#160;</p>
+<p><img src="images/DataInstances_TableRowContent.jpg" alt="" style="border: none;" border="0" /></p>
+<p>&#160;</p>
+<p>The hierarchical structure of Data Instances is central to Grooper's 
+ ability to model the data structure of complex documents. &#160;By breaking 
+ down the document recursively into manageable units, the data extraction 
+ logic required for child elements is greatly simplified, as the unrelated 
+ content in the document is removed from consideration.</p>
+<h2>Navigating Data Instances in Scripts</h2>
+<p>It is common for scripts to need access to the data elements stored 
+ in a Data Instance. &#160;For example, a Processing Script can be used 
+ to export complex data to a database, or a script could be added to the 
+ Data 
+ Model object to perform custom validation, perform custom integrations 
+ with line of business applications, or customize the user interface of 
+ the Data 
+ Review module. &#160;To support such cases, Data Instances are designed 
+ to make data easily available to script writers. &#160;</p>
+<h3>How to Find the Root Data Instance</h3>
+<p>Data Instances can be accessed through the IndexData member of the Batch 
+ Folder object. &#160;The IndexData member gets initialized during 
+ <a href="Classification.htm">classification</a>, when a content type which 
+ defines a Data 
+ Model is assigned to the &#160;Batch 
+ Folder object. &#160;Prior to <a href="Data_Extraction.htm">data extraction</a>, 
+ the fields in a Data Instance are blank or set to their default values. 
+ &#160;During data extraction, this blank instance is replaced by one populated 
+ with the extracted data elements.</p>
+<p>&#160;</p>
+<p>A Processing Script which is running at the same folder level as the 
+ documents will receive ProcessTask events for each folder at that level. 
+ &#160;The EventArgs for this event provides a &quot;CurNode&quot; member 
+ which contains a reference to the folder object. &#160;The root DataInstance 
+ can be accessed as shown below.</p>
+<p>&#160;</p>
+<div style="background-color: #ffffff; border: solid 1px #000000; padding: 5px; 
+	 float: none;">
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #0000ff; background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Folder</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">BatchFolder</font></span> <span style="font-size: 9.5pt; 
+													 font-family: Consolas; 
+													 color: #000000; background: #ffffff; 
+													 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 e.CurNode</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #0000ff; background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">RootInstance</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span> <span style="font-size: 9.5pt; 
+														 font-family: Consolas; 
+														 color: #000000; 
+														 background: #ffffff; 
+														 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 Folder.IndexData</font></span></p>
+</div>
+<p>&#160;</p>
+<p>In the case of a script on a Data 
+ Model object, a DataInstance is passed to the following events as 
+ a member of the EventArgs:</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>AfterExtraction</u></span> 
+	 - e.Instance is set to the <span style="text-decoration: underline; "><u>root</u></span> 
+	 DataInstance.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>FieldEnter</u></span> 
+	 - e.Instance is set to the <span style="text-decoration: underline; "><u>field's</u></span> 
+	 DataInstance.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>FieldExit</u></span>&#160;- 
+	 e.Instance is set to the <span style="text-decoration: underline; "><u>field's</u></span> 
+	 DataInstance.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Validate</u></span>&#160;- 
+	 e.Instance is set to the <span style="text-decoration: underline; "><u>root</u></span> 
+	 DataInstance.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>ValidateField</u></span>&#160;- 
+	 e.Instance is set to the <span style="text-decoration: underline; "><u>field's</u></span> 
+	 DataInstance.</li>
+</ul>
+<p>&#160;</p>
+<p>If field-level events which receive the field's DataInstance instead 
+ of the root DataInstance need to access the value of other data elements, 
+ Instance.Parent can be used to climb up the hierarchy of DataInstances. 
+ &#160;</p>
+<h3>How to Access Data Elements</h3>
+<p>Once the root DataInstance has been acquired, data elements can be accessed 
+ easily through scripting as shown below.</p>
+<p>&#160;</p>
+<div style="background-color: #ffffff; border: solid 1px #000000; padding: 5px; 
+	 float: none;">
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Access the value of a root field:</font></span></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">StudentId</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span> <span style="font-size: 9.5pt; 
+														 font-family: Consolas; 
+														 color: #000000; 
+														 background: #ffffff; 
+														 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 RootInstance.Fields(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+										 color: #A31515; background: #ffffff; 
+										 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;StudentID&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">StudentIdValue</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">String</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #000000; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 StudentId.Value</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Loop through section instances for the 'Semester' 
+	 section:</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">For</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #0000ff; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Each</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Semester</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span> <span style="font-size: 9.5pt; 
+														 font-family: Consolas; 
+														 color: #0000ff; 
+														 background: #ffffff; 
+														 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">In</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">RootInstance.Sections(</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #A31515; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Semester&quot;</font></span><span style="font-size: 9.5pt; 
+															 font-family: Consolas; 
+															 color: #000000; 
+															 background: #ffffff; 
+															 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Access field values inside the section:</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Year</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span> <span style="font-size: 9.5pt; 
+														 font-family: Consolas; 
+														 color: #000000; 
+														 background: #ffffff; 
+														 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 Semester.Fields(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+									 color: #A31515; background: #ffffff; 
+									 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Year&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Get a reference to a table:</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Courses</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span><span style="font-size: 9.5pt; 
+													 font-family: Consolas; 
+													 color: #000000; background: #ffffff; 
+													 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">.</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">ITable</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #000000; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 Semester.Tables(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+									 color: #A31515; background: #ffffff; 
+									 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Courses&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Loop through the rows in a table:</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">For</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #0000ff; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Each</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Course</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span><span style="font-size: 9.5pt; 
+													 font-family: Consolas; 
+													 color: #000000; background: #ffffff; 
+													 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">.</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">ITableRow</font></span> <span style="font-size: 9.5pt; 
+													 font-family: Consolas; 
+													 color: #0000ff; background: #ffffff; 
+													 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">In</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Courses.Rows</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #008000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="green" style="font-size:9.500000pt;">'Access column values in a table row:</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">GradeValue</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">String</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #000000; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 Course.Cells(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+								 color: #A31515; background: #ffffff; mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Grade&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">).Value</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Next</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Next</font></span></p>
+</div>
+<p>&#160;</p>
+<p>The interfaces ITable, ITableRow, and ITableCell are provided to simplify 
+ access to data stored in tables. &#160;However, it is not necessary to 
+ use these interfaces, as the entire hierarchy can be navigated as DataInstance 
+ objects.</p>
+<h3>Modifying Field Values</h3>
+<p>Field values can be easily modified from scripts, as shown below. &#160;Field 
+ values which are modified during the FieldEnter, FieldExit, or ValidateField 
+ event will be immediately reflected in the user interface of the Index 
+ Panel. &#160;</p>
+<p>&#160;</p>
+<div style="background-color: #ffffff; border: solid 1px #000000; padding: 5px; 
+	 float: none;">
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #0000ff; background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Dim</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">StudentId</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">DataInstance</font></span> <span style="font-size: 9.5pt; 
+														 font-family: Consolas; 
+														 color: #000000; 
+														 background: #ffffff; 
+														 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">= 
+	 RootInstance.Fields(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+										 color: #A31515; background: #ffffff; 
+										 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;StudentID&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">StudentId.Value 
+	 =</font></span> <span style="font-size: 9.5pt; font-family: Consolas; color: #A31515; 
+					 background: #ffffff; mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;123456&quot;</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Folder.IndexData 
+	 = RootInstance</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">Root.DataBase.SaveChanges()</font></span></p>
+</div>
+<h2>See Also</h2>
+<p><a href="Data_Extraction.htm">Data Extraction</a></p>
+<p><a href="Classification.htm">Classification</a></p>
+<p>Data 
+ Model</p>
+<p>Data 
+ Section</p>
+<p>Data 
+ Table</p>
+<p>Data 
+ Field</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

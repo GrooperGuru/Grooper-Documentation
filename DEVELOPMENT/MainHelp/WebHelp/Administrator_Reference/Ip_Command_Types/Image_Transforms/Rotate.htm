@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Rotate</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nImage Transforms\nRotate");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Auto_Deskew.htm\">Image Transforms<\/a> &gt; Rotate<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.Rotate.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Rotate</h1></td>
+<table>
+</tr>
+</table>
+Rotates an image by a given angle.
+
+<br/><br/><b>Inherits from:</b> <a href='../IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Angle</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0°, Range: 0° - 360°</td></tr>
+   <tr><td>The angle of the rotation, in degrees.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Interpolation Mode</td>
+    <td><table>
+   <tr><td>Type: RotateInterpolationMode, Default: Linear</td></tr>
+   <tr><td>The interpolation mode controls the output quality and speed of the rotate operation. Can be one of the following values:<br />
+<ul>
+<li><b>Linear</b>: Linear interpolation is slower but more accurate than the Nearest Neighbor interpolation. It is faster but less accurate than Cubic Interpolation. Linear
+interpolation sets the destination pixel based on analysis of the surrounding 4 pixels in the source image.
+</li>
+<li><b>Cubic</b>: The most accurate, but slowest interpolation method.  Sets destination pixels based on a 16-pixel neighborhood in the source image.
+</li>
+<li><b>NearestNeighbor</b>: This is the fastest and least accurate interpolation mode.  This simply sets the destination pixel to the value of the closest source pixel.
+</li>
+</ul>
+ <ul><li><b>None</b> - Fastest, lowest quality.</li><li><b>Bilinear</b> - Fast, better quality.</li><li><b>Bicubic</b> - Slower, better quality.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Resize</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If set to True, the command resizes the image to fit with in the dimensions of the image.
+If the command is set to False, the image may be cropped to fit within the dimensions of the image.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The color used to fill in edges exposed by rotation. If no background color is specified, the dominant background color of the image will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Rotate Example</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Original Image</th>
+     <th>Result Image</th>
+  </tr>
+  <tr>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.Rotate_Original_Image.jpg' /></td></p></td>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.Rotate_Result_Image.jpg' /></td></p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Node Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Node Types\nGrooper Node Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Node_Types.htm\">Grooper Node Types<\/a> &gt; Grooper Node Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Node</h1>
+Grooper Nodes are objects which appear in the <a href='../../Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm'>Grooper Tree Structure</a>.  Every object at every level of the tree structure, including folders,
+are considered Grooper Nodes.
+
+All Grooper Node objects support a base set of properties and behaviors common to all node types, such as:
+<ul><li><b>Name Property</b> - All node types have a name property.</li><li><b>Allowed Child Types</b> - Each node type defines a set of allowed child types, defining what type of objects may be added as
+children.  For example, a <a href='Data_Extraction/Data_Type.htm'>Data Type</a> object may have <a href='Data_Extraction/Data_Type.htm'>Data Types</a> or <a href='Data_Extraction/Data_Format.htm'>Data Formats</a> and children, but cannot have a <a href='Infrastructure/CMIS_Repository.htm'>CMIS Repository</a> as a child.</li><li><b>Lock Management</b> - Grooper's parallel processing sometimes requires synchronized access to node in the tree structure, to prevent multiple
+running processes or threads from attempting to modify the same object at the same time.</li><li><b>ACL Management</b> - Access Control Lists define who can access branches of the Grooper tree structure.</li><li><b>File Management</b> - Each node has a private file store, where files associated with the object are stored.  For example, <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> objects
+store an image which represents the page, and <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> objects store scripting projects made up of many files.</li><li><b>Reference Management</b> - Some objects are configured with references to other objects, such as an <a href='Profiles/OCR_Profile.htm'>OCR Profile</a> configured <a href='Profiles/IP_Profile.htm'>IP Profile</a> for
+pre-OCR image cleanup.  In such cases, it is important that users cannot delete the IP Profile while it is being used by the OCR Profile.  It is also
+important that if the OCR Profile is exported from Grooper, that the IP Profile it depends on is also exported.  The reference management system
+keeps track of which objects are referencing other objects.</li></ul><p>The common properties of any node may be viewed in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a> using the Node Properties Viewer, found on the 'Node Properties' tab.</p>
+
+<h2>List of Grooper Node Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:20%'/>
+  <col style='width:80%'/>
+  <tr>    <th>Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Batch Processing</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.Batch.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch.htm'>Batch</a>
+</td><td>A Batch is a hierarchy of folders and pages which serves as the fundamental unit of capture in Grooper. Batches can exist in one of two environments: Test or Production.  Test batches are only visible to administrators working in Grooper Administration.  
+Production batches are visible to all system users who have the appropriate access rights. Batches are normally created in Grooper Scan, but can also be created
+in Grooper Administration, Grooper Dashboard, or by various import utilities.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>
+</td><td>The Batch Folder object represents a logical folder within the structure of a <a href='Batch_Processing/Batch.htm'>Batch</a>. A Batch Folder can contain other Batch Folder objects as well as <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a>. A folder which has a Content Type assigned (<a href='Content_Models/Document_Type.htm'>Document Type</a> or <a href='Content_Models/Form_Type.htm'>Form Type</a>) is
+considered a document.<br /><br />Batch Folders can be created in a variety of ways. During scanning, import, or Separation Module execution, folders can be created automatically
+using rules defined in a <a href='Profiles/Separation_Profile.htm'>Separation Profile</a>.  Users can create folders manually in any application which uses the Batch Viewer Control.  File system folders can be copied
+and pasted into Grooper batches resulting in the creation of Batch Folder objects.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchPage.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>
+</td><td>The Batch Page object represents a logical page within a <a href='Batch_Processing/Batch.htm'>Batch</a>. Page objects can be created from individual images, such as during scanning or image file import. Page objects can also be created when an
+electronic document is imported. During electronic document import, Grooper automatically creates individual page images for display purposes.
+<br /><br />
+A Batch Page object can have multiple image files associated with it. For example, by default each page image stores two images: the primary image file and a thumbnail image file.  
+Additional image files may be created during batch processing, in cases where image cleanup such as line removal needs to be applied to images for the purposes
+of OCR, but without affecting the display image.  Certain processing modules, such as the Image Processing module, allow the output image to be written to a separate
+image file, and other modules, such as Full Text OCR, allow the use of an alternate input image. The list of allowed alternate image file names is defined as a property
+of the <a href='Batch_Processing/Batch_Process.htm'>Batch Process</a> object.
+<br /><br />
+Page objects also store additional files which contain OCR results, and a variety of values which indicate the results of image processing commands. For example,
+the Color Detect IP command stores a boolean value named "IsColor" to the Batch Page object. The Read Barcodes IP command stores an array of BarcodeInstance objects
+to the "Barcodes" value. The Blank Page Detect IP command stores a boolean value named "IsBlank".
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchProcess.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Process.htm'>Batch Process</a>
+</td><td>A Batch Process defines a list of steps through which batches will be processed.  Batch Processes are assigned to batches when they are created, and can be applied to existing batches in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>
+and <a href='../../User_Interface_Reference/Grooper_Dashboard.htm'>Grooper Dashboard</a>. Batch Processes must be published before they are visible to production modules. If changes are made to an existing
+Batch Process, those  changes must also be published before they are visible to production modules. For more information on the publishing
+process, please refer to  the <a href='../../Getting_Started/Grooper_Concepts/Batch_Processing.htm'>Batch Processing</a> topic.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchProcess.OverlayOnFolder.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Process_Folder.htm'>Batch Process Folder</a>
+</td><td>Represents the 'Batch Processing  / Processes' folder found in the root of a Grooper repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchProcessStep.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>
+</td><td>Represents a logical step in a <a href='Batch_Processing/Batch_Process.htm'>Batch Process</a>. A Batch Process Step defines an activity to be performed as part of a batch process.  Activities fall into two broad categories:
+<ul><li><b>Attended Activities</b> - Activities which require a human operator to perform, such as <a href='../Activity_Types/Attended_Activities/Scan.htm'>Scan</a>, <a href='../Activity_Types/Human_Review/Image_Review.htm'>Image Review</a>, and <a href='../Activity_Types/Human_Review/Data_Review.htm'>Data Review</a>.</li><li><b>Unattended Activities</b> - Automated activities which can be processed in the background on a server, such as <a href="../Activity_Types/Ocr_Processing/Full_Text_OCR.htm">Full Text OCR</a>, <a href="../Activity_Types/Object_Application_Execution/Image_Processing.htm">Image Processing</a>, and Extract.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchProcessingFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Processing_Folder.htm'>Batch Processing Folder</a>
+</td><td>Represents the 'Batch Processing' folder found in the root of a Grooper repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchesFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batches_Folder.htm'>Batches Folder</a>
+</td><td>A Batches Folder object is a folder which contains <a href='Batch_Processing/Batch.htm'>Batches</a>.  Any folder under the 'Batch Processing • Batches' node is considered a Batches Folder. This object does not have any configurable properties or
+functional use other than to display a user interface in Grooper Administration which allows the batches inside the folder to be managed collectively.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Capture.ControlSheet.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Control_Sheet.htm'>Control Sheet</a>
+</td><td>
+A Control Sheet Object is a special page that can be printed out and inserted into stacks of pages that are to be scanned to dynamically perform various functions within
+Grooper as the pages are scanned.  
+ When a Control Sheet is scanned, it changes settings within Grooper that affect non-control sheet page(s) scanned following the Control Sheet. For example,
+a Control Sheet may be created to tell Grooper to create a new <a href='Batch_Processing/Batch.htm'>Batch</a>, and then document pages scanned afterwards will be part of the new Batch. Or a Control Sheet
+may be created to tell Grooper to create a new Folder, and then document pages scanned afterwards will be inserted into that Folder. By selectively placing control
+sheets within a stack of pages to be scanned, scanner operators can manipulate Grooper to perform these common tasks without having to perform any manual configuration
+within the software.  This gives scanner operators much more control over the scanning process than they would normally have, as the changes in Grooper happen
+dynamically as the stack of pages is scanning.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.Project.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Project.htm'>Project</a>
+</td><td>A Project is defined as a collection of billing items, and can be assigned to <a href='Batch_Processing/Batch_Process.htm'>Batch Processes</a>. Projects are necessary when using the system Project Billing <a href='../Report_Types/Report_Types.htm'>Report</a>. The Project Billing report will calculate a total for each billing item's statistic and
+the product of each total against the corresponding rate.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Collections</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.Lexicon.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Collections/Lexicon.htm'>Lexicon</a>
+</td><td>A Lexicon is a dictionary which stores a list of keys or key-value pairs which are indexed for high-speed lookup. Lexicons are used throughout Grooper to store lists of words, phrases, field values, translations, weightings, and other information.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Content Models</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.ContentCategory.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Content_Category.htm'>Content Category</a>
+</td><td>A Content Category is a container for other Content Category and <a href='Content_Models/Document_Type.htm'>Document Type</a> objects within a <a href='Content_Models/Content_Model.htm'>Content Model</a>. Content Categories are used to organize the <a href='Content_Models/Document_Type.htm'>Document Types</a> in a <a href='Content_Models/Content_Model.htm'>Content Model</a> into a hierarchy.  This could be done for
+pure organizational purposes, but is more commonly used to distribute common data elements across many document types through inheritance.
+<p>A Content Category inherits all of the Data Elements defined on parent objects in the Content Model.  If the category itself defines a <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, all descendant
+document types will inherit the Data Elements defined in it, plus all of the data elements inherited by the Content Category.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.ContentModel.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Content_Model.htm'>Content Model</a>
+</td><td>A Content Model defines the taxonomy of a document set, in terms of the <a href='Content_Models/Document_Type.htm'>Document Types</a> it contains, and the Data Elements which appear on
+each document type. Content Models and the Content Types they contain also store classification training data, and define various settings which control how document
+classification and data extraction are performed.
+<h2>Defining Document Types</h2>
+<a href='Content_Models/Document_Type.htm'>Document Types</a> are created as children of a Content Model, and can optionally be organized into a hirearchy of <a href='Content_Models/Content_Category.htm'>Content Categories</a>.  A simple Content Model
+might be a flat list of 5 document types, while a more complex one might have hundreds of document types organized into dozens of categories.
+<h2>Classifying Documents</h2>
+Classification is the process of assigning a <a href='Content_Models/Document_Type.htm'>Document Type</a> to a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.  Before documents can be classified, the Document Types must be trained with samples
+or configured with classification rules.  The <a href='../Activity_Types/Unattended_Activities/Classify_Folders.htm'>Classify Folders</a> activity can then be used to assign the document types to objects in a batch.
+<h2>Defining Data Elements</h2><p>A <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> may be created at any level of the content model to define data elements such as <a href='../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Sections</a>, <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Tables</a>, and <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a>.  This
+can be done using the <a href='../Object_Command_Types/Create_Data_Model.htm'>Create Data Model</a> commmand, which will create a child object named "(data model)".   Data Elements can then be added as children of
+the Data Model.</p><h2>Data Element Inheritance</h2><p>Each document type will inherit all data elements defined on parent content types.  This means that the total set of data elements for a document type will include
+all elements defined directly on the document type, plus all data elements defined on parent content types all the way to the root of the cotntent model.</p><p>For example, if the content model defines a field named 'Scan Date', then all document types in the content model will inherit that field.  If a data element is defined on a
+<a href='Content_Models/Content_Category.htm'>Content Category</a> then all document types inside the category will inherit it.  </p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DocumentType.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Document_Type.htm'>Document Type</a>
+</td><td>A Document Type is an object in a <a href='Content_Models/Content_Model.htm'>Content Model</a> which represents a distinct type of document, such as an invoice or contract.  Document Types
+are ultimately assigned to documents in a batch in a process called <em>classification</em> Document Types are created as children of <a href='Content_Models/Content_Model.htm'>Content Model</a> or <a href='Content_Models/Content_Category.htm'>Content Category</a> objects.  Once created, document types can be assigned to <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>
+objects in a <a href='Batch_Processing/Batch.htm'>Batch</a> manually using the <a href='../Object_Command_Types/Assign_Document_Type.htm'>Assign Document Type</a> command.  The act of assigning a document type to a folder is called <em>classification</em>.
+<p>Classification is rarely performed manually by a user.  In most cases, automated classification is used to classify documents based on their lexical content or
+visual appearance.  To use automated classification, the <a href='Content_Models/Content_Model.htm'>Content Model</a> must be configured with a <a href='../Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a>, and each document type must be trained
+with examples or configured with classification rules.</p><p>Classification training can be performed in Grooper Administration using the Classification Testing tab of the parent <a href='Content_Models/Content_Model.htm'>Content Model</a> or Content Categoy, or in user
+modules via the <a href='../Object_Command_Types/Train_Document.htm'>Train Document</a> command, which is provided by the <a href='../Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a> used in the Classify Review activity. During training, a hierarchy of <a href='Content_Models/Form_Type.htm'>Form Type</a>,
+<a href='Content_Models/Page_Type.htm'>Page Type</a>, and <a href='Content_Models/Training_Page.htm'>Training Page</a> objects are created as children of the Document Type.  These objects represent different variations or languages of the document type, and store the
+data generated by the training process.</p><p>A Document Type inherits all Data Elements defined on parent objects in the Content Model, and may provide a <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> to define Data Elements which are
+specific to the Document Type.  The total set of Data Elements for a Document Type include those defined in the local Data Model, plus those inherited from
+parent objects in the Content Model.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.FormType.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Form_Type.htm'>Form Type</a>
+</td><td>A Form Type represents a variation or version of a <a href='Content_Models/Document_Type.htm'>Document Type</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.PageType.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Page_Type.htm'>Page Type</a>
+</td><td>A Page Type represents a logical page within a <a href='Content_Models/Form_Type.htm'>Form Type</a>. A Form Type with 5 pages will contain 5 Page Types as children.
+Page Types are not configured manually by users, but created internally by Grooper as documents are trained into a <a href='Content_Models/Content_Model.htm'>Content Model</a>,
+and are used to store sample pages and the features extracted from those sample pages. The Page Type object has no configurable properties.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.TrainingPage.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Content_Models/Training_Page.htm'>Training Page</a>
+</td><td>A Training Page represents an individual page which was used to train a Page Type.
+Training pages are not created or configured by users - they are created and managed internally
+by Grooper as documents are trained into a <a href='Content_Models/Content_Model.htm'>Content Model</a>. Do not delete or edit Training Page
+objects except as directed by Grooper support staff.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Data Extraction</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.DataColumn.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a>
+</td><td>Represents a column in a <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataExtractionFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Extraction_Folder.htm'>Data Extraction Folder</a>
+</td><td>Represents the 'Data Extraction' folder found in the root of a Grooper repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataField.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a>
+</td><td>Represents a field or table cell. Fields can be children of <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, <a href='../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>, or <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> objects. When added as the
+child of a Data Model or Data Section the object represents a field.  When added as the child of a
+Data Table, the object represents a column in the table.  Fields object define characteristics such as:
+<ul><li>The appearance of the item in the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a>.</li><li>The default ESP™ Extraction settings.  These settings can be overridden on individual content types.</li><li>Basic settings such as whether the field is required, visible, read only, displays a list, etc.</li><li>Validation mask settings which provide detailed control over what the user can enter.</li><li>Database lookup settings.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataFormat.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Format.htm'>Data Format</a>
+</td><td> Data Format objects are children of <a href='Data_Extraction/Data_Type.htm'>Data Type</a> objects, and represent a distinct format for the Data Type.
+For example, a date could appear on one document as 05/17/2013, and as May 17, 2013 on another document.
+Each of these formats is defined by a Data Format object which is a child of the 'Date' Data Type object.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataModel.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>
+</td><td>Defines the data elements for a content type. <p>A Data Model is a hierarchy of <a href='../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>, <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a>, <a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a>, and <a href='../Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a> objects which define the internal data structure
+of a content type.  A Data Model can be as simple as a list of fields (i.e. Invoice Date, Invoice Number, Invoice Amount,  and
+PO Number), or can be a complex hierarchy of sections, subsections, tables, and fields.  Data Models are created as children of
+the various Content Types in a <a href='Content_Models/Content_Model.htm'>Content Model</a>, using the 'Create Data Model' command, found on the property panel of the content type.</p><p>Data Models inherit the Data Elements defined on parent Content Types.  As such, a derived type may not have data element
+names which conflict those defined on a base type.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataSection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>
+</td><td>A Data Section allows the content of a document to be subdivided into sections for further processing.  Sections can be used for a variety of purposes, including but not limited to the following:
+<ul><li>To identify and extract repeating sections of a document.</li><li>To break a document down into a hierarchy of sections and subsections, representing the structure of the document's content.</li><li>To reorder text flow in situations where a document has multiple columns of information.</li><li>To simplify data extraction on complex documents.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataTable.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a>
+</td><td> Data Table objects are used to describe tabular data for the purposes of <a href='../../Getting_Started/Grooper_Concepts/Data_Extraction.htm'>Data Extraction</a> and <a href='../Activity_Types/Human_Review/Data_Review.htm'>Data Review</a>.
+The columns in the table are defined by adding child <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> elements to a Data Table object.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataType.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Type.htm'>Data Type</a>
+</td><td>A Data Type defines extraction logic for a distinct type of data, such as a field value or a table row.  Each data type defines one or more
+extractors, along with settings which control how the extractor results are transformed into a final result set. At runtime, a Data Type will execute execute the following extractors, in the order shown.
+<ul><li><b>Internal Pattern</b>: The Pattern property may define an internal <a href='../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a> which can be used to define extraction logic for simple data types.</li><li><b>Direct Children</b>: Data Types can have <a href='Data_Extraction/Data_Format.htm'>Data Formats</a> and other Data Types as children.</li><li><b>Referenced Extractors</b>: The Extractors property allows an ordered list of referenced extractors to be specified.</li></ul>
+The results returned from the individual extractors are then transformed into a final result set based on various output options.  The default behavior
+is that the output will contain all results from all extractors, in the order in which the appear in the document.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.FieldClass.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Field_Class.htm'>Field Class</a>
+</td><td>A Field Class is a trainable binary classifier, used for locating specific instances of a data pattern on a document. Field Classes are useful when a data value appears more than one time on a document, and it is necessary to examine the context
+of each data value. For example, a Field Class could be used to determine which date on an invoice document represents the
+Invoice Date, or which paragraph on a legal contract represents a Non-Compete Clause.
+<p>Internally, a Field Class is classifier with two classes: Positive and Negative.  When training is performed, the training
+instance is trained as a positive instance, and all other instances are trained as negative instances.  For example,
+if the Invoice Date field is trained, then the Ship Date and Due Date will be trained as negative instances.</p><p>The instances output from a Field Class will have a confidence value which reflects how closely the context matches
+the training data.</p>
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Infrastructure</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.CMIS.CmisConnection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/CMIS_Connection.htm'>CMIS Connection</a>
+</td><td>A CMIS Connection object represents a connection to CMIS-compliant content server.
+For a detailed overview of CMIS, please refer to the <a href='../../Getting_Started/Grooper_Concepts/Content_Management_System_Connectivity.htm'>Content Management System Connectivity</a> topic.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.CMIS.CmisContentType.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a>
+</td><td>A CMIS Content Type represents a content type defined in a <a href='Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>.  These objects are not
+created directly, but created when content types are imported from the property panel of a CMIS Repository object.
+CMIS Content Types are used to create and maintain mappings between Grooper content types and content types in a repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.CMIS.CmisRepository.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>
+</td><td>A CMIS Repository object represents a logical repository managed by a CMIS server.
+CMIS Repository objects are not created directly - they are created by importing a repository
+using the property panel of a <a href='Infrastructure/CMIS_Connection.htm'>CMIS Connection</a> object.  For a detailed overview of CMIS,
+please refer to the <a href='../../Getting_Started/Grooper_Concepts/Content_Management_System_Connectivity.htm'>Content Management System Connectivity</a> topic.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataConnection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/Data_Connection.htm'>Data Connection</a>
+</td><td>A Data Connection object represents a connection to a database, storing all information
+necessary to access the database.  These objects provide a connection basis for <a href='Infrastructure/Database_Table.htm'>Database Table</a> objects,
+and are also used directly in scripts to avoid storing authentication credentials in script code.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DatabaseTable.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/Database_Table.htm'>Database Table</a>
+</td><td>A Database Table object represents an externally-stored database table which can be queried from Grooper. Database Table objects do not store a copy of the data, but rather provide a placeholder object which can be used to
+reference the database table and create mappings between database table columns and other entities.
+<br /><br />Database Table objects are created in the property panel for the <a href='Infrastructure/Data_Connection.htm'>Data Connection</a> object, and are
+used by several entities throughout Grooper.  The Grooper Standard Export processing script uses Data Table objects to map
+fields from a Data Model to columns in a database table.  The <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> object uses Data Table objects to configure mappings
+used for performing database lookups on field values.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.FileStore.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/File_Store.htm'>File Store</a>
+</td><td>A File Store defines a storage location where Grooper can store content files associated with nodes in the Grooper tree structure. Files are stored for a variety of purposes in Grooper, including but not limited to:
+<ul><li>Scanned and imported images are stored as files on Batch Page objects.</li><li>PDF Versions of imported PDF documents are stored as files on Batch Folder objects.</li><li>OCR results are stored as files on Batch Page objects.</li><li>Script source code and compiled script binaries are stored as files on Grooper objects which support scripting.</li></ul><br />
+When new files are added to Grooper, they are always written to the File Store indicated by the Active File Store property of the <a href='Miscellaneous/Grooper_Root.htm'>Grooper Root</a> object.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.InfrastructureFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/Infrastructure_Folder.htm'>Infrastructure Folder</a>
+</td><td>Represents the 'Infrastructure' folder found in the root of a Grooper repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.LicenseServer.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/License_Server.htm'>License Server</a>
+</td><td>A License Server object is used to store connection information for a running instance of <a href='../../Getting_Started/Grooper_Concepts/Grooper_License_Server.htm'>Grooper License Server</a>. That information is made available to Grooper processes which need to check out licenses.  While multiple license server
+connections can be configured in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>, all running Grooper processes use the license server designated by the
+License Server property of the <a href='Miscellaneous/Grooper_Root.htm'>Grooper Root</a> object.
+<br /><br />Before configuring a License Server object in Grooper Administration, at least one instance of Grooper License Server
+needs to be running so that there is a service instance to connect to.  Installation of an instance of Grooper License Server
+can be accomplished using the Services Tab of <a href='../../User_Interface_Reference/Grooper_Configuration.htm'>Grooper Configuration</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Machine.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/Machine.htm'>Machine</a>
+</td><td>The Machine object represents the a server or workstation in the Grooper Enterprise. Selecting a Machine in the
+<a href='Infrastructure/Machines_Folder.htm'>Machines Folder</a> will display a panel with a performance section, a Services Installed section and a Details section.
+</td></tr><tr><td><a href='Infrastructure/Machines_Folder.htm'>Machines Folder</a></td><td>The Machines Folder provides a consolidated list of servers and workstation in the infrastructure,
+as well as a consolidated list of service instances installed.  From this panel, critical statistics such as
+processor usage, disk space usage, and memory usage can be viewed for any machine, and services on any
+machine (or all machines) can be started and stopped.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.ObjectLibrary.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Infrastructure/Object_Library.htm'>Object Library</a>
+</td><td>An Object Library is a .Net library of custom objects to be used in Grooper.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Miscellaneous</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Folder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Folder.htm'>Folder</a>
+</td><td>Represents a folder object in which objects can be stored.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.GrooperRoot.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Grooper_Root.htm'>Grooper Root</a>
+</td><td>Represents the root node of a Grooper repository. All <a href='../Grooper_Object_Types/Grooper_Object_Types.htm'>Grooper Object Types</a> in a Grooper repository are stored as children or descendants of the root node. The root node also stores several settings which
+apply to the repository.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Profiles</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.IpGroup.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/IP_Group.htm'>IP Group</a>
+</td><td>An IP Group is a container object which is used to create hierarchy and within an <a href='Profiles/IP_Profile.htm'>IP Profile</a>.  IP Groups may contain <a href='Profiles/IP_Step.htm'>IP Step</a> or other IP Group objects as children. Groups can be used for a variety of purposes:
+<ul><li>To organize complex IP Profiles.</li><li>To create re-useable units of IP functionality which can be copied and pasted between IP Profiles.</li><li>To conditionally execute or skip a sequence of IP Steps.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.IpProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/IP_Profile.htm'>IP Profile</a>
+</td><td>An IP Profile defines a sequence of image processing operations which are to be applied to an image. IP Profiles can have <a href='Profiles/IP_Step.htm'>IP Step</a> and <a href='Profiles/IP_Group.htm'>IP Group</a> objects as children.  A simple IP Profile might be a sequence of <a href='Profiles/IP_Step.htm'>IP Step</a> objects,
+each specifying an <a href='../IP_Command_Types/IP_Command_Types.htm'>IP Command</a> to be executed.  A more complex IP Profile might be a hierarchy of groups and steps, with conditional
+execution logic to customize flow based on properties of the image.
+<p>The execution order of items in an IP Profile is based on a pre-order tree traversal, which simply means that items execute in the
+order in which they would appear if the entire tree structure were expanded.  The execution order can be customized by specifying
+flow control expressions on individual <a href='Profiles/IP_Group.htm'>IP Group</a> or <a href='Profiles/IP_Step.htm'>IP Step</a> objects</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.IpStep.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/IP_Step.htm'>IP Step</a>
+</td><td>Represents an individual image processing operation in an <a href='Profiles/IP_Profile.htm'>IP Profile</a>.  Specifies an <a href='../IP_Command_Types/IP_Command_Types.htm'>IP Command</a> to execute, along with options which control
+how the step behaves.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.OCR.OcrProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/OCR_Profile.htm'>OCR Profile</a>
+</td><td>Defines settings which control how OCR is performed.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.ProfilesFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/Profiles_Folder.htm'>Profiles Folder</a>
+</td><td>Represents the 'Global Resources' folder found in the root of a Grooper repository.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Capture.ScannerProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/Scanner_Profile.htm'>Scanner Profile</a>
+</td><td>Defines a connection to a capture device, and settings which control how the device operates. Scanner Profiles are typically created and edited using the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm'>Scan Control</a> - a component of the Batch Scan Control used by the <a href='../Activity_Types/Attended_Activities/Scan.htm'>Scan</a>
+activity.  To create, edit, and test Scanner Profiles from Grooper Administration, go to any <a href='Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a> which is configured for the <a href='../Activity_Types/Attended_Activities/Scan.htm'>Scan</a> activity,
+and select the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/AttendedActivityTester.htm'>Attended Activity Tester</a> tab.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Capture.ScannerProfileFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/Scanner_Profile_Folder.htm'>Scanner Profile Folder</a>
+</td><td>The Scanner Profiles Folder stores <a href='Profiles/Scanner_Profile.htm'>Scanner Profile</a> objects created by the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm'>Scan Control</a>, and provides
+a user interface for creating, configuring, and testing Scanner Profiles in Grooper Administration.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Capture.SeparationProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Profiles/Separation_Profile.htm'>Separation Profile</a>
+</td><td>Separation Profiles are used to specify how pages will be separated into documents and folders within a batch.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Reports</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Reporting.Report.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Reports/Report_Instance.htm'>Report Instance</a>
+</td><td>Represents a named configuration of a Grooper Report. Report Instances are used by applications such as <a href='../../User_Interface_Reference/Grooper_Dashboard.htm'>Grooper Dashboard</a> and <a href='../../User_Interface_Reference/Grooper_Kiosk.htm'>Grooper Kiosk</a> to display reports. For example, consider the
+System Report 'Scan Volume' which contains properties named Start Date and End Date. A Report Instance with the Start Date set to '01/01/2017'
+and the End Date set to '12/31/2017' could be saved and named 'Scan Volume - 2017'. The 'Scan Volume - 2017' Report Instance could
+then be chosen when configuring the Report Instances to be displayed in Grooper Kiosk.<br /><br />
+There are several System Reports which ship with Grooper. Custom reports can be created in an <a href='Infrastructure/Object_Library.htm'>Object Library</a> by users with the appropriate
+skill sets using Microsoft Visual Studio and the <a href="http://msdn.microsoft.com/en-us/library/bb558708.aspx" target="_blank">Visual Studio Report Designer</a>.
+</td></tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

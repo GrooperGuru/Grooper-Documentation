@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>ApplicationXtender CMIS Server (REST)</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nService Instance Types\nApplicationXtender CMIS Server (REST)");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Service_Instance_Types.htm\">Service Instance Types<\/a> > ApplicationXtender CMIS Server (REST)<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.50 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>ApplicationXtender CMIS Server (REST)</h1>
+Exposes an EMC ApplicationXtender repository over CMIS.
+
+For a specific AX data source, exposes each of the AX applications as a CMIS repository.  Each repository has a single content type
+with properties matching the field layout of the corresponding AX application.
+
+<h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>AppXtender Connection</td>
+  </tr>
+  <tr>    <td>AX Web Services URL</td>
+    <td>The URL for an instance of ApplicationXtender Web Services.
+</td>
+  </tr>  <tr>    <td>Use Windows Credentials</td>
+    <td>If enabled, the service will connect to AX Web Services using the Windows credentials under which the service is running.  Otherwise,
+an anonymous connection will be created. If Windows security is used to control access to the AX Web Services URL, this option must be enabled.
+</td>
+  </tr>  <tr>    <td>Connection Time Out</td>
+    <td>The timeout, in seconds, for calls from this service instance to AppXtender Web Services.
+</td>
+  </tr>  <tr>    <td>Load Time Out</td>
+    <td>The timeout, in seconds, for generating the content stream for an individual document. This value represents the total amount of time a document render or a direct page export operation
+may take before a timeout error is generated.  If large documents are being extracted from the AppXtender
+repository, it may be necessary to increase this value. 
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Document Rendering</td>
+  </tr>
+  <tr>    <td>Use Render Server</td>
+    <td>Controls when ApplicationXtender Render Server is used for document rendering.  Can be one of the following values:<br />
+<ul>
+<li><b>Automatic</b>: Render Server will be used selectively, under the following circumstances:
+<ul><li>If any pages of the document are foreign files.</li><li>If Render Annotations is enabled, and the document has annotations.</li></ul>
+In all other cases,     </li>
+<li><b>Enabled</b>: Render Server will be used for every document.</li>
+<li><b>Disabled</b>: Render Server will never be used.</li>
+</ul>
+ This CMIS server supports 2 primary mechanisms for obtaining document content:
+<ul><li><b>Direct Export</b> - Each page of the document is extracted from AX Web Services as an image, and the sequence is streamed back as a multi-page
+TIFF file.  For pages referencing foreign files, a placeholder image will be inserted.  This is the fastest method of extracting content, and is the best
+choice for image-only repositories.</li><li><b>Render Server</b> - ApplicationXtender Render Server is used to render all pages of the document into a multipage TIFF of PDF file. This method
+requires more processing time than direct export, but has the advantage of allowing foreign files and annotations to be rendered.</li></ul>
+</td>
+  </tr>  <tr>    <td>File Format</td>
+    <td>Indicates the file format to be requested from Render Server. Can be one of the following values:<br />
+<ul>
+<li><b>PDF</b>: Faster performance, but cannot convert foreign file formats.</li>
+<li><b>TIF</b>: Slower performance, but can convert foreign file formats.</li>
+</ul>
+
+</td>
+  </tr>  <tr>    <td>Render Annotations</td>
+    <td>If enabled, ApplicationXtender annotations will be rendered.
+</td>
+  </tr>  <tr>    <td>Form Overlay Mode</td>
+    <td>The form overlay mode to be used when rendering COLD documents. Can be one of the following values:<br />
+<ul>
+<li><b>Text</b>: Text-based form overlay.</li>
+<li><b>Image</b>: Image-based form overlay.</li>
+<li><b>None</b>: No form overlay.</li>
+</ul>
+
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Document Save Options</td>
+  </tr>
+  <tr>    <td>Merge Action</td>
+    <td>Controls whether documents are added as new documents, or merged with existing documents based on matching index values. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: All documents will be added as new ApplicationXtender documents.</li>
+<li><b>Append</b>: Adds the current document's pages to the end of the existing document in ApplicationXtender.</li>
+<li><b>Prepend</b>: Inserts the current document's pages to the beginning of the existing document in ApplicationXtender.</li>
+</ul>
+ This feature requires that the target AX Application have the 'Part of Unique Key' flag enabled on at least one index field. Fields with this flag
+enabled will be used in a query prior to each document being exported. If a document is returned, the export will append/pre-pend the current Grooper document.
+Otherwise, a new document will be exported.
+</td>
+  </tr>  <tr>    <td>Submit Full Text Job</td>
+    <td>New or modified documents will be submitted to the full text index server configured for ApplicationXtender. This option requires the user account configured for the service's login, have administrative privileges on the repository server.
+An exception will be thrown if this method is called by an account without administrative privileges.
+</td>
+  </tr>  <tr>    <td>Full Text Job Queue Name</td>
+    <td>The name of the ApplicationXtender Full Text Job Queue to which documents should be submitted.
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Web Service Settings</td>
+  </tr>
+  <tr>    <td>Connection URL</td>
+    <td>Convenience string property containing the full URL path for this web service. The URL path is constructed by combining the Host Name, Port Number and URL Path property values and observing the HTTPS Enabled property.
+For example, this property's string value can easily be copied to the clipboard, and pasted into the URL property for a <a href='../Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a>.
+</td>
+  </tr>  <tr>    <td>HTTPS Enabled</td>
+    <td>Controls whether the HTTPS protocol is enabled.
+</td>
+  </tr>  <tr>    <td>Host Name</td>
+    <td>The host name to be used for this web service instance.
+</td>
+  </tr>  <tr>    <td>Port Number</td>
+    <td>The port number to be used for the web service.
+</td>
+  </tr>  <tr>    <td>URL Path</td>
+    <td>The web server path on which the CMIS server should be hosted.
+</td>
+  </tr>  <tr>    <td>Enable Debugging</td>
+    <td>Controls whether exception detail is returned by this web service when an exception occurs.
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Service Settings</td>
+  </tr>
+  <tr>    <td>Repository</td>
+    <td>The repository to which this service instance in bound. Service instances are bound permanently to a Grooper repository.  To change to repository, delete the service instance and reinstall it using the desired repository.
+</td>
+  </tr>  <tr>    <td>Service Display Name</td>
+    <td>The display name for the service.
+</td>
+  </tr>  <tr>    <td>Thread Priority</td>
+    <td>The priority level with which threads will be created. Can be one of the following values:<br />
+<ul>
+<li><b>Lowest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with any other priority.</li>
+<li><b>BelowNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Normal priority and before those with Lowest priority.</li>
+<li><b>Normal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with AboveNormal priority and before those with BelowNormal priority. Threads have Normal priority by default.</li>
+<li><b>AboveNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Highest priority and before those with Normal priority.</li>
+<li><b>Highest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled before threads with any other priority.</li>
+</ul>
+ If the service is running on a workstation, a priority lower than normal will help prevent the service from impacting the user interface responsiveness.
+</td>
+  </tr>  <tr>    <td>User Name</td>
+    <td>The user account under which the service should run. The account specified must:
+<ul><li>Have the Logon as Service permission on the machine on which the service is to run.</li><li>Have access to the Grooper database, if Windows security is being used for SQL connections.</li><li>Have access to the Grooper file store location.</li></ul>
+</td>
+  </tr>  <tr>    <td>Password</td>
+    <td>The password for the user account under which the service should run.
+</td>
+  </tr></table>
+
+<h2>Commands</h2>
+No commands defined
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

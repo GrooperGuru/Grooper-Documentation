@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Process Step</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nBatch Processing\nBatch Process Step");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Batch.htm\">Batch Processing<\/a> > Batch Process Step<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.BatchProcessStep.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Batch Process Step</h1></td>
+<table>
+</tr>
+</table>
+Represents a logical step in a [Batch Process].
+
+A Batch Process Step defines an activity to be performed as part of a batch process.  Activities fall into two broad categories:
+<ul><li><b>Attended Activities</b> - Activities which require a human operator to perform, such as [Scan], [Image Review], and [Data Review].</li><li><b>Unattended Activities</b> - Automated activities which can be processed in the background on a server, such as [Full Text OCR], [Image Processing], and [Extract].</li></ul>
+
+<br/><br/><b>Inherits from:</b> [Grooper Node]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Activity Type</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The type of activity to be performed at this step. See [Attended Activities] and [Unattended Activities] for details on individual activity types.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scope</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The processing scope of this step. Controls how items in the batch are processed.  The values available here will vary depending on which activity is selected.
+Scope can be one of the following values:
+<ul><li><b>Batch</b> - A single task will be created for the entire batch.</li><li><b>Folder</b> - A task will be created for each folder at the indicated level.  Folder levels are specified relative to the root of the batch,
+with level 0 representing the root, level 1 representing folders immediately below the root, and so on.</li><li><b>Page</b> - A task will be created for each page in the batch.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Folder Level</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 1, Range: 1 - 16</td></tr>
+   <tr><td>The folder level at which tasks will process when the Scope is set to 'Folder'.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Expressions</td>
+  </tr>
+  <tr>    <td>Should Submit Expression</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>An optional expression which determines whether tasks will be submitted for individual folders or pages. The expression is executed for each folder or page in scope, and should return a True or False value indicating whether the
+item should be processed.  If False is returned for every item in the batch, this will essentiall skip the entire step.  Below are various examples of
+should submit expressions:
+<p>Submit only items which are not flagged:<br /><span style="font-family: Courier">Item.Flagged = False</span></p><p>Submit only folders where the index data is valid:<br /><span style="font-family: Courier">DirectCast(Item,BatchFolder).DataIsValid = False</span></p><p>Submit only color pages:<br /><span style="font-family: Courier">DirectCast(Item, BatchPage).PixelFormat = GrooperImage.PixelFormat.Pixel24bppBgr</span></p><p>Submit only folders where the MIME type is PDF:<br /><span style="font-family: Courier">DirectCast(Item, BatchFolder).NativeMimeType = "application/pdf"</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Next Step Expression</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>An optional expression which determines the step to be executed after this one. The expression must evaluate to a BatchProcessStep object, or to Nothing.  Returning a value of Nothing will complete the batch.  Below are various examples of
+next step expressions:
+<p>If the batch has flagged pages, go to Rescan.  Otherwise, proceed to OCR:<br /><span style="font-family: Courier">If(Batch.HasFlaggedPages, Rescan, OCR)</span></p><p>If the batch has items with invalid index data, go to Data Review.  Otherwise, proceed to Export:<br /><span style="font-family: Courier">If(Batch.HasDataErrors, Data_Review, Export)</span></p>
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

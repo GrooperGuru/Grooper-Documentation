@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Object Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nBatch Object Types\nBatch Object Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Batch_Object_Types.htm\">Batch Object Types<\/a> &gt; Batch Object Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Batch Object</h1>
+Batch Objects represent items that can appear in Batches. Currently these are <a href='Batch_Processing/Batch_Folder.htm'>Batch Folders</a> and <a href='Batch_Processing/Batch_Page.htm'>Batch Pages</a>.
+
+<h2>List of Batch Object Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:20%'/>
+  <col style='width:80%'/>
+  <tr>    <th>Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Batch Processing</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchFolder.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Folder.htm'>Batch Folder</a>
+</td><td>The Batch Folder object represents a logical folder within the structure of a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. A Batch Folder can contain other Batch Folder objects as well as <a href='Batch_Processing/Batch_Page.htm'>Batch Pages</a>. A folder which has a Content Type assigned (<a href='../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> or <a href='../Grooper_Node_Types/Content_Models/Form_Type.htm'>Form Type</a>) is
+considered a document.<br /><br />Batch Folders can be created in a variety of ways. During scanning, import, or Separation Module execution, folders can be created automatically
+using rules defined in a <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a>.  Users can create folders manually in any application which uses the Batch Viewer Control.  File system folders can be copied
+and pasted into Grooper batches resulting in the creation of Batch Folder objects.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.BatchPage.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Batch_Processing/Batch_Page.htm'>Batch Page</a>
+</td><td>The Batch Page object represents a logical page within a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. Page objects can be created from individual images, such as during scanning or image file import. Page objects can also be created when an
+electronic document is imported. During electronic document import, Grooper automatically creates individual page images for display purposes.
+<br /><br />
+A Batch Page object can have multiple image files associated with it. For example, by default each page image stores two images: the primary image file and a thumbnail image file.  
+Additional image files may be created during batch processing, in cases where image cleanup such as line removal needs to be applied to images for the purposes
+of OCR, but without affecting the display image.  Certain processing modules, such as the Image Processing module, allow the output image to be written to a separate
+image file, and other modules, such as Full Text OCR, allow the use of an alternate input image. The list of allowed alternate image file names is defined as a property
+of the <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a> object.
+<br /><br />
+Page objects also store additional files which contain OCR results, and a variety of values which indicate the results of image processing commands. For example,
+the Color Detect IP command stores a boolean value named "IsColor" to the Batch Page object. The Read Barcodes IP command stores an array of BarcodeInstance objects
+to the "Barcodes" value. The Blank Page Detect IP command stores a boolean value named "IsBlank".
+</td></tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

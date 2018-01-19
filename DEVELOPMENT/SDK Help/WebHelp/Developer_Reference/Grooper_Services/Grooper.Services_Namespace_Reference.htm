@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper.Services Namespace Reference</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Services\nGrooper.Services Namespace Reference");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"WebService.htm\">Grooper Services<\/a> > Grooper.Services Namespace Reference<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>Grooper.Services Namespace Reference</h1><h2>Classes</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Class Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href="ImportWatcher.htm">ImportWatcher</a></td>
+     <td>Import Watcher is a service which polls an <a href='../Grooper_Core/ImportProvider.htm'>Import Provider</a> for new documents, and imports them based on rules.</td>
+  </tr>
+  <tr>
+     <td><a href="LicenseRenewalService.htm">LicenseRenewalService</a></td>
+     <td>Performs usage reporting when the Grooper pay-as-you-go licensing model is in use.</td>
+  </tr>
+  <tr>
+     <td><a href="LicenseService.htm">LicenseService</a></td>
+     <td>Distributes runtime licenses to Grooper applications.</td>
+  </tr>
+  <tr>
+     <td><a href="SystemMaintenanceService.htm">SystemMaintenanceService</a></td>
+     <td>Provides Grooper system maintenance services.</td>
+  </tr>
+  <tr>
+     <td><a href="TaskProcessingService.htm">TaskProcessingService</a></td>
+     <td>The Task Processing service executes <a href='../Grooper_Core/UnattendedActivity.htm'>Unattended Activities</a>, which perform the work associated with a step in a <a href='../Grooper_Core/BatchProcess.htm'>Batch Process</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="TimerService.htm">TimerService</a></td>
+     <td>Provides a base class for services which perform work on a timer interval.</td>
+  </tr>
+  <tr>
+     <td><a href="WebService.htm">WebService</a></td>
+     <td>Provides a base class for services which act as self-hosted web services.</td>
+  </tr>
+</table>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

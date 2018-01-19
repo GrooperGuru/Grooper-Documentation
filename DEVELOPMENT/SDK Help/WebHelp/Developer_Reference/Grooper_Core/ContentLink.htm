@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>ContentLink</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Core\nContentLink");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"UnattendedActivity.htm\">Grooper Core<\/a> > ContentLink<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>ContentLink</h1>
+<p>Content Links define references to content stored outside of Grooper, such as file on a file system or a document in
+a <a href='../Grooper_CMIS/CmisRepository.htm'>CMIS Repository</a>.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper.Core_Namespace_Reference.htm'>Grooper.Core</a><br/><b>Inherits from:</b> <a href='../Grooper/EmbeddedObject.htm'>EmbeddedObject</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>FetchError</td>
+     <td>String</td>
+     <td>If set, indicates an error which occurred while attempting to access the remote object.
+</td>
+  </tr>
+  <tr>
+     <td>FullPath</td>
+     <td>String</td>
+     <td>The full path to the linked object.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns a boolean indicating whether the connected object is empty.
+</td>
+  </tr>
+  <tr>
+     <td>ObjectName</td>
+     <td>String</td>
+     <td>The name of the linked object.
+</td>
+  </tr>
+  <tr>
+     <td>Owner</td>
+     <td><a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>OwnerNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>Path</td>
+     <td>String</td>
+     <td>The path to the linked object, minus the name.
+</td>
+  </tr>
+  <tr>
+     <td>PathSegments</td>
+     <td>IEnumerable(Of String)</td>
+     <td>A sequence of path segments representing the location of the remote object.
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../Grooper/GrooperRoot.htm'>GrooperRoot</a></td>
+     <td>Returns the root node
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FormatPathSegments(FirstSegmentIndex As Int32, LastSegmentIndex As Int32, Separator As String) As String</td>
+     <td>Returns a sub-portion of the path, formatted with a new separator.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FirstSegmentIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The starting path segment.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>LastSegmentIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ending path segment.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Separator</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The separator to be used between each path segment in the output.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FormatPathSegments(FirstSegmentIndex As Int32, Separator As String) As String</td>
+     <td>Returns a sub-portion of the path, formatted with a new separator.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FirstSegmentIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The starting path segment.  All segments from this segment until the last will be included in the output.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Separator</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The separator to be used between each path segment in the output.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetPathSegment(SegmentIndex As Int32) As String</td>
+     <td>Returns a specific path segment from the path associated with this link.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>SegmentIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The index of the segment to return.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetDatabase(Database As GrooperDb)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Database</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetOwner(Owner As <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a>, SkipInitialization As Boolean)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Owner</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>SkipInitialization</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns the dislay name.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.ContentLink_RemoveLink.png' height='16' width='16' /></td>
+    <td>Remove Link</td>
+    <td>Deletes the link between this object and the external content it is currently linked to.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

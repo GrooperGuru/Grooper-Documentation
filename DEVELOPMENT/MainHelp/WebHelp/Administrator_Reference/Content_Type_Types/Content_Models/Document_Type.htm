@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Document Type</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nContent Type Types\nContent Models\nDocument Type");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Content_Type_Types.htm\">Content Type Types<\/a> > <a href=\"Content_Category.htm\">Content Models<\/a> > Document Type<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.DocumentType.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Document Type</h1></td>
+<table>
+</tr>
+</table>
+A Document Type is an object in a <a href='Content_Model.htm'>Content Model</a> which represents a distinct type of document, such as an invoice or contract.  Document Types
+are ultimately assigned to documents in a batch in a process called <em>classification</em>
+
+Document Types are created as children of <a href='Content_Model.htm'>Content Model</a> or <a href='Content_Category.htm'>Content Category</a> objects.  Once created, document types can be assigned to <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>
+objects in a <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> manually using the <a href='../../Grooper_Object_Types/Assign_Document_Type.htm'>Assign Document Type</a> command.  The act of assigning a document type to a folder is called <em>classification</em>.
+<p>Classification is rarely performed manually by a user.  In most cases, automated classification is used to classify documents based on their lexical content or
+visual appearance.  To use automated classification, the <a href='Content_Model.htm'>Content Model</a> must be configured with a <a href='../../Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a>, and each document type must be trained
+with examples or configured with classification rules.</p><p>Classification training can be performed in Grooper Administration using the Classification Testing tab of the parent <a href='Content_Model.htm'>Content Model</a> or Content Categoy, or in user
+modules via the <a href='../../Grooper_Object_Types/Train_Document.htm'>Train Document</a> command, which is provided by the <a href='../../Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a> used in the Classify Review activity. During training, a hierarchy of <a href='Form_Type.htm'>Form Type</a>,
+<a href='Page_Type.htm'>Page Type</a>, and <a href='Training_Page.htm'>Training Page</a> objects are created as children of the Document Type.  These objects represent different variations or languages of the document type, and store the
+data generated by the training process.</p><p>A Document Type inherits all Data Elements defined on parent objects in the Content Model, and may provide a <a href='../../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> to define Data Elements which are
+specific to the Document Type.  The total set of Data Elements for a Document Type include those defined in the local Data Model, plus those inherited from
+parent objects in the Content Model.</p>
+
+<br/><br/><b>Inherits from:</b> <a href='../Content_Type_Types.htm'>Content Type</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Allow Training</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>Controls whether training is allowed with this Content Type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Scope - Data Extraction</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: (unlimited)</td></tr>
+   <tr><td>The maximum number of pages to be included in the scope from which data extraction is performed. This setting can be used to limit the number of pages loaded during data extraction and data review in cases where OCR
+has been performed on all pages in a large document, but the data extraction is only relevant to the first few pages. A value
+of 0 indicates unlimited scope.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Base Content Type</td>
+    <td><table>
+   <tr><td>Type: BaseContentTypeEnum, Default: Document</td></tr>
+   <tr><td>The base content type. Can be one of the following values:<br />
+<ul>
+<li><b>Document</b>: The content type represents a document, and will be displayed in a batch using a document icon.
+</li>
+<li><b>Folder</b>: The content type represents a folder, and will be displayed in a batch using a folder icon.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Classification Rules</td>
+  </tr>
+  <tr>    <td>Positive Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>The extractor to use for positive identification of this Document Type. If the extractor provided here successfully extracts one or more values from the document, the document will be
+classified as this Document Type with no further processing.
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Negative Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>The extractor to use for excluding possible candidate from being classified as this Document Type. If the extractor provided here successfully extracts one or more values from the document, this
+document type will be excluded from consideration.
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Pages</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The minimum number of pages required for a document to be classified as this document type. During classification, any document with less than this number of pages will be excluded from consideration as
+this document type.  If set to zero, no minimum page limit will be enforced.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Pages</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of pages allowed for a document to be classified as this document type. During classification, any document with more than this number of pages will be excluded from consideration as
+this document type.  If set to zero, no maximum page limit will be enforced.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Separation</td>
+  </tr>
+  <tr>    <td>Pagination</td>
+    <td><table>
+   <tr><td>Type: PaginationType, Default: Structured</td></tr>
+   <tr><td>Defines the pagination method to be used during document separation. Can be one of the following values:<br />
+<ul>
+<li><b>Structured</b>: The document type is a structured form, and should match a trained example page-for-page.
+</li>
+<li><b>Unstructured</b>: The document type is unstructured and of variable-length.  If EPI is present, the document will extend to to point indicated by the
+embedded page information.  Otherwise, the document will be extended to include all pages which meet the minimum confidence for any known page
+associated with the document type.
+</li>
+<li><b>Fixed</b>: The document type is always a specific fixed length, as indicated by the 'Page Count' property.
+</li>
+<li><b>Extended</b>: The document type should consume all pages up to the next document.
+</li>
+</ul>
+ The separation process generally works as follows:
+<ul><li>The initial separation points are established by finding all pages which classify as Page 1 of a document type.</li><li>At each document start position, the separation settings for the corresponding document type will be applied.</li><li>If Pagination is set to 'Extended' the document will simply extend to the start of the next document.</li><li>The other pagination methods define various mechanisms for detecting the last page and truncating the document.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Trigger On Any Page</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>When Pagination is set to 'Extended', specifies that separation should occur when a confident result is encountered for any page
+of this document type. If this option is disabled, separation will only occur when a confident Page 1 is encountered.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Count</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>When Pagination is set to 'Fixed', defines the page count for this document type. The document type will consume exactly this number of pages, unless the start of a new document is encountered.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Combine Contiguous Documents</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, contiguous instances of this document type within a batch will be combined into a single document.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Is Attachment</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates this document type is an attachment which should be appended to the previous document.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

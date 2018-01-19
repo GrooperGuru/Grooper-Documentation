@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Type</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Node Types\nData Extraction\nData Type");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Grooper_Node_Types.htm\">Grooper Node Types<\/a> &gt; <a href=\"Data_Extraction_Folder.htm\">Data Extraction<\/a> &gt; Data Type<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.DataType.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Data Type</h1></td>
+<table>
+</tr>
+</table>
+A Data Type defines extraction logic for a distinct type of data, such as a field value or a table row.  Each data type defines one or more
+extractors, along with settings which control how the extractor results are transformed into a final result set.
+
+At runtime, a Data Type will execute execute the following extractors, in the order shown.
+<ul><li><b>Internal Pattern</b>: The Pattern property may define an internal <a href='../../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a> which can be used to define extraction logic for simple data types.</li><li><b>Direct Children</b>: Data Types can have <a href='Data_Format.htm'>Data Formats</a> and other Data Types as children.</li><li><b>Referenced Extractors</b>: The Extractors property allows an ordered list of referenced extractors to be specified.</li></ul>
+The results returned from the individual extractors are then transformed into a final result set based on various output options.  The default behavior
+is that the output will contain all results from all extractors, in the order in which the appear in the document.
+
+
+<br/><br/><b>Inherits from:</b> <a href='../Grooper_Node_Types.htm'>Grooper Node</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Value Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a>, Default: String</td></tr>
+   <tr><td>Defines the type of data this Data Type will output. Any extracted values which cannot be converted to the Value Type will be discarded.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Culture Filter</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Defines a list of cultures supported by this extractor. If this value is empty, the extractor will execute against all documents.  Otherwise, the extractor will only execute on documents which map to one of the specified cultures.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Data Extraction</td>
+  </tr>
+  <tr>    <td>Pattern</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a></td></tr>
+   <tr><td>Defines an internal <a href='../../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a> which can be used in place of a child data format. This property is useful for simple extractions where only one format needs to be defined.
+(See <a href='../../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Referenced Extractors</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Defines an optional list of external extractors to be executed. At runtime, referenced extractors execute after the internal pattern and the direct children have been executed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Input Filter</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>An optional extractor to be used for transforming input prior to extraction. Input filters are used to select a subset of the source content prior to running the extractors.  In many cases extraction logic
+can be simplified if scope is limited to a small portion of the document.  When an input filter is specified, it is executed against the source.
+The Data Type's extractors are then executed on each instance returned by the input filter.
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Exclusion Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>An optional extractor to be used for filtering undesirable results from the result set. Any output instances which overlap with an exclusion instance will be discarded.
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Output</td>
+  </tr>
+  <tr>    <td>Collation</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Collation_Provider_Types/Collation_Provider_Types.htm'>Collation Provider</a></td></tr>
+   <tr><td>Defines how instances from individual extractors are transformed into the final output.
+(See <a href='../../Collation_Provider_Types/Collation_Provider_Types.htm'>Collation Provider</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Output Order</td>
+    <td><table>
+   <tr><td>Type: RankingMethod, Default: Order</td></tr>
+   <tr><td>Controls the output order of the result set. Can be one of the following values:<br />
+<ul>
+<li><b>Order</b>: Results are returned in the order in which they appear in the content flow.
+</li>
+<li><b>ReverseOrder</b>: Results are returned in reverse of the order in which they appear in the content flow.
+</li>
+<li><b>Frequency</b>: Results are returned ordered by the number of occurrences of each value in the document. Value which occur more frequently
+will be sorted to the top.  <i>For example, a mortgage file may contain many different SSN values, but the most frequently occurring SSN
+value will be that of the borrower.  In such a case, a Pattern-based extraction with a Instance Ranking based on Frequency will produce
+the correct result for the Borrower SSN field in most cases.</i>
+</li>
+<li><b>Confidence</b>: DO NOT USE.  This ranking method is used internally by Grooper to rank instances extracted by a Field Class during
+context-based extraction, after the confidence value for each instance has been calculated.
+</li>
+<li><b>OcrConfidence</b>:  Results are returned order by the average OCR confidence of all characters which make up the extracted value.
+</li>
+<li><b>ExtractionOrder</b>: Results are returned in the order of the extractor which produced each match. Can be used to prioritize the results from one
+extractor those of over another.
+</li>
+<li><b>ValueLengthAscending</b>: Results are returned in the order of their value lengths, in ascending order.
+</li>
+<li><b>ValueLengthDescending</b>: Returns are returned in the order of their value lengths, in descending order.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Result Filter</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Instance_Filter.htm'>Instance Filter</a></td></tr>
+   <tr><td>Specifies options for filtering output instances.
+(See <a href='../../Grooper_Object_Types/Instance_Filter.htm'>Instance Filter</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Deduplication</td>
+  </tr>
+  <tr>    <td>Deduplicate Locations</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If True, instances with overlapping zones will be de-duplicated, with precedence given to larger data elements.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Deduplicate Values</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If True, duplicate values will be eliminated, leaving only the first instance of the value.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Collation_Provider_Types/Collation_Provider_Types.htm'>Collation Provider</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+<tr><td><a href='../Grooper_Node_Types.htm'>Grooper Node</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Instance_Filter.htm'>Instance Filter</a></td></tr>
+<tr><td><a href='../../Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

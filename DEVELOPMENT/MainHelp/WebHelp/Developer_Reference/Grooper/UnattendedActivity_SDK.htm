@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>UnattendedActivity_SDK</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Developer Reference\nGrooper\nUnattendedActivity_SDK");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Developer_Reference.htm\">Developer Reference<\/a> > <a href=\"Grooper_Namespace_Reference.htm\">Grooper<\/a> > UnattendedActivity_SDK<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.50 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>UnattendedActivity</h1>
+<p>Serves as the base class for all unattended activities.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper_Namespace_Reference.htm'>Grooper</a><br/><b>Inherits from:</b> <a href='BatchProcessingActivity_SDK.htm'>BatchProcessingActivity</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Database</td>
+     <td><a href='GrooperDb_SDK.htm'>GrooperDb</a></td>
+     <td>Returns the GrooperDB object.
+</td>
+  </tr>
+  <tr>
+     <td>ErrorDisposition</td>
+     <td>IssueDisposition</td>
+     <td>Determines what happens when an error occurs processing an activity.
+A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.</li>
+<li><b>Flag</b>: The associated <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.</li>
+<li><b>Stop</b>: The <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>ExecuteConfirmation</td>
+     <td>String</td>
+     <td>Override this property to specify a string that should be displayed as a confirmation before the Activity is executed. This confirmation will only appear if the Activity is being executed manually as part of a UI. It will not be displayed if the
+Activity is running outside of the UI.
+</td>
+  </tr>
+  <tr>
+     <td>IsAttended</td>
+     <td>Boolean</td>
+     <td>Returns true if this activity is an attented activity.
+</td>
+  </tr>
+  <tr>
+     <td>MaximumConsecutiveErrors</td>
+     <td>Int32</td>
+     <td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../../Administrator_Reference/Grooper_Node_Types/Miscellaneous/Grooper_Root.htm'>GrooperRoot</a></td>
+     <td>Returns the Grooper root object.
+</td>
+  </tr>
+  <tr>
+     <td>StatNames</td>
+     <td>IEnumerable(Of String)</td>
+     <td>Iterates the list of stat names tracked by this activity.
+</td>
+  </tr>
+  <tr>
+     <td>TypeDisplayName</td>
+     <td>String</td>
+     <td>Returns the type display name of this object.
+</td>
+  </tr>
+  <tr>
+     <td>TypeName</td>
+     <td>String</td>
+     <td>Returns the full type name of this object.
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AddCustomStatValue(Name As String, Value As Double)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetActivityCommands(Item As <a href='GrooperNode_SDK.htm'>GrooperNode</a>, RepositoryId As Guid) As IEnumerable`1</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='GrooperNode_SDK.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>RepositoryId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ProcessTask(CurNode As <a href='BatchObject_SDK.htm'>BatchObject</a>)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>CurNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='BatchObject_SDK.htm'>BatchObject</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Serialize() As String</td>
+     <td>Serializes this activity to a JSON string.
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns the display name for this activity type.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+No commands defined<br/>
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

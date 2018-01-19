@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Regular Expression Examples</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nExamples\nRegular Expression Examples");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Regular_Expression_Examples.htm\">Examples<\/a> &gt; Regular Expression Examples<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Regular Expression Examples</h1>
+<p>Below are some simple examples of regular expression syntax. &#160;Regular 
+ expressions are a standard mechanism for describing patterns within text, 
+ and there are many public resources and tutorials online covering the 
+ syntax for regular expressions. &#160;Below are links to a few of these:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><a href="http://msdn.microsoft.com/en-us/library/az24scfc(v%3dvs.110).aspx" 
+			 target="_blank">Microsoft .Net Framework Regular Expression 
+	 Reference</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/Regular_expression" target="_blank">Wikipedia 
+	 - Regular Expression</a></li>
+	<li><a href="http://www.regular-expressions.info/tutorial.html" target="_blank">Regular 
+	 Expression Tutorial</a></li>
+</ul>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<tr>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Regular 
+		 Expression</p></td>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Match 
+		 Example</p></td>
+		<td><p style="text-align: center; font-size: 10pt; font-weight: bold;">Comments</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">[0-9]{3}-[0-9]{3}-[0-9]{4}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample9.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">The general format of a regular 
+		 expression is Character Set{Length}.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">A-Z{3,16}, A-Z{2} [0-9]{5}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample1.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Length can be variable, as shown 
+		 in the extraction of the city.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">[0-9]{8,16}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample2.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Note that we are pulling a portion 
+		 of the Tracking Number.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">\b[0-9]{8,16}\b</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample3.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">By requiring &quot;breaks&quot; 
+		 before and after the value, we eliminate the partial extraction 
+		 of Tracking Number.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">\(?[0-9]{3}\)?[ \-][0-9]{3}-[0-9]{4}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample4.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">? indicates that the previous 
+		 element is optional. &#160;In this case the parenthesis around 
+		 the area code are optional, allowing the expression to match multiple 
+		 formats for a phone number.<br />
+		Note the use of \ to escape characters which are considered special 
+		 characters in regular expressions, such as &quot;(&quot;, &#160;&quot;)&quot;, 
+		 and &quot;-&quot;.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">(?&lt;=tracking no: )A-Z0-9{18}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample5.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Uses a positive lookbehind assertion 
+		 (?&lt;= subexpression) to only find matching items preceded by 
+		 the words &quot;tracking no&quot;.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">(?&lt;=amount due )[0-9]{1,3}\.[0-9]{2}</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample6.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Another example of using the 
+		 lookbehind assertion to find a specific instance of data.</font></span></td>
+	</tr>
+	<tr>
+		<td><p style="font-size: 10pt;">state</p>
+		<p style="font-size: 10pt;">([^\n]*\n)*?</p>
+		<p style="font-size: 10pt;">plaintiff</p>
+		<p style="font-size: 10pt;">([^\n]*\n)*?</p>
+		<p style="font-size: 10pt;">defendant</p></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample7.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Example of capturing a specific 
+		 region of content by using words as placeholders. &#160;This type 
+		 of expression can be used to define Data 
+		 Sections.</font></span></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">(?&lt;=\()[0-9]{1,2}(?=\))</font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;"><img src="images/RegularExpressionExample8.jpg" alt="" style="border: none;" border="0" /></font></span></td>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Creativity with regular expressions 
+		 can allow extraction of a wide variety of information.</font></span></td>
+	</tr>
+</table>
+<h2>See Also</h2>
+<p>Data Format</p>
+<p><a href="../Grooper_Concepts/Data_Extraction.htm">Data Extraction</a></p>
+<p>&#160;</p>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

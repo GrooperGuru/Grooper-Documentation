@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Registration Zone</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nRegistration Zone");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> > Registration Zone<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Registration Zone</h1>
+Registration zones are used to align [Field Zones] and [OMR Zones] prior to zonal extraction.
+
+When documents are scanned, pages shift slightly, causing alignment issues with zonal extraction.  Registration zones correct this
+shift by aligning zones relative to other elements on the page.<br /><br />
+Registration zones cannot have children.  Registration zones can be children of [Field Zones] or [OMR Zones].
+
+<br/><br/><b>Inherits from:</b> [Field Zone]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Registration</td>
+  </tr>
+  <tr>    <td>Scope</td>
+    <td><table>
+   <tr><td>Type: [RegistrationZoneScope], Default: Page</td></tr>
+   <tr><td>The scope of the registration zone. Can be one of the following values:<br />
+<ul>
+<li><b>Page</b>: The registration zone on this page will be search for instances of the registration text.
+</li>
+<li><b>Document</b>: The entire document content will be searched for instances of the registration text.  Requires full text OCR.
+</li>
+<li><b>PageRegion</b>: Aligns the field to a specific region of the page.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Location</td>
+    <td><table>
+   <tr><td>Type: [Rectangle], Default: (0,0):(0,0)</td></tr>
+   <tr><td>The location of the registration text on the sample page used for setup. This location <b>must</b> be set before the registration zone can be used.  To set the location,
+test the Registration Zone and use the Save Location command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Registration Pattern</td>
+    <td><table>
+   <tr><td>Type: [Data Pattern]</td></tr>
+   <tr><td>Defines a text value or pattern which matches a label or other text element near the data value. The registration pattern is responsible for matching an element on the page, such as a field label, which will
+always have the same position relative to the data value.  If the registration pattern hits multiple locations, an
+extraction will be attempted at each of the locations, potentially producing multiple candidates for the field value.
+(See [Data Pattern])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Alignment</td>
+    <td><table>
+   <tr><td>Type: [RegistrationAlignment], Default: TopLeft</td></tr>
+   <tr><td>Indicates which corner of the registration value is used as the registration point. Can be one of the following values:<br />
+<ul>
+<li><b>TopLeft</b>: Registration will be relative to the top left of the registration text.
+</li>
+<li><b>TopRight</b>: Registration will be relative to the top right of the registration text.
+</li>
+<li><b>BottomLeft</b>: Registration will be relative to the bottom left of the registration text.
+</li>
+<li><b>BottomRight</b>: Registration will be relative to the bottom right of the registration text.
+</li>
+<li><b>Center</b>: Registration will be relative to the center of the registration text.
+</li>
+</ul>
+ In some cases, it can be important which corner of a text element is used as the reference point.  This is particularly
+true when regular expression syntax is used in the registration text, and the resulting registration text may have a variable
+length.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Use At Page Level</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If enabled, this registration zone will be used for all zones on the page which do not have individually-defined registration zones.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Extraction</td>
+  </tr>
+  <tr>    <td>Extraction Type</td>
+    <td><table>
+   <tr><td>Type: [ZonalExtractionType], Default: None</td></tr>
+   <tr><td>The type of data extraction to be used with this zone. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: No zonal extraction will be performed.  This zone simply establishes the zoom area when the user tabs into the field.
+</li>
+<li><b>Barcode</b>: The zone will use barcode recognition to read a barcode value.
+</li>
+<li><b>OCR</b>: The zone will use OCR to read a text value.
+</li>
+<li><b>FullText</b>: The zone will be re-extracted from existing full text OCR, if it exists.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>OCR Profile</td>
+    <td><table>
+   <tr><td>Type: [OCR Profile]</td></tr>
+   <tr><td>The [OCR Profile] to be used for zonal data extraction.
+(See [OCR Profile])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Barcode Detection Settings</td>
+    <td><table>
+   <tr><td>Type: [Barcode Detection]</td></tr>
+   <tr><td>The settings to be used for barcode recognition.
+(See [Barcode Detection])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Apply Field Extractor</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Controls whether the extractor for the field will be executed on the OCR results obtained from the zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Shape Name</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The name of a Shape to be used as the region for this zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Zone Location</td>
+  </tr>
+  <tr>    <td>Page No</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 0</td></tr>
+   <tr><td>The page number associated with this zone. A negative value indicates on offset starting at the end of the document.  For example, -1 indicates the last page of the document
+-2 indicates the 2nd to last page of the document, and etc.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Bounds</td>
+    <td><table>
+   <tr><td>Type: [Rectangle], Default: (0,0):(0,0)</td></tr>
+   <tr><td>The location of the zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Image Cleanup</td>
+  </tr>
+  <tr>    <td>IP Profile</td>
+    <td><table>
+   <tr><td>Type: [IP Profile]</td></tr>
+   <tr><td>The [IP Profile] to run prior to zonal extraction. This IP Profile performs <em>temporary</em> image cleanup prior to extraction.  It does not permanently alter the image.
+(See [IP Profile])</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[Barcode Detection]</td></tr>
+<tr><td>[Data Pattern]</td></tr>
+<tr><td>[IP Profile]</td></tr>
+<tr><td>[OCR Profile]</td></tr>
+<tr><td>[Rectangle]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

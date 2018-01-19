@@ -1,0 +1,3266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Core\nBatch");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"UnattendedActivity.htm\">Grooper Core<\/a> > Batch<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>Batch</h1>
+<p>A Batch is a hierarchy of folders and pages which serves as the fundamental unit of capture in Grooper.
+
+Batches can exist in one of two environments: Test or Production.  Test batches are only visible to administrators working in Grooper Administration.  
+Production batches are visible to all system users who have the appropriate access rights. Batches are normally created in Grooper Scan, but can also be created
+in Grooper Administration, Grooper Dashboard, or by various import utilities.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper.Core_Namespace_Reference.htm'>Grooper.Core</a><br/><b>Inherits from:</b> <a href='../Grooper/GrooperNode.htm'>GrooperNode</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>ACL</td>
+     <td>AccessControlList</td>
+     <td>Returns the effective ACL for this node.  If no ACL has been set directly on the node, the tree structure
+is traversed up to the root and the first ACL encountered is returned.  If no ACL is found, null/Nothing
+will be returned.
+</td>
+  </tr>
+  <tr>
+     <td>AclCanBeEdited</td>
+     <td>Boolean</td>
+     <td>Returns true if the current user can edit the ACL.
+</td>
+  </tr>
+  <tr>
+     <td>AllChildren</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Iterates recursively through all nodes below this node.
+</td>
+  </tr>
+  <tr>
+     <td>AllChildrenOfType(Type As Type)</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Returns all nodes at any level below the current node which have a TypeName matching
+the supplied parameter.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to filter by.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AllChildrenToLevel(Level As Int32)</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Iterates all children at a specific level below this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Level</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of levels below the level of the current node</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AllowedChildTypes</td>
+     <td>IEnumerable(Of Type)</td>
+     <td>Iterates the list of types which can be added as children.
+</td>
+  </tr>
+  <tr>
+     <td>Attributes</td>
+     <td>NodeAttributes</td>
+     <td>The attributes of this node.
+A combination of the following flags:<br />
+<ul>
+<li><b>Clear</b>: Removes all flags.
+</li>
+<li><b>ReadOnly</b>: Users cannot modify the item directly.
+</li>
+<li><b>ContentsReadOnly</b>: Users cannot modify the children of this node.
+</li>
+<li><b>ContentsSorted</b>: The children of this node will be sorted by name.
+</li>
+<li><b>HasACL</b>: Indicates whether this node has an Access Control List attached to it.
+</li>
+<li><b>System</b>: Indicates whether this node is a system object.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>AutoName</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node type uses automatic name generation. Node types which use auto name generation: (a) do not prompt for a name on creation; and (b) disable user renaming.
+</td>
+  </tr>
+  <tr>
+     <td>BatchProcess</td>
+     <td><a href='BatchProcess.htm'>BatchProcess</a></td>
+     <td>Returns the <a href='BatchProcess.htm'>Batch Process</a> associated with the batch.
+</td>
+  </tr>
+  <tr>
+     <td>BatchProcessName</td>
+     <td>String</td>
+     <td>Returns the name of the <a href='BatchProcess.htm'>Batch Process</a> associated with the batch.
+</td>
+  </tr>
+  <tr>
+     <td>BatchRoot</td>
+     <td><a href='BatchFolder.htm'>BatchFolder</a></td>
+     <td>Returns the root folder of the batch.
+</td>
+  </tr>
+  <tr>
+     <td>CanAddChildren</td>
+     <td>Boolean</td>
+     <td>Returns true if this node has child types defined, the current user has appropriate write permissions, and the 'ContentsReadOnly' flag is not set.
+</td>
+  </tr>
+  <tr>
+     <td>CanHaveChildren</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node type can have children.
+</td>
+  </tr>
+  <tr>
+     <td>CanScript</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node type can have a script.
+</td>
+  </tr>
+  <tr>
+     <td>ChildrenAtLevel(Level As Int32)</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Iterates though children at a specific level below this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Level</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of levels below this node to generate a list for.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ChildrenOfType(Type As Type)</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Returns all immediate children of this node which have a TypeName matching the supplied
+parameter.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The TypeName to filter by.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Created</td>
+     <td>DateTime</td>
+     <td>The date and time when this batch was created.
+</td>
+  </tr>
+  <tr>
+     <td>CreatedBy</td>
+     <td>String</td>
+     <td>The user id under which the batch was created.
+</td>
+  </tr>
+  <tr>
+     <td>CreatedByDisplayName</td>
+     <td>String</td>
+     <td>The display name of the user who created the batch.
+</td>
+  </tr>
+  <tr>
+     <td>CurrentStep</td>
+     <td><a href='BatchProcessStep.htm'>BatchProcessStep</a></td>
+     <td>The <a href='BatchProcessStep.htm'>Batch Process Step</a> within the <a href='BatchProcess.htm'>Batch Process</a> which this batch is currently processing through. The batch must be paused before this property can be edited.
+</td>
+  </tr>
+  <tr>
+     <td>CurrentStepActivityName</td>
+     <td>String</td>
+     <td>The name of the activity associated with the current step.
+</td>
+  </tr>
+  <tr>
+     <td>CurrentStepName</td>
+     <td>String</td>
+     <td>The current step of the batch process that this batch is on.
+</td>
+  </tr>
+  <tr>
+     <td>Description</td>
+     <td>String</td>
+     <td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td>
+  </tr>
+  <tr>
+     <td>DirtyFields</td>
+     <td>DirtyFieldMask</td>
+     <td>Returns a bit mask specifying which database fields have been modified.
+A combination of the following flags:<br />
+<ul>
+<li><b>None</b></li>
+<li><b>NonField</b></li>
+<li><b>Name</b></li>
+<li><b>ParentId</b></li>
+<li><b>NodeIndex</b></li>
+<li><b>NumChildren</b></li>
+<li><b>Attributes</b></li>
+<li><b>NodeValues</b></li>
+<li><b>Files</b></li>
+<li><b>Properties</b></li>
+<li><b>ACL</b></li>
+<li><b>All</b></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>DisplayName</td>
+     <td>String</td>
+     <td>The human-readable display name for this node. Derived classes can override this property to provide dynamically generated names
+rather than stored names.  For example, BatchPage overrides this property to return "Page 1",
+"Page 2", etc. using the NodeIndex rather than trying to keep up with renaming nodes each time
+a page is inserted.  Please note that all nodes must have a unique name, so if dynamic name
+generation is to be implemented, use the node's unique id as the name.
+</td>
+  </tr>
+  <tr>
+     <td>FileNames</td>
+     <td>IEnumerable(Of String)</td>
+     <td>Provides a list of filenames for files associated with this node.
+</td>
+  </tr>
+  <tr>
+     <td>Files</td>
+     <td>IEnumerable(Of ContentFile)</td>
+     <td>Iterates the list of file objects stored on this node.
+</td>
+  </tr>
+  <tr>
+     <td>FilesString</td>
+     <td>String</td>
+     <td>Gets JSON string which contains the serialized file entries for this node.
+</td>
+  </tr>
+  <tr>
+     <td>FullDisplayName</td>
+     <td>String</td>
+     <td>Returns the full display path and display name for this node.
+</td>
+  </tr>
+  <tr>
+     <td>HasACL</td>
+     <td>Boolean</td>
+     <td>Returns true or false to indicate whether this node has an ACL attached to it.
+</td>
+  </tr>
+  <tr>
+     <td>HasCompiledScript</td>
+     <td>Boolean</td>
+     <td>Determines whether this node has a compiled script associated with it.
+</td>
+  </tr>
+  <tr>
+     <td>HasContentsReadOnlyFlag</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node has the ContentsReadOnly attribute set.
+</td>
+  </tr>
+  <tr>
+     <td>HasContentsSortedFlag</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node has the ContentsSorted attribute set.
+</td>
+  </tr>
+  <tr>
+     <td>HasDataErrors</td>
+     <td>Boolean</td>
+     <td>Returns true if the batch has folders with invalid index data.
+</td>
+  </tr>
+  <tr>
+     <td>HasDbRow</td>
+     <td>Boolean</td>
+     <td>A boolean value indicating whether this node has been written to the database.
+</td>
+  </tr>
+  <tr>
+     <td>HasFlaggedFolders</td>
+     <td>Boolean</td>
+     <td>Returns true if the batch has flagged folders or documents.
+</td>
+  </tr>
+  <tr>
+     <td>HasFlaggedItems</td>
+     <td>Boolean</td>
+     <td>Returns true if the batch has flagged items.
+</td>
+  </tr>
+  <tr>
+     <td>HasFlaggedPages</td>
+     <td>Boolean</td>
+     <td>Returns true if the batch has flagged pages.
+</td>
+  </tr>
+  <tr>
+     <td>HasScript</td>
+     <td>Boolean</td>
+     <td>Returns a value indicating whether this node has a script associated with it.
+</td>
+  </tr>
+  <tr>
+     <td>IconImage</td>
+     <td>Image</td>
+     <td>Returns a 16x16 icon image which represents this object.
+</td>
+  </tr>
+  <tr>
+     <td>IconKey</td>
+     <td>String</td>
+     <td>Returns a unique identifier representing the icon image used for this object.
+</td>
+  </tr>
+  <tr>
+     <td>Id</td>
+     <td>Guid</td>
+     <td>Unique Node ID.  This value is read only. Every node in the Grooper tree structure is identified by a GUID.
+</td>
+  </tr>
+  <tr>
+     <td>IsDirty</td>
+     <td>Boolean</td>
+     <td>Gets or sets a value indicating whether this node has been changed and needs to be
+written to the database.  Please note that value is set automatically when any properties of
+a node are changed.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns a boolean indicating whether the connected object is empty.
+</td>
+  </tr>
+  <tr>
+     <td>IsExportable</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node may be exported.
+</td>
+  </tr>
+  <tr>
+     <td>IsProduction</td>
+     <td>Boolean</td>
+     <td>Returns true if the batch is a production batch, or false if it is a test batch.
+</td>
+  </tr>
+  <tr>
+     <td>IsReadOnly</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node has the ReadOnly attribute set.
+</td>
+  </tr>
+  <tr>
+     <td>IsRoot</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node is the root node.
+</td>
+  </tr>
+  <tr>
+     <td>IsSystem</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node has the System attribute set.
+</td>
+  </tr>
+  <tr>
+     <td>IsWriteable</td>
+     <td>Boolean</td>
+     <td>Indicates whether this node is writable. To be writable, a node must not have the ReadOnly or System attribute set, and the current user must have Write access to it.
+</td>
+  </tr>
+  <tr>
+     <td>Item(Name As String)</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the child node with the provided name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the child node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Item(Index As Int32)</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the child node with the provided name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Index</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index of the child node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Locked</td>
+     <td>Boolean</td>
+     <td>Returns true if the node is locked.
+</td>
+  </tr>
+  <tr>
+     <td>LockedByMe</td>
+     <td>Boolean</td>
+     <td>Returns true if the node is locked by the current running process.
+</td>
+  </tr>
+  <tr>
+     <td>Name</td>
+     <td>String</td>
+     <td>The name of the node.  Names must be unique within the parent container node.  Use
+DisplayName when displaying in a user interface. Some object types generate the name displayed to users dynamically by overriding the
+DisplayName property.  For example, a BatchPage node uses the unique GUID Id as its actual name,
+but for display purposes uses its position within the parent folder to produce "Page 1",
+"Page 2", etc.    
+</td>
+  </tr>
+  <tr>
+     <td>NextNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>The sibling node following this node.
+</td>
+  </tr>
+  <tr>
+     <td>NodeIndex</td>
+     <td>Int32</td>
+     <td>The index of this node within the parent container.
+</td>
+  </tr>
+  <tr>
+     <td>NumChildren</td>
+     <td>Int32</td>
+     <td>The number of children this node contains.
+</td>
+  </tr>
+  <tr>
+     <td>ParentId</td>
+     <td>Guid</td>
+     <td>The ID of the parent node.  Use the ParentNode property to access the parent.
+</td>
+  </tr>
+  <tr>
+     <td>ParentNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the parent node.
+</td>
+  </tr>
+  <tr>
+     <td>Permissions</td>
+     <td>PermissionFlags</td>
+     <td>Returns permission flags for the current user on this node.
+A combination of the following flags:<br />
+<ul>
+<li><b>None</b></li>
+<li><b>Read</b></li>
+<li><b>Write</b></li>
+<li><b>Delete</b></li>
+<li><b>Execute</b></li>
+<li><b>FullControl</b></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>PgStatus</td>
+     <td>ProcessingStatus</td>
+     <td>The current status of the batch.
+Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: No status has been assigned.
+</li>
+<li><b>Ready</b>: Ready to be processed.
+</li>
+<li><b>Working</b>: Processing is in progress.
+</li>
+<li><b>Completed</b>: Processing is completed.
+</li>
+<li><b>Paused</b>: Processing has been paused.
+</li>
+<li><b>Error</b>: An error has occurred.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>PrevNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>The sibling node preceding this node.
+</td>
+  </tr>
+  <tr>
+     <td>Priority</td>
+     <td>Int32</td>
+     <td>The priority of the batch. The Priority value controls the order in which tasks are processed, with the value 1 representing the highest priority level, and the value 5 representing
+the lowest priority level. (i.e. Items of priority 1 are processed before items of Priority 2, and so on. The batch must be paused before this property can be edited.
+</td>
+  </tr>
+  <tr>
+     <td>PropertiesJson</td>
+     <td>String</td>
+     <td>Gets or sets the JSON string which contains the serialized properties for this node. Do not set this property unless you know what you are doing.
+</td>
+  </tr>
+  <tr>
+     <td>PropsDirty</td>
+     <td>Boolean</td>
+     <td>Gets or sets a value indicating whether the properties of this node have changes which should be written to the database
+on the next call to SaveChanges().
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../Grooper/GrooperRoot.htm'>GrooperRoot</a></td>
+     <td>Returns the root node
+</td>
+  </tr>
+  <tr>
+     <td>RowId</td>
+     <td>Int32</td>
+     <td>Unique identifier for the database row associated with this node.  This value is
+read only. A Grooper tree structure can make use of multiple database tables.  The Id value is
+a GUID that uniquely identifies the node globally.  The RowId is an integer identity value which
+uniquely identifies the row in a specific database table.
+</td>
+  </tr>
+  <tr>
+     <td>RowVersion</td>
+     <td>String</td>
+     <td>Unique value that indicates the version of the database row.  Used to detect changes
+written to the database by another process.  This value is read only.
+</td>
+  </tr>
+  <tr>
+     <td>ScriptNamespace</td>
+     <td>String</td>
+     <td>Returns the Script Namespace for the node.
+</td>
+  </tr>
+  <tr>
+     <td>StepNo</td>
+     <td>Int32</td>
+     <td>
+The step number this batch is currently processing through.
+
+</td>
+  </tr>
+  <tr>
+     <td>StepNumber</td>
+     <td>Int32</td>
+     <td>The current step of the batch process that this batch is on.
+</td>
+  </tr>
+  <tr>
+     <td>TopChildrenOfType(Type As Type)</td>
+     <td>IEnumerable(Of <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Returns the highest level nodes which have a TypeName matching the supplied parameter.
+Items of the supplied TypeName which are below another item of the same TypeName will not be
+returned.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to filter by.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>TotalFolders</td>
+     <td>Int32</td>
+     <td>Returns the total number of folders in the batch.
+</td>
+  </tr>
+  <tr>
+     <td>TotalPages</td>
+     <td>Int32</td>
+     <td>Returns the total number of pages in the batch.
+</td>
+  </tr>
+  <tr>
+     <td>TypeDisplayName</td>
+     <td>String</td>
+     <td>A human-readable name for the type of this node.
+</td>
+  </tr>
+  <tr>
+     <td>TypeName</td>
+     <td>String</td>
+     <td>The typename of the current node.  This property is read only. Type names are the name of the class inherited from GrooperNode.
+</td>
+  </tr>
+  <tr>
+     <td>ValueNames</td>
+     <td>IEnumerable(Of String)</td>
+     <td>Iterates through the list of value names associated with this node.
+</td>
+  </tr>
+  <tr>
+     <td>ValuesString</td>
+     <td>String</td>
+     <td>Gets JSON string which contains the serialized values for this node.
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AddNew() As Boolean</td>
+     <td>Writes this node to the database as a new row.
+</td>
+  </tr>
+  <tr>
+     <td>AppendNode(NewNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>) As Boolean</td>
+     <td>Appends a new node as child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AppendTextFile(FileName As String, Value As String)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ApplyBatchProcess(StartingStep As <a href='BatchProcessStep.htm'>BatchProcessStep</a>)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>StartingStep</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='BatchProcessStep.htm'>BatchProcessStep</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ApplyBatchProcess(Process As <a href='BatchProcess.htm'>BatchProcess</a>, StartingStep As <a href='BatchProcessStep.htm'>BatchProcessStep</a>)</td>
+     <td>Applies a batch process to this batch, optionally setting the starting step to a specific step in the process.
+The batch must be locked and paused before this function can be called.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Process</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='BatchProcess.htm'>BatchProcess</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The batch process to apply.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>StartingStep</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='BatchProcessStep.htm'>BatchProcessStep</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The optional starting step.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcAppendChild(NewNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, ipd As IProgressDisplay) As Boolean</td>
+     <td>Appends the specified node as a child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to append to the child list.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcAppendChildren(NewNodes As IEnumerable, ipd As IProgressDisplay) As Boolean</td>
+     <td>Appends the specified items as a children of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNodes</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcDeleteChild(Id As Guid, ipd As IProgressDisplay) As Boolean</td>
+     <td>Deletes the specified child node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Id</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the node to delete.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Progress display object.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcDeleteChildren(Ids As IEnumerable, ipd As IProgressDisplay) As Boolean</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Ids</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcInsertChild(NewNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, InsertIndex As Int32) As Boolean</td>
+     <td>Appends the specified node as a child of this node at a specific position.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to insert.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>InsertIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index at which the node should be inserted.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcMove(NewParent As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, InsertIndex As Int32) As Boolean</td>
+     <td>Moves the node to a new parent, optionally inserting it at a specifix index.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewParent</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The new parent node.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>InsertIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index at which the node should inserted.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CcRenameChild(Id As Guid, NewName As String, EnsureUnique As Boolean) As Boolean</td>
+     <td>Renames the child node with the specified ID.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Id</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the node to rename.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>NewName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The new name.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>EnsureUnique</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If set to true, a unique name will be automatically generated if needed.  If set to false, and the provided
+name is already in use, an error will be generated.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ChangeBatchStatus(Status As ProcessingStatus, LogStatusChange As Boolean) As Boolean</td>
+     <td>Deletes all incomplete tasks, updates the batch status, and submits tasks for the current
+step, if the status is being changed to Ready. If the current batch status equals the passed parameter value, no work is done.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Status</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: ProcessingStatus</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status to update the batch to. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: No status has been assigned.
+</li>
+<li><b>Ready</b>: Ready to be processed.
+</li>
+<li><b>Working</b>: Processing is in progress.
+</li>
+<li><b>Completed</b>: Processing is completed.
+</li>
+<li><b>Paused</b>: Processing has been paused.
+</li>
+<li><b>Error</b>: An error has occurred.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>LogStatusChange</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ChangeFileStore(NewFileStore As <a href='../Grooper/FileStore.htm'>FileStore</a>) As Int32</td>
+     <td>Moves the files for this node to the indicated filestore.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewFileStore</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/FileStore.htm'>FileStore</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The new file store.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Clear()</td>
+     <td>Removes a value from this node.
+</td>
+  </tr>
+  <tr>
+     <td>ClearValue(ValueName As String)</td>
+     <td>Removes a value from this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the value to remove.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Clone(gdbDst As GrooperDb, KeepId As Boolean) As GrooperNode</td>
+     <td>Creates a clone of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>gdbDst</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>KeepId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CloneBranch(gdbDst As GrooperDb, ipd As IProgressDisplay, KeepIds As Boolean) As GrooperNode</td>
+     <td>Clones this branch of the tree. Not all objects can be cloned.  Please check the CanClone property before calling
+this method.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>gdbDst</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>KeepIds</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Complete() As Boolean</td>
+     <td>Complete this step of the BatchProcess and move to the next, or complete
+the batch if this is the last step.
+</td>
+  </tr>
+  <tr>
+     <td>ContainsId(Id As Guid) As Boolean</td>
+     <td>Determines if a node with the specified Id value is present as an immediate child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Id</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Id to search for.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ContainsName(Name As String) As Boolean</td>
+     <td>Determines if a node with the specified name is present as an immediate child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Id to search for.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CopyFileTo(SrcFileName As String, DstNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, DstFileName As String) As Boolean</td>
+     <td>Copies a file from this node to another GrooperNode.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>SrcFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename to copy.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>DstNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The destination node.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>DstFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The destination filename.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>CopyPropertiesFrom(Node As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>)</td>
+     <td>Copies the properties from another GrooperNode.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Node</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Delete() As Boolean</td>
+     <td>Deletes all tasks associated with this batch.
+</td>
+  </tr>
+  <tr>
+     <td>DeleteAllFiles() As Boolean</td>
+     <td>Deletes all files associated with this node.
+</td>
+  </tr>
+  <tr>
+     <td>DeleteAllStats()</td>
+     <td>Deletes all Custom Stats and Session data associated with this batch.
+</td>
+  </tr>
+  <tr>
+     <td>DeleteAllTasks()</td>
+     <td>Deletes all tasks associated with this batch.
+</td>
+  </tr>
+  <tr>
+     <td>DeleteFile(FileName As String, IgnoreErrors As Boolean) As Boolean</td>
+     <td>Deletes a file associated with this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename under which the file was previously stored.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>IgnoreErrors</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>DeletePendingTasks()</td>
+     <td>Deletes all Processing Tasks whose status is Ready.
+</td>
+  </tr>
+  <tr>
+     <td>DeleteUncompletedTasks()</td>
+     <td>Deletes all Processing Tasks whose status is Paused or Working.
+</td>
+  </tr>
+  <tr>
+     <td>DisableScript()</td>
+     <td>Disables the script associated with this node by deleting the compiled assemblies. Re-compile the script to re-enable it.
+</td>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FileEntryExists(FileName As String) As Boolean</td>
+     <td>Determines if file entry exists with the specified name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the file.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FileEntryExists(FileId As Guid) As Boolean</td>
+     <td>Determines if a file entry exists with the specified file ID.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the file.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetActiveTaskCount() As Int32</td>
+     <td>Returns the quantity of tasks for this batch whose status is Ready or Working.
+</td>
+  </tr>
+  <tr>
+     <td>GetAncestor(LevelsAbove As Int32) As GrooperNode</td>
+     <td>Returns the ancestor node a specific number of levels above this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>LevelsAbove</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of levels.  A value of 1 will return the parent of this node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetAncestorOfType(Type As Type) As GrooperNode</td>
+     <td>Returns the first ancestor up the tree which has the indicated type, or which derived from the indicated type. Developed for use by the BatchPage object to locate its parent Batch object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of GrooperNode object to find.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetBranchReferences() As Dictionary`2</td>
+     <td>Returns a complete list of all references to this node, and any references to any of
+this node's children.
+</td>
+  </tr>
+  <tr>
+     <td>GetBranchReferencesToMe() As List`1</td>
+     <td>Returns a complete list of all references to this node, and any references to any of
+this node's children.
+</td>
+  </tr>
+  <tr>
+     <td>GetDisplayPathFrom(Ancestor As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>) As String</td>
+     <td>Returns a string representing the path (made from display names) between this node and
+an ancestor node above it in the tree structure.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Ancestor</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to calculate a path from.  This node must be an ancestor
+of the current node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetEventHistory() As List`1</td>
+     <td>Returns the event history for this node.
+</td>
+  </tr>
+  <tr>
+     <td>GetFileEntry(FileName As String) As ContentFile</td>
+     <td>Retrieves a file entry by name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the file.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetFileEntry(FileId As Guid) As ContentFile</td>
+     <td>Retrieves a file entry by file ID.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the file.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetHistory() As DataTable</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>GetLastError() As String</td>
+     <td>Returns the last error message which was set with SetLastError() or WriteToLog().
+</td>
+  </tr>
+  <tr>
+     <td>GetLevelsBelow(Type As Type) As Int32</td>
+     <td>Gets the number of levels between this node and a node above it of a specific type.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node type to measure from.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetLevelsBelow(Node As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>) As Int32</td>
+     <td>Gets the number of levels between this node and a specific ancestor node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Node</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to measure from.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetLock() As NodeLock</td>
+     <td>Otains the lock object for this node.
+</td>
+  </tr>
+  <tr>
+     <td>GetNodeById(IdToFind As Guid) As GrooperNode</td>
+     <td>Finds a node with the specified Id value.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>IdToFind</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The unique Id value to find.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetPathFrom(Ancestor As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>) As String</td>
+     <td>Returns a string representing the path between this node and an ancestor node
+above it in the tree structure.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Ancestor</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to calculate a path from.  This node must be an ancestor
+of the current node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetPathFromRoot() As String</td>
+     <td>Returns a string representing the path between this node the root node.
+</td>
+  </tr>
+  <tr>
+     <td>GetPathTypesFromRoot() As String</td>
+     <td>Returns a string representing the path types between this node and the root node. This is used to identify the Type of each part of the Path.
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetReferencesToMe() As List`1</td>
+     <td>Returns a list of references to this node.
+</td>
+  </tr>
+  <tr>
+     <td>GetShadowNode() As ShadowNode</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>GetTaskCount(Status As ProcessingStatus) As Int32</td>
+     <td>Returns the quantity of tasks for this batch whose status equals the passed status value.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Status</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: ProcessingStatus</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetTaskInfo() As Dictionary`2</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>GetUniqueName(BaseName As String) As String</td>
+     <td>Creates a unique name for a child node, starting from a base name and adding a number at the end if needed.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>BaseName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The base name.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetValue(ValueName As String) As TheType</td>
+     <td>Reads a serialized JSON object from a value.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value name under which the object was previously stored.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetValue(ValueName As String) As String</td>
+     <td>Reads a string value from this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value name under which the string was previously stored.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>HasBeenDeleted() As Boolean</td>
+     <td>Determines if the database row associated with this node has been deleted by another process since the time it was read.
+</td>
+  </tr>
+  <tr>
+     <td>HasChanged() As Boolean</td>
+     <td>Determines if the database row associated with this node has been modified by another
+process since the time it was read.
+</td>
+  </tr>
+  <tr>
+     <td>HasValue(ValueName As [String&], SearchOption As ValuenameOptions) As Boolean</td>
+     <td>Determines if a value exists on this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [String&]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the value to check.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>SearchOption</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: ValuenameOptions</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>InitScript() As Boolean</td>
+     <td>Initializes the script associated with this node. Uses Root.DebugMode to determine whether to load the script DLL with debug symbols
+(PDB file).  Currently Root.DebugMode is only set on GrooperAdmin when it is launched from the
+ScriptManager tab with a /debug command-line parameter.
+</td>
+  </tr>
+  <tr>
+     <td>InsertNode(NewNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, InsertIndex As Int32) As Boolean</td>
+     <td>Inserts a node as a child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to insert.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>InsertIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The index at which the item should be inserted, or the constant
+GrooperNode.Append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>InsertNode(NewNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, im As InsertMethod) As Boolean</td>
+     <td>Inserts a node as a child of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to insert.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>im</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: InsertMethod</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The insert method.Can be one of the following values:<br />
+<ul>
+<li><b>None</b></li>
+<li><b>PeerBefore</b>: Insert before this node as a peer node.
+</li>
+<li><b>PeerAfter</b>: Insert after the this node as a peer node.
+</li>
+<li><b>ChildAppend</b>: Append as last child of this node.
+</li>
+<li><b>ChildPrepend</b>: Prepend as first child of this node.
+</li>
+</ul>
+</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsDescendantOf(Node As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>) As Boolean</td>
+     <td>Determines if the specified node is an ancestor of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Node</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The node to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsDescendantOf(Type As Type) As Boolean</td>
+     <td>Determines if a node with the specified type or deriving from the specified type is an ancestor of this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ItemsInScope(bps As <a href='BatchProcessStep.htm'>BatchProcessStep</a>) As IEnumerable`1</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>bps</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='BatchProcessStep.htm'>BatchProcessStep</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LoadFile(FileName As String) As ContentStream</td>
+     <td>Loads a file as a stream.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename to read.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LoadFileObject(FileName As String, AdditionalTypes As IEnumerable) As TheType</td>
+     <td>Loads a JSON-serialized object from the file store.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filename the object was previously stored under.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AdditionalTypes</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LoadImage(FileName As String) As GrooperImage</td>
+     <td>Loads an image from the specified filename.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LoadPropertyJson() As String</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>LoadTextFile(FileName As String) As String</td>
+     <td>Loads a text file from the file store.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename under which the file was previously saved.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Lock(ProcedureName As String, ReloadIfChanged As Boolean) As Boolean</td>
+     <td>Attempts to obtain an exclusive lock on the node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ProcedureName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the procedure requesting the lock.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ReloadIfChanged</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true, the node will be checked to see if it has change since it was read from the database.  If so, it will be reloaded.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Move(NewParent As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, InsertIndex As Int32) As Boolean</td>
+     <td>Moves this node from its current location in the tree structure to a new location. The node will be renamed if necessary to ensure uniqueness.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewParent</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The parent node that this node should be moved to.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>InsertIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The index at which the item should be inserted, or the constant
+GrooperNode.Append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>MoveFile(FileName As String, TargetNode As <a href='../Grooper/GrooperNode.htm'>GrooperNode</a>, AllowOverwrite As Boolean) As Boolean</td>
+     <td>Moves a file from this node to the passed target node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>TargetNode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AllowOverwrite</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>NameIsConflict(NewName As String) As Boolean</td>
+     <td>Determines if renaming this node to the specified value will create a name conflict with
+another node in the same parent container.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>NewChild(NewType As Type, Name As String) As GrooperNode</td>
+     <td>Creates a new child node with the specified type and appends it to the current node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>NewType</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of the new node.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the new node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>NodeFromPath(Path As String, FromRoot As Boolean) As GrooperNode</td>
+     <td>Finds a child node using a path string.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Path</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A GrooperNode object, or Null/Nothing if the path is not found.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>FromRoot</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true, then search from root, otherwise search from the current node.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>PathExists(Path As String) As Boolean</td>
+     <td>Determines if a node exists for a specific path.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Path</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The path to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>PauseProcessing()</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>PurgeBatch(Items As IEnumerable, ipd As IProgressDisplay)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Items</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ipd</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IProgressDisplay</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Reload(ReloadChildren As Boolean) As Boolean</td>
+     <td>Reloads this node from the database.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ReloadChildren</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Remove()</td>
+     <td>Removes this node and marks it for deletion on the next call to GrooperDb.SaveChanges().
+</td>
+  </tr>
+  <tr>
+     <td>RenameFile(OldFileName As String, NewFileName As String) As Boolean</td>
+     <td>Renames a file associated with this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>OldFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The current filename.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>NewFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The new filename.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ResetSpecificSteps(Steps As IEnumerable, ResetCompleted As Boolean, ResetErrors As Boolean)</td>
+     <td>Deletes all tasks for each step included in the passed collection.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Steps</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ResetCompleted</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ResetErrors</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ResumeProcessing(BatchIsFullyLoaded As Boolean) As Boolean</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>BatchIsFullyLoaded</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SaveFile(Stream As Stream, MimeType As String, DstFileName As String, AllowOverwrite As Boolean)</td>
+     <td>Saves a file from a stream to Grooper.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Stream</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Stream</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>MimeType</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>DstFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AllowOverwrite</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SaveFileObject(FileName As String, Item As TheType, AdditionalTypes As IEnumerable, AllowOverwrite As Boolean)</td>
+     <td>Saves an object to the file store using JSON serialization.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename to store the object under.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: TheType</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to be stored.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AdditionalTypes</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AllowOverwrite</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SaveImageFile(Image As GrooperImage, DstFileName As String, AllowOverwrite As Boolean)</td>
+     <td>Save an image file on this node under the specified filename.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Image</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperImage</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The image to save.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>DstFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename under which to save the image.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AllowOverwrite</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If set to false, the method will fail if a file with the same name already exists.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SaveTextFile(DstFileName As String, TextContent As String, MimeType As String, AllowOverwrite As Boolean)</td>
+     <td>Saves text data to a file in the file store.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>DstFileName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The filename to store the file under.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>TextContent</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The text content to save.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>MimeType</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The MIME type to associate with the data.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>AllowOverwrite</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Serialize() As String</td>
+     <td>Serializes this node to JSON.
+</td>
+  </tr>
+  <tr>
+     <td>SetBranchAttributes(Value As NodeAttributes)</td>
+     <td>Sets the attributes on this node and all nodes below it.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: NodeAttributes</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attributes to set. A combination of the following flags:<br />
+<ul>
+<li><b>Clear</b>: Removes all flags.
+</li>
+<li><b>ReadOnly</b>: Users cannot modify the item directly.
+</li>
+<li><b>ContentsReadOnly</b>: Users cannot modify the children of this node.
+</li>
+<li><b>ContentsSorted</b>: The children of this node will be sorted by name.
+</li>
+<li><b>HasACL</b>: Indicates whether this node has an Access Control List attached to it.
+</li>
+<li><b>System</b>: Indicates whether this node is a system object.
+</li>
+</ul>
+</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetDatabase(Database As GrooperDb)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Database</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetValue(ValueName As String, Value As TheType)</td>
+     <td>Saves an object to a value using JSON serialization.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value name to store the object under.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: TheType</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to store.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetValue(ValueName As String, Value As String)</td>
+     <td>Saves a string value to this node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ValueName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value name under which to store the string.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The string to store.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetValues(Values As [Dictionary`2])</td>
+     <td>Saves multiple values.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Values</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [Dictionary`2]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SortChildren()</td>
+     <td>Sorts the children of this node on name.
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns the display name for the node.
+</td>
+  </tr>
+  <tr>
+     <td>TryLock(ProcedureName As String, ReloadIfChanged As Boolean) As Boolean</td>
+     <td>Attempts a single time to lock the node.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ProcedureName</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the procedure requesting the lock.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ReloadIfChanged</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true, the node will be checked to see if it has change since it was read from the database.  If so, it will be reloaded.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Unload()</td>
+     <td>Unloads the children of this node.  Call this method to free up the memory associated
+with large branches of the tree.
+</td>
+  </tr>
+  <tr>
+     <td>Unlock() As Boolean</td>
+     <td>Unlocks a previously locked node.
+</td>
+  </tr>
+  <tr>
+     <td>Update() As Boolean</td>
+     <td>Updates the database row associated with this node with any fields which have been
+changed. Uses BuildSetClause() to construct a SQL SET clause from the flags contained in
+DirtyFields.   
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+  <tr>
+     <td>WriteToLog(Type As EventType, Message As String, pa() As Object)</td>
+     <td>Writes an entry to the log table in the database.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: EventType</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of event to log. A combination of the following flags:<br />
+<ul>
+<li><b>Err</b>: Errors - Critical error messages.
+</li>
+<li><b>Wrn</b>: Warnings - Non-critical warning messages.
+</li>
+<li><b>Prc</b>: Procedural - Tracing of procedural calls. <i>NOTE: Enabling this option can generate large volumes of log entries. Use only during troubleshooting.</i>
+</li>
+<li><b>Inf</b>: Information - Detailed information logging. <i>NOTE: Enabling this option can generate large volumes of log entries. Use only during troubleshooting.</i>
+</li>
+<li><b>Aud</b>: Audit - Audit trail events such as batch creation, object deletion, etc.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Message</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The message, or message format.  Uses String.Format syntax.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>pa</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parameters for String.Format</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>WriteToLog(ex As Exception, Message As String, pa() As Object)</td>
+     <td>Writes an error to the Grooper event log, using the stack trace from the provided exception and the specified message.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Exception</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The exception.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Message</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The message to log.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>pa</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String.Format() params.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>WriteToLog(ex As Exception)</td>
+     <td>Writes an error to the Grooper event log, using the stack trace and message contained the provided exception.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>ex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Exception</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The exception to log.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.GrooperNode_AddMultipleItems.png' height='16' width='16' /></td>
+    <td>Add Multiple Items</td>
+    <td>Creates multiple items as children of the selected object.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Item Type</td>
+    <td>The type of item to create. One child item of this type will be created for each name specified in the Item Names property.
+</td>
+  </tr>  <tr>    <td>Item Names</td>
+    <td>The names of the child items to create. For each name provided in the list, a child item of the specified Item Type will be created.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.GrooperNode_ClearChildren.png' height='16' width='16' /></td>
+    <td>Clear Children</td>
+    <td>Deletes all children of the selected object(s).
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_CloneToProduction.png' height='16' width='16' /></td>
+    <td>Clone To Production</td>
+    <td>Clones the batch into production, and launches it into a <a href='BatchProcess.htm'>Batch Process</a>.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Target Step</td>
+    <td>The target step of the <a href='BatchProcess.htm'>Batch Process</a> where the batch will be started.
+</td>
+  </tr>  <tr>    <td>Start Paused</td>
+    <td>If set to true, the batch will start with a paused status.  Otherwise the batch will begin processing immediately.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_CloneToTest.png' height='16' width='16' /></td>
+    <td>Clone To Test</td>
+    <td>Clones this production batch to the 'Production Clones' folder of the test branch.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.GrooperNode_ExportToArchive.png' height='16' width='16' /></td>
+    <td>Export to Compressed Archive</td>
+    <td>Exports a set of Grooper nodes to a ZIP archive.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Archive Name</td>
+    <td>Name of the Zip Archive to be created.
+</td>
+  </tr>  <tr>    <td>Archive Path</td>
+    <td>Path to Publish the Archive to.
+</td>
+  </tr>  <tr>    <td>Archive Password</td>
+    <td>Password to use when creating the Zip Archive If the password is set, then the archive will be encrypted using it, otherwise the archive will be unencrypted.
+</td>
+  </tr>  <tr>    <td>Export Nodes</td>
+    <td>List of Grooper Nodes to be Published.
+</td>
+  </tr>  <tr>    <td>Show Ellipses</td>
+    <td>specifies whether elipses (...) will be shown after the command name on context menus.  By default, this property will return true if the command has
+configurable properties, or if the command has the RequiresUIAttribute applied.  Derived classes may override this property to exercise direct control over
+whether ellipses will be displayed.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_Pause.png' height='16' width='16' /></td>
+    <td>Pause</td>
+    <td>Set the batch to a paused state.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.GrooperNode_PublishToRepository.png' height='16' width='16' /></td>
+    <td>Publish to Grooper Repository</td>
+    <td>Publishes a set of Grooper Nodes to a Target Grooper Repository.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Target Repository</td>
+    <td>Grooper Repository to Publish to.
+</td>
+  </tr>  <tr>    <td>Export Nodes</td>
+    <td>List of Grooper Nodes to be published.
+</td>
+  </tr>  <tr>    <td>Publish as Read Only</td>
+    <td>If true, then exported nodes will be Read Only in the Target Repository.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_Resume.png' height='16' width='16' /></td>
+    <td>Resume</td>
+    <td>Resumes processing on the batch at the current step.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_UpdateProcess.png' height='16' width='16' /></td>
+    <td>Update Process</td>
+    <td>Updates the <a href='BatchProcess.htm'>Batch Process</a> associated with this batch to the latest published version, and assigns a starting <a href='BatchProcessStep.htm'>Batch Process Step</a>.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Target Step</td>
+    <td>The <a href='BatchProcessStep.htm'>Batch Process Step</a> where the batch should begin processing. The batch will be updated to use the latest published version of the parent <a href='BatchProcess.htm'>Batch Process</a>.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.Core.Batch_ViewXML.png' height='16' width='16' /></td>
+    <td>View XML</td>
+    <td>Opens the selected batch in an XML view. Useful for comparing a batch to its control before and after changes are made.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

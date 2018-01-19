@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Contrast Stretch</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nColor Adjustment\nContrast Stretch");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Adjust_Saturation.htm\">Color Adjustment<\/a> > Contrast Stretch<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.ContrastStretch.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Contrast Stretch</h1></td>
+<table>
+</tr>
+</table>
+Adjusts the contrast of an image so that the lightest pixels are 100% white, and darkest pixels are 100% black.
+
+Normalizes the contrast in an image, as shown the in example below.
+<p><svg width="240" height="170"><rect x="0" y="0" width="100" height="150" stroke="rgb(128,128,128)" fill="rgb(240,240,240)" /><text x="10" y="20" font-size="16" font-weight="bold" fill="rgb(128,128,128)">Document</text><rect x="120" y="0" width="100" height="150" stroke="rgb(0,0,0)" fill="rgb(255,255,255)" /><text x="130" y="20" font-size="16" font-weight="bold" fill="rgb(0,0,0)">Document</text></svg></p>
+
+<br/><br/><b>Inherits from:</b> <a href='../../IP_Command_Types/IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Black Threshold</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a>, Default: 5pt</td></tr>
+   <tr><td>The minimum amount of black area required to establish the black point.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Black Limit</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 20%, Range: 0% - 100%</td></tr>
+   <tr><td>The maximum percentage by which the black point will be adjusted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>White Limit</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 20%, Range: 0% - 100%</td></tr>
+   <tr><td>The maximum percentage by which the white point will be adjusted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

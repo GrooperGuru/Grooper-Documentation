@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>ApplicationXtender CMIS Server</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nService Instance Types\nApplicationXtender CMIS Server");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Service_Instance_Types.htm\">Service Instance Types<\/a> &gt; ApplicationXtender CMIS Server<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>ApplicationXtender CMIS Server</h1>
+Exposes an EMC ApplicationXtender repository over CMIS.
+
+For a specific AX data source, exposes each of the AX applications as a CMIS repository.  Each repository has a single content type
+with properties matching the field layout of the corresponding AX application.
+
+<br/><br/><b>Inherits from:</b> Web Service<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>AppXtender Connection</td>
+  </tr>
+  <tr>    <td>AX Web Services URL</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The URL for an instance of ApplicationXtender Web Services.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>AX Data Source Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The ApplicationXtender Data Source name to use for this CMIS Service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Use Windows Credentials</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, the service will connect to AX Web Services using the Windows credentials under which the service is running.  Otherwise,
+an anonymous connection will be created. If Windows security is used to control access to the AX Web Services URL, this option must be enabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Connection Time Out</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The timeout, in seconds, for calls from this service instance to AppXtender Web Services.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Load Timeout</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The timeout, in seconds, for generating the content stream for an individual document. This value represents the total amount of time a document render or a direct page export operation
+may take before a timeout error is generated.  If large documents are being extracted from the AppXtender
+repository, it may be necessary to increase this value. 
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Document Rendering</td>
+  </tr>
+  <tr>    <td>Rendering Mode</td>
+    <td><table>
+   <tr><td>Type: RenderingMode, Default: ImageOnly</td></tr>
+   <tr><td>Controls how document content is extracted from ApplicationXtender. Can be one of the following values:<br />
+<ul>
+<li><b>ImageOnly</b>: All documents will be returned as multipage TIFF images. In this mode, all documents will be reported to have a MIME type of image/tiff. In the case where all pages of a document are image-based types, the
+document's content stream will be a multi-page TIFF containing all pages of the document.  PDF documents and text files will be automatically converted to images.
+For all others types of pages, such as AX foreign files, a placeholder image will be generated to represent the page.
+</li>
+<li><b>Native</b>: Documents will be returned in their native format. In this mode, the MIME type for each document is determined examining individual pages. Use this mode when it is necessary interchange electronic documents
+between Grooper and ApplicationXtender.  Please note that when Native mode is enabled, determining the MIME type for a document can be a time-consuming operation
+which slows down query operations.  This is due to the fact that in AX, the MIME type associated with a document can only be determined by reading the header of
+each content file - an operation which adds time to queries requesting cmis:contentStreamMimeType, cmis:contentStreamFileName, or cmis:contentStreamLength.
+</li>
+<li><b>RenderServer</b>: AX Render Server will be used to render documents to TIFF or PDF, based on the value of the 'Render Format' property. Use this mode when it is necessary to include AX annotations on the images ingested to Grooper, or to render AX COLD documents.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Format</td>
+    <td><table>
+   <tr><td>Type: FileType, Default: PDF</td></tr>
+   <tr><td>Indicates the file format to be requested from AX Render Server. Can be one of the following values:<br />
+<ul>
+<li><b>PDF</b>: Slower performance, but can convert foreign file formats.
+</li>
+<li><b>TIF</b>: Faster performance, but cannot convert foreign file formats.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Annotations</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, ApplicationXtender annotations will be rendered.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Form Overlay Mode</td>
+    <td><table>
+   <tr><td>Type: FormOverlayType, Default: None</td></tr>
+   <tr><td>The form overlay mode to be used when rendering COLD documents. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: No form overlay.
+</li>
+<li><b>Image</b>: Image-based form overlay.
+</li>
+<li><b>Text</b>: Text-based form overlay.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Generate Error Page Image</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, an error page will be generated when an AX document page cannot be retrieved from the AX Web Service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Document Save Options</td>
+  </tr>
+  <tr>    <td>Merge Action</td>
+    <td><table>
+   <tr><td>Type: MergeAction, Default: None</td></tr>
+   <tr><td>Controls whether documents are added as new documents, or merged with existing documents based on matching index values. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: All documents will be added as new ApplicationXtender documents.
+</li>
+<li><b>Append</b>: Adds the current document's pages to the end of the existing document in ApplicationXtender.
+</li>
+<li><b>Prepend</b>: Inserts the current document's pages to the beginning of the existing document in ApplicationXtender.
+</li>
+</ul>
+ This feature requires that the target AX Application have the 'Part of Unique Key' flag enabled on at least one index field. Fields with this flag
+enabled will be used in a query prior to each document being exported. If a document is returned, the export will append/pre-pend the current Grooper document.
+Otherwise, a new document will be exported.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Submit Full Text Job</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>New or modified documents will be submitted to the full text index server configured for ApplicationXtender. This option requires the user account configured for the service's login, have administrative privileges on the repository server.
+An exception will be thrown if this method is called by an account without administrative privileges.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Full Text Job Queue Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The name of the ApplicationXtender Full Text Job Queue to which documents should be submitted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Direct Database Connection</td>
+  </tr>
+  <tr>    <td>Enable Direct Database Connection</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Enable a direct connection to the ApplicationXtender MS SQL database. A direct database connection will improve performance when performing CMIS queries against a repository, and during Grooper Batch importing.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Connection</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td></tr>
+   <tr><td>A Grooper Data Connection to the ApplicationXtender MS SQL database. Grooper Data Connections are created in Grooper Administration within the Infrastructure Folder.
+(See <a href='../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Web Service Settings</td>
+  </tr>
+  <tr>    <td>Connection URL</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Convenience string property containing the full URL path for this web service. The URL path is constructed by combining the Host Name, Port Number and URL Path property values and observing the HTTPS Enabled property.
+For example, this property's string value can easily be copied to the clipboard, and pasted into the URL property for a <a href='../Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>HTTPS Enabled</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Controls whether the HTTPS protocol is enabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Host Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The host name to be used for this web service instance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Port Number</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The port number to be used for the web service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>URL Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The web server path on which the CMIS server should be hosted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Enable Debugging</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Controls whether exception detail is returned by this web service when an exception occurs.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Service Settings</td>
+  </tr>
+  <tr>    <td>Repository</td>
+    <td><table>
+   <tr><td>Type: <a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+   <tr><td>The repository to which this service instance in bound. Service instances are bound permanently to a Grooper repository.  To change to repository, delete the service instance and reinstall it using the desired repository.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Service Display Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The display name for the service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Thread Priority</td>
+    <td><table>
+   <tr><td>Type: ThreadPriority, Default: Lowest</td></tr>
+   <tr><td>The priority level with which threads will be created. Can be one of the following values:<br />
+<ul>
+<li><b>Lowest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with any other priority.
+</li>
+<li><b>BelowNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Normal priority and before those with Lowest priority.
+</li>
+<li><b>Normal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with AboveNormal priority and before those with BelowNormal priority. Threads have Normal priority by default.
+</li>
+<li><b>AboveNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Highest priority and before those with Normal priority.
+</li>
+<li><b>Highest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled before threads with any other priority.
+</li>
+</ul>
+ If the service is running on a workstation, a priority lower than normal will help prevent the service from impacting the user interface responsiveness.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>User Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The user account under which the service should run. The account specified must:
+<ul><li>Have the Logon as Service permission on the machine on which the service is to run.</li><li>Have access to the Grooper database, if Windows security is being used for SQL connections.</li><li>Have access to the Grooper file store location.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Password</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The password for the user account under which the service should run.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td></tr>
+<tr><td><a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Train Lexicon</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nMiscellaneous\nTrain Lexicon");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"CMIS_Batch_Transfer.htm\">Miscellaneous<\/a> &gt; Train Lexicon<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Activities.TrainLexicon.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Train Lexicon</h1></td>
+<table>
+</tr>
+</table>
+Executes an extractor and populates a <a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> with the results.
+
+<br/><br/><b>Inherits from:</b> Unattended Activity<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Lexicon</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td></tr>
+   <tr><td>The <a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> to be trained.
+(See <a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>Defines an extractor which will be used to define the values available to train the <a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a>.
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scope</td>
+    <td><table>
+   <tr><td>Type: TrainingScope, Default: Document</td></tr>
+   <tr><td>Indicates the scope against which the extractor should be executed. Can be one of the following values:<br />
+<ul>
+<li><b>Document</b>: The extractor will be executed against the full document content.
+</li>
+<li><b>DataElement</b>: The extractor will be executed against the content of a <a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a>.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Scope</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>Indicates a maximum number of pages from each document to be trained. A value of zero indicates unlimited pages.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Element</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a></td></tr>
+   <tr><td>When Scope is set to 'DataElement', indicates the DataElement against which the extractor will be run.
+(See <a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+<tr><td><a href='../../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Viewer</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper™ Core Library\nControls\nBatch Viewer");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> > <a href=\"../Forms/Adjust_Binary_Image_Dialog.htm\">Grooper™ Core Library<\/a> > <a href=\"Batch_Details_Viewer.htm\">Controls<\/a> > Batch Viewer<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Batch Viewer</h1>
+<p>Displays the contents of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> in a hierarchical folder view. The Batch Viewer control is used throughout Grooper to display and edit the contents of a batch.
+</p>
+<p><img src='..\..\..\images\ScreenShots\Grooper.Core.BatchViewer.jpg' class='ScreenShotBorder' /></p>
+<h2>Context Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>
+     <th>&nbsp;</th>
+     <th>Command Name</th>
+     <th>Shortcut Keys</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Copy.png' /></td>
+     <td>Copy</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+C</td>
+     <td>Copies the selected object(s) to the Windows clipboard.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Cut.png' /></td>
+     <td>Cut</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+X</td>
+     <td>Cuts the selected object(s) to the Windows clipboard.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Delete.png' /></td>
+     <td>Delete</td>
+     <td style='text-align:center; vertical-align:middle;'>Del</td>
+     <td>Deletes the selected object(s).
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Move_Down.png' /></td>
+     <td>Move Down</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Down</td>
+     <td>Move the selected item down.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Move_Up.png' /></td>
+     <td>Move Up</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Up</td>
+     <td>Move the selected item up.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Paste.png' /></td>
+     <td>Paste</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+V</td>
+     <td>Pastes the contents of the Windows clipboard as children of the currenlty selected folder.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer.Properties.png' /></td>
+     <td>Properties...</td>
+     <td style='text-align:center; vertical-align:middle;'>F12</td>
+     <td>Display the properties for the currenly selected object.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Shortcut Keys</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_AddSelection.png' height='16' width='16' /></td>
+    <td>Add Selection to New Folder</td>
+    <td style='text-align:center; vertical-align:middle;'>Shift+Ins</td>
+    <td>Creates a new folder and moves all the selected <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a> inside it.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_AdjustImage.png' height='16' width='16' /></td>
+    <td>Adjust Image</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+A</td>
+    <td>Displays a UI allowing the user to edit the display properties of the image. For black and white images, the threshold may be adjusted.  For grayscale and color images, the brightness and contrast may be adjusted.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_AppendToPrevious.png' height='16' width='16' /></td>
+    <td>Append to Previous</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+P</td>
+    <td>Append the selected object(s) to the previous folder. If the selected object is a folder, the contents of the selected folder will be appended to the previous folder, and the
+selected folder will be removed. If the selected object is one or more pages, the pages will be appended to the end of the previous folder.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ImageReview_ApplyCleanup.png" height="16" width="16" /></td>
+    <td>Apply Image Cleanup</td>
+    <td style='text-align:center; vertical-align:middle;'>Alt+I</td>
+    <td>Applies an <a href='../../../Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to one or more pages.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>IP Profile</td>
+    <td>The <a href='../../../Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to execute.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_CropImage.png' height='16' width='16' /></td>
+    <td>Crop</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+P</td>
+    <td>Crop Image. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_DeskewImage.png' height='16' width='16' /></td>
+    <td>Deskew</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+D</td>
+    <td>Deskew Image. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_GotoNextFlaggedItem.png' height='16' width='16' /></td>
+    <td>Go To Next Flagged Item</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+G</td>
+    <td>Moves the focused item to the first flagged page of the batch (if any).
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Activities.ImageReview_MarkAsReviewed.png' height='16' width='16' /></td>
+    <td>Mark As Reviewed</td>
+    <td style='text-align:center; vertical-align:middle;'>None</td>
+    <td>Marks one or more pages as reviewed.  If the page was previously flagged, the flag will be removed.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_NewFolder.png' height='16' width='16' /></td>
+    <td>New Folder</td>
+    <td style='text-align:center; vertical-align:middle;'>Ins</td>
+    <td>Adds a new <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Core.BatchViewer_SplitFolder.png' height='16' width='16' /></td>
+    <td>Split Folder</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+S</td>
+    <td>Splits the content of the parent folder at the currently selected node, moving all items from the selected node to the end of the folder into a new folder.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\..\images\CommandIcons\Grooper.Activities.ImageReview_Unmark.png' height='16' width='16' /></td>
+    <td>Unmark</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+U</td>
+    <td>Marks one or more pages as reviewed.  If the page was previously flagged, the flag will be removed.
+
+
+</td>
+</tr>
+</table>
+
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

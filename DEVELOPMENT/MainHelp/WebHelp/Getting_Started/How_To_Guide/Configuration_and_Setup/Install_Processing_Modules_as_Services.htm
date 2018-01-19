@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Install Processing Modules as Services</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nConfiguration and Setup\nInstall Processing Modules as Services");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Install_a_Stand-Alone_Instance_of_Grooper.htm\">Configuration and Setup<\/a> &gt; Install Processing Modules as Services<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Install a Processing Module as a Service</h1>
+<p>This guide demonstrates how to install a processing module such as Full Text OCR, Image Processing, Extract, and etc. as a Windows service.</p>
+<h2>Step 1: Launch Grooper Configuration</h2>
+<ul style="list-style: disc;">
+<li>On the workstation or server where services should run, launch Grooper Configuration.</li>
+<li>Select the Services Tab.</li>
+</ul>
+<h2>Step 2: Add a Service Instance</h2>
+<ul style="list-style: disc;">
+<li>Click the Add button. &#160;This will display the 'Select Service Type' dialog, a shown below.</li>
+<li>Select 'Processing Module Service' and click OK.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallServices_SelectServiceTypeDialog.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 3: Configure the Service Instance</h2>
+<ul style="list-style: disc;">
+<li>The Service Instance Configuration dialog box shown below should now be visible.</li>
+<li>Select the Processing Module to be hosted by the service instance.</li>
+<li>
+<p>If the processing module is to run on a workstation where users will be working, set the Thread Priority to 'BelowNormal'. &#160;This will minimize the performance impact on the user by ensuring that the user interface thread always has higher priority than the background worker threads.</p>
+</li>
+<li>
+<p>Enter the Number of Threads the service instance should run. &#160;This should be less than or equal to the number of processing cores on the machine.</p>
+</li>
+<li>
+<p>Enter the user name and password of the account under which the service should run. &#160;(This may be already set if the Settings Tab has been configured with default service account credentials.)</p>
+</li>
+<li>
+<p>When finished, click OK.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallServices_ServiceInstanceConfigurationDialog.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 4: Start &#160;the Service</h2>
+<ul style="list-style: disc;">
+<li>Wait for the service installation to complete.</li>
+<li>Select the new service instance from the list and click 'Start Service'.</li>
+</ul>
+<h2>See Also</h2>
+<p>Grooper Configuration - Services Tab</p>
+<p>Processing Modules</p>
+<p><a href="../../Grooper_Concepts/Batch_Processing.htm">Batch Processing</a></p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

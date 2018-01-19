@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch_General</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper UI Elements\nGrooper NodeView Controls\nBatch_General");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; <a href=\"../Grooper_UI_Elements.htm\">Grooper UI Elements<\/a> &gt; <a href=\"FileStore_Utilities.htm\">Grooper NodeView Controls<\/a> &gt; Batch_General<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Batch General NodeView</h1>
+<p>
+Provides a user interface displaying the properties of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> and a list of Tabs showing various details about the
+<a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> including Processing Status, Processing History, Event Log History, Current Tasks, <a href='../../../Administrator_Reference/Activity_Types/Activity_Types.htm'>Activity</a> Statistics, a <a href='../../../Administrator_Reference/Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a> and Batch
+Details.
+
+</p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Node_Property_Grid.htm'>Node Property Grid</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a></td>
+     <td>Displays <a href='../../../Administrator_Reference/Data_Instance_Types/Document_Instance.htm'>Document Instance</a> objects, providing a user interface for reviewing and editing the data elements associated with a document. The Index Panel is a hierarchy of Index Panel Control objects, designed to allow editing of the hierarchical <a href='../../../Administrator_Reference/Grooper_Object_Types/Data_Instance.htm'>Data Instance</a> objects produced by
+the <a href='../../../Administrator_Reference/Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Info_Viewer.htm'>Batch Info Viewer</a></td>
+     <td>Provides a tabbed interface for viewing information about a batch.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Task_Status_Chart.htm'>Batch Task Status Chart</a></td>
+     <td>Displays a bar chart showing the task processing status for each step in the <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Processing_History_Viewer.htm'>Batch Processing History Viewer</a></td>
+     <td>Displays the history of processes and/or users which have performed task processing on the selected batch.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Event_Viewer.htm'>Batch Event Viewer</a></td>
+     <td>Displays a list of events which have occurred on a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> object.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Task_Viewer.htm'>Batch Task Viewer</a></td>
+     <td>Displays the tasks associated with a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Other_Grooper_Controls/Batch_Details_Viewer.htm'>Batch Details Viewer</a></td>
+     <td>Displays details about the currently selected batch.
+</td>
+  </tr>
+</table>
+<h2>Toolbar Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.Batch_General.Cancel.png" /></td>
+     <td>Cancel</td>
+     <td>Cancel the changes.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.Batch_General.Save.png" /></td>
+     <td>Save</td>
+     <td>Saves the changes to the <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+<h2>See Also</h2>
+<p><a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

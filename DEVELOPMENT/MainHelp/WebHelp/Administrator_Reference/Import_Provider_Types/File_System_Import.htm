@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>File System Import</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nImport Provider Types\nFile System Import");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Import_Provider_Types.htm\">Import Provider Types<\/a> &gt; File System Import<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.FileSystem.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>File System Import</h1></td>
+<table>
+</tr>
+</table>
+Provides import connectivity to file systems.
+
+See the File System Action activity for follow-up actions which can be performed in a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+
+<br/><br/><b>Inherits from:</b> File Import<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Import Source</td>
+  </tr>
+  <tr>    <td>Base Directory</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The base directory from which files should be imported.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Include Subfolders</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>Indicates whether subfolders below the Base directory should be processed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>File Filtering</td>
+  </tr>
+  <tr>    <td>Required Attributes</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>A file must have all attributes specified here or it will be ignored. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Ignore Attributes</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>Files with any of the specified attributes will be ignored. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Allowed File Extensions</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Specifies a <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> containing file extensions which should be imported. If no lexicon is specified here, all file extensions will be imported, except for those specified
+in the Exclusion lexicon.  Each file extension in the lexicon should be in lower case and preceded by a "." character.
+(See <a href='../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Excluded File Extensions</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Specifies a <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> containing file extensions which should be excluded from the import process. Each file extension in the lexicon should be in lower case and preceded by a "." character.
+(See <a href='../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Exclusion Filter</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>An optional extractor which is used to filter out undesirable file types. For each file on the source file system, the data type will be executed against the full path
+to the file.  If the data type returns any results at all, the file will be excluded from the import process.
+<p>Use this property to filter out files such as Microsoft Office temporary files: ~$New_Resume.docx</p>
+(See <a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum File Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int64.htm'>Int64</a>, Default: 0</td></tr>
+   <tr><td>The maximum size of a file to be imported, in megabytes. Files larger than this will be ignored.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Ignore Unknown File Types</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, files for which no file registration is present in the Windows registry will be ignored.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Disposition</td>
+  </tr>
+  <tr>    <td>File Disposition</td>
+    <td><table>
+   <tr><td>Type: DispositionType, Default: NoChange</td></tr>
+   <tr><td>Disposition of Items after successful import. Can be one of the following values:<br />
+<ul>
+<li><b>NoChange</b>: Do not do anything to each item after importing.
+</li>
+<li><b>Flag</b>: Flag each item after importing.
+</li>
+<li><b>Delete</b>: Delete each item after importing.
+</li>
+<li><b>Move</b>: Move each item after importing.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Attributes To Set</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>File attributes which should be set on each file after import. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Attributes To Clear</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>File attributes which should be cleared on each file after import. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Disposition Directory</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The directory files should be moved into after successfully importing.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Processing Options</td>
+  </tr>
+  <tr>    <td>Sparse Import</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If true, documents will be imported in sparse mode. Sparse documents avoid duplicating storage in Grooper when the content can be accessed through a link.  Sparse imports serve
+two general purposes:
+<ul><li>To speed up imports.  Afterwards, content can then be loaded in parallel in a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, using the <a href='../Activity_Types/Unattended_Activities/Link_Action.htm'>Link Action</a> activity.</li><li>To avoid duplicating storage in Grooper unnecessarily.  All Grooper modules can work with sparse documents in the same way
+they can work with normal documents.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Skip Count</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>Indicates the number of items to skip at the beginning of the sequence. Use this property to restart an import which was previously stopped.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Max Items</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>Indicates the maximum number of items to process. This can be used with Skip Count to perform incremental imports.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Batch Creation</td>
+  </tr>
+  <tr>    <td>Batch Type</td>
+    <td><table>
+   <tr><td>Type: ImportBaseFolder, Default: Test</td></tr>
+   <tr><td>Determines whether the batches created during the import process should be Test Batches or Production Batches. Can be one of the following values:<br />
+<ul>
+<li><b>Production</b></li>
+<li><b>Test</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Starting Step</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td></tr>
+   <tr><td>The step within a batch process where batches will be started.
+(See <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Folder Levels</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Defines the number of folder levels which will be translated into subfolders within the Grooper <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Items per Batch</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 2500</td></tr>
+   <tr><td>The maximum number of items to be imported into a single batch.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Priority</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 3, Range: 1 - 5</td></tr>
+   <tr><td>The priority of the batch. The Priority value controls the order in which tasks are processed, with the value 1 representing the highest priority level, and the value 5 representing
+the lowest priority level. (i.e. Items of priority 1 are processed before items of Priority 2, and so on.  The batch must be paused before this property can be edited.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Batch Name Prefix</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>An optional prefix to be prepended onto each batch name.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Start Paused</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If true, created batches will be started in a paused state.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Batch Folder Classification</td>
+  </tr>
+  <tr>    <td>Document Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td></tr>
+   <tr><td>Optionally assign a content type to created batch folders.
+(See <a href='../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>)</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td></tr>
+<tr><td><a href='../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td></tr>
+<tr><td><a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+<tr><td><a href='../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+<tr><td><a href='../Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

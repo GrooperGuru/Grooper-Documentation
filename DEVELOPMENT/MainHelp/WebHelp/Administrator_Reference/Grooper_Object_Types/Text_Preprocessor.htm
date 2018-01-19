@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Text Preprocessor</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nText Preprocessor");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Text Preprocessor<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Text Preprocessor</h1>
+Defines options for temporary text preprocessing which occurs prior to executing an extractor.
+
+<br/><br/><b>Inherits from:</b> Embedded Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Preprocessing Options</td>
+  </tr>
+  <tr>    <td>Tab Marking</td>
+    <td><table>
+   <tr><td>Type: <a href='Horizontal_Tab_Marker.htm'>Horizontal Tab Marker</a></td></tr>
+   <tr><td>When enabled, converts space characters to tab characters based on the width of the gap occupied by the space character.  Tabs can be matched
+using \t in regular expressions. Tab marking is useful for identifying the boundaries between segments of text within a line.  For example, tabs could be used to break up
+the columns of a table row based on the fact that there is a gap between the columns.  
+(See <a href='Horizontal_Tab_Marker.htm'>Horizontal Tab Marker</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Paragraph Marking</td>
+    <td><table>
+   <tr><td>Type: <a href='Paragraph_Marker.htm'>Paragraph Marker</a></td></tr>
+   <tr><td>Modifies the input so that CR/LF pairs only appear at the end of paragraphs. By default, OCR results contain a CR/LF pair at the end of each line.  Enabling this option will
+perform paragraph detection and modify the input as follows:
+<ul><li>If the line represents the last line of a paragraph, the CR/LF pair will be left intact.</li><li>Otherwise, the CR/LF pair will be replaced by a SPACE character.</li></ul>
+Paragraph marking allows extraction of data elements which may wrap from line to line.
+(See <a href='Paragraph_Marker.htm'>Paragraph Marker</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Vertical Tab Marking</td>
+    <td><table>
+   <tr><td>Type: <a href='Vertical_Tab_Marker.htm'>Vertical Tab Marker</a></td></tr>
+   <tr><td>When enabled, converts \r\n pairs to \v pairs based on configurable settings. Vertical tab marking is useful for identifying the boundaries between elements in cases where a measurable gap exists.  
+(See <a href='Vertical_Tab_Marker.htm'>Vertical Tab Marker</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Ignore Control Characters</td>
+    <td><table>
+   <tr><td>Type: ControlCharacters, Default: None</td></tr>
+   <tr><td>Indicates the set of control characters to ignore for the purposes of data extraction. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: No characters will be ignored.
+</li>
+<li><b>Space</b>: Space characters will be ignored.
+</li>
+<li><b>NewLine</b>: Carriage return / line feed pairs will be replaced by a single space character.
+</li>
+<li><b>FormFeed</b>: Form feed (\f) characters will be ignored.
+</li>
+<li><b>All</b>: All control characters will be ignored.
+</li>
+</ul>
+ Before the expression is executed, all selected characters will be removed from the source document. This option is useful
+in eliminating data extraction problems caused when OCR engines recognize additional spaces, or for performing extraction across multiple
+lines.  For example, consider a date value where instead of '03/25/2013', the OCR engine outputs '0 3/25/2 013'.  Ignoring the space character
+will allow the value to be extracted as a date.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Horizontal_Tab_Marker.htm'>Horizontal Tab Marker</a></td></tr>
+<tr><td><a href='Paragraph_Marker.htm'>Paragraph Marker</a></td></tr>
+<tr><td><a href='Vertical_Tab_Marker.htm'>Vertical Tab Marker</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

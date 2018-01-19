@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Classification Viewer</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper UI Elements\nOther Grooper Controls\nClassification Viewer");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; <a href=\"../Grooper_UI_Elements.htm\">Grooper UI Elements<\/a> &gt; <a href=\"Code_Editor.htm\">Other Grooper Controls<\/a> &gt; Classification Viewer<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Classification Viewer</h1>
+<p>Displays the contents of a [Batch], along with a list of Classification Candidates.
+</p>
+<p><img src="../../../images/ScreenShots/Grooper.Activities.ClassificationViewer.jpg" class="ScreenShotBorder" /></p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>[Batch Viewer]</td>
+     <td>Displays the contents of a [Batch] in a hierarchical folder view. The Batch Viewer control is used throughout Grooper to display and edit the contents of a batch.
+</td>
+  </tr>
+</table>
+<h2>Context Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer.Assign_Type.png" /></td>
+     <td>Assign Type</td>
+     <td>Opens the [Assign Document Type] dialog and sets the selected [Batch Folder's] document type to the selected [Content Type].
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Shortcut Keys</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_AssignContentType.png" height="16" width="16" /></td>
+    <td>Assign Content Type</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+F</td>
+    <td>Assigns a [Content Type] to the currently selected folder.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_CombineLoosePages.png" height="16" width="16" /></td>
+    <td>Combine Loose Pages</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+P</td>
+    <td>Combines each range of contiguous loose pages into a new document, and attempts to classify each.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_MoveToNext.png" height="16" width="16" /></td>
+    <td>Go To Next Issue</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+N</td>
+    <td>Sets the selection to the next loose page or un-classified [Batch Folder].
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_MergePages.png" height="16" width="16" /></td>
+    <td>Merge Pages</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+M</td>
+    <td>Inserts the selected pages into a new folder, optionally classified as a content type.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_ReprocessBatch.png" height="16" width="16" /></td>
+    <td>Reprocess Batch</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+F5</td>
+    <td>Reprocess all or part of the batch through [Classification].
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Perform Separation</td>
+    <td>Reprocess loose pages using ESP™ auto separation.
+</td>
+  </tr>  <tr>    <td>Re-Classify Pages</td>
+    <td>If enabled, re-runs classification on the page objects prior to performing separation.  Enable this option to leverage training which did not
+exist at the time of classification, or to recognize newly-added document types.
+</td>
+  </tr>  <tr>    <td>Perform Classification</td>
+    <td>Re-run classification.  By default, this only attempts to re-classify un-classified folders.
+</td>
+  </tr>  <tr>    <td>Re-Classify All Folders</td>
+    <td>Include folders which are already classified.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_RevertToLoosePages.png" height="16" width="16" /></td>
+    <td>Revert To Loose Pages</td>
+    <td style='text-align:center; vertical-align:middle;'>&nbsp;</td>
+    <td>Moves all descendant page objects to the root of the selected folder, and then deletes all descendant folders.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_SplitDocument.png" height="16" width="16" /></td>
+    <td>Split Document</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+S</td>
+    <td>Splits a folder or document at the currently selected page, optionally assigning a content type to the new document.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_Train.png" height="16" width="16" /></td>
+    <td>Train Document</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+T</td>
+    <td>Assign a [Document Type] for the selected document and train the [Content Model] with its features.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Activities.ClassificationViewer_Unclassify.png" height="16" width="16" /></td>
+    <td>Unclassify</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+U</td>
+    <td>Removes the selected folder and inserts its contents into the parent at the same position the folder was located.
+
+
+</td>
+</tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

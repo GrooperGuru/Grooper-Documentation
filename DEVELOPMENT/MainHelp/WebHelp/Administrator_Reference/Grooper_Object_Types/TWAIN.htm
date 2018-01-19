@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>TWAIN</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nTWAIN");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> > TWAIN<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>TWAIN</h1>
+TWAIN Scanner Capture Protocol.
+
+<br/><br/><b>Inherits from:</b> [Capture Protocol]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Options</td>
+  </tr>
+  <tr>    <td>Hide Interface</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If set to true, the scanner driver's user interface will be hidden during scanning.  Note that some
+scanner drivers do not support hiding the user interface.  In such cases, this setting will be disabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Enable Compression</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If set to true, the scanner driver will return compressed images.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Compression Mode</td>
+    <td><table>
+   <tr><td>Type: [CompressionMode], Default: None</td></tr>
+   <tr><td>The compression mode to use for image transfer. In some cases, performance can be improved by using compression
+during image transfer. Please note that the list of supported compression modes may change when the color format is changed
+in the driver settings, leaving the profile configured with an invalid compression type. Can be one of the following values:<br />
+<ul>
+<li><b>None</b></li>
+<li><b>BitFields</b></li>
+<li><b>Group3</b></li>
+<li><b>Group4</b></li>
+<li><b>Jbig</b></li>
+<li><b>Jpeg</b></li>
+<li><b>Lzw</b></li>
+<li><b>Packbits</b></li>
+<li><b>Png</b></li>
+<li><b>Rle4</b></li>
+<li><b>Rle8</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Device Info</td>
+  </tr>
+  <tr>    <td>Product Name</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The name of the scanner device.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Driver TWAIN Version</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The TWAIN protocol version implemented in the scanner driver.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Manufacturer</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The manufacturer of the capture device.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Serial Number</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The serial number of the scanner, if one is provided by the driver.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

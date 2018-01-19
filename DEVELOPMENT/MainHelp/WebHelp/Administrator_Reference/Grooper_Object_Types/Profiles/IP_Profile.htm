@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>IP Profile</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nProfiles\nIP Profile");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"IP_Group.htm\">Profiles<\/a> > IP Profile<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.IpProfile.Normal.png' height = '32' width = '32' /></td>
+<td><h1>IP Profile</h1></td>
+<table>
+</tr>
+</table>
+An IP Profile defines a sequence of image processing operations which are to be applied to an image.
+
+IP Profiles can have [IP Step] and [IP Group] objects as children.  A simple IP Profile might be a sequence of [IP Step] objects,
+each specifying an [IP Command] to be executed.  A more complex IP Profile might be a hierarchy of groups and steps, with conditional
+execution logic to customize flow based on properties of the image.
+<p>The execution order of items in an IP Profile is based on a pre-order tree traversal, which simply means that items execute in the
+order in which they would appear if the entire tree structure were expanded.  The execution order can be customized by specifying
+flow control expressions on individual [IP Group] or [IP Step] objects</p>
+
+<br/><br/><b>Inherits from:</b> [Ip Element Container]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Should Execute Expression</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Defines an expression which determines whether the [IP Step] or [IP Group] should execute. Must evaluate to Boolean value.  True means the item should execute, and false means it should be skipped.  Below are various examples of Should Execute expressions:
+<p>Execute only if the input image is color:<br /><span style="font-family: Courier">Image.IsColor</span></p><p>Execute only if the input image is black and white:<br /><span style="font-family: Courier">Image.IsBinary</span></p><p>Execute only if the input image is 8-bit grayscale:<br /><span style="font-family: Courier">Image.ColorFormat=GrooperImage.PixelFormat.Pixel8bppGrayscale</span></p><p>Execute only if the previously-executed [Measure Entropy] command returned an entropy of more than 85%:<br /><span style="font-family: Courier">Results.Measure_Entropy.Entropy &gt; 0.85#</span></p><p>Execute only if the previously-executed [Classify Image] command returned a Class Name of "Noisy Blue Background":<br /><span style="font-family: Courier">Results.Classify_Image.ClassName = "Noisy Blue Background"</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Next Step Expression</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Defines an expression which determines the next IP Step to execute. Fires after a [Batch] completes the current step, and must evaluate to an [IP Step] or [IP Group] object.  If Nothing is returned, execution of the [IP Profile] will terminate.
+Otherwise, execution will resume at the step returned. Below are various examples of Next Step expressions:
+<p>If the image is black and white, run the 'Binary Cleanup' [IP Group].  Otherwise, run the 'Color Cleanup' group:<br /><span style="font-family: Courier">If(Image.IsBinary, Binary_Cleanuup, Color_Cleanup)</span></p><p>If the image is black and white, terminate execution.  Otherwise, proceed to the 'Color Detect' [IP Step]:<br /><span style="font-family: Courier">If(Image.IsBinary, Nothing, Color_Detect)</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

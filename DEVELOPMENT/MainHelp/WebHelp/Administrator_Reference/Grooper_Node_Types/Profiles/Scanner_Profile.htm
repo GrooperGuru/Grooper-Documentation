@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Scanner Profile</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Node Types\nProfiles\nScanner Profile");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Grooper_Node_Types.htm\">Grooper Node Types<\/a> &gt; <a href=\"IP_Group.htm\">Profiles<\/a> &gt; Scanner Profile<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Capture.ScannerProfile.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Scanner Profile</h1></td>
+<table>
+</tr>
+</table>
+Defines a connection to a capture device, and settings which control how the device operates.
+
+Scanner Profiles are typically created and edited using the <a href='../../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm'>Scan Control</a> - a component of the Batch Scan Control used by the <a href='../../Activity_Types/Attended_Activities/Scan.htm'>Scan</a>
+activity.  To create, edit, and test Scanner Profiles from Grooper Administration, go to any <a href='../Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a> which is configured for the <a href='../../Activity_Types/Attended_Activities/Scan.htm'>Scan</a> activity,
+and select the <a href='../../../User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/AttendedActivityTester.htm'>Attended Activity Tester</a> tab.
+
+<br/><br/><b>Inherits from:</b> <a href='../Grooper_Node_Types.htm'>Grooper Node</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Selected Device</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The scanner device to be associated with this Scanner Profile.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Device Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Defines settings which are specific to the selected scanner device. Editing this property launches the manufacturer setup screen for the device.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Protocol Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Protocol_Settings_Types/Protocol_Settings_Types.htm'>Protocol Settings</a></td></tr>
+   <tr><td>Defines settings which are specific to the scanner protocol.
+(See <a href='../../Protocol_Settings_Types/Protocol_Settings_Types.htm'>Protocol Settings</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Options</td>
+  </tr>
+  <tr>    <td>Feed Orientation</td>
+    <td><table>
+   <tr><td>Type: FeedOrientation, Default: TopFirst</td></tr>
+   <tr><td>Indicates the orientation in which pages will be scanned. Can be one of the following values:<br />
+<ul>
+<li><b>TopFirst</b>: No rotation will be performed.
+</li>
+<li><b>LeftFirst</b>: Front pages will be rotated 90° counter-clockwise, and back pages will be rotated 90° clockwise.
+</li>
+<li><b>RightFirst</b>: Front pages will be rotated 90° clockwise, and back pages will be rotated 90° counter-clockwise.
+</li>
+<li><b>BottomFirst</b>: All pages will be rotated 180°.
+</li>
+<li><b>Auto</b>: Grooper will automatically determine the orientation of each page and rotate it accordingly.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scan Area</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, Default: (0,0):(0,0)</td></tr>
+   <tr><td>The rectangular scan area to configure the scanner with, specified in inches. If this property is set to any value other than a blank rectangle (0,0):(0,0), then this
+rectangle will be used as the capture area during scan.  This will override the scan area which would
+otherwise be calculated from the scanner driver's page size and cropping settings.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>IP Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='IP_Profile.htm'>IP Profile</a></td></tr>
+   <tr><td>An optional <a href='IP_Profile.htm'>IP Profile</a> to be used for scanner-specific image cleanup. In some cases, it may be necessary to apply custom image cleanup to the images produced by a specific scanner model. In such cases,
+an IP Profile should be created and attached to the Scanner Profile rather than the Scan module settings, so that it only applies to images
+captured using the scanner model.  NOTE: Real time permanent image cleanup should be applied using the IP Profile attached to the Scan module.
+(See <a href='IP_Profile.htm'>IP Profile</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>ScanOnce™</td>
+  </tr>
+  <tr>    <td>ScanOnce™ Mode</td>
+    <td><table>
+   <tr><td>Type: SimplePixelFormat, Default: None</td></tr>
+   <tr><td>The ScanOnce™ operating mode.  Controls whether ScanOnce™ is enabled, and specifies the default color format in
+which pages are displayed. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: None.
+</li>
+<li><b>Grayscale</b>: 8-Bit Grayscale
+</li>
+<li><b>Color</b>: 24-Bit Color
+</li>
+<li><b>Binary</b>: Black and White
+</li>
+</ul>
+ To enable ScanOnce™, configure the scanner to scan in color or grayscale, and then set this property to indicate the
+default display format for each captured page.  To disable ScanOnce™ entirely, set the ScanOnce™ Mode to 'None'.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Detect Color</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Enables or disables automatic color detection. When automatic color detection is enabled, Grooper will analyze each page to determine if it contains color.  If the
+page contains color, the display format will be set to color rather than the default specified in the ScanOnce™ Mode
+property.  The sensitivity of color detection can be adjusted using the Color Detection Settings property.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Color Detection Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../../IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a></td></tr>
+   <tr><td>The settings used to determine if a page contains color. 
+(See <a href='../../IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Threshold Method</td>
+    <td><table>
+   <tr><td>Type: BinarizationMethod, Default: Simple</td></tr>
+   <tr><td>The default thresholding method to be used for displaying pages in black and white. Can be one of the following values:<br />
+<ul>
+<li><b>Simple</b>: Thresholds an image to black and white using a fixed threshold value between 0 and 255.
+</li>
+<li><b>Auto</b>: Selects a threshold value automatically based on histogram analysis.
+</li>
+<li><b>Adaptive</b>: Thesholds pixels based on the intensity of pixels in the local neighborhood.
+</li>
+<li><b>Dynamic</b>: Performs adaptive thresholding, while preserving dark areas on the page.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Threshold</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The threshold value to be used when Simple or Global thresholding is in use. For Simple thresholding, this value determines the amount of intensity required for a pixel to be considered white.
+For Global threshold, this value serves as the 'initial threshold' value required for global thresholding.
+<p>Threshold values can range from 0 to 255, with 0 representing pure black and 255 representing pure white.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Brightness</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The default brightness adjustment used for pages displayed in color or grayscale. This a value between -100% and 100% representing the percentage by which the brightness will be increased or decreased."
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Contrast</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The default contrast adjustment used for pages displayed in color or grayscale. This a value between -100% and 100% representing the percentage by which the contrast will be increased or decreased."
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a></td></tr>
+<tr><td><a href='IP_Profile.htm'>IP Profile</a></td></tr>
+<tr><td><a href='../../Protocol_Settings_Types/Protocol_Settings_Types.htm'>Protocol Settings</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

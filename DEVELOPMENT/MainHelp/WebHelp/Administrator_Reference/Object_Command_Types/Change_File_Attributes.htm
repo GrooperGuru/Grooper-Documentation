@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Change File Attributes</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nObject Command Types\nChange File Attributes");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Object_Command_Types.htm\">Object Command Types<\/a> &gt; Change File Attributes<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../images/TypeIcons/Grooper.Core.FileSystemLink_ChangeAttributes.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Change File Attributes</h1></td>
+<table>
+</tr>
+</table>
+Changes the file attributes on the linked file.
+
+<br/><br/><b>Inherits from:</b> <a href='Object_Command_Types.htm'>ObjectCommand</a>(Of <a href='../Content_Link_Types/File_System_Link.htm'>File System Link</a>)<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Attributes to Set</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>File attributes which should be set on each file after import. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Attributes to Clear</td>
+    <td><table>
+   <tr><td>Type: FileAttributes, Default: 0</td></tr>
+   <tr><td>File attributes which should be cleared on each file after import. A combination of the following flags:<br />
+<ul>
+<li><b>ReadOnly</b>: The file is read-only.
+</li>
+<li><b>Hidden</b>: The file is hidden, and thus is not included in an ordinary directory listing.
+</li>
+<li><b>System</b>: The file is a system file. That is, the file is part of the operating system or is used exclusively by the operating system.
+</li>
+<li><b>Directory</b>: The file is a directory.
+</li>
+<li><b>Archive</b>: The file is a candidate for backup or removal.
+</li>
+<li><b>Device</b>: Reserved for future use.
+</li>
+<li><b>Normal</b>: The file is a standard file that has no special attributes. This attribute is valid only if it is used alone.
+</li>
+<li><b>Temporary</b>: The file is temporary. A temporary file contains data that is needed while an application is executing but is not needed after the application is finished. File systems try to keep all the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+</li>
+<li><b>SparseFile</b>: The file is a sparse file. Sparse files are typically large files whose data consists of mostly zeros.
+</li>
+<li><b>ReparsePoint</b>: The file contains a reparse point, which is a block of user-defined data associated with a file or a directory.
+</li>
+<li><b>Compressed</b>: The file is compressed.
+</li>
+<li><b>Offline</b>: The file is offline. The data of the file is not immediately available.
+</li>
+<li><b>NotContentIndexed</b>: The file will not be indexed by the operating system's content indexing service.
+</li>
+<li><b>Encrypted</b>: The file or directory is encrypted. For a file, this means that all data in the file is encrypted. For a directory, this means that encryption is the default for newly created files and directories.
+</li>
+<li><b>IntegrityStream</b>: The file or directory includes data integrity support. When this value is applied to a file, all data streams in the file have integrity support. When this value is applied to a directory, all new files and subdirectories within that directory, by default, include integrity support.
+</li>
+<li><b>NoScrubData</b>: The file or directory is excluded from the data integrity scan. When this value is applied to a directory, by default, all new files and subdirectories within that directory are excluded from data integrity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Content_Link_Types/File_System_Link.htm'>File System Link</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

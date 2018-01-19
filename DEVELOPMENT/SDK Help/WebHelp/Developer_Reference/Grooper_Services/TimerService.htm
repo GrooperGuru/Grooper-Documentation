@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>TimerService</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Services\nTimerService");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"WebService.htm\">Grooper Services<\/a> > TimerService<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>TimerService</h1>
+<p>Provides a base class for services which perform work on a timer interval.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper.Services_Namespace_Reference.htm'>Grooper.Services</a><br/><b>Inherits from:</b> <a href='../Grooper/ServiceInstance.htm'>ServiceInstance</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AsSeviceEntry</td>
+     <td>ServiceEntry</td>
+     <td>Returns the Service Instance as a ServiceEntry.
+</td>
+  </tr>
+  <tr>
+     <td>EnableScheduling</td>
+     <td>Boolean</td>
+     <td>Enable or disable Scheduling Options
+</td>
+  </tr>
+  <tr>
+     <td>EndTime</td>
+     <td>DateTime</td>
+     <td>Latest time the service is permitted to run each day
+</td>
+  </tr>
+  <tr>
+     <td>HasDBRow</td>
+     <td>Boolean</td>
+     <td>Returns true if a database row exists for this service instance.
+</td>
+  </tr>
+  <tr>
+     <td>HasValidId</td>
+     <td>Boolean</td>
+     <td>Returns true if this object has a valid row ID, indicating that it has been stored to the database.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns a boolean indicating whether the connected object is empty.
+</td>
+  </tr>
+  <tr>
+     <td>IsLicenseServer</td>
+     <td>Boolean</td>
+     <td>Returns true if this service instance is an instance of Grooper.Services.LicenseServer.
+</td>
+  </tr>
+  <tr>
+     <td>IsProcessingModule</td>
+     <td>Boolean</td>
+     <td>Returns true if this service instance is an instance of Grooper.Services.TaskProcessingService.
+</td>
+  </tr>
+  <tr>
+     <td>Password</td>
+     <td>String</td>
+     <td>The password for the user account under which the service should run.
+</td>
+  </tr>
+  <tr>
+     <td>PgServiceDisplayName</td>
+     <td>String</td>
+     <td>The display name for the service.
+</td>
+  </tr>
+  <tr>
+     <td>Repository</td>
+     <td><a href='../Grooper/DataSource.htm'>DataSource</a></td>
+     <td>The repository to which this service instance in bound. Service instances are bound permanently to a Grooper repository.  To change to repository, delete the service instance and reinstall it using the desired repository.
+</td>
+  </tr>
+  <tr>
+     <td>RepositoryId</td>
+     <td>Guid</td>
+     <td>The Repository Id of the Service Instance pertains to.
+</td>
+  </tr>
+  <tr>
+     <td>RepositoryName</td>
+     <td>String</td>
+     <td>Returns the name of the Grooper repository this service instance is linked to.
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../Grooper/GrooperRoot.htm'>GrooperRoot</a></td>
+     <td>Returns the root node
+</td>
+  </tr>
+  <tr>
+     <td>RunDaysOfWeek</td>
+     <td>DaysOfWeek</td>
+     <td>A variable determining whether the service should run or not on each day of the week If StartTime and EndTime are left at their default values of 12:00:00 AM, then time of day will not be considered for service scheduling.
+A combination of the following flags:<br />
+<ul>
+<li><b>Sunday</b></li>
+<li><b>Monday</b></li>
+<li><b>Tuesday</b></li>
+<li><b>Wednesday</b></li>
+<li><b>Thursday</b></li>
+<li><b>Friday</b></li>
+<li><b>Saturday</b></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>ServiceDescription</td>
+     <td>String</td>
+     <td>The description of the Windows service.
+</td>
+  </tr>
+  <tr>
+     <td>ServiceDisplayName</td>
+     <td>String</td>
+     <td>The display name of the Windows service.
+</td>
+  </tr>
+  <tr>
+     <td>ServiceInstancingId</td>
+     <td>String</td>
+     <td>A unique identifier for this service type.
+</td>
+  </tr>
+  <tr>
+     <td>ServiceName</td>
+     <td>String</td>
+     <td>The name of the Windows service.
+</td>
+  </tr>
+  <tr>
+     <td>StartTime</td>
+     <td>DateTime</td>
+     <td>Earliest time the service is permitted to run each day If StartTime and EndTime are left at their default values of 12:00:00 AM, then time of day will not be considered for service scheduling.
+</td>
+  </tr>
+  <tr>
+     <td>ThreadPriority</td>
+     <td>ThreadPriority</td>
+     <td>The priority level with which threads will be created. If the service is running on a workstation, a priority lower than normal will help prevent the service from impacting the user interface responsiveness.
+Can be one of the following values:<br />
+<ul>
+<li><b>Lowest</b>: The thread can be scheduled after threads with any other priority.
+</li>
+<li><b>BelowNormal</b>: The thread can be scheduled after threads with Normal priority and before those with Lowest priority.
+</li>
+<li><b>Normal</b>: The thread can be scheduled after threads with AboveNormal priority and before those with BelowNormal priority. Threads have Normal priority by default.
+</li>
+<li><b>AboveNormal</b>: The thread can be scheduled after threads with Highest priority and before those with Normal priority.
+</li>
+<li><b>Highest</b>: The thread can be scheduled before threads with any other priority.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>TimerInterval</td>
+     <td>Int32</td>
+     <td>The amount of time, in seconds, between each Tick event.
+</td>
+  </tr>
+  <tr>
+     <td>TypeName</td>
+     <td>Object</td>
+     <td>Returns the the full type name of this service instance.
+</td>
+  </tr>
+  <tr>
+     <td>UserName</td>
+     <td>String</td>
+     <td>The user account under which the service should run. The account specified must:
+<ul><li>Have the Logon as Service permission on the machine on which the service is to run.</li><li>Have access to the Grooper database, if Windows security is being used for SQL connections.</li><li>Have access to the Grooper file store location.</li></ul>
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AddNew() As Boolean</td>
+     <td>Add this object to the database as a new row.
+</td>
+  </tr>
+  <tr>
+     <td>ClearId()</td>
+     <td>Clears the database row ID from this object, thereby disassociating it from the database row.
+</td>
+  </tr>
+  <tr>
+     <td>Delete() As Boolean</td>
+     <td>Deletes the database row associated with this object.
+</td>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ExecuteServiceControl(InstallLog As [String&], CommandText As String) As Boolean</td>
+     <td>Runs the service controller for the servince instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>InstallLog</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [String&]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>CommandText</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetServiceController() As ServiceController</td>
+     <td>Gets the service controller for the service instance.
+</td>
+  </tr>
+  <tr>
+     <td>GetServiceStatus() As ServiceControllerStatus</td>
+     <td>Queries the status of the service instance.
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>Install(InstallLog As [String&]) As Boolean</td>
+     <td>Installs the service instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>InstallLog</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [String&]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>OnStart() As Boolean</td>
+     <td>Handles starting of the TimerServiceInstance.
+</td>
+  </tr>
+  <tr>
+     <td>OnStop() As Boolean</td>
+     <td>Handles stopping of the TimerServiceInstance.
+</td>
+  </tr>
+  <tr>
+     <td>SetDatabase(Database As GrooperDb)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Database</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>StartService() As Boolean</td>
+     <td>Start the service instance.
+</td>
+  </tr>
+  <tr>
+     <td>StopService() As Boolean</td>
+     <td>Stop the service instance.
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns a string value representation of the connected object.
+</td>
+  </tr>
+  <tr>
+     <td>Uninstall(InstallLog As [String&]) As Boolean</td>
+     <td>Uninstalls the service instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>InstallLog</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [String&]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Update() As Boolean</td>
+     <td>Updates the web service instance in the Grooper database.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>
+Validates the <a href='../Grooper/ServiceInstance.htm'>Service Instance</a>.
+
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

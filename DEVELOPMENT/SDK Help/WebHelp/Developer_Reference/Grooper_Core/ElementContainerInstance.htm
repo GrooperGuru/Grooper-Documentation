@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>ElementContainerInstance</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Core\nElementContainerInstance");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"UnattendedActivity.htm\">Grooper Core<\/a> > ElementContainerInstance<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>ElementContainerInstance</h1>
+<p>Represents a data element instance which may contain child sections and tables.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper.Core_Namespace_Reference.htm'>Grooper.Core</a><br/><b>Inherits from:</b> <a href='FieldContainerInstance.htm'>FieldContainerInstance</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AllChildren</td>
+     <td>IEnumerable(Of <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Enumerates all children of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>AllChildrenOfType(TypeToFind As Type)</td>
+     <td>IEnumerable(Of <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Enumerates all descendants of this instance which are of the indicated type.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>TypeToFind</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of descendants to find.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AllFields</td>
+     <td>IEnumerable(Of <a href='FieldInstance.htm'>FieldInstance</a>)</td>
+     <td>Enumerates all <a href='FieldInstance.htm'>FieldInstance</a> objects which are descendants of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>BatchFolder</td>
+     <td><a href='BatchFolder.htm'>BatchFolder</a></td>
+     <td>The <a href='BatchFolder.htm'>Batch Folder</a> object with which this instance is associated.
+</td>
+  </tr>
+  <tr>
+     <td>BatchObject</td>
+     <td><a href='BatchFolder.htm'>BatchFolder</a></td>
+     <td>The <a href='BatchFolder.htm'>Batch Folder</a> object with which this instance is associated.
+</td>
+  </tr>
+  <tr>
+     <td>CenterPoint</td>
+     <td>PointExF</td>
+     <td>Returns the center point of the region associated with this instance.
+</td>
+  </tr>
+  <tr>
+     <td>ChildrenAtLevel(Level As Int32)</td>
+     <td>IEnumerable(Of <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Returns all children the specified number of levels below this item.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Level</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The number of levels. A value of 1 will return the immediate children of this item.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ChildrenOfType(TypeToFind As Type)</td>
+     <td>IEnumerable(Of <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Enumerates all direct children of this instance which are of the indicated type.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>TypeToFind</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type of children to find.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Confidence</td>
+     <td>Double</td>
+     <td>The confidence level assigned to this instance.
+</td>
+  </tr>
+  <tr>
+     <td>ContentType</td>
+     <td><a href='ContentType.htm'>ContentType</a></td>
+     <td>The <a href='ContentType.htm'>Content Type</a> of the <a href='BatchFolder.htm'>Batch Folder</a> associated with this <a href='DataInstance.htm'>Data Instance</a>.
+</td>
+  </tr>
+  <tr>
+     <td>Count</td>
+     <td>Int32</td>
+     <td>Returns the number of child instances.
+</td>
+  </tr>
+  <tr>
+     <td>DataElement</td>
+     <td><a href='DataElement.htm'>DataElement</a></td>
+     <td>Returns the <a href='DataElement.htm'>Data Element</a> associated with this instance.
+</td>
+  </tr>
+  <tr>
+     <td>DataModel</td>
+     <td><a href='DataModel.htm'>DataModel</a></td>
+     <td>Returns the <a href='DataModel.htm'>Data Model</a> associated with this instance.
+</td>
+  </tr>
+  <tr>
+     <td>DocumentInstance</td>
+     <td><a href='DocumentInstance.htm'>DocumentInstance</a></td>
+     <td>Returns the DocumentInstance at the root of the DataElementInstance hierarchy.
+</td>
+  </tr>
+  <tr>
+     <td>EndIndex</td>
+     <td>Int32</td>
+     <td>Returns the ending index (Index + Length - 1)
+</td>
+  </tr>
+  <tr>
+     <td>ErrorCount</td>
+     <td>Int32</td>
+     <td>Returns the number of fields below this instance which are currently set to an error status.
+</td>
+  </tr>
+  <tr>
+     <td>Fields</td>
+     <td>IEnumerable(Of <a href='FieldInstance.htm'>FieldInstance</a>)</td>
+     <td>Enumerates <a href='FieldInstance.htm'>FieldInstance</a> objects which are direct children of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>Fields(Name As String)</td>
+     <td><a href='FieldInstance.htm'>FieldInstance</a></td>
+     <td>Returns a child <a href='FieldInstance.htm'>FieldInstance</a> by name.  If no child field exists with the specified name, null will be returned.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the field.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Fields(Id As Guid)</td>
+     <td><a href='FieldInstance.htm'>FieldInstance</a></td>
+     <td>Returns a child <a href='FieldInstance.htm'>FieldInstance</a> using the ID of the associated <a href='DataField.htm'>Data Field</a> object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Id</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the field.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FirstPage</td>
+     <td>Int32</td>
+     <td>Returns the 0-based index of the first page on which this instance appears.
+</td>
+  </tr>
+  <tr>
+     <td>HasOcrParity</td>
+     <td>Boolean</td>
+     <td>Indicates whether the instance has parity between the length of the string value and the number of OcrItems.
+</td>
+  </tr>
+  <tr>
+     <td>HasZoneInfo</td>
+     <td>Boolean</td>
+     <td>Indicates whether this instance has a region associated with it.
+</td>
+  </tr>
+  <tr>
+     <td>HighlightColor</td>
+     <td>Color</td>
+     <td>Returns the color to be used for highlighting this instance.
+</td>
+  </tr>
+  <tr>
+     <td>Index</td>
+     <td>Int32</td>
+     <td>The starting index of this instance within the parent instance.
+</td>
+  </tr>
+  <tr>
+     <td>InvalidFields</td>
+     <td>IEnumerable(Of <a href='FieldInstance.htm'>FieldInstance</a>)</td>
+     <td>Iterates all descendant FieldInstance objects which are marked as invalid.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns a boolean indicating whether the connected object is empty.
+</td>
+  </tr>
+  <tr>
+     <td>IsValid</td>
+     <td>Boolean</td>
+     <td>Indicates whether all descendant fields and/or table cells are valid.
+</td>
+  </tr>
+  <tr>
+     <td>Item(index As Int32)</td>
+     <td><a href='DataInstance.htm'>DataInstance</a></td>
+     <td>Returns the child instance at a specific index.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>index</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index of the child instance.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LastPage</td>
+     <td>Int32</td>
+     <td>Returns the 0-based index of the last page on which this instance appears.
+</td>
+  </tr>
+  <tr>
+     <td>Length</td>
+     <td>Int32</td>
+     <td>The length of this instance, in characters, within the parent instance. Please note that length represents the length of the element within the parent instance.  It does not necessarily
+indicate the number of characters in the Value property or the number of items in the OcrResults object.
+</td>
+  </tr>
+  <tr>
+     <td>Location</td>
+     <td><a href='../Grooper/RectangleExF.htm'>RectangleExF</a></td>
+     <td>The location of this instance on the page.
+</td>
+  </tr>
+  <tr>
+     <td>Name</td>
+     <td>String</td>
+     <td>The name of this data instance.
+</td>
+  </tr>
+  <tr>
+     <td>Owner</td>
+     <td><a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>OwnerNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>PageCount</td>
+     <td>Int32</td>
+     <td>Returns the number of pages referenced in the OCR data.
+</td>
+  </tr>
+  <tr>
+     <td>PageIndex</td>
+     <td>Int32</td>
+     <td>The 0-based page index on which the starting character of this data element appears.
+</td>
+  </tr>
+  <tr>
+     <td>PageNo</td>
+     <td>Int32</td>
+     <td>The 1-based page number on which this item appears.
+</td>
+  </tr>
+  <tr>
+     <td>Parent</td>
+     <td><a href='DataInstance.htm'>DataInstance</a></td>
+     <td>Returns the parent instance of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>ParentElement</td>
+     <td><a href='DataElementInstance.htm'>DataElementInstance</a></td>
+     <td>Returns the parent instance.
+</td>
+  </tr>
+  <tr>
+     <td>ParentSection</td>
+     <td><a href='SectionInstance.htm'>SectionInstance</a></td>
+     <td>Returns the section that contains this item, or null/Nothing if this item is not in a section.
+</td>
+  </tr>
+  <tr>
+     <td>Resolution</td>
+     <td>Int32</td>
+     <td>The resolution, in DPI, of the source document associated with this instance.
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../Grooper/GrooperRoot.htm'>GrooperRoot</a></td>
+     <td>Returns the root node
+</td>
+  </tr>
+  <tr>
+     <td>RootInstance</td>
+     <td><a href='DataInstance.htm'>DataInstance</a></td>
+     <td>Returns the instance at the root of the hierarchy.
+</td>
+  </tr>
+  <tr>
+     <td>SectionInstances(Section As <a href='DataSection.htm'>DataSection</a>)</td>
+     <td>IEnumerable(Of <a href='SectionInstance.htm'>SectionInstance</a>)</td>
+     <td>Returns all section instances for the indicated <a href='DataSection.htm'>Data Section</a> object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Section</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataSection.htm'>DataSection</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The <a href='DataSection.htm'>Data Section</a> to find instances of.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Sections</td>
+     <td>IEnumerable(Of <a href='SectionInstance.htm'>SectionInstance</a>)</td>
+     <td>Enumerates <a href='SectionInstance.htm'>SectionInstance</a> objects which are direct children of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>Sections(Name As String)</td>
+     <td><a href='SectionInstance.htm'>SectionInstance</a></td>
+     <td>Returns a child <a href='SectionInstance.htm'>SectionInstance</a> by name.  If no child section exists with the specified name, null will be returned.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the section.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Tables</td>
+     <td>IEnumerable(Of <a href='TableInstance.htm'>TableInstance</a>)</td>
+     <td>Enumerates <a href='TableInstance.htm'>TableInstance</a> objects which are direct children of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>Tables(Name As String)</td>
+     <td><a href='TableInstance.htm'>TableInstance</a></td>
+     <td>Returns a child <a href='TableInstance.htm'>TableInstance</a> by name.  If no child table exists with the specified name, null will be returned.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name of the table.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>TypeDisplayName</td>
+     <td>String</td>
+     <td>The type display name of the Data Instance.
+</td>
+  </tr>
+  <tr>
+     <td>TypeName</td>
+     <td>String</td>
+     <td>The type name of the Data Instance.
+</td>
+  </tr>
+  <tr>
+     <td>Value</td>
+     <td>String</td>
+     <td>The value of this data instance.
+</td>
+  </tr>
+  <tr>
+     <td>Visible</td>
+     <td>Boolean</td>
+     <td>Indicates whether a the user interface element associated with this data element is visible. If a <a href='FieldProfile.htm'>Field Profile</a> exists for this element, and the 'Visible' property of that profile has a value, then this value is returned.
+Otherwise, the 'Visible' property of the <a href='DataField.htm'>Data Field</a> object is returned.
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Add(item As <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Appends a new child instance to the children of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The item to add.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AddRange(Items As IEnumerable)</td>
+     <td>Adds a list of items to the collection.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Items</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IEnumerable`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The items to add.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Append(PageNo As Int32, Instance As <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Appends the content of the provided instance to this instance, setting the Page No property of all OCR Items to the indicated page number. This is used when extracting data across multiple pages to construct a source
+DataInstance containing all pages.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageNo</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The page number being appended.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Instance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The DataInstance to append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Append(PageIndex As Int32, ch As Char)</td>
+     <td>Appends a single character to the instance content.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ch</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Char</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Append(PageIndex As Int32, LiteralValue As String)</td>
+     <td>Appends a string value to the instance content.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>LiteralValue</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Append(Instance As <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Appends the content of the provided instance to this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Instance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The instance to append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>AppendSection(Section As <a href='SectionInstance.htm'>SectionInstance</a>)</td>
+     <td>Appends a child section instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Section</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='SectionInstance.htm'>SectionInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The section instance to append.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Clear()</td>
+     <td>Deletes all children of this instance.
+</td>
+  </tr>
+  <tr>
+     <td>ClearCache()</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>Contains(item As <a href='DataInstance.htm'>DataInstance</a>) As Boolean</td>
+     <td>Determines if the specified instance is a child of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>DistanceFrom(Instance As <a href='DataInstance.htm'>DataInstance</a>) As Double</td>
+     <td>Returns the distance, in inches, between the center points of this instance and the supplied instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Instance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The DataInstance to calculate the distance from.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindChild(Id As Guid) As DataInstance</td>
+     <td>Finds a child of this instance by Id.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Id</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Id to search for.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindChild(Name As String, Normalize As Boolean) As DataInstance</td>
+     <td>Finds a child of this instance by name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The name to search for.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Normalize</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If true, names will be normalized during the search to ignore case and to ignore the distinction between " " and "_".</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindDataElement(FieldId As Guid) As DataInstance</td>
+     <td>Finds a child element having the provided ID.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FieldId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of a <a href='DataElement.htm'>Data Element</a> in a <a href='DataModel.htm'>Data Model</a>.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindFieldInstance(FieldId As Guid) As FieldInstance</td>
+     <td>Searches <a href='DataInstance.htm'>DataInstance</a> hierarchy for a <a href='FieldInstance.htm'>FieldInstance</a> with the ID of <a href='DataField.htm'>DataField</a> object specified in the mappings.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FieldId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The ID of the <a href='DataField.htm'>DataField</a> object we need the value for.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindInstances(Value As String) As DataInstanceCollection</td>
+     <td>Finds instances of the specified string value within this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value to find.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindSingleInstanceField(FieldId As Guid) As FieldInstance</td>
+     <td>Returns the first field instance found with the specified FieldId.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>FieldId</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Guid</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The field ID to find.  This value is the Id of a <a href='DataField.htm'>DataField</a> object.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FireReferencingExpressions()</td>
+     <td>Fires expressions for all fields referencing this element in an expression.
+</td>
+  </tr>
+  <tr>
+     <td>GetAnnotations(PageIndex As Int32) As IEnumerable`1</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetPathInstances() As DataInstanceCollection</td>
+     <td>Returns a list of DataInstances which represents the path from the root to this
+instance.
+</td>
+  </tr>
+  <tr>
+     <td>GetPathInstances(BaseInstance As <a href='DataInstance.htm'>DataInstance</a>) As DataInstanceCollection</td>
+     <td>Returns a list of DataInstances which represents the path from the root to the indicated BaseInstance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>BaseInstance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetSubInstance(Index As Int32, Length As Int32) As DataInstance</td>
+     <td>Gets a sub portion of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Index</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The starting character index.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Length</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The character length to extract.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetSubInstance(PageIndex As Int32, Bounds As <a href='../Grooper/RectangleExF.htm'>RectangleExF</a>) As DataInstance</td>
+     <td>Gets a sub portion of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Bounds</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/RectangleExF.htm'>RectangleExF</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The rectangle of the area to extract, in inches.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetSubInstance(Location As TextLocation) As DataInstance</td>
+     <td>Gets a sub portion of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Location</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: TextLocation</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The TextLocation for the sub instance.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetSubInstance(PageIndex As Int32) As DataInstance</td>
+     <td>Returns a new instance containing all characters on the indicated page.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The index of the page to extract.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetTextBounds(PageIndex As Int32) As RectangleExF</td>
+     <td>Returns a rectangle representing the bounds of the page on which this instance appears.  Units are in inches.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>PageIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index of the page.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>HasChild(Name As String) As Boolean</td>
+     <td>Determines whether this element has a child element with the provided name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>HasGeometricOverlap(OtherInstance As <a href='DataInstance.htm'>DataInstance</a>) As Boolean</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>OtherInstance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>HasIndexOverlap(OtherInstance As <a href='DataInstance.htm'>DataInstance</a>) As Boolean</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>OtherInstance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IndexOf(item As <a href='DataInstance.htm'>DataInstance</a>) As Int32</td>
+     <td>Returns the 0-based index of the indicated instance within the collection of child instances.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The instance to return the index of.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Insert(index As Int32, item As <a href='DataInstance.htm'>DataInstance</a>)</td>
+     <td>Inserts a child instance at the indicated position within the collection of children.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>index</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index at which to insert the item.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The item to insert.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>InsertSection(Section As <a href='SectionInstance.htm'>SectionInstance</a>, InstanceIndex As Int32)</td>
+     <td>Inserts a child section at the specified index.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Section</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='SectionInstance.htm'>SectionInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The section instance to insert.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>InstanceIndex</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The 0-based index at which to insert the child section.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>LinkUI(IndexPanel As IIndexPanel, Control As IIndexPanelControl)</td>
+     <td>Links this instance to a control in the Index Panel.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>IndexPanel</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IIndexPanel</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Control</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: IIndexPanelControl</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>OverlapsWith(OtherInstance As <a href='DataInstance.htm'>DataInstance</a>) As Boolean</td>
+     <td>Determines if the instance overlaps with another instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>OtherInstance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>Remove(item As <a href='DataInstance.htm'>DataInstance</a>) As Boolean</td>
+     <td>Removes the indicated child item from the collection of children.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>item</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The item to remove.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>RemoveAt(index As Int32)</td>
+     <td>Removes the child instance at the specified index.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>index</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Int32</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A 0-based index specifying the child's position.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>RemoveSectionInstance(SectionInstance As <a href='SectionInstance.htm'>SectionInstance</a>)</td>
+     <td>Removes a section instance from the list of child elements.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>SectionInstance</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='SectionInstance.htm'>SectionInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The instance to remove.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>RemoveUILinks()</td>
+     <td>Clears the user interface links for this instance and all of its children.
+</td>
+  </tr>
+  <tr>
+     <td>SetDatabase(Database As GrooperDb)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Database</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetOwner(Owner As <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a>, SkipInitialization As Boolean)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Owner</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>SkipInitialization</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetValue(Value As String, Location As <a href='../Grooper/RectangleExF.htm'>RectangleExF</a>, OcrResults As OcrResults)</td>
+     <td>Replaces the value, location, and OCR results of this instance.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Value</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The value of the instance.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Location</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/RectangleExF.htm'>RectangleExF</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The location of this instance.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>OcrResults</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: OcrResults</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The OCR Results associated with the instance.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SortChildren(Comparer As IComparer)</td>
+     <td>Sorts child instances using the specified implementation of IComparer.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Comparer</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: [IComparer`1]</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SwapSections(Section1 As <a href='SectionInstance.htm'>SectionInstance</a>, Section2 As <a href='SectionInstance.htm'>SectionInstance</a>)</td>
+     <td>Swaps the position of 2 section instances.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Section1</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='SectionInstance.htm'>SectionInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The first child instance.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Section2</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='SectionInstance.htm'>SectionInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The second child instance.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>TopDescendantsWithName(Name As String) As IEnumerable`1</td>
+     <td>Enumerates top descendants with the provided name.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Name</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns a string representation of the object.
+</td>
+  </tr>
+  <tr>
+     <td>Translate(X As Double, Y As Double)</td>
+     <td>Translates the location of this instance by X and Y amounts.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>X</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The offset on the X axis, in inches.</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Y</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Double</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The offset on the Y axis, in inches.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>UnlinkUI()</td>
+     <td>Unlinks this instance from its user interface component.
+</td>
+  </tr>
+  <tr>
+     <td>Validate() As Boolean</td>
+     <td>Triggers a validation event for this instance.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+  <tr>
+     <td>WriteToLog(Message As String, pa() As Object)</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Message</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>pa</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

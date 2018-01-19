@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Binarize</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nMiscellaneous\nBinarize");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Binarize.htm\">Miscellaneous<\/a> &gt; Binarize<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.Binarize.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Binarize</h1></td>
+<table>
+</tr>
+</table>
+Converts an image to 8-bit black and white using various thresholding methods.
+
+<br/><br/><b>Inherits from:</b> <a href='../IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Thresholding Method</td>
+    <td><table>
+   <tr><td>Type: BinarizationMethod, Default: Auto</td></tr>
+   <tr><td>Specifies the thresholding method which will be used. Can be one of the following values:<br />
+<ul>
+<li><b>Simple</b>: Thresholds an image to black and white using a fixed threshold value between 0 and 255.
+</li>
+<li><b>Auto</b>: Selects a threshold value automatically based on histogram analysis.
+</li>
+<li><b>Adaptive</b>: Thesholds pixels based on the intensity of pixels in the local neighborhood.
+</li>
+<li><b>Dynamic</b>: Performs adaptive thresholding, while preserving dark areas on the page.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Black Grouping</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 25%, Range: 0% - 100%</td></tr>
+   <tr><td>In dymamic thresholding, specifies how aggressively dark areas of the image will be preserved.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Threshold</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 127, Range: 1 - 255</td></tr>
+   <tr><td>Defines the threshold value to be used for simple thresholding.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Window Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 5pt</td></tr>
+   <tr><td>The size of the window used to determine the threshold value for each pixel in Dynamic and Adaptive thresholding.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Kernel Type</td>
+    <td><table>
+   <tr><td>Type: AdaptiveKernelType, Default: Box</td></tr>
+   <tr><td>Specifies the kernel type to use for adaptive thresholding. Can be one of the following values:<br />
+<ul>
+<li><b>Box</b>: Uses a box kernel.
+</li>
+<li><b>Gaussian</b>: Uses a Gaussian kernel.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Delta</td>
+    <td><table>
+   <tr><td>Type: Single, Default: 16, Range: 1 - 255</td></tr>
+   <tr><td>For dynamic and adaptive thresholding, specifies the change in intensity required for a pixel to be considered an edge pixel.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Sigma</td>
+    <td><table>
+   <tr><td>Type: Single, Default: 0, Range: 0 - 255</td></tr>
+   <tr><td>For adaptive thresholding using a Gaussian kernel, specifies the Gaussian sigma value. If set to zero, the sigma value will be calculated automatically based on the Mask Window Size, using the following
+formula: sigma = 0.3 * ((MaskWindowSize - 1) * 0.5 - 1) + 0.8.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

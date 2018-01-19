@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Scan Index Export</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nGetting Started Tutorials\nScan Index Export");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Scan_Index_Export.htm\">Getting Started Tutorials<\/a> &gt; Scan Index Export<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>HOW TO: Scan, Index, and Export</h1>
+<p>This tutorial provides a walk-through of the process required to build a simple batch process. &#160;The process created in this tutorial will perform basic image cleanup during scanning, and real-time separation based on Patch T patch code sheets. &#160;The documents will be indexed manually, and exported to a file system directory in PDF format, with the metadata exported as XML.</p>
+<h2>Step 1 - Create a New Content Model</h2>
+<p>The first step will be to create a Content Model, which will describe the document types and data elements we will be capturing.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>In Grooper Administration, navigate to the Content Models folder.</li>
+<li>Right-click the Content Models folder and select "Add Content Model"</li>
+<li>Name the IP Profile 'Scan Index Export' and click OK.</li>
+</ul>
+<h2>Step 2 - Add a Document Type</h2>
+<p>We will need at least one document type, so let's create that first.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Right-click the 'Scan Index Export' Content Model and select 'Add Document Type'.</li>
+<li>Name the new Document Type 'Generic Document' and click OK. &#160;</li>
+<li>The Content Model should now look like this:</li>
+</ul>
+<p><img src="images/ScanIndexExport_Step02.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 3 - Add a Data Model to the Content Model</h2>
+<p>As we will be indexing field values, we need to add a Data Model to the Content Model so that we can define fields.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Select the 'Scan Index Export' Content Model in the left pane.</li>
+<li>Click the Create Data Model toolbar button on the property panel for the Content Model.</li>
+<li>The Content Model should now look like this:</li>
+</ul>
+<p><img src="images/ScanIndexExport_Step03.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 4 - Add Index Fields</h2>
+<p>This step will add the fields we will be indexing. &#160;To keep things simple, we will just add two fields: Description and Document Date.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Right-click the newly-created Data Model immediately below the 'Scan Index Export' Content Model, and select 'Add Data Field'.</li>
+<li>Name the field 'Description' and click OK.</li>
+<li>Right-click the Data Model again and select 'Add Data Field'</li>
+<li>Name the field 'Document Date' and click OK.</li>
+<li>In the property panel for the 'Document Date' field, change the Display Width property to 100, and set the Data Type property to the 'Data Types • (system) • Date' Data Type.</li>
+<li>Click the Save button. &#160;The Content Model should now look like this:</li>
+</ul>
+<p><img src="images/ScanIndexExport_Step04.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 5 - Create an IP Profile for Scan-Time Image Cleanup</h2>
+<p>The first step will be to create an IP Profile containing image cleanup commands, which will be used for real-time image cleanup during scanning. &#160;</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>In Grooper Administration, navigate to Profiles • IP Profiles.</li>
+<li>Right-click the IP Profiles folder and select "Add Ip Profile"</li>
+<li>Name the IP Profile 'Scan Cleanup' and click OK.</li>
+<li>Add an Auto Deskew command. &#160;In the property panel for the new IP Profile, click Add • Image Transforms • Auto Deskew.</li>
+<li>Add an Auto Border Crop command. &#160;In the property panel for the new IP Profile, click Add • Image Cleanup • Auto Border Crop.</li>
+<li>Click the Save button on the toolbar. &#160;The IP Profile should now contain the following commands:</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/ScanIndexExport_.IpCommands.gif" class="ScreenShot" alt="" border="0" /></p>
+<h2>Step 6 - Create a Separation Profile</h2>
+<p>The next step will be to create a Separation Profile, which will be used during scanning to perform real-time separation on Patch T separator sheets.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>In Grooper Administration, navigate to Profiles • Separation Profiles.</li>
+<li>Right-click the Separation Profiles folder and select "Add Separation Profile"</li>
+<li>Name the IP Profile 'Patch T Separation' and click OK.</li>
+<li>Add an event to create new folders at level 1 when a patch code is detected. &#160;Click the Add Event toolbar command, and set the event properties as shown below, then click OK.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step06_PatchEvent.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Add an event to delete blank pages. &#160;(If you are using a scanner model which supports blank page deletion in the driver, this step can be skipped.) &#160;Click the Add Event toolbar command, and set the event properties as shown below, then click OK.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step06_BlankPageEvent.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>The Separation Profile should now contain the events shown below. &#160;Click Save on the toolbar for the Separation Profile.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step06_Events.gif" class="ScreenShot" alt="" border="0" /></p>
+<h2>Step 7 - Create a Batch Process</h2>
+<p>This step will create a Batch Process to specify the steps through which batches will be processed. &#160;We will be adding 3 steps: Scan, Data Entry, and Export.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>In Grooper Administration, navigate to Batch Processing • Processes • Working.</li>
+<li>Right-click the 'Working' folder and select 'Add Batch Process'.</li>
+<li>Name the Batch Process 'Scan Index Export' and click OK.</li>
+<li>Click 'Add Step' on the toolbar and add a Scan step as follows:</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_ScanStep.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click OK, and then configure the settings for the Scan Module to use the IP Profile created in Step 5 and the Separation Profile created in Step 6, as shown below. &#160;Click OK when finished.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_ScanSettings.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click 'Add Step' again and add a Data Review step as shown below. This is where users will enter the data fields.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_DataEntryStep.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click OK, and then configure the settings for the Data Review Module, as shown below. &#160;Since we are running the step at the batch level, the Processing Level for Data Review is set to Level 1 - indicating that users will be review data on the items at Level 1 below the root of the batch. &#160;Click OK when finished.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_DataEntrySettings.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click 'Add Step' again and add a Export step as shown below. Our export will use the Standard Export processing script, so we want to use Grooper Scripting as the processing module.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_ExportStep.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click OK and the properties for the Grooper Scripting module will be displayed. &#160;Set the Processing Script property to reference Export Scripts • Standard Export, as shown below.</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_ExportSettings.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Click 'Configure Script' to display the settings for the Standard Export script.</li>
+<li>Set the 'Base Export Folder' property under 'File System Location' to a folder you have write access to.</li>
+<li>Leave all other properties set to their default values, and click OK to close all dialog boxes.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_ExportScriptSettings.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>The Batch Process should now look like the sample shown below. &#160;Click Save to save the Batch Process.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/ScanIndexExport_Step07_BatchProcess.jpg" class="ScreenShot" alt="" border="0" /></p>
+<h2>Step 8 - Publish and Test the Batch Process</h2>
+<p>Your new process is now complete...time to publish and test it.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Use the Publish command on the toolbar to publish the Batch Process</li>
+<li>Launch the Scan Module and create a batch using the 'Scan Index Export' Batch Process.</li>
+<li>Scan some documents.</li>
+<li>Complete the batch.</li>
+<li>Launch the Data Review Module and click Start.</li>
+<li>Enter data for all documents.</li>
+<li>Complete the batch.</li>
+<li>Launch Grooper Script and click start.</li>
+<li>When all tasks have been processed, navigate to the file system directory configured for the export step and verify that the documents and metadata have been exported.</li>
+</ul>
+<h2>See Also</h2>
+<p><a href="../Batch_Processing/Build_a_Batch_Process.htm">HOW TO: Build a Batch Process</a></p>
+<p>Batch Process</p>
+<p>Content Model</p>
+<p>Data Model</p>
+<p>Data Field</p>
+<p>IP Profile</p>
+<p>Separation Profile</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

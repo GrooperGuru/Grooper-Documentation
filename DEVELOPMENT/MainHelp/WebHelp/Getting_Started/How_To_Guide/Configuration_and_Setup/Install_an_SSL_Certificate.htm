@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Install an SSL Certificate</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+ <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nConfiguration and Setup\nInstall an SSL Certificate");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Install_a_Stand-Alone_Instance_of_Grooper.htm\">Configuration and Setup<\/a> &gt; Install an SSL Certificate<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Install an SSL Certificate</h1>
+To enable HTTPS for a Grooper Web Service (such as <a href="../../../Administrator_Reference/Service_Instance_Types/Grooper_CMIS_Server.htm">Grooper CMIS Server</a>) an X.509 certificate must be installed on the host machine and bound to a port number. <br />&#160; <br />Complete the following steps to bind a port number to an installed X.509 certificate: 
+<p style="text-align: justify;">1)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>View the certificate with the MMC Snap-in</p>
+
+<p style="text-align: justify;">2)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Get the certificate's thumbprint</p>
+
+<p style="text-align: justify;">3)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Build the command line command and parameters</p>
+
+<p style=" margin-left: 20px;">a)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Command line format: &#160;netsh http add sslcert ipport=0.0.0.0:&lt;Port Number&gt; certhash=&lt;Thumbprint&gt; appid={00112233-4455-6677-8899-AABBCCDDEEFF}</p>
+
+<p style=" margin-left: 40px;">i)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>ipport=0.0.0.0 - It is unnecessary to indicate an actual IP address here because our only intent is to associate the Port Number to the installed certificate. So, leave this as 0.0.0.0</p>
+
+<p style=" margin-left: 40px;">ii)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>&lt;Port Number&gt; - The port number for the Grooper service</p>
+
+<p style=" margin-left: 40px;">iii)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>certhash - The certhash is the thumbprint of the certificate without any spaces</p>
+
+<p style=" margin-left: 40px;">iv)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;</font></span>appid - This app id is irrelevant. so. leave this as {00112233-4455-6677-8899-AABBCCDDEEFF}</p>
+
+<p>4)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Execute the command in a command prompt window</p>
+
+<p style=" margin-left: 20px;">a)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Example:</p>
+
+<p style=" margin-left: 40px;">i)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Port Number: 13999</p>
+
+<p style=" margin-left: 40px;">ii)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Cert Hash: &#160;‎e7 16 ba 5d 42 36 80 0b 90 f6 a2 44 f2 06 e9 a0 ec 73 25 44</p>
+
+<p style=" margin-left: 40px;">iii)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Command with parameters: &#160;netsh http add sslcert ipport=0.0.0.0:13999 certhash=e716ba5d4236800b90f6a244f206e9a0ec732544 appid={00112233-4455-6677-8899-AABBCCDDEEFF}</p>
+
+<p>5)<span style='word-spacing:normal; font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>The command prompt window should return the message 'SSL Certificate successfully added' upon success</p>
+
+<p>&#160;</p>
+View the certificate with the MMC Snap-in:
+<ol style="list-style: decimal;">
+<li>Open a command Prompt window</li>
+<li>Type mmc and press the ENTER key</li>
+<li>On the File menu, click Add/Remove Snap In</li>
+<li>Click Add</li>
+<li>In the Add Standalone Snap-in dialog box, select Certificates</li>
+<li>Click Add</li>
+<li>In the Certificates snap-in dialog box, select Computer account and click Next</li>
+<li>In the Select Computer dialog box, click Finish</li>
+<li>In the Add or Remove Snap-ins dialog box, click OK</li>
+<li>On the Add/Remove Snap-in dialog box, click OK</li>
+<li>In the Console Root window, click Certificates (Local Computer) to view the certificate stores for the computer</li>
+</ol>
+<p>Get the certificate's thumbprint:</p>
+<ol style="list-style: decimal;">
+<li>Double-click the certificate in the MMC Snap-in console</li>
+<li>Click the Details tab</li>
+<li>Scroll to the bottom of the Field Value list and click Thumbprint</li>
+<li>Copy the thumbprint of the certificate into a text editor such as Notepad</li>
+<li>Remove all spaces between the hexadecimal characters</li>
+</ol>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

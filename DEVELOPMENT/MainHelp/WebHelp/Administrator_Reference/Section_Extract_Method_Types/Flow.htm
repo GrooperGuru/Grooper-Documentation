@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Flow</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nSection Extract Method Types\nFlow");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Section_Extract_Method_Types.htm\">Section Extract Method Types<\/a> > Flow<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Flow</h1>
+Identifies [Section Instances] using an extractor to match segments of text.  For each match, the character data between the starting
+and ending position will become an output [Section Instance].
+
+This method is useful in cases where (a) the section content is contiguous in the input; and (b) the start and end of the section content can be identified with
+pattern matching.
+<p>For example, the document below could be divided into employee records using the pattern 'EMPLOYEE:.*?DEPARTMENT:[^\r]+'.</p><br /><div style="border-style: solid; border-width: 1px; background-color: white; font-family: Courier;"><p style="text-align: center;">ACTIVE EMPLOYEE REPORT</p><hr /><p style="background-color:#B0FFB0">
+EMPLOYEE: Doe, Jane  SSN: 000-00-0000  PHONE: (000) 000-0000<br />
+ADDRESS: 1234 S Main  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+DOB: 00/00/0000  EMAIL: janedoe@acme.com    DEPARTMENT: IT</p><hr /><p style="background-color:#B0FFB0">
+EMPLOYEE: Doe, John  SSN: 000-00-0000  PHONE: (000) 000-0000<br />
+ADDRESS: 2233 N Elm  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+DOB: 00/00/0000  EMAIL: johndoe@acme.com    DEPARTMENT: AP</p><hr /><p style="background-color:#B0FFB0">
+EMPLOYEE: Smith, Kim  SSN: 000-00-0000  PHONE: (000) 000-0000<br />
+ADDRESS: 8888 W 24th  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+DOB: 00/00/0000  EMAIL: kimsmith@acme.com  DEPARTMENT: Admin</p></div><p>As another example, consider the BORROWER INFORMATION section below.  This is a single-instance section which can be captured easily using the
+pattern '\r\nBORROWER INFORMATION\r\n.*?\r\nLENDER INFORMATION\r\n'.</p><br /><div style="border-style: solid; border-width: 1px; background-color: white; font-family: Courier;"><p style="text-align: center;"><b>APPRAISAL REPORT</b></p><hr /><p><b>PROPERTY INFORMATION</b></p><p>PARCEL ID: 37239534  SQ FT: 1,652  BED: 3  BATH: 2.5<br />
+ADDRESS: 1234 S Main  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+GARAGE: 2 Car  POOL: N  Central Heat/Air: Y </p><div style="background-color:#B0FFB0"><p><b>BORROWER INFORMATION</b></p><p>EMPLOYEE: Doe, John  SSN: 000-00-0000  PHONE: (000) 000-0000<br />
+ADDRESS: 2233 N Elm  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+DOB: 00/00/0000  EMAIL: johndoe@acme.com    DEPARTMENT: AP</p><p>EMPLOYEE: Doe, Jane  SSN: 000-00-0000  PHONE: (000) 000-0000<br />
+ADDRESS: 1234 S Main  CITY: Anytown  STATE: AA  ZIP: 00000<br />
+DOB: 00/00/0000  EMAIL: janedoe@acme.com    DEPARTMENT: IT</p><p><b>LENDER INFORMATION</b></p></div><p>LENDER NAME: First Bank and Trust, 1 N Main Street, Anytown, AA 00000<br />...</p></div>
+
+<br/><br/><b>Inherits from:</b> [Section Extract Method]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Extractor</td>
+    <td><table>
+   <tr><td>Type: [Embedded Extractor]</td></tr>
+   <tr><td>The extractor to be used to identify section instances. Each instance returned by this extractor will become a section instance.
+(See [Embedded Extractor])</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[Embedded Extractor]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

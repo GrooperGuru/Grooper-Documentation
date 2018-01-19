@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>OCR Profile</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Node Types\nProfiles\nOCR Profile");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Grooper_Node_Types.htm\">Grooper Node Types<\/a> &gt; <a href=\"IP_Group.htm\">Profiles<\/a> &gt; OCR Profile<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.OCR.OcrProfile.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>OCR Profile</h1></td>
+<table>
+</tr>
+</table>
+Defines settings which control how OCR is performed.
+
+<br/><br/><b>Inherits from:</b> <a href='../Grooper_Node_Types.htm'>Grooper Node</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>OCR Engine</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The OCR Engine to use with this OCR profile. Please note that some OCR engines require additional licensing.  See <a href='../../OCR_Engine_Types/OCR_Engine_Types.htm'>OCR Engine Types</a> for details on the OCR engines available in Grooper.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>IP Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='IP_Profile.htm'>IP Profile</a></td></tr>
+   <tr><td>The <a href='IP_Profile.htm'>IP Profile</a> to be used for temporary image cleanup prior to OCR.  Does not permanently alter the page images.  Do not include any commands which change the size or resolution of the image.
+(See <a href='IP_Profile.htm'>IP Profile</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Region of Interest</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, Default: (0,0):(0,0)</td></tr>
+   <tr><td>Indicates the region of the page to be processed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Synthesis</td>
+  </tr>
+  <tr>    <td>Synthesis Method</td>
+    <td><table>
+   <tr><td>Type: SynthesisMethodEnum, Default: Full</td></tr>
+   <tr><td>The method by which (x,y) character locations will be converted to a text flow. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: Grooper will perform no synthesis.  The text flow will reflect what was generated by the OCR engine.
+</li>
+<li><b>Full</b>: Grooper will re-synthesize results received from the OCR engine.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Font Pitch</td>
+    <td><table>
+   <tr><td>Type: FontPitchMode, Default: Auto</td></tr>
+   <tr><td>When synthesis is enabled, this setting controls how the font pitch is detected. Can be one of the following values:<br />
+<ul>
+<li><b>Auto</b>: Indicates that Grooper should automatically determine the font pitch for each segment of text.
+</li>
+<li><b>Fixed</b>: Indicates that all text should be treated as fixed-pitch.
+</li>
+<li><b>Variable</b>: Indicates that all text should be treated as variable-pitch.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Variance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 10%, Range: 0% - 100%</td></tr>
+   <tr><td>When font pitch detection is enabled, the maximum variance in character cell sizes allowed for a fixed-pitch font. By definition, a fixed-pitch font is one where all characters occupy the exact same amount of horizontal space.  Due to the imperfect
+nature of scanned document images, there will be some in the widths of character cells.  This value controls how much variance is allowed before
+the segment is determined to be a variable pitch font.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Segment End Ratio</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 125%, Range: 0% - 500%</td></tr>
+   <tr><td>When synthesis is enabled, controls how wide a gap must be in relation to the current font size in order to constitute the end of a segment.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Segment Reprocessing Threshold</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0%, Range: 0% - 100%</td></tr>
+   <tr><td>Text segments with an average character confidence below this value will re-processed through OCR. A value of 0 disables segment reprocessing entirely.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Iterative Processing</td>
+  </tr>
+  <tr>    <td>OCR Iterations</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 1</td></tr>
+   <tr><td>Indicates the number of iterations for iterative OCR.  A setting of 1 indicates that iterative OCR is disabled. Iterative OCR improves accuracy by performing OCR in multiple passes.  On each successive pass, characters recognized in previous
+passes are digitally dropped out of the image.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Enable Cell Validation</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether cell validation should be used. When cell validation is enabled, after OCR is performed on the full image, the image will be divided into an NxN matrix
+of cells, specified by the Rows and Columns properties.  OCR is then performed on each cell independently, and the results
+are merged with the full page OCR.  Edge characters within 0.01" the cell edges are automatically deleted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Rows</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 2</td></tr>
+   <tr><td>When cell validation is enabled, the number of vertical cells the image should be divided into.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Columns</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 2</td></tr>
+   <tr><td>When cell validation is enabled, the number of horizontal cells the image should be divided into.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Cell Edge Buffer</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0.1, Range: 0.05 - 0.25</td></tr>
+   <tr><td>The size, in inches, of a buffer zone around the border of the cell. Any characters overlapping the buffer zone will be eliminated.  This helps eliminate partial characters which
+may be picked up on cell boundaries.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Cell Overlap</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0.25, Range: 0 - 2</td></tr>
+   <tr><td>When cell validation is enabled, the amount, in inches, that cells will overlap each other.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Skip First Column</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>When Cell Validation is in use, indicates whether the first column of cells should be skipped. Speeds up the cell validation process by skipping the first column of cells.  Most of the issues addressed
+by cell validation tend to occur when graphical elements appear to the left of the text.  As such, re-OCRing the
+first column of cells tends to add limited benefit in some cases.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Results Filtering</td>
+  </tr>
+  <tr>    <td>Minimum Character Confidence</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0%, Range: 0% - 100%</td></tr>
+   <tr><td>Any characters with a confidence below this value will be discarded.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Eliminate Edge Characters</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, characters near the edge of the ROI will be eliminated based on the 'Minimum Distance to Edge' property.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Distance to Edge</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0.01</td></tr>
+   <tr><td>When Eliminate Edge Characters is enabled, this specifies the minimum distance, in inches, between a character and the
+edge of the ROI.  Any character closer than this will be eliminated from the OCR output.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Eliminate Isolated Symbols</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, segments of one or more symbols which are not part of a text line will be eliminated.
+The Maximum Symbol Ratio property controls what percentage of the segment must be symbols.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Symbol Ratio</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 1</td></tr>
+   <tr><td>When Eliminate Isolated Symbols is enabled, this specifies the minimum ratio of symbol characters a
+segment must contain in order for it to be eliminated from the OCR output.  A value of 1 will require that every character in the segment be a symbol.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Character Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a>, Default: (0,0)</td></tr>
+   <tr><td>The minimum absolute character size, in inches.  Characters smaller than this will be eliminated from the
+OCR output.  A value of 0 for Width or Height indicates that there is no minimum."
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Character Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a>, Default: (0,0)</td></tr>
+   <tr><td>The maximum absolute character size, in inches.  Characters Larger than this will be eliminated from the
+OCR output.  A value of 0 for Width or Height indicates that there is no maximum.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0</td></tr>
+   <tr><td>The minimum font size, in points.  Any characters which are measurable and have a font size smaller than the
+indicated point size will be eliminated from the OCR output. A value of 0 indicates that there is no minimum.  (1 point = 1/72")
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 0</td></tr>
+   <tr><td>The maximum font size, in points.  Any characters which are measurable and have a font size larger than the
+indicated point size will be eliminated from the OCR output. A value of 0 indicates that there is no maximum.  (1 point = 1/72")
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>OCR Engine Info</td>
+  </tr>
+  <tr>    <td>Licensing</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>
+Licensing information associated with the specific OCR engine
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Version</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>
+OCR engine version (if any)
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='IP_Profile.htm'>IP Profile</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

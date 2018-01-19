@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Patch Code Detection</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nFeature Detection\nPatch Code Detection");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Barcode_Detection.htm\">Feature Detection<\/a> &gt; Patch Code Detection<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.ReadPatchCodes.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Patch Code Detection</h1></td>
+<table>
+</tr>
+</table>
+The Detect Patch Codes command is used to determine if an image contains a patch
+code.  This command is frequently used for Separation.  This command returns true
+if a patch code is detected and false if one is not.
+
+<br/><br/><b>Inherits from:</b> <a href='../IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Read Directions</td>
+    <td><table>
+   <tr><td>Type: ReadDirection, Default: South</td></tr>
+   <tr><td>Determines in which direction(s) the patch code reader searches the document for recognizable patch codes. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: Represents no directions. Not recommended in general use.
+</li>
+<li><b>East</b>: Easterly scan (horizontally, left to right).
+</li>
+<li><b>South</b>: Southerly scan (vertically, top to bottom).
+</li>
+<li><b>West</b>: Westerly scan (horizontally, right to left).
+</li>
+<li><b>North</b>: Northerly scan (vertically, bottom to top).
+</li>
+<li><b>NorthEast</b>: Northeasterly scan (diagonally, lower left to upper right).
+</li>
+<li><b>SouthEast</b>: Southeasterly scan (diagonally, upper right to lower left).
+</li>
+<li><b>SouthWest</b>: Southwesterly scan (diagonally, upper right to lower left).
+</li>
+<li><b>NorthWest</b>: Northwesterly scan (diagonally, lower right to upper left).
+</li>
+<li><b>All</b>: Represents all supported directions.
+</li>
+</ul>
+ South, for example, starts at the top of the page and reads down.  Multiple directions can be useful for
+detecting barcodes with inconsistent orientations.  However, certain barcode values may change if they are read
+upside down.  For example:  A Patch T barcode read upside down becomes a Patch 3.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Quiet Zone Tolerance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 50%, Range: 0% - 100%</td></tr>
+   <tr><td>Barcodes require an area of free space around the barcode known as the Quiet Zone. These areas should be clear of any stray marks or graphics. <br /><br />
+Quiet Zone Tolerance defines how tolerant the barcode reader is of marks in the Quiet Zone.  A setting of 0 will ignore
+the Quiet Zone requirement.  A setting of 1 will strictly require that the Quiet Zone is respected.  Settings closer
+to 1 can be good for barcodes like patch codes that are generally unobstructed. Settings closer to 0 can cause false
+positives, but may be required for barcodes that are embedded in the content of a document (e.g. Code39 or UPC).
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Read Quality</td>
+    <td><table>
+   <tr><td>Type: ReadingQuality, Default: MostAccurate</td></tr>
+   <tr><td>This setting has high-level influence over performance and accuracy of barcode recognition. Can be one of the following values:<br />
+<ul>
+<li><b>Normal</b>: Uses normal barcode extraction.
+</li>
+<li><b>MostAccurate</b>: This will cause a fine-grained scanning for barcode features, repeating the search multiple times using different settings.
+</li>
+<li><b>Fastest</b>: Coarse scanning of the document for barcode features.  More likely to give up earlier without finding all barcodes.
+</li>
+</ul>
+ <ul><li><b>Fastest</b> - Coarse scanning of the document for barcode features.  More likely to give up earlier without finding all barcodes.</li><li><b>MostAccurate</b> - This will cause a fine-grained scanning for barcode features.
+This will repeat its search multiple times under different configurations to try and detect every barcode.</li><li><b>Default</b> - A compromise between the other two settings.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scan Interval</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 500</td></tr>
+   <tr><td>Gets or sets the scan interval.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Result Type</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>    <th>Member Name</th>
+    <th>Member Type</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>PatchCodes</td>
+    <td>List(Of BarCodeInstance)</td>
+    <td>A list of patch codes found on the image.
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

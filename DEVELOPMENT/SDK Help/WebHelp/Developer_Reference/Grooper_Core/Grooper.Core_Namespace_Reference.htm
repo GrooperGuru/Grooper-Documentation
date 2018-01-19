@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper.Core Namespace Reference</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Core\nGrooper.Core Namespace Reference");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"UnattendedActivity.htm\">Grooper Core<\/a> > Grooper.Core Namespace Reference<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>Grooper.Core Namespace Reference</h1><h2>Classes</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Class Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href="AbsoluteAdjustment.htm">AbsoluteAdjustment</a></td>
+     <td>Adjusts the edge to a specific absolute position.</td>
+  </tr>
+  <tr>
+     <td><a href="AnchorAdjustment.htm">AnchorAdjustment</a></td>
+     <td>Adjusts the edge relative to a text element on the document.</td>
+  </tr>
+  <tr>
+     <td><a href="ArrayProvider.htm">ArrayProvider</a></td>
+     <td>Matches a list of values arranged in horizontal, vertical, or flow order.</td>
+  </tr>
+  <tr>
+     <td><a href="AttendedActivity.htm">AttendedActivity</a></td>
+     <td>Serves as the base class for all attended activities.</td>
+  </tr>
+  <tr>
+     <td><a href="BaseArrayProvider.htm">BaseArrayProvider</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href="BaseCombiningProvider.htm">BaseCombiningProvider</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href="Batch.htm">Batch</a></td>
+     <td>A Batch is a hierarchy of folders and pages which serves as the fundamental unit of capture in Grooper.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchesFolder.htm">BatchesFolder</a></td>
+     <td>A Batches Folder object is a folder which contains <a href='Batch.htm'>Batches</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchFolder.htm">BatchFolder</a></td>
+     <td>The Batch Folder object represents a logical folder within the structure of a <a href='Batch.htm'>Batch</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchObject.htm">BatchObject</a></td>
+     <td>Batch Objects represent items that can appear in Batches. Currently these are <a href='BatchFolder.htm'>Batch Folders</a> and <a href='BatchPage.htm'>Batch Pages</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchObjectStreamGenerator.htm">BatchObjectStreamGenerator</a></td>
+     <td>Represents a base class for objects which generate an output stream using the contents of a BatchFolder object.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchPage.htm">BatchPage</a></td>
+     <td>The Batch Page object represents a logical page within a <a href='Batch.htm'>Batch</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchPage_ImageInfo.htm">BatchPage: ImageInfo</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href="BatchProcess.htm">BatchProcess</a></td>
+     <td>A Batch Process defines a list of steps through which batches will be processed. </td>
+  </tr>
+  <tr>
+     <td><a href="BatchProcessFolder.htm">BatchProcessFolder</a></td>
+     <td>Represents the 'Batch Processing  / Processes' folder found in the root of a Grooper repository.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchProcessingActivity.htm">BatchProcessingActivity</a></td>
+     <td>Activities define work to be performed on objects in a batch, and define settings which control how the work is performed.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchProcessingFolder.htm">BatchProcessingFolder</a></td>
+     <td>Represents the 'Batch Processing' folder found in the root of a Grooper repository.</td>
+  </tr>
+  <tr>
+     <td><a href="BatchProcessStep.htm">BatchProcessStep</a></td>
+     <td>Represents a logical step in a <a href='BatchProcess.htm'>Batch Process</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="CaptureZone.htm">CaptureZone</a></td>
+     <td>Capture Zones associate regions on a page with <a href='DataElement.htm'>Data Elements</a> in a <a href='DataModel.htm'>Data Model</a>, and are used to facilitate zonal data capture.</td>
+  </tr>
+  <tr>
+     <td><a href="ClassifyMethod.htm">ClassifyMethod</a></td>
+     <td>Classify Metheds define classification mechanisms which are used in <a href='ContentModel.htm'>Content Models</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="CollationProvider.htm">CollationProvider</a></td>
+     <td>Collation providers define various methods of processing the the output of a <a href='DataType.htm'>Data Type</a> object.</td>
+  </tr>
+  <tr>
+     <td><a href="CombineProvider.htm">CombineProvider</a></td>
+     <td>Combines instances from child extractors based on the grouping specified in the Group By property.</td>
+  </tr>
+  <tr>
+     <td><a href="ContainerDataElement.htm">ContainerDataElement</a></td>
+     <td>A Data Element that is a container for one or more other data elements in a data element hierarchy.</td>
+  </tr>
+  <tr>
+     <td><a href="ContentCategory.htm">ContentCategory</a></td>
+     <td>A Content Category is a container for other Content Category and <a href='DocumentType.htm'>Document Type</a> objects within a <a href='ContentModel.htm'>Content Model</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="ContentLink.htm">ContentLink</a></td>
+     <td>Content Links define references to content stored outside of Grooper, such as file on a file system or a document in
+a <a href='../Grooper_CMIS/CmisRepository.htm'>CMIS Repository</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="ContentModel.htm">ContentModel</a></td>
+     <td>A Content Model defines the taxonomy of a document set, in terms of the <a href='DocumentType.htm'>Document Types</a> it contains, and the <a href='DataElement.htm'>Data Elements</a> which appear on
+each document type.</td>
+  </tr>
+  <tr>
+     <td><a href="ContentType.htm">ContentType</a></td>
+     <td>A Content Type is any element of a <a href='ContentModel.htm'>Content Model</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="DatabaseTable.htm">DatabaseTable</a></td>
+     <td>A Database Table object represents an externally-stored database table which can be queried from Grooper.</td>
+  </tr>
+  <tr>
+     <td><a href="DataColumn.htm">DataColumn</a></td>
+     <td>Represents a column in a <a href='DataTable.htm'>Data Table</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="DataConnection.htm">DataConnection</a></td>
+     <td>A Data Connection object represents a connection to a database, storing all information
+necessary to access the database.  These objects provide a connection basis for <a href='DatabaseTable.htm'>Database Table</a> objects,
+and are also used directly in scripts to avoid storing authentication credentials in script code.</td>
+  </tr>
+  <tr>
+     <td><a href="DataElement.htm">DataElement</a></td>
+     <td>
+Represents an element of data.
+</td>
+  </tr>
+  <tr>
+     <td><a href="DataElementInstance.htm">DataElementInstance</a></td>
+     <td>Defines a DataInstance which represents the value of a <a href='DataElement.htm'>Data Element</a> in a <a href='DataModel.htm'>Data Model</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="DataElementProfile.htm">DataElementProfile</a></td>
+     <td>Data Element Profiles store settings for <a href='DataElement.htm'>Data Elements</a> such as sections, tables, and fields on a <a href='ContentType.htm'>Content Type</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="DataExtractionFolder.htm">DataExtractionFolder</a></td>
+     <td>Represents the 'Data Extraction' folder found in the root of a Grooper repository.</td>
+  </tr>
+  <tr>
+     <td><a href="DataField.htm">DataField</a></td>
+     <td>Represents a field or table cell.</td>
+  </tr>
+  <tr>
+     <td><a href="DataFormat.htm">DataFormat</a></td>
+     <td> Data Format objects are children of <a href='DataType.htm'>Data Type</a> objects, and represent a distinct format for the Data Type.
+For example, a date could appear on one document as 05/17/2013, and as May 17, 2013 on another document.
+Each of these formats is defined by a Data Format object which is a child of the 'Date' Data Type object.
+</td>
+  </tr>
+  <tr>
+     <td><a href="DataInstance.htm">DataInstance</a></td>
+     <td>Defines an instance of text data on a document.</td>
+  </tr>
+  <tr>
+     <td><a href="DataModel.htm">DataModel</a></td>
+     <td>Defines the data elements for a content type.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern.htm">DataPattern</a></td>
+     <td>Defines an extractor which returns all instances of data matching a regular expression.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_GroupLookupOptions.htm">DataPattern: GroupLookupOptions</a></td>
+     <td>Defines lookup options which apply to a named regular expression group.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_LookupOptions.htm">DataPattern: LookupOptions</a></td>
+     <td>Defines lookup options which should be applied to extraction results.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_TextPreprocessor.htm">DataPattern: TextPreprocessor</a></td>
+     <td>Defines options for temporary text preprocessing which occurs prior to executing an extractor.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_TextPreprocessor+HorizontalTabMarker.htm">DataPattern: TextPreprocessor+HorizontalTabMarker</a></td>
+     <td>Defines settings which control horizontal tab insertion.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_TextPreprocessor+ParagraphMarker.htm">DataPattern: TextPreprocessor+ParagraphMarker</a></td>
+     <td>Defines settings which control paragraph detection.</td>
+  </tr>
+  <tr>
+     <td><a href="DataPattern_TextPreprocessor+VerticalTabMarker.htm">DataPattern: TextPreprocessor+VerticalTabMarker</a></td>
+     <td>Replaces \r\n pairs with \v characters in cases where the vertical gap between two lines of text meets certain criteria.</td>
+  </tr>
+  <tr>
+     <td><a href="DataSection.htm">DataSection</a></td>
+     <td>A Data Section allows the content of a document to be subdivided into sections for further processing.  Sections can be used for a variety of purposes, including but not limited to the following:
+<ul><li>To identify and extract repeating sections of a document.</li><li>To break a document down into a hierarchy of sections and subsections, representing the structure of the document's content.</li><li>To reorder text flow in situations where a document has multiple columns of information.</li><li>To simplify data extraction on complex documents.</li></ul></td>
+  </tr>
+  <tr>
+     <td><a href="DataTable.htm">DataTable</a></td>
+     <td> Data Table objects are used to describe tabular data for the purposes of Data Extraction and <a href='../Grooper_Activities/DataReview.htm'>Data Review</a>.
+The columns in the table are defined by adding child <a href='DataField.htm'>Data Field</a> elements to a Data Table object.</td>
+  </tr>
+  <tr>
+     <td><a href="DataType.htm">DataType</a></td>
+     <td>A Data Type defines extraction logic for a distinct type of data, such as a field value or a table row.  Each data type defines one or more
+extractors, along with settings which control how the extractor results are transformed into a final result set.</td>
+  </tr>
+  <tr>
+     <td><a href="DividerSEM.htm">DividerSEM</a></td>
+     <td>Identifies <a href='SectionInstance.htm'>Section Instances</a> by splitting the input content at each occurence of a specific text pattern.</td>
+  </tr>
+  <tr>
+     <td><a href="DocumentInstance.htm">DocumentInstance</a></td>
+     <td>Represents the entire content of a document, and serves as the root of the <a href='DataInstance.htm'>DataInstance</a> hierarchies generated by the <a href='../Grooper_Activities/Extraction.htm'>Extraction</a> activity.</td>
+  </tr>
+  <tr>
+     <td><a href="DocumentType.htm">DocumentType</a></td>
+     <td>A Document Type is an object in a <a href='ContentModel.htm'>Content Model</a> which represents a distinct type of document, such as an invoice or contract.  Document Types
+are ultimately assigned to documents in a batch in a process called <em>classification</em></td>
+  </tr>
+  <tr>
+     <td><a href="EdgeAdjustment.htm">EdgeAdjustment</a></td>
+     <td>Defines a mechanism for adjusting edges of a region in Geometric section extraction.</td>
+  </tr>
+  <tr>
+     <td><a href="EdgeOfPageAdjustment.htm">EdgeOfPageAdjustment</a></td>
+     <td>Adjusts the edge to the full bounds of the page.</td>
+  </tr>
+  <tr>
+     <td><a href="ElementContainerInstance.htm">ElementContainerInstance</a></td>
+     <td>Represents a data element instance which may contain child sections and tables.</td>
+  </tr>
+  <tr>
+     <td><a href="EmbeddedExtractor.htm">EmbeddedExtractor</a></td>
+     <td>Represents a property which can (a) define a local extractor in the form of a <a href='DataPattern.htm'>Data Pattern</a> object; or (b) or reference an external
+extractor such as a <a href='DataType.htm'>Data Type</a> or <a href='FieldClass.htm'>Field Class</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="EmbeddedLexicon.htm">EmbeddedLexicon</a></td>
+     <td>Represents a property which can include locally-defined lexicon entries as well as references to external lexicons.</td>
+  </tr>
+  <tr>
+     <td><a href="ExportProvider.htm">ExportProvider</a></td>
+     <td>Export providers define export connectivity to external systems such as file systems, content management repositories, mail servers, and etc.</td>
+  </tr>
+  <tr>
+     <td><a href="ExtractZone.htm">ExtractZone</a></td>
+     <td>
+Serves as the base class for all extraction zones.
+</td>
+  </tr>
+  <tr>
+     <td><a href="FieldClass.htm">FieldClass</a></td>
+     <td>A Field Class is a trainable binary classifier, used for locating specific instances of a data pattern on a document.</td>
+  </tr>
+  <tr>
+     <td><a href="FieldClassInstance.htm">FieldClassInstance</a></td>
+     <td>Represent a DataInstance captured by a <a href='FieldClass.htm'>Field Class</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="FieldContainerInstance.htm">FieldContainerInstance</a></td>
+     <td>Defines an instance which may contain field objects as descendants.</td>
+  </tr>
+  <tr>
+     <td><a href="FieldInstance.htm">FieldInstance</a></td>
+     <td>Represents the value of a <a href='DataField.htm'>Data Field</a> object.</td>
+  </tr>
+  <tr>
+     <td><a href="FieldProfile.htm">FieldProfile</a></td>
+     <td>Defines settings for a <a href='DataField.htm'>Data Field</a> which apply when processing a specific Content Type.</td>
+  </tr>
+  <tr>
+     <td><a href="FieldZone.htm">FieldZone</a></td>
+     <td>Field Zones associate a <a href='DataField.htm'>Data Field</a> with a region of the document, and optionally specify zonal extraction parameters.</td>
+  </tr>
+  <tr>
+     <td><a href="FileExport.htm">FileExport</a></td>
+     <td>Provides import connectivity to CMIS-compliant content management platforms.</td>
+  </tr>
+  <tr>
+     <td><a href="FileImport.htm">FileImport</a></td>
+     <td>Provides common functionality to all file system-based import providers.</td>
+  </tr>
+  <tr>
+     <td><a href="FileSystemExport.htm">FileSystemExport</a></td>
+     <td>Provides export connectivity to the Windows file system.</td>
+  </tr>
+  <tr>
+     <td><a href="FileSystemImport.htm">FileSystemImport</a></td>
+     <td>Provides import connectivity to file systems.</td>
+  </tr>
+  <tr>
+     <td><a href="FileSystemLink.htm">FileSystemLink</a></td>
+     <td>Defines a link to a file stored on the Windows file system.</td>
+  </tr>
+  <tr>
+     <td><a href="FixedSEM.htm">FixedSEM</a></td>
+     <td>Identifies section instances using a fixed geometric region.</td>
+  </tr>
+  <tr>
+     <td><a href="FlowLayoutProvider.htm">FlowLayoutProvider</a></td>
+     <td>Detects cases where the array elements occur one after another in the text flow of the document.</td>
+  </tr>
+  <tr>
+     <td><a href="FlowSEM.htm">FlowSEM</a></td>
+     <td>Identifies <a href='SectionInstance.htm'>Section Instances</a> using an extractor to match segments of text.  For each match, the character data between the starting
+and ending position will become an output <a href='SectionInstance.htm'>Section Instance</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="FolderContentGenerator.htm">FolderContentGenerator</a></td>
+     <td>Defines settings which control the export of content from a <a href='BatchFolder.htm'>Batch Folder</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="FormType.htm">FormType</a></td>
+     <td>A Form Type represents a variation or version of a <a href='DocumentType.htm'>Document Type</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="GeometricProvider.htm">GeometricProvider</a></td>
+     <td>Defines a rectangular region using anchors, and extracts the character data bounded by the region as a <a href='SectionInstance.htm'>Section Instance</a>. </td>
+  </tr>
+  <tr>
+     <td><a href="GrooperVoting.htm">GrooperVoting</a></td>
+     <td>A Grooper OCR which performs OCR using multiple <a href='../Grooper_OCR/OcrProfile.htm'>OCR Profiles</a>, and then combines the results using a voting mechanism.</td>
+  </tr>
+  <tr>
+     <td><a href="HeaderValue.htm">HeaderValue</a></td>
+     <td>Detects the layout of a table automatically by analyzing results from value and header extractors defined on <a href='DataColumn.htm'>Data Column</a> objects.</td>
+  </tr>
+  <tr>
+     <td><a href="HorizontalLayoutProvider.htm">HorizontalLayoutProvider</a></td>
+     <td>Detects cases where the array elements are arranged in a horizontal row.</td>
+  </tr>
+  <tr>
+     <td><a href="HvHeaderDetector.htm">HvHeaderDetector</a></td>
+     <td>The header detection process attempts to detect a table header on each page, by analyzing results from the header extractors defined on
+individual <a href='DataColumn.htm'>Data Column</a> objects.</td>
+  </tr>
+  <tr>
+     <td><a href="HvRowDetector.htm">HvRowDetector</a></td>
+     <td>The row detection process uses the Value Extractors defined on primary columns to detect individual table rows.</td>
+  </tr>
+  <tr>
+     <td><a href="ImportProvider.htm">ImportProvider</a></td>
+     <td>Import providers enable import of file-based content from a variety of sources such as file systems, mail servers, and content repositories.</td>
+  </tr>
+  <tr>
+     <td><a href="ImportProvider_FolderLevelInfo.htm">ImportProvider: FolderLevelInfo</a></td>
+     <td>Defines folder levels which will be translated into subfolders within the Grooper <a href='Batch.htm'>Batch</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="InferGrid.htm">InferGrid</a></td>
+     <td>Extracts tables which have both row and column headers, by infering a grid from the header positions.</td>
+  </tr>
+  <tr>
+     <td><a href="InstanceFilter.htm">InstanceFilter</a></td>
+     <td>Defines rules for excluding individual results from the output.</td>
+  </tr>
+  <tr>
+     <td><a href="LayoutProvider.htm">LayoutProvider</a></td>
+     <td>Layout Providers define the various layouts in which arrays can be detected.</td>
+  </tr>
+  <tr>
+     <td><a href="Lexical.htm">Lexical</a></td>
+     <td>Classifies documents or pages based on the their text content.</td>
+  </tr>
+  <tr>
+     <td><a href="Lexicon.htm">Lexicon</a></td>
+     <td>A Lexicon is a dictionary which stores a list of keys or key-value pairs which are indexed for high-speed lookup.</td>
+  </tr>
+  <tr>
+     <td><a href="MimeTypeHandler.htm">MimeTypeHandler</a></td>
+     <td>MIME type handlers define properties and commands which may be applied to a <a href='BatchFolder.htm'>Batch Folder</a> object with a specific MIME type.</td>
+  </tr>
+  <tr>
+     <td><a href="NormalProvider.htm">NormalProvider</a></td>
+     <td>Returns all instances from all extractors individually.</td>
+  </tr>
+  <tr>
+     <td><a href="OmrZone.htm">OmrZone</a></td>
+     <td>OMR Zones are used for Optical Mark Recognition (OMR), to read the state of checkboxes and determine if they are checked or unchecked.</td>
+  </tr>
+  <tr>
+     <td><a href="OrderedArrayProvider.htm">OrderedArrayProvider</a></td>
+     <td>Finds sequences of values where one result is present for each extractor, in the order in which they appear.</td>
+  </tr>
+  <tr>
+     <td><a href="PageType.htm">PageType</a></td>
+     <td>A Page Type represents a logical page within a <a href='FormType.htm'>Form Type</a>. A Form Type with 5 pages will contain 5 Page Types as children.
+Page Types are not configured manually by users, but created internally by Grooper as documents are trained into a <a href='ContentModel.htm'>Content Model</a>,
+and are used to store sample pages and the features extracted from those sample pages. The Page Type object has no configurable properties.</td>
+  </tr>
+  <tr>
+     <td><a href="PatternBasedProvider.htm">PatternBasedProvider</a></td>
+     <td>Uses a regular expression to select a sequence of child extractor results.</td>
+  </tr>
+  <tr>
+     <td><a href="PdfMimeTypeHandler.htm">PdfMimeTypeHandler</a></td>
+     <td>MIME type handler for PDF document types.  Defines the PDF-specific properties and commands which may be appied to a <a href='BatchFolder.htm'>Batch Folder</a> object.</td>
+  </tr>
+  <tr>
+     <td><a href="ProfilesFolder.htm">ProfilesFolder</a></td>
+     <td>Represents the 'Global Resources' folder found in the root of a Grooper repository.</td>
+  </tr>
+  <tr>
+     <td><a href="Project.htm">Project</a></td>
+     <td>A Project is defined as a collection of billing items, and can be assigned to <a href='BatchProcess.htm'>Batch Processes</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="Project_BillingItem.htm">Project: BillingItem</a></td>
+     <td>A Billing Item consists of an Activity, a Statistic Name and a Rate.</td>
+  </tr>
+  <tr>
+     <td><a href="RegistrationZone.htm">RegistrationZone</a></td>
+     <td>Registration zones are used to align <a href='FieldZone.htm'>Field Zones</a> and <a href='OmrZone.htm'>OMR Zones</a> prior to zonal extraction.</td>
+  </tr>
+  <tr>
+     <td><a href="RowMatch.htm">RowMatch</a></td>
+     <td>Uses an extractor to match each row.</td>
+  </tr>
+  <tr>
+     <td><a href="SectionExtractMethod.htm">SectionExtractMethod</a></td>
+     <td>A Section Extract Method defines an extraction method for use with <a href='DataSection.htm'>Data Section</a> objects.</td>
+  </tr>
+  <tr>
+     <td><a href="SectionInstance.htm">SectionInstance</a></td>
+     <td>Represents the value of a <a href='DataSection.htm'>Data Section</a> object.</td>
+  </tr>
+  <tr>
+     <td><a href="SectionProfile.htm">SectionProfile</a></td>
+     <td>Defines settings for a <a href='DataSection.htm'>Data Section</a> which apply when processing a specific <a href='ContentType.htm'>Content Type</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="SingleInstanceProvider.htm">SingleInstanceProvider</a></td>
+     <td>Returns the first instance returned by any extractor and discards all other results.  Useful for implementing a  waterfall
+approach where the most strict format is tried first, follow by less strict formats.</td>
+  </tr>
+  <tr>
+     <td><a href="SplitProvider.htm">SplitProvider</a></td>
+     <td>Splits the input at each instance found by an extractor.  The Split Position property provides a variety of methods for splitting the input.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageType.htm">StorageType</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeBoolean.htm">StorageTypeBoolean</a></td>
+     <td>Represents a Boolean (true or false) value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeDateTime.htm">StorageTypeDateTime</a></td>
+     <td>Represents an instant in time, typically expressed as a date and/or time of day.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeDecimal.htm">StorageTypeDecimal</a></td>
+     <td>Represents a decimal value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeDouble.htm">StorageTypeDouble</a></td>
+     <td>Represents a 64-bit floating point value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeGUID.htm">StorageTypeGUID</a></td>
+     <td>Represents a globally unique identifier (GUID).</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeInt16.htm">StorageTypeInt16</a></td>
+     <td>Represents a 16-bit integer value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeInt32.htm">StorageTypeInt32</a></td>
+     <td>Represents a 32-bit integer value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeInt64.htm">StorageTypeInt64</a></td>
+     <td>Represents a 64-bit integer value.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeNumeric.htm">StorageTypeNumeric</a></td>
+     <td>Base class for all numeric types.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeRanged.htm">StorageTypeRanged</a></td>
+     <td>Base class for all integer storage types.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeString.htm">StorageTypeString</a></td>
+     <td>String values can store any type of text information.</td>
+  </tr>
+  <tr>
+     <td><a href="StorageTypeURL.htm">StorageTypeURL</a></td>
+     <td>A Uniform Resource Locator (URL) is a string of characters used to identify a web resource, such as a web page on an HTTP server, or a file on an FTP server.</td>
+  </tr>
+  <tr>
+     <td><a href="TableCellInstance.htm">TableCellInstance</a></td>
+     <td>Represents the value of a table cell.</td>
+  </tr>
+  <tr>
+     <td><a href="TableExtractMethod.htm">TableExtractMethod</a></td>
+     <td>Defines settings and logic for a <a href='DataSection.htm'>Data Section</a> extraction method.</td>
+  </tr>
+  <tr>
+     <td><a href="TableInstance.htm">TableInstance</a></td>
+     <td>Represents an instance of a <a href='DataTable.htm'>Data Table</a> object on a document.</td>
+  </tr>
+  <tr>
+     <td><a href="TableProfile.htm">TableProfile</a></td>
+     <td>Defines settings for a <a href='DataTable.htm'>Data Table</a> which apply when processing a specific <a href='ContentType.htm'>Content Type</a>.</td>
+  </tr>
+  <tr>
+     <td><a href="TableRowInstance.htm">TableRowInstance</a></td>
+     <td>Represents a table row in a <a href='TableInstance.htm'>TableInstance</a>.  </td>
+  </tr>
+  <tr>
+     <td><a href="TrainingPage.htm">TrainingPage</a></td>
+     <td>A Training Page represents an individual page which was used to train a Page Type.
+Training pages are not created or configured by users - they are created and managed internally
+by Grooper as documents are trained into a <a href='ContentModel.htm'>Content Model</a>. Do not delete or edit Training Page
+objects except as directed by Grooper support staff.</td>
+  </tr>
+  <tr>
+     <td><a href="UnattendedActivity.htm">UnattendedActivity</a></td>
+     <td>Serves as the base class for all unattended activities.</td>
+  </tr>
+  <tr>
+     <td><a href="VerticalLayoutProvider.htm">VerticalLayoutProvider</a></td>
+     <td>Detects cases where the array elements are arranged in a vertical column.</td>
+  </tr>
+  <tr>
+     <td><a href="Visual.htm">Visual</a></td>
+     <td>Classifies documents or pages based on their visual appearance.</td>
+  </tr>
+  <tr>
+     <td><a href="ZipHandler.htm">ZipHandler</a></td>
+     <td>Mime type handler for Zip Archive files.</td>
+  </tr>
+</table>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

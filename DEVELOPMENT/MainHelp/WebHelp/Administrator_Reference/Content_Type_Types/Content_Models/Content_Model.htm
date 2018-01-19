@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Content Model</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nContent Type Types\nContent Models\nContent Model");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Content_Type_Types.htm\">Content Type Types<\/a> > <a href=\"Content_Category.htm\">Content Models<\/a> > Content Model<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.ContentModel.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Content Model</h1></td>
+<table>
+</tr>
+</table>
+A Content Model defines the taxonomy of a document set, in terms of the <a href='Document_Type.htm'>Document Types</a> it contains, and the Data Elements which appear on
+each document type.
+
+Content Models and the Content Types they contain also store classification training data, and define various settings which control how document
+classification and data extraction are performed.
+<h2>Defining Document Types</h2>
+<a href='Document_Type.htm'>Document Types</a> are created as children of a Content Model, and can optionally be organized into a hirearchy of <a href='Content_Category.htm'>Content Categories</a>.  A simple Content Model
+might be a flat list of 5 document types, while a more complex one might have hundreds of document types organized into dozens of categories.
+<h2>Classifying Documents</h2>
+Classification is the process of assigning a <a href='Document_Type.htm'>Document Type</a> to a <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.  Before documents can be classified, the Document Types must be trained with samples
+or configured with classification rules.  The <a href='../../Activity_Types/Unattended_Activities/Classify_Folders.htm'>Classify Folders</a> activity can then be used to assign the document types to objects in a batch.
+<h2>Defining Data Elements</h2><p>A <a href='../../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> may be created at any level of the content model to define data elements such as <a href='../../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Sections</a>, <a href='../../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Tables</a>, and <a href='../../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a>.  This
+can be done using the <a href='../../Grooper_Object_Types/Create_Data_Model.htm'>Create Data Model</a> commmand, which will create a child object named "(data model)".   Data Elements can then be added as children of
+the Data Model.</p><h2>Data Element Inheritance</h2><p>Each document type will inherit all data elements defined on parent content types.  This means that the total set of data elements for a document type will include
+all elements defined directly on the document type, plus all data elements defined on parent content types all the way to the root of the cotntent model.</p><p>For example, if the content model defines a field named 'Scan Date', then all document types in the content model will inherit that field.  If a data element is defined on a
+<a href='Content_Category.htm'>Content Category</a> then all document types inside the category will inherit it.  </p>
+
+<br/><br/><b>Inherits from:</b> <a href='../Content_Type_Types.htm'>Content Type</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Classification Method</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a></td></tr>
+   <tr><td>Specifies the method to be used for training and classifying documents. If no classification method is specified, all documents will be classified as the Default Content Type.
+(See <a href='../../Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Content Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../Content_Type_Types.htm'>Content Type</a></td></tr>
+   <tr><td>Specifies a <a href='../Content_Type_Types.htm'>Content Type</a> to be assigned when a document cannot be confidently classified, or when no Classification Method is specified. If no default content type is specified, documents which do not meet the minimum confidence requirements will be left unclassifiedr.
+(See <a href='../Content_Type_Types.htm'>Content Type</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Scope - Classification</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: (unlimited)</td></tr>
+   <tr><td>Controls which pages in a document are used for <a href='../../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> purposes. An integer value can be entered to limit the number of pages loaded during Classification in cases where OCR
+has been performed on all pages in a large document, but the Classification is only relevant to the first few pages. A value
+of 0 indicates unlimited scope.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Scope - Data Extraction</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Int32.htm'>Int32</a>, Default: (unlimited)</td></tr>
+   <tr><td>The maximum number of pages to be included in the scope from which data extraction is performed. This setting can be used to limit the number of pages loaded during data extraction and data review in cases where OCR
+has been performed on all pages in a large document, but the data extraction is only relevant to the first few pages. A value
+of 0 indicates unlimited scope.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Base Content Type</td>
+    <td><table>
+   <tr><td>Type: BaseContentTypeEnum, Default: Document</td></tr>
+   <tr><td>The base content type. Can be one of the following values:<br />
+<ul>
+<li><b>Document</b>: The content type represents a document, and will be displayed in a batch using a document icon.
+</li>
+<li><b>Folder</b>: The content type represents a folder, and will be displayed in a batch using a folder icon.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Classification Tuning</td>
+  </tr>
+  <tr>    <td>Minimum Similarity</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Double.htm'>Double</a>, Default: 60%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum similarity required for confident classification of a page or document. When a document is classified with a similarity below this value, it will be left as an unclassified folder unless the
+Default Content Type property is set, in which case the document will be classified as the Default Content Type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Difference</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Double.htm'>Double</a>, Default: 2%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum difference between the top classification candidate and the next closest candidate.  This setting allows close ties
+to be identified and placed in front of a human operator for review. This setting prevents confident classification in cases where a document is similar to multiple document types
+in the Content Model.  It indicates the minimum difference in confidence between the best result and the second best
+result required for confident classification.  For example, if a document has a similarity value of .97 for  Document
+Type A and .94 for Document Type B, then .03 is the difference.  Setting the minimum difference to .05 would flag the
+classification result as non-confident, requiring user intervention.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Training Similarity</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Double.htm'>Double</a>, Default: 0%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum similarity between a document being trained and an existing <a href='Form_Type.htm'>Form Type</a>. If the document
+is below the minimum similarity, it will be trained as a new Form Type, rather than being merged with an existing Form Type. <a href='Form_Type.htm'>Form Types</a> are children of <a href='Document_Type.htm'>Document Type</a> objects, and represent different versions of the Document Type.  When Grooper
+is trained with a new document, the following logic is applied:
+<ul><li>If no Form Types exist with the same number of pages as the document being trained, create a new Form Type.</li><li>For each existing Form Type, perform a page-by-page comparison.</li><li>If a Form Type is found where every page is above the Minimum Training Similarity, merge with that Form Type.</li><li>Otherwise, create a new Form Type.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum OCR Confidence</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Double.htm'>Double</a>, Default: 70%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum OCR confidence level required for a page to be used for training. This setting prevents the use of low-quality documents for training purposes.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a></td></tr>
+<tr><td><a href='../Content_Type_Types.htm'>Content Type</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

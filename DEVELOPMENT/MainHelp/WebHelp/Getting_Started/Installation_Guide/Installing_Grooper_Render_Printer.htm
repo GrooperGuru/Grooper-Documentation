@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Installing Grooper Render Printer</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+ <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nInstallation Guide\nInstalling Grooper Render Printer");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Release_Notes.htm\">Installation Guide<\/a> &gt; Installing Grooper Render Printer<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Render Printer Installer and Initialization</h1>
+<p>The Grooper Render Printer Installer installs a custom version of the 
+ Black Ice Printer Driver for Grooper. &#160;See <a href="../Grooper_Concepts/Grooper_Render_Printer_Concepts.htm">Grooper 
+ Render Printer Concepts</a> for more information on prerequisites and 
+ other information that may affect the installation of Grooper Render Printer.</p>
+<p>&#160;</p>
+<h2>Grooper Installation Files</h2>
+<p><span style="font-weight: bold;">Setup.exe</span> - this is the main 
+ Grooper Render Printer installation file. </p>
+<p style="font-weight: bold;">Setup.exe.config <span style="font-weight: normal;">- 
+ resource used by the Grooper Render Printer installer. </span></p>
+<p style="font-weight: bold;">Setup.pdb <span style="font-weight: normal;">- 
+ resource used by the Grooper Render Printer installer.</span> </p>
+<p style="font-weight: bold;">Setup.vshost.exe<span style="font-weight: normal;"> 
+ - resource used by the Grooper Render Printer installer.</span> </p>
+<p style="font-weight: bold;">Setup.vshost.exe.config<span style="font-weight: normal;"> 
+ - resource used by the Grooper Render Printer installer.</span> </p>
+<p style="font-weight: bold;">Setup.vshost.exe.manifest <span style="font-weight: normal;">- 
+ resource used by the Grooper Render Printer installer. </span></p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">S</span>etup.xml 
+ <span style="font-weight: normal;">- resource used by the Grooper Render 
+ Printer installer.</span></p>
+<p style="font-weight: normal;"><span style="font-weight: bold;">Driver 
+ Files folder</span> - resource used by the Grooper Render Printer installer.</p>
+<p style="font-weight: normal;"><span style="font-weight: bold;">Install 
+ folder</span> - resource used by the Grooper Render Printer installer.</p>
+<h2>&#160;</h2>
+<p><img src="images/GrooperRenderPrinter_Uninstall.JPG" alt="" class="ScreenShot" 
+		 align="right" border="0" /></p>
+<h2>Installing Grooper Render Printer</h2>
+<p>This section will describe the steps required to run the Grooper Render 
+ Printer installer and configure Grooper Render Printer via the installation 
+ wizard:</p>
+<ol style="list-style: decimal;">
+	<li>Launch setup.exe (be sure to 'Run as administrator')</li>
+	<li>The splash screen will be presented. &#160;Click Next to continue. 
+	 &#160;&#160;An uninstall option will be presented if Grooper Render 
+	 Printer has been previously installed (see below). </li>
+	<li>The installation destination location will be presented next. &#160;Click 
+	 Browse to make any required path changes. &#160;Click Next to continue.</li>
+	<li>This is the configuration for the output folder destination for 
+	 temporary Grooper Render Printer files.&#160;&#160;&#160;&#160;Click 
+	 Next to continue. &#160;<span style="font-style: italic;"><i>Note: &#160;This 
+	 temporary storage requires few resources and is not recommended to 
+	 be changed unless necessary.</i></span></li>
+	<li>The installation will execute. &#160;Depending on system usage, 
+	 the installer may prompt for a system restart. &#160;Click Finish 
+	 to exit the installer.</li>
+</ol>
+<p>&#160;</p>
+<h2>Uninstalling Grooper Render Printer</h2>
+<p>This section will describe the steps required to uninstall Grooper Render 
+ Printer:</p>
+<p><img src="images/GrooperRenderPrinter_Uninstall.JPG" alt="" class="ScreenShot" 
+		 border="0" /></p>
+<ol style="list-style: decimal;">
+	<li>Launch setup.exe</li>
+	<li>Click 'Yes' to continue with the uninstall.</li>
+	<li>The wizard will uninstall the Grooper Render Printer.</li>
+	<li>Depending on system usage, the uninstall process may require a 
+	 system restart.</li>
+</ol>
+<p>&#160;</p>
+<h2>Installation Context (setting up multiple users and service accounts)</h2>
+<p>Grooper Render Printer installs under the context of the account/user 
+ that is logged in to perform the installation. &#160;Certain steps may 
+ need to be taken in situations where the logged in user or service doesn't 
+ perform the installation or when more than one user on a machine will 
+ use perform rendering activities. &#160;While Grooper Render Printer should 
+ not have to be installed more than once per machine, the following steps 
+ should be taken to configure Grooper Render Printer for any user/service 
+ account that didn't perform the installation (see <a href="../Grooper_Concepts/Grooper_Render_Printer_Concepts.htm">Grooper 
+ Render Printer Concepts</a> for more details):</p>
+<ol style="list-style: decimal;">
+	<li>Log in as the user or service account that will perform render 
+	 activities.</li>
+	<li>Open 'Devices and Printers' (<a href="https://msdn.microsoft.com/en-us/library/windows/hardware/ff547529(v%3dvs.85).aspx">Microsoft 
+	 Devices and Printers</a>):</li>
+	<ul style="list-style: disc;">
+		<li>Right-click on 'Grooper Render Printer'</li>
+		<li>Select 'Set as default printer'.</li>
+	</ul>
+	<li>Go to the local users 'Documents' folder in Windows Explorer (e.g. 
+	 &quot;C:\Users\&lt;logged-in user&gt;\Documents\&quot;) &#160;and 
+	 created a folder named &quot;GrooperRender&quot;.</li>
+	<li>Open 'User Environment Variables' (<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/bb776899(v%3dvs.85).aspx">Microsoft 
+	 User Environment Variables</a>):</li>
+	<ul style="list-style: disc;">
+		<li>Click 'New...'</li>
+		<li>Enter 'GROOPER_RENDERPATH' for the Variable name.</li>
+		<li>Enter the path configured in step 3 for the Variable value 
+		 (e.g. &quot;C:\Users\&lt;logged-in user&gt;\Documents\GrooperRender&quot;).</li>
+		<li>Click 'OK'.</li>
+	</ul>
+</ol>
+<p>&#160;</p>
+<h2>See Also</h2>
+<p><a href="../Grooper_Concepts/Grooper_Render_Printer_Concepts.htm">Grooper 
+ Render Printer Concepts</a></p>
+<p>Render 
+ Document</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

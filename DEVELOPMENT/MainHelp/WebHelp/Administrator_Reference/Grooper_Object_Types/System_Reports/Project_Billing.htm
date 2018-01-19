@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Project Billing</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nSystem Reports\nProject Billing");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Batch_Statistics.htm\">System Reports<\/a> > Project Billing<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Project Billing</h1>
+Calculates <a href='../Billing_Item.htm'>Billing Item</a> quantities and optional dollar amounts for a configured <a href='../../Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a> and date range.
+
+<br/><br/><b>Inherits from:</b> Table Report<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Report Settings</td>
+  </tr>
+  <tr>    <td>Grooper Project</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a></td></tr>
+   <tr><td>The Grooper Project for which to run the report.
+(See <a href='../../Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Report Columns</td>
+    <td><table>
+   <tr><td>Type: Columns, Default: 0</td></tr>
+   <tr><td>Items and statistics to include in the report. A combination of the following flags:<br />
+<ul>
+<li><b>BatchProcess</b></li>
+<li><b>ProcessStep</b></li>
+<li><b>Rate</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Date Range</td>
+    <td><table>
+   <tr><td>Type: <a href='../Date_Range.htm'>Date Range</a>, Default: Month to Date</td></tr>
+   <tr><td>&nbsp;</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Appearance</td>
+  </tr>
+  <tr>    <td>Column Widths</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>Optional comma-delimited list of column widths in inches. For example, to indicate 2 inches for the first column and 1/2 inch for the second column, enter the following value:<br />2, 0.5
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Column Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>Optional comma-delimited list of Fomat Specifiers. For example, to indicate Currency to two decimal places for the third column, enter the following value:<br />"","",C2<br /><br />
+See the following articles for detailed Format Specifier information:
+<ul><li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">Standard Numeric</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank">Standard Date and Time</a></li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../Int32.htm'>Int32</a>, Default: 10, Range: 1 - 200</td></tr>
+   <tr><td>Font Size in points for the column header cells.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../Int32.htm'>Int32</a>, Default: 10, Range: 1 - 200</td></tr>
+   <tr><td>Font Size in points for the table data cells.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Center Table</td>
+    <td><table>
+   <tr><td>Type: <a href='../Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If this property is set to True, the table will be centered horizontally on the report page.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Row Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Background color for the Header Row.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Row Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Background color for the Data Rows.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Date_Range.htm'>Date Range</a></td></tr>
+<tr><td><a href='../../Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

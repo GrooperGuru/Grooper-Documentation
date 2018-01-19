@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Group Lookup Options</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nGroup Lookup Options");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Group Lookup Options<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Group Lookup Options</h1>
+Defines lookup options which apply to a named regular expression group.
+
+<br/><br/><b>Inherits from:</b> <a href='Lookup_Options.htm'>Lookup Options</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Group Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The name of the group to which this set of options apply.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Vocabulary</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Defines an optional set of allowed values. If a vocabulary is defined, then any result which does not occur in vocabulary will be discarded.
+(See <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Exclusions</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Defines an optional set of disallowed values. Any extracted value appearing in this list will be discarded.
+(See <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Clean Key</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, vocabulary lookups will be performed with all punctuation symbols and control characters removed. As an example, this option could be used to match O'Connor in a lexicon which contains 'oconnor'.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Enable Translation</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, values will be translated to the replacement values specified in the vocabulary. Vocabulary entries may consist of key-value pairs, using the = symbol as a delimiter.  For example, the vocabulary
+entry OK=Oklahoma indicates that if the value "OK" is found, it should be translated to "Oklahoma".  If the vocabulary
+entry does not specify a replacement value, then no translation will be performed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Match Case</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, the case of the extracted value will be detected, and the detected casing will be applied to the translated output value.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Porter Stemming</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, the final result will be lower-cased and stemmed to its root form using Porter Stemming. This property affects english documents only.  Stemming is the process of reducing inflected words to their word stem, base or root form.  Stemming is useful when extracting features for
+use in classification of documents or data elements.  Below are some stemming examples:
+<li>The strings "cats", "catlike", and "catty" reduce to "cat".</li><li>The strings "stems", "stemmer", "stemming", "stemmed" reduce to "stem".</li><li>The strings "fishing", "fished", and "fisher" reduce to "fish".</li><li>The strings "argue", "argued", "argues", "arguing", and "argus" reduce to "argu" (illustrating the case where the stem is not itself a word
+or root) but "argument" and "arguments" reduce to the stem "argument".</li>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Fuzzy Matching Options</td>
+  </tr>
+  <tr>    <td>Fuzzy Match Similarity</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Double.htm'>Double</a>, Default: 100%, Range: 0% - 100%</td></tr>
+   <tr><td>The percentage of similarity required for a fuzzy match.  A value of 100% will disable fuzzy matching. Controls how similar a fuzzy match candidate must be to the extracted value in order for a replacement to occur.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fuzzy Match Minimum Length</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0, Range: 0 - 512</td></tr>
+   <tr><td>The minimum length of values that will be considered for a fuzzy match. Any value shorter than the configured minimum will not be submitted for fuzzy matching.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fuzzy Match Depth</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>If set to a value other than 0, specifies that only the top N entries in the lexicon will be considered for fuzzy matching purposes.  If set to 0,
+fuzzy matching will be performed for all entries in the lexicon. NOTE: Depth limits work best when applied to vocabulary lexicons which are sorted in descending order by frequency.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fuzzy Match Weightings</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>A lexicon containing fuzzy match weightings. Fuzzy match weightings allow the cost of swapping characters to be customized, to account for OCR engine confusion between characters which have
+a similar visual appearance.  By default during fuzzy matching, swapping a character has a cost of 1.  This would cause DBGRBBS and DEGREES to have a distance
+of 3, as 3 character replacements are required.  With a word length of 6, this produces a 50% match.  However, if we adjust weightings so that it only costs
+0.25 to convert a B to an E, the distance is now 0.75, producing an 87.5% match.
+<p>Each lexicon entry specifies a cost for converting character A to character B.  Therefore, each entry must contain exactly two characters in the key.  The first character
+rerpesents the OCR character being matched, and is case-sensitive.  The second character represents the lexicon character, and is NOT case-sensitive. For example:</p><p>
+1I=0.25<br />
+lI=0.25<br />
+BE=0.25<br />
+EB=0.25<br />
+3B=0.50<br /></p><p>Costs 0.25 to convert a 1 to an I.</p>
+(See <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fuzzy Match Vocabulary</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Defines a vocabulary to be used in place of the main vocabulary for fuzzy matching. By default, when fuzzy matching is enabled, the main vocabulary is used for fuzzy matching.  However, if the main vocabulary
+is large, it may be desirable for performance reason to restrict fuzzy matching to a smaller list of key values.  In such cases,
+this property can be used to override the set of lexicon enties used for fuzzy matching.
+(See <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

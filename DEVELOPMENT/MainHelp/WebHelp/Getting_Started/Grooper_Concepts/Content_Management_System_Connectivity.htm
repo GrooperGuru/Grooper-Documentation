@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Content Management System Connectivity</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nContent Management System Connectivity");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Content Management System Connectivity<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Content Management System Connectivity</h1>
+<p>Grooper's integration with content management systems goes far beyond 
+ the &quot;export only&quot; integrations found in legacy capture solutions, 
+ providing powerful capabilities for both importing and exporting objects.</p>
+<ul style="list-style: disc;">
+	<li><p><span style="font-weight: bold; text-decoration: underline; "><u>Automated 
+	 Creation of Artifacts</u></span>. &#160;Grooper Content 
+	 Models and Data 
+	 Models can be created directly from the content types in a repository, 
+	 eliminating the tedious, error-prone task of manually creating document 
+	 types, fields, value lists in the capture environment which match 
+	 those in the repository. &#160;</p></li>
+	<li><p><span style="font-weight: bold; text-decoration: underline; "><u>Two-Way 
+	 Document Interchange</u></span>. &#160;Grooper content types can be permanently 
+	 mapped to content types in the repository, allowing ongoing two-way 
+	 document interchange. &#160;This capability allows Grooper to pull 
+	 batches from a repository to perform additional data extraction or 
+	 additional classification. &#160;It allows Grooper's automated <a href="Classification.htm">classification</a> or <a href="Data_Extraction.htm">data 
+	 extraction</a> to be trained from existing documents in a repository. 
+	 &#160;It also allows Grooper to be used for migrating content from 
+	 one repository to another, optionally transforming the data in the 
+	 process.</p></li>
+	<li><p><span style="font-weight: bold; text-decoration: underline; "><u>Repository 
+	 Access</u></span>. &#160;The contents of a repository can be browsed and 
+	 queried from Grooper Administration, allowing administrators to quickly 
+	 and easily validate the success of exports, delete test batches, and 
+	 etc. without exiting Grooper Administration. &#160;Objects can also 
+	 be copied and pasted between Grooper batches and the repository using 
+	 standard clipboard operations.</p></li>
+</ul>
+<h2>Content Management Interoperability Services</h2>
+<p>Grooper supports the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis" 
+							 target="_blank">Content Management Interoperability 
+ Standard</a> (CMIS), an open standard which allows applications to inter-operate 
+ with content management systems. &#160;This standard, sponsored by <a 
+	 href="http://www.aiim.org/" target="_blank">AIIM</a>, was originally 
+ approved in May of 2010, and is now support by a growing list of 30+ content 
+ management systems including Alfresco, EMC ApplicationXtender, EMC Documentum, 
+ HP Autonomy/Interwoven, HP Trim, HP Records Manager, IBM Content Manager, 
+ IBM Filenet, IBM Content Manager OnDemand, Microsoft SharePoint, OpenText, 
+ Oracle Webcenter, and many more. &#160;A complete list of vendors supporting 
+ CMIS can be found <a href="http://en.wikipedia.org/wiki/Content_Management_Interoperability_Services" 
+						 target="_blank">here</a>.</p>
+<h2>Grooper Implementation of CMIS</h2>
+<p>Grooper's implementation of CMIS is based on the following Grooper objects:</p>
+<ul style="list-style: disc;">
+	<li>CMIS 
+	 Connection. Represents a connection to a CMIS server. &#160;Connections 
+	 are specified in terms of a URL to the AtomPub binding of a CMIS server 
+	 instance, a user name, and a password. &#160;</li>
+	<li>CMIS 
+	 Repository. - Represents a logical &quot;repository&quot; managed 
+	 by a CMIS server. &#160;For example, Microsoft's CMIS implementation 
+	 for SharePoint exposes each SharePoint document library as a repository. 
+	 &#160;EMC Documentum exposes each Documentum repository as a repository, 
+	 while EMC ApplicationXtender exposes each AX application as a separate 
+	 repository.</li>
+	<li>CMIS 
+	 Content Type. &#160;Represents a content type within the repository, 
+	 to which Grooper content types can be mapped.</li>
+</ul>
+<p>Grooper can maintain connections to any number of CMIS servers running 
+ on any number of platforms. &#160;The example below contains CMIS connections 
+ to Alfresco, EMC ApplicationXtender, Microsoft Sharepoint, EMC Documentum, 
+ and IBM FileNet. &#160;Directly beneath each CMIS 
+ Connection object are the CMIS 
+ Repository objects for which connections have been configured. &#160;</p>
+<p><img src="images/CMIS_ConnectionsScreenShot.jpg" alt="" style="border: none;" border="0" /></p>
+<p>The general procedure for configuring a CMIS connection is as follows:</p>
+<ol style="list-style: decimal;">
+	<li>Create a CMIS 
+	 Connection using the AtomPub URL for the CMIS server.</li>
+	<li>Use the Query 
+	 Repositories command on the property panel for the CMIS 
+	 Connection object to display a list of available repositories.</li>
+	<li>Highlight the desired repository and use the Import 
+	 Repository command on the property panel for the CMIS 
+	 Connection object.</li>
+	<li>Navigate to the newly-created CMIS 
+	 Repository object (created as a child of the CMIS Connection).</li>
+	<li>Select the content type(s) to be imported and use the Import 
+	 Types command to create CMIS 
+	 Content Type objects for each of the selected content types.</li>
+	<li>Navigate to the newly-created CMIS 
+	 Content Type object(s). &#160;(CMIS 
+	 Content Types are stored in the 'Content Types' subfolder of the 
+	 CMIS 
+	 Repository object.)</li>
+	<li>Use the property panel for the CMIS 
+	 Content Type to map it to a Grooper content Type, or use the Generate 
+	 Content Type command to create a new Grooper content type from 
+	 the CMIS Content Type.</li>
+</ol>
+<h2>Repositories Not Supporting CMIS</h2>
+<p>For organizations using systems which do not yet include support for 
+ CMIS, several options are available, as outlined below:</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Grooper 
+	 Standard Export</u></span> - Grooper ships with a Standard Export script 
+	 which can be used to export documents and metadata to a file system 
+	 using industry-standard formats which can be imported to most document 
+	 management systems.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Custom 
+	 Export Scripts</u></span> - If none of the advanced features of Grooper's 
+	 CMIS interface are needed, a custom activity can be used to facilitate 
+	 transfer of documents into the target repository. &#160;Grooper development 
+	 staff can be contracted to develop a custom export for the target 
+	 repository. &#160;It also is possible that a custom export script 
+	 for the target repository has already been created. &#160;&#160;Please 
+	 contact your Grooper account representative to obtain additional information 
+	 and pricing.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Custom 
+	 CMIS Implementation</u></span> - Grooper development staff can be contracted 
+	 to develop a custom CMIS server application for the target repository. 
+	 &#160;Please contact your Grooper account representative to obtain 
+	 pricing.</li>
+</ul>
+<h2>See Also</h2>
+<p>CMIS 
+ Connection</p>
+<p>CMIS 
+ Repository</p>
+<p>CMIS 
+ Content Type</p>
+<p><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis#resources" 
+		 target="_blank">CMIS Technical Committee Web Site</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Content_Management_Interoperability_Services" 
+		 target="_blank">Wikipedia Entry for CMIS</a></p>
+<p><a href="http://chemistry.apache.org/" target="_blank">Apache Chemistry 
+ Open Source CMIS Resources</a></p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

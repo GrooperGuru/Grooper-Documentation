@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Classify Image</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nMiscellaneous\nClassify Image");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Binarize.htm\">Miscellaneous<\/a> &gt; Classify Image<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.ClassifyImage.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Classify Image</h1></td>
+<table>
+</tr>
+</table>
+Compares an image against a set of sample images and classifies the image based upon which sample image it is found to be most similar to.
+
+<br/><br/><b>Inherits from:</b> <a href='../IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Sample Images</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Sample_Image_Collection.htm'>Sample Image Collection</a></td></tr>
+   <tr><td>One or more sample images representing the shape to be detected. This property cannot be edited while changes are pending.
+(See <a href='../../Grooper_Object_Types/Sample_Image_Collection.htm'>Sample Image Collection</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Similarity</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 85%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum percentage of similarity required for successful image classification.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Color Space</td>
+    <td><table>
+   <tr><td>Type: ColorSpaceType, Default: RGB</td></tr>
+   <tr><td>The color space to use. Can be one of the following values:<br />
+<ul>
+<li><b>RGB</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/RGB_color_space">RGB Color Space</a> - Channels: Red, Green, Blue.
+</li>
+<li><b>HSV</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSV Color Space</a> - Channels: Hue, Saturation, Value (Intensity).
+</li>
+<li><b>LAB</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/Lab_color_space">LAB Color Space</a> - Channels: Luminosity, A Value, B Value.
+</li>
+<li><b>YCbCr</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/YCbCr">YCbCr Color Space</a> - Channels: Luma, Chroma Blue, Chroma Red.
+</li>
+<li><b>YUV</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/YUV">YUV Color Space</a> - Channels: Y (luma), U (chroma red), V (chroma blue).
+</li>
+<li><b>XYZ</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/CIE_1931_color_space">XYZ Color Space</a> - Channels: X, Y, Z.
+</li>
+<li><b>HLS</b>: <a target="_blank" href="https://en.wikipedia.org/wiki/HSL_and_HSV">HLS Color Space</a> - Channels: Hue, Lightness, Saturation.
+</li>
+</ul>
+ The input image will be converted to the indicated color space prior to channel extraction.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Image Class</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: None</td></tr>
+   <tr><td>The value to be used for the ImageClass output value when the image matches none of the predefined Image Classes.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Result Type</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>    <th>Member Name</th>
+    <th>Member Type</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>ClassName</td>
+    <td>String</td>
+    <td>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Object_Types/Sample_Image_Collection.htm'>Sample Image Collection</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

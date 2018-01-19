@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Script Manager</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper UI Elements\nOther Grooper Controls\nScript Manager");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; <a href=\"../Grooper_UI_Elements.htm\">Grooper UI Elements<\/a> &gt; <a href=\"Code_Editor.htm\">Other Grooper Controls<\/a> &gt; Script Manager<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Script Manager</h1>
+<p>Provides script viewing, compilation, management, and basic editing features.
+</p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Node_File_Code_Editor.htm'>Node File Code Editor</a></td>
+     <td>Provides display and editing of Visual Basic code and project files.
+</td>
+  </tr>
+</table>
+<h2>Toolbar Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Actions___Delete.png" /></td>
+     <td>Actions / Delete</td>
+     <td>Deletes all scripting project files.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Actions___Disable.png" /></td>
+     <td>Actions / Disable</td>
+     <td>Disables the script from being used by Grooper.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Actions___Update_References.png" /></td>
+     <td>Actions / Update References</td>
+     <td>Updates the references of Grooper libararies to enable compilation in different development environments.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Compile.png" /></td>
+     <td>Compile</td>
+     <td>Compiles the script and stores the DLL and PDB to the file store.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Create.png" /></td>
+     <td>Create</td>
+     <td>Creates a scripting project.
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+     <td>Debug Target</td>
+     <td>Target Grooper Application. Select the Grooper Application in which debugging should occur.
+<ul>Choose from the following:
+<li>Administration</li><li>Attended Client</li><li>Unattended Client</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.ScriptManager.Edit_in_Visual_Studio.png" /></td>
+     <td>Edit in Visual Studio</td>
+     <td>Launches the Visual Studio IDE to edit the script.
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+     <td>Save</td>
+     <td>Saves the scripting project.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

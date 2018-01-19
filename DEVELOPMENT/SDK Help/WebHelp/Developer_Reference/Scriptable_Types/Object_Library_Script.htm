@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Object Library Script</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nScriptable Types\nObject Library Script");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"Scriptable_Types.htm\">Scriptable Types<\/a> > Object Library Script<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>Object Library Script</h1>
+<p>A script attached to a specific <a href='../Grooper/ObjectLibrary.htm'>Object Library</a>.</p>
+<p>Object Library scripts can be used to perform custom programming using many of the objects available in Grooper. Object Library
+scripts are typically used to perform customizations such as:
+<ul><li>Creating a custom Activity inherited from <a href='../Grooper_Core/AttendedActivity.htm'>AttendedActivity</a> or <a href='../Grooper_Core/UnattendedActivity.htm'>UnattendedActivity</a> (<a href='../../Getting_Started/Examples/Object_Library_Script_Examples/Unattended_Activity_Example.htm'>Unattended Activity Example</a>) that can be added as a <a href='../Grooper_Core/BatchProcessStep.htm'>Batch Process Step</a> in any <a href='../Grooper_Core/BatchProcess.htm'>Batch Process</a>.</li><li>Creating a custom Windows Service inherited from TimerServiceInstance. (<a href='../../Getting_Started/Examples/Object_Library_Script_Examples/Timer_Service_Example.htm'>Timer Service Example</a>)</li><li>Creating a custom Web Service inherited from <a href='../Grooper_Services/WebService.htm'>WebService</a>. (<a href='../../Getting_Started/Examples/Object_Library_Script_Examples/Web_Service_Example.htm'>Web Service Example</a>)</li><li>Creating a custom Report Definition inherited from ReportDefinition or SimpleReportDefinition.</li><li>Creating a custom Capture Device inherited from <a href='../Grooper_Capture/CaptureDevice.htm'>CaptureDevice</a>.</li><li>Creating a custom IP Command inherited from <a href='../Grooper_IP/IpCommand.htm'>IPCommand</a>. (<a href='../../Getting_Started/Examples/Object_Library_Script_Examples/IP_Command_Example.htm'>IP Command Example</a>)</li><li>Creating a custom OCR Engine inherited from <a href='../Grooper_OCR/OcrEngine.htm'>OCREngine</a>.</li><li>Creating a custom Zonal Capture inherited from <a href='../Grooper_Core/CaptureZone.htm'>CaptureZone</a>.</li><li>Creating custom Property Grids that are used as the configuration UI in other Object Library scripts. (<a href='../../Getting_Started/Examples/Object_Library_Script_Examples/Property_Grid_Editor_Example.htm'>Property Grid Editor Examples</a>)</li><li>Creating a custom <a href='../Grooper/ObjectCommand.htm'>Object Command</a> that is used from the context menus of <a href='../Grooper_Core/BatchPage.htm'>Batch Pages</a> and <a href='../Grooper_Core/BatchFolder.htm'>Batch Folders</a> from the Batch Viewer. (Object Command Example)</li></ul></p>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

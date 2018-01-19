@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <tocdata>  <item name=\"Correct OCR\" url=\"Administrator_Reference/Grooper_Object_Types/OCR_Processing/Correct_OCR.htm\" />  <item name=\"Full Text OCR\" url=\"Administrator_Reference/Grooper_Object_Types/OCR_Processing/Full_Text_OCR.htm\" />    </tocdata>";

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Separation Provider Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nSeparation Provider Types\nSeparation Provider Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Separation_Provider_Types.htm\">Separation Provider Types<\/a> &gt; Separation Provider Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Separation Provider</h1>
+
+
+<h2>List of Separation Provider Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Change_in_Value_Separation.htm'>Change in Value Separation</a></td>
+     <td>A new folder is created each time the extracted value changes.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Control_Sheet_Separation.htm'>Control Sheet Separation</a></td>
+     <td>Separate the batch using Grooper <a href='../Grooper_Node_Types/Batch_Processing/Control_Sheet.htm'>Control Sheets</a>.
+</td>
+  </tr>
+  <tr>
+     <td><a href='EPI_Separation.htm'>EPI Separation</a></td>
+     <td>Performs Separation using embedded page information (EPI). The Provided Extractor should be a Data Type which returns a 1-based integer page
+number. When this binding method is in use, Grooper applies the following logic: 1) If the page number is 1, create a new folder. 2) If the page number
+is &gt; 1, it will be applied to the current folder only if it is in sequence with the last recorded page number. If the page is out of sequence, it will
+be left as a loose page.
+</td>
+  </tr>
+  <tr>
+     <td><a href='ESP_Auto_Separation.htm'>ESP Auto Separation</a></td>
+     <td>Performs separation using ESP™ automatic separation.  Requires that classification has previously been run at page level.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Event-Based_Separation.htm'>Event-Based Separation</a></td>
+     <td>Separate the batch based on Separation Events. Separation events can separate based on patch codes, barcodes, blank pages, detected shapes, or page content types.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Pattern-Based_Separation.htm'>Pattern-Based Separation</a></td>
+     <td>A new folder will be created if the extractor produces any results on the page.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Undo_Separation.htm'>Undo Separation</a></td>
+     <td>Flattens a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> by recursively removing all children <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>, leaving only loose pages. No action will be taken if the BaseFolder does not conatin any children <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>.
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

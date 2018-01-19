@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch View</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper Common UI Library\nControls\nBatch View");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> > <a href=\"../Forms/Adjust_Binary_Image_Dialog.htm\">Grooper Common UI Library<\/a> > <a href=\"Batch_Details_Viewer.htm\">Controls<\/a> > Batch View<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.50 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Batch View</h1>
+<p>Represents the base class for all controls which display Grooper <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a> in the <a href='../../Grooper_Attended_Client/Controls/Batch_Multi_View.htm'>Batch Multi View</a> architecture associated with Attended Client. Custom batch view controls which work in Attended Client can be created by inheriting from this class.  At minimum, base classes should override the
+Initialize() method, the OnNodeModified() method, the FocusedItem property, and the SelectedItems property.
+</p>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Batch_Viewer.htm'>Batch Viewer</a></td>
+     <td>Displays the contents of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> in a hierarchical folder view. The Batch Viewer control is used throughout Grooper to display and edit the contents of a batch.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Batch_Viewer_Scan_Control.htm'>Batch Viewer Scan Control</a></td>
+     <td>Provides document scanning capabilities and displays the contents of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> in a hierarchical folder view in a single control. This is a combination control combining the ScanControl and the BatchViewer controls.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Classification_Viewer.htm'>Classification Viewer</a></td>
+     <td>Displays the contents of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, along with a list of Classification Candidates.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Index_Navigator.htm'>Index Navigator</a></td>
+     <td>Displays <a href='../../../Developer_Reference/Grooper/DocumentInstance_SDK.htm'>Document Instance</a> objects, providing a user interface for reviewing and editing the data elements associated with a document. The Index Navigator Panel is a hierarchy of Index Panel Control objects, designed to allow editing of the hierarchical <a href='../../../Developer_Reference/Grooper/DataInstance_SDK.htm'>Data Instance</a> objects produced by
+the <a href='../../../Administrator_Reference/Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Thumbnail_Viewer.htm'>Thumbnail Viewer</a></td>
+     <td>Provides a thumbnail-based view of a <a href='../../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+</td>
+  </tr>
+</table>
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

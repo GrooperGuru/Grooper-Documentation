@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Activity Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nActivity Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Activity_Types.htm\">Activity Types<\/a> &gt; Activity Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Activity</h1>
+Activities define work to be performed on objects in a batch, and define settings which control how the work is performed.
+
+Activities fall into two general categories:  Attended Activities, which are performed by a human operator in a Grooper client application,
+and Unattended Activities, which are performed by code.
+
+<h2>List of Activity Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:20%'/>
+  <col style='width:80%'/>
+  <tr>    <th>Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Attended Activities</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.Scan.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Attended_Activities/Scan.htm'>Scan</a>
+</td><td>Scan is an attended activity which provides a user interface optimized for creating batches and scanning/importing pages. Scan is typically the first step in a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>. The user interface for the Scan activity includes the <a href='../Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a> Batch View control.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Export</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.ExportDocument.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Export/Document_Export.htm'>Document Export</a>
+</td><td>Exports document content using an <a href='../Export_Provider_Types/Export_Provider_Types.htm'>Export Provider</a>.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Human Review</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.ClassifyReview.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Human_Review/Classification_Review.htm'>Classification Review</a>
+</td><td>Provides a user interface for reviewing the structure of a batch after <a href='../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> and/or <a href="Object_Application_Execution/Separation.htm">Separation</a>. The user interface for the Classification Review activity includes the <a href='../Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a> Batch View control.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.DataReview.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Human_Review/Data_Review.htm'>Data Review</a>
+</td><td>Provides a user interface for entering data or validating the results of <a href='Unattended_Activities/Extraction.htm'>Extraction</a>. The user interface for the Data Review activity includes the <a href='../Batch_View_Types/Index_Navigator.htm'>Index Navigator</a> Batch View control.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.ImageReview.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Human_Review/Image_Review.htm'>Image Review</a>
+</td><td>Image Review is an attended activity which provides a user interface optimized for quickly reviewing and/or correcting the
+results of <a href='../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> or <a href="Object_Application_Execution/Separation.htm">Separation</a>. The user interface for the Image Review activity includes the <a href='../Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a> and <a href='../Batch_View_Types/Thumbnail_Viewer.htm'>Thumbnail Viewer</a> Batch View controls.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.Review.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Human_Review/Review.htm'>Review</a>
+</td><td>Provides a configurable user interface for human review of documents or pages in a batch. The <a href='../Attended_Client_Types/Attended_Client_Types.htm'>Attended Client</a> provides the user interface for this Activity. This client will display one or more <a href='../Batch_View_Types/Batch_View_Types.htm'>Batch View</a> controls as indicated by the
+Activity's configuration.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Microfilm Processing</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Microfilm.AnalyzeStrips.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Microfilm_Processing/Analyze_Strips.htm'>Analyze Strips</a>
+</td><td>Category: Microfilm Processing. Performs a horizontal projection profile on each page of a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> (where each <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> is a strip of a microfilm reel) and stores the result
+as text files on the <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> objects. 
+This Activity is intended to be a precursor to the <a href='Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a> Activity that will use the horizontal profile data to do further work. Each page image
+is required to be 8 bit grayscale.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Microfilm.ConsolidatePages.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Microfilm_Processing/Consolidate_Pages.htm'>Consolidate Pages</a>
+</td><td>
+Category: Microfilm Processing. A prerequisite for running this Activity is the <a href='Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a> Activity. After running the <a href='Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a> Activity, each
+Frame Folder contains either one or two <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a> that were contained within the frame. The Consolidate Pages Activity consolidates all of the Frame Folder
+Pages as children of the Batch root and deletes the Frame Folders.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Microfilm.DetectFrames.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a>
+</td><td>Category: Microfilm Processing. Analyzes horizontal projection profile data stored on a set of microfilm strips to detect microfilm frames and creates one batch folder per frame. 
+A prerequite for running this Activity is the <a href='Microfilm_Processing/Analyze_Strips.htm'>Analyze Strips</a> Activity. After running the <a href='Microfilm_Processing/Analyze_Strips.htm'>Analyze Strips</a> Activity, each BatchPage object contains horizontal projection
+profile data for the page (which represents a strip of a microfilm reel). The <a href='Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a> Activity analyzes the horizontal projection profile data for the
+entire reel to detect each frame. A batch folder will be created for each frame, and the frame image will be stored as the primary image file on the batch folder.
+Finally, the original page images for the Batch will be deleted. The end result of the Activity is a set of Batch Frame folders.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Microfilm.DetectPages.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a>
+</td><td>Category: Microfilm Processing. For each Frame Folder, this Activity detects and extracts Page Images from the Frame Image and creates child batch page objects under the Frame Folder. 
+A prerequite for running this Activity is the <a href='Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a> Activity. After running the <a href='Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a> Activity, each Frame Folder contains a frame image that
+contains one or two pages. The <a href='Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a> Activity analyzes the frame image to detect the pages within it.
+
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Miscellaneous</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.CMIS.CmisBatchTransfer.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/CMIS_Batch_Transfer.htm'>CMIS Batch Transfer</a>
+</td><td>Transfers a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> to another Grooper repository, optionally launching the batch into a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>
+in the target repository. This activity is designed to facilitate distributed applications, providing a secure mechanism for moving batches between Grooper
+repositories over web protocols.  To use this activity, the following prerequisites must be met:
+<ul><li>An instance of <a href='../Service_Instance_Types/Grooper_CMIS_Server.htm'>Grooper CMIS Server</a> must be installed on the target repository.</li><li>A <a href='../Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a> must be created in the source repository, which connects to the <a href='../Service_Instance_Types/Grooper_CMIS_Server.htm'>Grooper CMIS Server</a> discussed above.</li><li>The <a href='../Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a> representing the target repository must be imported in the source repository.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.Deduplicate.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Deduplicate.htm'>Deduplicate</a>
+</td><td>Detects duplicate documents.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.DisposeBatch.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Dispose_Batch.htm'>Dispose Batch</a>
+</td><td>Dispose Batch is an unattended activity designed to dispose of <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a> when they have completed processing through a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>. This activity can delete <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a>, move them to archival, or migrate their contents between Grooper <a href='../Grooper_Node_Types/Infrastructure/File_Store.htm'>File Stores</a>.  Please note that
+if deleting or archiving the batch, this action must be the last step in the <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.LaunchProcess.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Launch_Process.htm'>Launch Process</a>
+</td><td>Launches an external process, optionally waiting for that process to terminate.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.SpawnBatch.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Spawn_Batch.htm'>Spawn Batch</a>
+</td><td>Creates a new batch using a filtered set of level 1 folders from the current batch. <p>Copies one or more level 1 folder objects from the batch to a new batch, optionally launching the new
+batch into a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.  If no items in the batch match the specified criteria, no batch is created.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.TrainLexicon.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Train_Lexicon.htm'>Train Lexicon</a>
+</td><td>Executes an extractor and populates a <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> with the results.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Object Application/Execution</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.ExecuteCommand.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Object_Application_Execution/Execute_Command.htm">Execute Command</a>
+</td><td>Executes a command defined for a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object or <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> object.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.ImageProcessing.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Object_Application_Execution/Image_Processing.htm">Image Processing</a>
+</td><td>Applies an <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to pages in a  <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profiles</a> apply a list of image processing commands to pages in a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, and are used for image cleanup and/or image feature detection.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.Redaction.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Object_Application_Execution/Redaction.htm">Redaction</a>
+</td><td>Applies a Redaction Profile to pages in a batch. Redaction performs permanent image-based redaction of information based on settings defined in a Redaction Profile.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.Separation.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Object_Application_Execution/Separation.htm">Separation</a>
+</td><td>Applies a <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> to pages in a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity will apply the specified <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> to all pages which are immediate
+children of the folder being processed.  To separate loose pages in the root of a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, run this activity at
+the batch level.  To separate loose pages inside a subfolder, run the activity at the level of the folders
+which contain loose pages.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>OCR Processing</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.CorrectOCR.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Ocr_Processing/Correct_OCR.htm">Correct OCR</a>
+</td><td>Corrects OCR results for a document, or for a data element on a document. Performs word splitting and OCR spell correction.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.FullTextOcr.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href="Ocr_Processing/Full_Text_OCR.htm">Full Text OCR</a>
+</td><td>Applies an <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a> to pages in a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity can only run at page scope.  The selected OCR Profile will be executed against the primary image for each page, and the OCR results
+will be stored to the page object.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Rendering</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Activities.RenderDocument.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Rendering/Render_Document.htm'>Render Document</a>
+</td><td>Renders the native file version stored on a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> to PDF. <p>Rendering allows electronic documents of any type to be displayed in Grooper, and allows their textual content to be accessed by Grooper activities
+such as <a href='../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> and <a href='Unattended_Activities/Extraction.htm'>Extraction</a>. Conversion to PDF is achieved by automating the native application to print the document to a Grooper-
+installed printer called the 'Grooper Render Printer', which generates a PDF file from the print stream. This activity can render any electronic
+document format, as long as the following criteria are met:</p><ul><li>An instance of Grooper Render Printer has been installed on the machine(s) where the activity will run, and has been set as the default printer for
+the user account under which the activity will run.</li><li>The native application for the file type has been installed on the machine(s) where the activity will run.</li><li>The native application provides a shell print verb (i.e. when the file is right-clicked in Windows Explorer, a 'Print' option is present).</li></ul><p>Only a single instance of this activity may run on the same machine at the same time.  If the folder does not have a native version, this activity does nothing.</p>
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Unattended Activities</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Banking.A2iACheckReader.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/A2iA_CheckReader.htm'>A2iA CheckReader</a>
+</td><td>Performs check recognition using A2iA CheckReader. Runs with folder scope only.  The first page in the folder to be processed must be the front image of a check.  Once A2iA recognition has run, the resulting
+values are stored to the fields indicated in the Field Mappings property.  A2iA CheckReader can extract the following data elements:
+<ul><li><b>Amount</b> - The dollar amount of the check.</li><li><b>Check Date</b> - The date of the check.</li><li><b>Check Number</b> - The check number.</li><li><b>Code Line</b> - The MICR line of the check.</li><li><b>Payee</b> - The name and address of the payee.</li><li><b>Payor</b> - The name and address of the payor.</li></ul><p>A2iA CheckReader requires special licensing.  To purchase licensing for A2iA CheckReader, please contact your Grooper sales representative.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Banking.cheque.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Checkify.htm'>Checkify</a>
+</td><td>Performs custom processing on check and supporting document images for Check21 Batches 
+Finds check image(s) in the batch, moves them to the front of the batch and ensures that each check front image has a back image.
+At the end of the process, two subfolders will be created, one containing the check images and one for supporting documents.
+If no check image is found in the batch, then an exception will be thrown.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.ClassifyFolders.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Classify_Folders.htm'>Classify Folders</a>
+</td><td>Runs classification on <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>. Attempts to automatically assign a Content Type to each <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  The activity is configured with a <a href='../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>, which
+defines the settings to be used for classification, and the set of possible content types are the descendants of the Content Model at the specified
+Classification Level.
+<p>Classification is performed as follows, for each folder in scope:</p><ol><li>Load the content for the folder.  The content for a folder includes all descendant pages of the folder, unless the Page Scope property of
+the Content Model is set to FirstPageOnly.  In this case, only content for the first page of each folder is loaded.</li><li>Compare the content to the training for each possible content type.</li><li>Generate a list of content types in descending order by similarity, so that the highest-scoring content types are at the top of the list.</li><li>If the top result has a similarity below the Minimum Similarity specified on the Content Model, classification fails.  In such cases, if a
+Default Content Type has been specified on the Content Model, then the folder will be assigned this type.  Otherwise the folder will be left
+unclassified.</li><li>If the top result and the 2nd result have a similarity difference less than the Minimum Similarity specified on the Content Model, then
+classification fails.  This helps identify and flag documents which are similar to more than one known document type.</li><li>Otherwise, the folder is classified with the content type represented by the top result.</li></ol>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.ClassifyPages.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Classify_Pages.htm'>Classify Pages</a>
+</td><td>Runs classification on <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a>. This activity generates a list of <a href='../Grooper_Node_Types/Content_Models/Page_Type.htm'>Page Type</a> candidates and stores it to the page object.  This activity must run before <a href="Object_Application_Execution/Separation.htm">Separation</a> under the
+following circumstances:
+<ul><li>If the configured <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> is using the 'ESP Auto Separation' method.</li><li>If the configured <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> is using the 'Events' method, and 'Content Type' events are included.</li></ul>
+NOTE: The <a href="Ocr_Processing/Full_Text_OCR.htm">Full Text OCR</a> activity must execute before Page Classification if the specified <a href='../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> is using lexical classification.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.ContentAction.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Content_Action.htm'>Content Action</a>
+</td><td>Performs an action on the content associated with <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> objects. In the scope of this activity, "content" refers to the sequence of pages assocated with a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  For example,
+this activity can be used to split multipage content into individual page objects, or to merge child page objects into
+a single multipage file stored on the folder.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.DatabaseExport.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Database_Export.htm'>Database Export</a>
+</td><td>Exports metadata from a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object to a <a href='../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>. Allows <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a> from multiple levels of a <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> to be mapped to columns in a <a href='../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.DetectLanguage.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Detect_Language.htm'>Detect Language</a>
+</td><td>Detects the dominant language of each <a href='../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> of the <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> and marks the page with the appropriate language code identifier.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.Extraction.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Extraction.htm'>Extraction</a>
+</td><td>Extraction is an unattended activity which performs data extraction on folders in a <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity can only run with Folder scope.  The folders to be extracted must be classified, and the assigned content type must have a <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.LinkAction.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/Link_Action.htm'>Link Action</a>
+</td><td>Performs an action on the <a href='../Content_Link_Types/Content_Link_Types.htm'>Content Link</a> associated with a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.MimeTypeAction.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/MIME_Type_Action.htm'>MIME Type Action</a>
+</td><td>Performs an action on the MIME Type Handler associated with a <a href='../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Activities.PdfTextExtract.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/PDF_Text_Extract.htm'>PDF Text Extract</a>
+</td><td>Performs text extraction from PDF files.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Banking.ImageCashLetter.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Unattended_Activities/X9.37_Merge.htm'>X9.37 Merge</a>
+</td><td>Creates a X9.37 Deposit file from a batch of check payment information. Runs at Batch or Folder level Scope. In either case, all child nodes of the basenode are looked at to see if they match the configured
+' document type and if they do they will be processed.
+Each child folder is expected to contain at least one batchpage representing the front image of the check.  It may also contain a batch page representing
+the back image of the check. If the batch folder does not contain the back image of the check then a dummy back image will be automatically created from
+the front image.
+
+</td></tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

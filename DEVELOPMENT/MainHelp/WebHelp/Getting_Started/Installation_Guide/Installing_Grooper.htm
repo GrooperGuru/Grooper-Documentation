@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Installing Grooper</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+ <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nInstallation Guide\nInstalling Grooper");
+addTocInfo("Getting Started\nInstallation Guide\nInstalling Grooper\nGrooper_Database_Initialization_Wizard");
+
+
+	if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Release_Notes.htm\">Installation Guide<\/a> &gt; <a href=\"Installing_Grooper.htm\">Installing Grooper<\/a> &gt; Grooper_Database_Initialization_Wizard<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Release_Notes.htm\">Installation Guide<\/a> &gt; Installing Grooper<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Installer and Initialization</h1>
+<p>The Grooper Installer installs Grooper. &#160;Depending on the number 
+ of pre-requisites that exist on the target machine, the pre-requisites 
+ will take the majority of the installation time and may require one or 
+ more reboots. &#160;The optional Microsoft SQL Express installer (used 
+ during the Grooper Wizard to install a local database instance), in particular, 
+ can take 15 minutes or more to install.</p>
+<h2>Grooper Installation Files</h2>
+<p><span style="font-weight: bold;">setup.exe</span> - this is the main 
+ Grooper installation file. </p>
+<p style="font-weight: bold;">Grooper (x<span style="font-style: italic;"><i>##</i></span>).msi 
+ <span style="font-weight: normal;">- resource used by the Grooper installer. 
+ - x##: x86 for 32bit installer and x64 for 64bit installer </span></p>
+<p style="font-weight: bold;">Setup.ini <span style="font-weight: normal;">- 
+ resource used by the Grooper installer.</span></p>
+<p style="font-weight: bold;">0x0409.ini <span style="font-weight: normal;">- 
+ resource used by the Grooper installer.</span></p>
+<p style="font-weight: bold;">program files folder <span style="font-weight: normal;">- 
+ resource used by the Grooper installer.</span></p>
+<p style="font-weight: bold;">Windows folder <span style="font-weight: normal;">- 
+ resource used by the Grooper installer.</span></p>
+<p style="font-weight: normal;"><span style="font-weight: bold;">System32 
+ folder</span> - resource used by the Grooper installer.</p>
+<p style="font-weight: normal;"><span style="font-weight: bold;">System64 
+ folder</span> - resource used by the Grooper installer.</p>
+<h2>Installing Grooper</h2>
+<p>The section will describe the steps required to run the Grooper installer, 
+ configure Grooper via the installation wizard, and finalize the Grooper 
+ installation via Grooper Configuration.</p>
+<p>&#160;</p>
+<h3>Run the Installer</h3>
+<p>1. &#160;Launch setup.exe</p>
+<p>&#160;</p>
+<p>2. &#160;Any required prerequisites will be prompted for installation 
+ at this time. &#160;Click install to continue. &#160;One or more system 
+ reboots may be required.</p>
+<p>&#160;</p>
+<p><img src="images/InstallerPrereqs.png" alt="" class="ScreenShotBorder" border="0" /></p>
+<p>&#160;</p>
+<p>3. &#160;After the prerequisites are installed, the Grooper InstallShield 
+ Wizard will install the Grooper files. &#160;Click Next until the 'Ready 
+ to Install the Program' screen appears. &#160;Click Install.</p>
+<p>&#160;</p>
+<p><img src="images/InstallerInstall.png" class="ScreenShotBorder" </p=""=""="" alt="" border="0" /> </p>
+<p>&#160;</p>
+<p>4. &#160;After the Grooper InstallShield Wizard is Completed, click 
+ Finish and then launch Grooper Configuration. &#160;</p>
+<p>&#160;</p>
+<p>5. &#160;This will prompt a Confirmation box confirming this is a new 
+ installation. &#160;Click 'Yes' to continue to the Grooper Database Initialization 
+ Wizard.</p>
+<p>&#160;</p>
+<p><img src="images/InitializationConfirmation.png" alt="" class="ScreenShot" border="0" /></p>
+<p>&#160;</p>
+<h3><a name="Grooper_Database_Initialization_Wizardbc-1"></a><a name="Grooper_Database_Initialization_Wizard">Grooper Database Initialization 
+ Wizard</a></h3>
+<p>The Grooper Database Initialization Wizard can be used to connect to 
+ an existing instance of Grooper, connect to an existing SQL Server, or 
+ create a local database instance. &#160;The Grooper Initialization Wizard 
+ also sets the primary File Store for Grooper for new installations and 
+ optionally sets the default service credentials for the local machine.</p>
+<p>&#160;</p>
+<p>Navigation of the wizard is handled by the Next and Back buttons in 
+ the top left. &#160;Users can only proceed forward (Next) if settings 
+ on the current panel validate correctly. &#160;No actual configuration 
+ or changes will be applied until the Apply Configuration button is pushed 
+ on the final tab.</p>
+<h4>Service Credentials</h4>
+<p><img src="images/WizardServiceCredentials.jpg" alt="" class="ScreenShot" border="0" /></p>
+<p>&#160;</p>
+<p>1. &#160;(Optional) &#160;Enter administrative credentials that will 
+ be used as the default credentials for such things as running Grooper 
+ services, running Grooper License Servers, etc. &#160;If left blank, these 
+ fields can be filled out during service setup.</p>
+<p>&#160;</p>
+<p>2. &#160;Click Next.</p>
+<h4>Database Connection</h4>
+<p><img src="images/WizardDatabaseConnection.jpg" alt="" class="ScreenShot" border="0" /></p>
+<p>&#160;</p>
+<p>3. &#160;If installing a <a href="../How_To_Guide/Configuration_and_Setup/Install_a_Stand-Alone_Instance_of_Grooper.htm">Local 
+ Database Instance</a>, click 'Install Local Database Instance'. &#160;Otherwise, 
+ enter the Database Connection Parameters to connect to an existing SQL 
+ Server instance*.</p>
+<p>&#160;</p>
+<p>4. &#160;Click Next.</p>
+<p>&#160;</p>
+<p>*If an instance of Grooper already exists in the selected database, 
+ the user will be prompted to connected to the existing database. &#160;If 
+ 'yes' is chosen, Grooper will connect to that database instance, &#160;the 
+ Initialization Wizard will exit, and Grooper Configuration will open. 
+ &#160;</p>
+<h4>File Store</h4>
+<p><img src="images/WizardFileStore.jpg" alt="" class="ScreenShot" border="0" /></p>
+<p>&#160;</p>
+<p>5. &#160;Set a primary File Store for Grooper. &#160;This is the location 
+ that Grooper files (scripts, temporary images, etc) will be stored. &#160;The 
+ default location is 'C:\GrooperFileStore'. &#160;This can be changed to 
+ any location to store Grooper files. &#160;It is important to use a UNC 
+ or shared path if Grooper will be used on any other servers or workstations.</p>
+<p>&#160;</p>
+<p>6. &#160;(Optional) Encrypt the File Store - check the 'Encrypt Using 
+ Key Phrase' box and enter a key phrase. &#160;This will encrypt any files 
+ stored in the File Store.</p>
+<p>&#160;</p>
+<p>7. &#160;Click Next.</p>
+<h4>Apply Configuration</h4>
+<p>8. &#160;Click 'Apply Configuration' to apply the entered settings, 
+ create the Grooper database, initialize the Grooper Installation, and 
+ create the Grooper File Store.</p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

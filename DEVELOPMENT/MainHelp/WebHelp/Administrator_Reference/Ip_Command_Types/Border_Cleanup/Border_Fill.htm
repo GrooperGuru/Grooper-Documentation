@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Border Fill</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nBorder Cleanup\nBorder Fill");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Auto_Border_Crop.htm\">Border Cleanup<\/a> &gt; Border Fill<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.BorderFill.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Border Fill</h1></td>
+<table>
+</tr>
+</table>
+Drops out artifacts around the edge of an image.
+
+<br/><br/><b>Inherits from:</b> Feature Dropout<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Border Region Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a>, Default: 0.25in</td></tr>
+   <tr><td>The size of the border region to be processed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Method</td>
+    <td><table>
+   <tr><td>Type: FillMethod, Default: Exclusive</td></tr>
+   <tr><td>Specifies the border filling method to be used. Can be one of the following values:<br />
+<ul>
+<li><b>Exclusive</b>: Objects intersecting the border boundary will be excluded from the dropout operation.
+</li>
+<li><b>Inclusive</b>: Objects intersecting the border boundary will be included in the dropout operation.
+</li>
+<li><b>Trim</b>: The entire border region will be cleared.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Max Edge Distance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 1pt</td></tr>
+   <tr><td>Specifies the maximum distance from the edge of the image for a blob which will be filled.
+<p><svg width="150" height="200"><defs><marker id="arrowstart" markerWidth="5" markerHeight="5" refX="4" refY="2" orient="auto" markerUnits="strokeWidth"><path d="M0,2 L4,4 L4,0 z" fill="blue" /></marker><marker id="arrowend" markerWidth="5" markerHeight="5" refX="0" refY="2" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,4 L4,2 z" fill="blue" /></marker></defs><rect x="0" y="0" width="150" height="200" stroke="black" fill="white" /><line x1="135" y1="0" x2="135" y2="200" style="stroke:rgb(0,0,0);stroke-width:5" /><line x1="0" y1="2" x2="135" y2="2" style="stroke:rgb(0,0,0);stroke-width:5" /><line x1="2" y1="2" x2="2" y2="200" style="stroke:rgb(0,0,0);stroke-width:5" /><line x1="2" y1="198" x2="135" y2="198" style="stroke:rgb(0,0,0);stroke-width:5" /><line x1="141" y1="25" x2="141" y2="25" stroke="blue" marker-end="url(#arrowstart)" /><line x1="141" y1="25" x2="146" y2="25" stroke="blue" marker-end="url(#arrowend)" /></svg></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Dropout Options</td>
+  </tr>
+  <tr>    <td>Dropout Method</td>
+    <td><table>
+   <tr><td>Type: DropoutMethods, Default: Fill</td></tr>
+   <tr><td>Specifies how the area occupied by matching blobs will be filled. Can be one of the following values:<br />
+<ul>
+<li><b>Fill</b>: Pixels removed from the image will be filled using the Fill Color, if one is specified.
+</li>
+<li><b>Inpaint</b>: Pixels removed from the image will be digitally restored, using information from the surrounding area. Image inpainting is a digital restoration technique designed to fill in missing areas of an image seamlessly.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Radius</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 3px</td></tr>
+   <tr><td>Specifies the radius around the area to be filled which will be considered during inpainting.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Method</td>
+    <td><table>
+   <tr><td>Type: InpaintMethod, Default: NavierStokes</td></tr>
+   <tr><td>Specifies the algorithm to be used for inpainting. Can be one of the following values:<br />
+<ul>
+<li><b>Telea</b>: Restore unknown pixels using the weighted sum of approximations by known pixels in the neighborhood. A. Telea, "An image inpainting technique based on the fast marching method", J. GRAPHICS TOOLS, 2004.
+</li>
+<li><b>NavierStokes</b>: Uses the Navier-Stokes equations from fluid dynamics to "flow" surrounding pixels into filled area, the same way a fluid would fill a void. M. Bertalmio, A. L. Bertozzi, G. Sapiro, "Navier-Stokes, Fluid Dynamics, and Image and Video Inpainting", IEEE CVPR, 2001.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fill Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When the Dropout Method is 'Fill', specifies the color to be used.  If no color is specified, the background color of the image will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Mask Dilation Factor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0, Range: -16 - 16</td></tr>
+   <tr><td>Controls the amount of dilation or erosion applied to the mask image. Increase this value to more effectively drop out the edges of objects.  Positive values will dilate the mask features, while negative values
+will erode them.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Binarization Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+   <tr><td>Defines settings for creating the binarized image used during feature detection. A "binarized" image is an 8 bit-per-pixel black and white version of the input image which is used for feature detection.  It is generated from the source image
+at runtime using the thresholding settings defined here, with the goal of producing an image where the features to be detected are clearly visible.
+
+<p>This command outputs an intermediate image named "Binarized" which allows binarization output to be reviewed and tuned.</p><p>Note that if adaptive thresholding is used, it <u>will</u> be applied to images which are already black and white.  Because adaptive thresholding tends to eliminate
+dark areas from the document, it can provide useful preprocessing for tasks such as line detection, where dark areas produce many line candidates which must be analayzed
+and processed.</p>
+(See <a href='../Miscellaneous/Binarize.htm'>Binarize</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td></tr>
+</table>
+<h2>Border Fill Example</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Original Image</th>
+     <th>Result Image</th>
+  </tr>
+  <tr>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.BorderFill_Original_Image.jpg' /></td></p></td>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.BorderFill_Result_Image.jpg' /></td></p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

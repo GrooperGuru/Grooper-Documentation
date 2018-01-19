@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Mask Settings</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nMask Settings");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Mask Settings<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Mask Settings</h1>
+Input masking provides detailed control over what users can enter at each character position in a field.
+
+Use input masking to ensure correct formatting of manually entered values such as SSNs, phone numbers, and etc.
+
+<br/><br/><b>Inherits from:</b> <a href='Grooper_Object_Types.htm'>Grooper Object</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Input Mask</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>An input mask which controls the format in which data must be entered for the field. When enabled, a <a href="https://msdn.microsoft.com/en-us/library/system.windows.forms.maskedtextbox(v=vs.110).aspx" target="_blank">MaskedTextBox control</a> is used
+in place of a standard TextBox control.  Cannot be used in tables or on fields which are drop-down lists.  For a detailed discussion of the special characters using in
+input masks, see the Microsoft documentation on <a href="https://msdn.microsoft.com/en-us/library/system.windows.forms.maskedtextbox.mask(v=vs.110).aspx" target="_blank">mask formats</a>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Reset On Space</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If True, the space input character causes the current editable position in the mask to be reset. If False the Space character will be processed as a normal input character.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Skip Literals</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If True, literal characters in the input masked will be skipped so that the user is not required to enter them.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Hide Prompt On Leave</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, the input mask will only be displayed when the field has focus.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Allow Prompt As Input</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Determines whether the prompt character is allowed as valid input.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Text Mask Format</td>
+    <td><table>
+   <tr><td>Type: MaskFormat, Default: ExcludePromptAndLiterals</td></tr>
+   <tr><td>Determines how the literal and prompt characters in the mask are processed when
+the generating the formatted string. More specifically, it determines whether literal characters,
+prompt characters, or both are included in the Text property. When prompt characters are excluded,
+they are transformed into spaces in the formatted string. Can be one of the following values:<br />
+<ul>
+<li><b>ExcludePromptAndLiterals</b>: Return only text input by the user.
+</li>
+<li><b>IncludePrompt</b>: Return text input by the user as well as any instances of the prompt character.
+</li>
+<li><b>IncludeLiterals</b>: Return text input by the user as well as any literal characters defined in the mask.
+</li>
+<li><b>IncludePromptAndLiterals</b>: Return text input by the user as well as any literal characters defined in the mask and any instances of the prompt character.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Prompt Character</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a>, Default: _</td></tr>
+   <tr><td>The character to be used to indicate the absence of user input.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

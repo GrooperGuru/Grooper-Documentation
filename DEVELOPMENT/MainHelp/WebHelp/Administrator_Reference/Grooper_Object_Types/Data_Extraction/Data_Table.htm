@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Table</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nData Extraction\nData Table");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Data_Column.htm\">Data Extraction<\/a> > Data Table<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.DataTable.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Data Table</h1></td>
+<table>
+</tr>
+</table>
+ Data Table objects are used to describe tabular data for the purposes of [Data Extraction] and [Data Review].
+The columns in the table are defined by adding child [Data Field] elements to a Data Table object.
+
+<br/><br/><b>Inherits from:</b> [Data Element]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Extract Method</td>
+    <td><table>
+   <tr><td>Type: [Table Extract Method]</td></tr>
+   <tr><td>Specifies the method to be used for table extraction.
+(See [Table Extract Method])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Initial Row Count</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 0</td></tr>
+   <tr><td>The number of rows the table is to be initialized with. Specifies the number of rows which should be present in a newly-created instance of the table.  This value also serves as a minimum
+row count for data extraction.  If data extraction produces less rows, blank rows will be added to make up the difference.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Appearance</td>
+  </tr>
+  <tr>    <td>Cell Border Style</td>
+    <td><table>
+   <tr><td>Type: [DataGridViewCellBorderStyle], Default: Single</td></tr>
+   <tr><td>The cell border style to use for this table. Can be one of the following values:<br />
+<ul>
+<li><b>Custom</b>: A border that has been customized.
+</li>
+<li><b>Single</b>: A single line border.
+</li>
+<li><b>Raised</b>: A three-dimensional raised border.
+</li>
+<li><b>Sunken</b>: A three-dimensional sunken border.
+</li>
+<li><b>None</b>: No borders.
+</li>
+<li><b>SingleVertical</b>: A vertical single-line border.
+</li>
+<li><b>RaisedVertical</b>: A vertical three-dimensional raised border.
+</li>
+<li><b>SunkenVertical</b>: A vertical three-dimensional sunken border.
+</li>
+<li><b>SingleHorizontal</b>: A horizontal single-line border.
+</li>
+<li><b>RaisedHorizontal</b>: A horizontal three-dimensional raised border.
+</li>
+<li><b>SunkenHorizontal</b>: A horizontal three-dimensional sunken border.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: Control</td></tr>
+   <tr><td>The background color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Foreground Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: ControlText</td></tr>
+   <tr><td>The foreground color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Visible</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: True</td></tr>
+   <tr><td>Controls whether this item is visible in the user interface.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Position</td>
+    <td><table>
+   <tr><td>Type: [LabelPositionEnum], Default: Left</td></tr>
+   <tr><td>Controls how the label for this item is displayed. Can be one of the following values:<br />
+<ul>
+<li><b>Left</b>: The label is displayed to the left of the item.
+</li>
+<li><b>Above</b>: The label is displayed above the item.
+</li>
+<li><b>Below</b>: The label is displayed below the item.
+</li>
+<li><b>None</b>: The label will not be displayed.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Alignment</td>
+    <td><table>
+   <tr><td>Type: [ContentAlignment], Default: MiddleLeft</td></tr>
+   <tr><td>The text alignment to be used for the data element's label. Can be one of the following values:<br />
+<ul>
+<li><b>TopLeft</b>: Content is vertically aligned at the top, and horizontally aligned on the left.
+</li>
+<li><b>TopCenter</b>: Content is vertically aligned at the top, and horizontally aligned at the center.
+</li>
+<li><b>TopRight</b>: Content is vertically aligned at the top, and horizontally aligned on the right.
+</li>
+<li><b>MiddleLeft</b>: Content is vertically aligned in the middle, and horizontally aligned on the left.
+</li>
+<li><b>MiddleCenter</b>: Content is vertically aligned in the middle, and horizontally aligned at the center.
+</li>
+<li><b>MiddleRight</b>: Content is vertically aligned in the middle, and horizontally aligned on the right.
+</li>
+<li><b>BottomLeft</b>: Content is vertically aligned at the bottom, and horizontally aligned on the left.
+</li>
+<li><b>BottomCenter</b>: Content is vertically aligned at the bottom, and horizontally aligned at the center.
+</li>
+<li><b>BottomRight</b>: Content is vertically aligned at the bottom, and horizontally aligned on the right.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Header Row</td>
+  </tr>
+  <tr>    <td>Display Header Row</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: True</td></tr>
+   <tr><td>Determines whether a column header appears at the top of the table.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Row Font Style</td>
+    <td><table>
+   <tr><td>Type: [FontStyle], Default: Regular</td></tr>
+   <tr><td>The font style to use for the header row. A combination of the following flags:<br />
+<ul>
+<li><b>Regular</b>: Normal text.
+</li>
+<li><b>Bold</b>: Bold text.
+</li>
+<li><b>Italic</b>: Italic text.
+</li>
+<li><b>Underline</b>: Underlined text.
+</li>
+<li><b>Strikeout</b>: Text with a line through the middle.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Foreground Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: ControlText</td></tr>
+   <tr><td>The background color for the table column headers.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Background Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: Control</td></tr>
+   <tr><td>The background color for the table column headers.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Total Row</td>
+  </tr>
+  <tr>    <td>Display Total Row</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Controls whether a total row will be displayed at the bottom of the table.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Total Row Font Style</td>
+    <td><table>
+   <tr><td>Type: [FontStyle], Default: Regular</td></tr>
+   <tr><td>The font style to use for the total row. A combination of the following flags:<br />
+<ul>
+<li><b>Regular</b>: Normal text.
+</li>
+<li><b>Bold</b>: Bold text.
+</li>
+<li><b>Italic</b>: Italic text.
+</li>
+<li><b>Underline</b>: Underlined text.
+</li>
+<li><b>Strikeout</b>: Text with a line through the middle.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Total Row Foreground Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: ControlText</td></tr>
+   <tr><td>The background color for the table column headers.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Total Row Background Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: Control</td></tr>
+   <tr><td>The background color for the table column headers.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Total Columns</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Any columns selected in this list will be summed in the total row at the bottom of the table.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Behavior</td>
+  </tr>
+  <tr>    <td>Preserve Character Data</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Indicates whether character-level position and confidence data should be saved. If true, character-level detail will be saved with the data element.  If false, only the raw text of the element's value
+will be saved.  As storing this information increases storage requirements and reduces performance, this feature should only
+be enabled for individual data elements in cases where it is needed.
+<p>Character-level data can be useful in custom activities or custom export sceanrios, and is also used in certain built-in
+Grooper activities.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Rubberband OCR Profile</td>
+    <td><table>
+   <tr><td>Type: [OCR Profile]</td></tr>
+   <tr><td>The [OCR Profile] to use for rubberband OCR.
+(See [OCR Profile])</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[Data Field]</td></tr>
+<tr><td>[OCR Profile]</td></tr>
+<tr><td>[Table Extract Method]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

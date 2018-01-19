@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Folder</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nBatch Object Types\nBatch Processing\nBatch Folder");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Batch_Object_Types.htm\">Batch Object Types<\/a> &gt; <a href=\"Batch_Folder.htm\">Batch Processing<\/a> &gt; Batch Folder<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.BatchFolder.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Batch Folder</h1></td>
+<table>
+</tr>
+</table>
+The Batch Folder object represents a logical folder within the structure of a <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+
+A Batch Folder can contain other Batch Folder objects as well as <a href='Batch_Page.htm'>Batch Pages</a>. A folder which has a Content Type assigned (<a href='../../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> or <a href='../../Grooper_Node_Types/Content_Models/Form_Type.htm'>Form Type</a>) is
+considered a document.<br /><br />Batch Folders can be created in a variety of ways. During scanning, import, or Separation Module execution, folders can be created automatically
+using rules defined in a <a href='../../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a>.  Users can create folders manually in any application which uses the Batch Viewer Control.  File system folders can be copied
+and pasted into Grooper batches resulting in the creation of Batch Folder objects.
+
+<br/><br/><b>Inherits from:</b> <a href='../Batch_Object_Types.htm'>Batch Object</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Content Type</td>
+    <td><table>
+   <tr><td>Type: Content Type</td></tr>
+   <tr><td>The content type assigned to this folder.
+(See Content Type)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Has Index Data</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether this folder has index data associated with it.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Index Data Valid</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether the data saved on this folder is valid, or whether it has validation errors. This flag is set at the time index data is saved, and therefore indicates if the data was valid at the time it was saved.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Has PDF Version</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether this folder object has a PDF version.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Flagged</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates that the item has been flagged for review.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Flag Reason</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The reason why the item has been flagged.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Native File Properties</td>
+  </tr>
+  <tr>    <td>Content Link</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Content_Link_Types/Content_Link_Types.htm'>Content Link</a></td></tr>
+   <tr><td>Defines a link to external document content.
+(See <a href='../../Content_Link_Types/Content_Link_Types.htm'>Content Link</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>MIME Type Handler</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></td></tr>
+   <tr><td>Defines a link to external document content.
+(See <a href='../../Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Has Native Version</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether this folder has native file version.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>File Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Returns the Native Version filename, if a Native Version exists on this Batch Folder.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>MIME Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The MIME type of the native file.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>File Type Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>A description of the native file type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Has Local Copy</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether the native file has been copied onto the folder object.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Text Extraction</td>
+  </tr>
+  <tr>    <td>OCR Data</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The OCR data associated with this object.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Culture</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The OCR data associated with this object.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Content_Link_Types/Content_Link_Types.htm'>Content Link</a></td></tr>
+<tr><td>Content Type</td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

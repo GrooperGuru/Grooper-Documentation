@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Processing</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nBatch Processing");
+addTocInfo("Getting Started\nGrooper Concepts\nBatch Processing\nProcessing_Scope");
+addTocInfo("Getting Started\nGrooper Concepts\nBatch Processing\nTask_Processing");
+
+
+	if(bc == 2)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Batch_Processing.htm\">Batch Processing<\/a> &gt; Task_Processing<\/p>");
+}
+else if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Batch_Processing.htm\">Batch Processing<\/a> &gt; Processing_Scope<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Batch Processing<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Batch Processing</h1>
+<p>Grooper's content processing capabilities center around the ability 
+ to process Batches of documents through Batch Processes. &#160;The sections 
+ below will discuss Grooper's architecture for representing document content 
+ and defining the operations to be performed on it. &#160;</p>
+<table class="NoBorder" cellspacing="0" width="50%" align="right">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr>
+		<td style="vertical-align: Top;"><p style="text-align: center;">Raw 
+		 Pages<br />
+		<img src="images/image18.jpg" alt="" style="border: none;" border="0" /></p></td>
+		<td style="vertical-align: Top;"><p style="text-align: center;">Separated 
+		 &amp; Classified<br />
+		<img src="images/image19.jpg" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</table>
+<h2>Batches</h2>
+<p>A batch is hierarchy of folders and pages which may range in size from 
+ a single page to thousands of pages. &#160;The simplest form of a batch 
+ is a list of raw pages, such as a sequence of pages acquired from a document 
+ scanner.</p>
+<p>As a batch is processed through Grooper, raw pages are typically organized 
+ into a hierarchy of folders which represent documents using Grooper's 
+ <a href="Document_Separation.htm">document separation</a> capabilities, 
+ and those folders are then assigned document types through one or more 
+ <a href="Classification.htm">classification</a> methods. &#160;As such, 
+ a &quot;document&quot; in Grooper is a batch folder which has been classified 
+ as a document type.</p>
+<p>For example, the figure to the right depicts a batch of legal pleadings 
+ which originates as list of raw pages, but is later separated into a hierarchy 
+ of level 1 folders which represent case files, and level 2 folders which 
+ represent the individual pleadings within each case file.</p>
+<h3>Batch Folders</h3>
+<p>Batch Folder objects wear many hats. &#160;In their simplest form, they 
+ are simply &#160;containers used to organize other objects in a batch. 
+ &#160;Folders can be manually created by users in the Batch Viewer Control, 
+ or they may be created automatically by Unattended Activities such as 
+ Separation. &#160;Folders can be used to organize a batch into any number 
+ of hierarchical levels. &#160;</p>
+<h4>Folder Classification</h4>
+<p>Folders have a Content Type property which can be set to classify the 
+ folder as a specific content type. &#160;Folders may be classified manually 
+ by users, or automatically by Unattended Activities such as Classify Folders.</p>
+<p>When a content type is assigned to a folder, the following changes occur:</p>
+<ul style="list-style: disc;">
+	<li>If the content type is document-based, the folder will be represented 
+	 with a document icon rather than a folder icon.</li>
+	<li>If the content type has a Data Model, then the folder will be initialized 
+	 with index data, allowing it to be processed by the Extraction and 
+	 Data Review activities.</li>
+</ul>
+<h4>Electronic Documents</h4>
+<p>Folder objects are also used to represent electronic documents. &#160;When 
+ an electronic document is imported to Grooper, a folder object is created 
+ to represent it. &#160;A folder created from an electronic file will always 
+ display a document icon, regardless of its classification status, but 
+ it is still a folder object, capable of containing page objects as children. 
+ &#160;This architecture allows electronic files to be split into individual 
+ pages, processed, and then re-assembled into documents later.</p>
+<p>The native electronic document is stored as a file on the folder object. 
+ &#160;If the native file is a PDF or image-based file type, the document 
+ will be immediately viewable in Grooper. &#160;For other file types, the 
+ Render Document Activity can be used to render a PDF version of the electronic 
+ document. &#160;After rendering, both the native file and the PDF version 
+ will be stored as files on the folder, and document will be viewable in 
+ Grooper. </p>
+<h3>Batch Pages</h3>
+<p>Batch Page objects represent individual pages of document content. &#160;They 
+ store information about the page such as the page image, OCR data, lists 
+ of objects detected on the page, &#160;ScanOnce™ page display information, 
+ and etc. </p>
+<h3>Batch Structure &amp; Properties</h3>
+<p>Each batch object in Grooper contains 3 important elements:</p>
+<ul style="list-style: disc;">
+	<li>A root folder, in which all batch content is stored.</li>
+	<li>A copy of the Batch Process currently assigned to the batch.</li>
+	<li>A set of properties which indicate the status and priority of the 
+	 batch.</li>
+</ul>
+<p>The root folder of a batch also stores batch-level data elements. When 
+ a content type is specified on the batch process associated with a batch, 
+ it's root folder will be automatically classified as that type, allowing 
+ the batch to be indexed with the data elements defined for that content 
+ type.</p>
+<h2>Batch Processes</h2>
+<p>The work to be performed on each batch is defined by a Batch Process, 
+ which is assigned to the batch at the time it is created. &#160;A batch 
+ process is an ordered set of steps, each defining an activity to be performed. 
+ &#160;Some activities are Attended Activities which require a human operator, 
+ while others are Unattended Activities performed by the system.</p>
+<p>For example, the Batch Process shown below contains 6 steps. &#160;Batches 
+ using this Batch Process will processed sequentially through these steps 
+ in the order in which they are defined. &#160;In cases where the processing 
+ order needs to be modified dynamically, this can be done by creating a 
+ <a href="../../../SDK Help/Developer_Reference/Scriptable_Types/Batch_Process_Script.htm">Batch 
+ Process Script</a>. &#160;Outside of intervention by a script, Batch Processes 
+ will always progress through the defined steps sequentially.</p>
+<p style="text-align: center;"><img src="images/image17.jpg" alt="" style="border: none;" 
+									 border="0" /></p>
+<p>Each of the process steps are related to a Processing Module. Each module 
+ represents an activity such as scanning, performing OCR or extracting 
+ data. When the work for each processing step is complete, batches are 
+ advanced to the next step in the batch process. Upon the completion of 
+ the final step in a batch process, the batch's status will be set to 'Complete'.</p>
+<h3>Batch Process Publishing</h3>
+<p><img src="images/BatchProcessing_PublishingExample.jpg" alt="" style="border: none;" 
+		 align="right" border="0" />Batch Processes are created and edited 
+ in the 'Working' folder under 'Batch Processing', and are not available 
+ for use by system users until they are published. Publishing is accomplished 
+ using the Publish command on the property panel for the Batch Process 
+ object in Grooper Administration. &#160;This operation places a read-only 
+ copy of the Batch Process in the 'Published' folder, as shown in the image 
+ to the right. &#160;</p>
+<p>The published version will remain unchanged until such time as the working 
+ version is published again, or until the Batch Process is unpublished. 
+ &#160;Unpublishing a batch process will remove it from the 'Published' 
+ folder, preventing users from creating batches which use that batch process. 
+ &#160;</p>
+<p>When users create new batches, they are prompted to select a batch process 
+ from the list of published batch processes. &#160;When the batch is created, 
+ a copy of the batch process is copied to the newly-created batch object. 
+ &#160;This mechanism helps to ensure that changes to a batch process - 
+ even published changes - do not affect batches in progress unless they 
+ are explicitly applied to each batch.</p>
+<p>An updated batch process, once published, may be applied to existing 
+ batches using the Update Process command in Grooper Dashboard, or using 
+ the Apply Batch Process command on the property panel for the Batch object 
+ in Grooper Administration.</p>
+<h3><a name="Processing_Scopebc-1"></a><a name="Processing_Scope">Processing Scope</a></h3>
+<p><img src="images/BatchProcessing_ScopeExample.jpg" alt="" style="border: none;" 
+		 align="right" border="0" />Each step in a Batch Process has a 
+ 'Scope' setting, which controls how work will be distributed to users 
+ or processes. &#160;The scope values are defined as follows:</p>
+<ul style="list-style: disc;">
+	<li><span style="text-decoration: underline; "><u>Batch</u></span> - Each 
+	 batch will be processed as a single task, by a single user or process. 
+	 &#160;At batch scope, there is no opportunity for parallel processing, 
+	 as a single user or process will perform all work.</li>
+	<li><span style="text-decoration: underline; "><u>Folder Level</u></span> 
+	 - This value indicates that batches will be processed one folder at 
+	 a time, at a specific level within the batch. &#160;Levels are numbered 
+	 starting with 0 representing the root of the batch, level 1 indicating 
+	 the first level of folders beneath the root, and so on. &#160;In the 
+	 example shown at the right, there are 5 folders at level 1. &#160;When 
+	 the batch moves to this step, 5 independent tasks will be created, 
+	 allowing all 5 tasks to be processed concurrently, provided that enough 
+	 concurrent processes or users are actively working. </li>
+	<li><span style="text-decoration: underline; "><u>Page</u></span> - Indicates 
+	 that a task will be created for each page. &#160;Page scope is optimal 
+	 for processes such as OCR or image cleanup which natively operate 
+	 on individual pages, as it allows highly parallel processing.</li>
+</ul>
+<p>Some activities only support certain scope configurations. &#160;For 
+ example, the Scan Module can only run at the batch level. &#160;Full Text 
+ OCR and Image Processing can only run at the page level. &#160;The scope 
+ options available for a step will vary based on which activity is currently 
+ selected.</p>
+<p>When processing Unattended Activities, it is best to run processing 
+ at the most granular scope possible, as this provides the highest opportunity 
+ for parallel processing. &#160;For Attended Activities, which involve 
+ a human operator, scope selection may depend on more factor than just 
+ processing efficiency. &#160;For example, the Image Review activity is 
+ typically run at batch scope so that users can view and edit thumbnails 
+ for the entire batch, rather than reviewing one page at a time. &#160;As 
+ another example, Data Review is sometimes run at a level higher than the 
+ folders being reviewed, so that the user can move back and forth in the 
+ batch to review a set of documents as a whole, rather than reviewing each 
+ document individually. &#160;</p>
+<h3><a name="Task_Processingbc-2"></a><a name="Task_Processing">Task Processing</a></h3>
+<p>At each step in a batch process, a set of tasks are created based on 
+ the scope setting. &#160;The resulting task queue serves as a to-do list 
+ for users and processes working in the system. &#160;In a production environment, 
+ Unattended Activities are performed by instances of the Task Processing 
+ service running on servers, while Attended Activities are performed by 
+ users working in client applications.</p>
+<p>Whether a human operator or an automated process, all workers pull tasks 
+ from the task queue, perform the associated work, and then 'complete' 
+ the task. &#160;When the last task for a specific step is completed, the 
+ entire batch is moved to the next step in the batch process, and a new 
+ set of tasks is added for that step.<br />
+<br />
+In support of this parallel processing architecture, it is typical to run 
+ many concurrent threads of the Task Processing service for processor-intensive 
+ activities such as Full Text OCR and Image Processing, or for activities 
+ which may have high latency, such as CMIS Action. &#160;</p>
+<p>The example below demonstrates how tasks are processed for a step running 
+ at folder level 1. &#160;As there are 5 folders at level 1 in the batch, 
+ 5 tasks will be created. &#160;These 5 tasks are independent of each other, 
+ and can be processed concurrently if enough users or service processes 
+ are currently working.</p>
+<p style="text-align: center;"><img src="images/BatchProcessing_TaskProcessing.jpg" 
+									 alt="" style="border: none;" border="0" /></p>
+<h3>Task Priority</h3>
+<p>Tasks are processed in order of priority. &#160;The priority level of 
+ tasks is controlled by the Priority property of the Batch, a value between 
+ 1 and 5, with priority 1 representing tasks which should be processed 
+ first. &#160;Therefore, if Batch A with a priority level of 3 has tasks 
+ in the queue, and Batch B is added with a priority level of 1, the processing 
+ modules will stop working on Batch A's tasks until all of Batch B's tasks 
+ are complete. &#160;If all tasks in the queue have the same priority level, 
+ then tasks are processed in the order in which they were added to the 
+ queue.</p>
+<h3>Task Filtering</h3>
+<p>Many of Grooper's attended modules support task filtering, allowing 
+ users to configure a filter which restricts the tasks they process to 
+ a specific batch, batch process, or step in the process. &#160;This feature 
+ is designed to support environments where it is important for a single 
+ user to process a batch from start to finish. &#160;When filtering is 
+ in use, tasks which match the filtering criteria are still processed in 
+ priority order.</p>
+<h2>See Also</h2>
+<p>Activity Types</p>
+<p>Batch Process</p>
+<p>Batch<br />
+</p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

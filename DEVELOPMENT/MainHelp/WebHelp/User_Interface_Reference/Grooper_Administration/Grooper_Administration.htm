@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Administration</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper Administration\nGrooper Administration");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../User_Interface_Reference.htm\">User Interface Reference<\/a> > <a href=\"Grooper_Administration.htm\">Grooper Administration<\/a> > Grooper Administration<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Administration</h1>
+<p>Grooper Administration is a browser for the <a href='../../Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm'>Grooper Tree Structure</a>, used by administrators to configure and manage objects in a
+Grooper repository. This application uses an explorer-style view, where the tree structure is displayed in a panel on the left, and a panel
+on the right displays the properties of the currently selected node.
+</p>
+<p><img src="../../images/ScreenShots/GrooperAdmin.frmMain.jpg" class="ScreenShot" /></p>
+<h2>Toolbar Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Add_Item.png" /></td>
+     <td>Add Item</td>
+     <td>Add a new item as child of the currently selected node. Items can be Folders or Batches. Displays the <a href='../Grooper™_Base_Library/Forms/New_Item_Dialog.htm'>New Item Dialog</a>, allowing the user to specify a name for the new item.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Clone_Item.png" /></td>
+     <td>Clone Item</td>
+     <td>Clone the currently selected item. Displays the <a href='../Grooper™_Base_Library/Forms/New_Item_Dialog.htm'>New Item Dialog</a>, allowing the user to specify a name for the cloned item.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Collapse_Expand.png" /></td>
+     <td>Collapse/Expand</td>
+     <td>Hide or display the tree structure in the left pane.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Delete.png" /></td>
+     <td>Delete</td>
+     <td>Delete the currently selected item. A confirmation dialog box is displayed to confirm the delete operation.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Publish.png" /></td>
+     <td>Publish</td>
+     <td>Publish the selected item to another Grooper repository. Displays the <a href='Forms/Publish_Objects_Dialog.htm'>Publish Objects Dialog</a>, allowing the user to specify options which control the publishing process.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Refresh.png" /></td>
+     <td>Refresh</td>
+     <td>Refresh the selected node and all items below it.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Rename.png" /></td>
+     <td>Rename</td>
+     <td>Rename the currently selected item.
+</td>
+  </tr>
+</table>
+<h2>Main Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>
+     <th>&nbsp;</th>
+     <th>Command Name</th>
+     <th>Shortcut Keys</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Edit___Back.png" /></td>
+     <td>Edit / Back</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+Left</td>
+     <td>Go back to the previously-visited node.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Edit___Clear_Branch_Attributes.png" /></td>
+     <td>Edit / Clear Branch Attributes...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Clear one or more attributes on the selected node and its descendants. Displays the <a href='Forms/Attributes_Editor_Dialog.htm'>Attributes Editor Dialog</a>, allowing the user to specify which attributes should be cleared.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Edit___Find.png" /></td>
+     <td>Edit / Find...</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+F</td>
+     <td>Search the Grooper repository for objects by name, id, or type name. Displays the <a href='Forms/Find_Objects_Dialog.htm'>Find Objects Dialog</a>.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Edit___Forward.png" /></td>
+     <td>Edit / Forward</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+Right</td>
+     <td>Go forward in the recently visited nodes list.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Edit___Set_Branch_Attributes.png" /></td>
+     <td>Edit / Set Branch Attributes...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Set one or more attributes on the selected node and its descendants. Displays the <a href='Forms/Attributes_Editor_Dialog.htm'>Attributes Editor Dialog</a>, allowing the user to specify which attributes should be set.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.File___Change_Repository.png" /></td>
+     <td>File / Change Repository</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Connect to a different Grooper repository.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.File___Export.png" /></td>
+     <td>File / Export...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Export objects from the Grooper tree structure to a ZIP file. Displays the <a href='Forms/Export_Objects_Dialog.htm'>Export Objects Dialog</a>, allowing the user to specify objects to be included in the ZIP archive.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.File___Import.png" /></td>
+     <td>File / Import...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Imports objects from a Grooper ZIP file to the currently open repository. Displays a file browser dialog to allow selection of a Grooper ZIP archive.  Once a ZIP file has been
+selected, the <a href='Forms/Import_Objects_Dialog.htm'>Import Objects Dialog</a> will be displayed, allowing the user to select which object will be
+imported from the ZIP file.
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+     <td>Help / About...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Display Grooper version information.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Help___Show_Help.png" /></td>
+     <td>Help / Show Help...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Display help.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Tools___Fuzzy_Match_Visualizer.png" /></td>
+     <td>Tools / Fuzzy Match Visualizer...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Displays the <a href='Forms/Fuzzy_Match_Visualizer.htm'>Fuzzy Match Visualizer</a>.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Tools___Options.png" /></td>
+     <td>Tools / Options...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Display the <a href='Forms/Grooper_Administration_Options_Dialog.htm'>Grooper Administration Options Dialog</a>.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Tools___Repair_Branch.png" /></td>
+     <td>Tools / Repair Branch...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Detect and repair errors in the selected node and its descendants. Displays the <a href='Forms/Repair_Branch_Dialog.htm'>Repair Branch Dialog</a>.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Tools___Validate_Branch.png" /></td>
+     <td>Tools / Validate Branch...</td>
+     <td style='text-align:center; vertical-align:middle;'>F11</td>
+     <td>Validates the properties of the selected object and all objects below it, producing a consolidated list of validation messages. Displays the <a href='Forms/Validate_Branch_Dialog.htm'>Validate Branch Dialog</a>.
+</td>
+  </tr>
+</table>
+<h2>Context Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Add_Item.png" /></td>
+     <td>Add Item</td>
+     <td>Add a new item as child of the currently selected node. Items can be Folders or Batches. Displays the <a href='../Grooper™_Base_Library/Forms/New_Item_Dialog.htm'>New Item Dialog</a>, allowing the user to specify a name for the new item.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Clone_Item.png" /></td>
+     <td>Clone Item</td>
+     <td>Clone the currently selected item. Displays the <a href='../Grooper™_Base_Library/Forms/New_Item_Dialog.htm'>New Item Dialog</a>, allowing the user to specify a name for the cloned item.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Delete.png" /></td>
+     <td>Delete</td>
+     <td>Delete the currently selected item. A confirmation dialog box is displayed to confirm the delete operation.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Publish.png" /></td>
+     <td>Publish</td>
+     <td>Publish the selected item to another Grooper repository. Displays the <a href='Forms/Publish_Objects_Dialog.htm'>Publish Objects Dialog</a>, allowing the user to specify options which control the publishing process.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../images/CommandIcons/GrooperAdmin.frmMain.Rename.png" /></td>
+     <td>Rename</td>
+     <td>Rename the currently selected item.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

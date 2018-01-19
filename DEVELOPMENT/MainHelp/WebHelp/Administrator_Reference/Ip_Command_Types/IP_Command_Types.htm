@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>IP Command Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nIP Command Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"IP_Command_Types.htm\">IP Command Types<\/a> &gt; IP Command Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>IP Command</h1>
+IP commands perform image processing work, such as image cleanup, format conversion, or feature detection.
+
+IP Commands are used to construct <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profiles</a>, and are also used as stand-alone properties on some Grooper types.
+<p>Some IP Commands modify the images they process, while other IP Commands simply detect features in an image, without
+modifying the image in any way.</p><p>Each IP Command defines a set of supported pixel formats.  If an image with an unsupported pixel format is encountered,
+the command will take no action.</p>
+
+<h2>List of IP Command Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:20%'/>
+  <col style='width:80%'/>
+  <tr>    <th>Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Border Cleanup</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoBorderCrop.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Border_Cleanup/Auto_Border_Crop.htm'>Auto Border Crop</a>
+</td><td>Detects black borders around the edge of an image, crops the image to remove the border, and cleans up remaining edge artifacts. <p>This command is designed to remove edge artifacts produced by document scanners.  This includes solid black borders as shown below, as
+well as smaller edge artifacts such as streaks and specks.</p><p>Example of black border:</p><div style="width:80; height:120; background-color:black; padding:5; text-align:center;"><div style="width:70; height:110; background-color:white; padding:5;"><font size="1">Document<br /><br />The quick brown fox jumped over the log.</font></div></div>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoBorderInvert.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Border_Cleanup/Auto_Border_Invert.htm'>Auto Border Invert</a>
+</td><td>Detects dark borders around the edge of an image and inverts or fills the area occupied by the border.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.BorderFill.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Border_Cleanup/Border_Fill.htm'>Border Fill</a>
+</td><td>Drops out artifacts around the edge of an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Crop.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Border_Cleanup/Crop.htm'>Crop</a>
+</td><td>Crops borders of an image by a specified amount.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Color Adjustment</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.AdjustSaturation.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Adjust_Saturation.htm'>Adjust Saturation</a>
+</td><td>Adjusts the saturation (color intensity) in an image.  
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AdjustTint.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Adjust_Tint.htm'>Adjust Tint</a>
+</td><td>Adjusts the tint in an image.  
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoAdjustLevels.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Auto_Adjust_Levels.htm'>Auto Adjust Levels</a>
+</td><td>The Adjust Levels command corrects the tonal range and color balance by adjusting the shadow, midtone, and highlights of an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoColorBalance.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Auto_Color_Balance.htm'>Auto Color Balance</a>
+</td><td>Automatically corrects the color and contrast of an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoWhiteBalance.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Auto_White_Balance.htm'>Auto White Balance</a>
+</td><td>Automatically adjusts the white point in an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.BrightnessContrast.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Brightness_Contrast.htm'>Brightness Contrast</a>
+</td><td>Modifies the brightness and/or contrast of an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ColorDropout.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Color_Dropout.htm'>Color Dropout</a>
+</td><td>Replaces pixels in a specific color range with a replacement color. This command has several possible uses:
+<ul><li><u>Replace all colors. </u> - Leave the Target Color empty.</li><li><u>Replace all shades of gray. </u> - Leave the Target Color empty, and set Invert to True.</li><li><u>Replace a specific color</u> - Set the Target Color to the color which should be replaced.</li><li><u>Preserve a specific color</u> - Set the Target Color to the color which should be preserved, and set Invert to True.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Colorize.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Colorize.htm'>Colorize</a>
+</td><td>This command can be used to replace the hue, saturation and luminance values in an
+image with those of the specified base color. 
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ContrastStretch.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Contrast_Stretch.htm'>Contrast Stretch</a>
+</td><td>Adjusts the contrast of an image so that the lightest pixels are 100% white, and darkest pixels are 100% black. Normalizes the contrast in an image, as shown the in example below.
+<p><svg width="240" height="170"><rect x="0" y="0" width="100" height="150" stroke="rgb(128,128,128)" fill="rgb(240,240,240)" /><text x="10" y="20" font-size="16" font-weight="bold" fill="rgb(128,128,128)">Document</text><rect x="120" y="0" width="100" height="150" stroke="rgb(0,0,0)" fill="rgb(255,255,255)" /><text x="130" y="20" font-size="16" font-weight="bold" fill="rgb(0,0,0)">Document</text></svg></p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AdjustGamma.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Gamma_Adjust.htm'>Gamma Adjust</a>
+</td><td>Controls the gamma correction level.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Invert.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Invert.htm'>Invert</a>
+</td><td>Inverts images which are negated. A "negated" image is one where the feature pixels are white, and the image background is black, as shown below at the left.  The output image from this command
+will be an inverted version of the original image, as shown at the right.
+<p><svg width="220" height="150"><defs><pattern id="WhiteLines" patternUnits="userSpaceOnUse" width="80" height="10"><rect width="80" height="10" fill="black" /><line x1="0" y1="5" x2="80" y2="5" stroke="white" stroke-width="5" /></pattern><pattern id="BlackLines" patternUnits="userSpaceOnUse" width="80" height="10"><rect width="80" height="10" fill="white" /><line x1="0" y1="5" x2="80" y2="5" stroke="black" stroke-width="5" /></pattern></defs><rect x="0" y="0" width="100" height="150" stroke="black" fill="black" /><rect x="10" y="10" width="80" height="130" stroke="transparent" fill="url(#WhiteLines)" /><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="130" y="10" width="80" height="130" stroke="transparent" fill="url(#BlackLines)" /></svg></p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Posterize.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Posterize.htm'>Posterize</a>
+</td><td>Generates an image made up of primary and secondary colors of the source image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Solarize.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Solarize.htm'>Solarize</a>
+</td><td>Use this command to adjust the curves to generate a classic "solarize" effect.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.SwapChannels.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Color_Adjustment/Swap_Channels.htm'>Swap Channels</a>
+</td><td>Converts RGB to BGR.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Feature Detection</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.ReadBarcodes.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a>
+</td><td>Detects and reads barcode data.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.BlankPageDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Blank_Page_Detection.htm'>Blank Page Detection</a>
+</td><td>Determines if a page is blank based on a threshold of black pixels.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ColorDetect.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Color_Detection.htm'>Color Detection</a>
+</td><td>Detects whether an image contains color, grayscale, or black and white content, optionally converting the image to the detected color depth.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.CornerDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Corner_Detection.htm'>Corner Detection</a>
+</td><td>Detects corners using Harris corner detection.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.EdgeDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Edge_Detection.htm'>Edge Detection</a>
+</td><td>Detects edges in an image using a Sobel filter.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.LineDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Line_Detection.htm'>Line Detection</a>
+</td><td>Detects lines in an image using a <a href="https://en.wikipedia.org/wiki/Hough_transform">Hough Transform</a>. This command does not produce an end result by itself, but rather is used in other IP commands, such as <a href='Feature_Detection/Sticky_Note_Detection.htm'>Sticky Note Detection</a>, to
+detect line features in images.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ReadPatchCodes.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Patch_Code_Detection.htm'>Patch Code Detection</a>
+</td><td>The Detect Patch Codes command is used to determine if an image contains a patch
+code.  This command is frequently used for Separation.  This command returns true
+if a patch code is detected and false if one is not.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ShapeDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Shape_Detection.htm'>Shape Detection</a>
+</td><td>Detects regions within an image which are similar to a sample image. This command can be used to detect stamps, seals, logos, and other visual elements in an image.  The output from Shape Detection
+can be used in several ways throughout Grooper:
+<ul><li>As a trigger for event-based separation in a <a href='../Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a>.  If the separation profile is being used in real time during scanning, then a
+Shape Detection command must be included in the real-time <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> being used during <a href='../Activity_Types/Attended_Activities/Scan.htm'>Scan</a>.</li><li>As a source of features for <a href='../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a>, by including a Shape Detection command in the Feature Extraction IP Profile assigned to a <a href='../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a></li><li>As a registration mechanism for a <a href='../Capture_Zone_Types/Field_Zone.htm'>Field Zone</a> in zonal extraction.  This is useful in cases where a stamp or seal contains information which needs
+to be extracted.  If a Field Zone is configured with a Shape Name, at run time the zone will be positioned directly over the detected shape.  Using the
+<a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> assigned to the Field Zone, it is then possible to deskew and clean up the region so that OCR is successful.
+</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.StickyNoteDetection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Detection/Sticky_Note_Detection.htm'>Sticky Note Detection</a>
+</td><td>Detects color sticky notes, optionally flagging the pages on which they are detected. This command is useful in helping scan operators identify pages with sticky notes attached at scan time, so that any corrective
+action can be taken before the batch is completed.
+<p>This command is designed to detect color sticky notes on non-color document backgrounds.  Sticky note detection will not work on documents which have
+a colored background.</p>
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Feature Removal</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.BarcodeDropout.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Barcode_Removal.htm'>Barcode Removal</a>
+</td><td>Removes barcodes from an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.BlobRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Blob_Removal.htm'>Blob Removal</a>
+</td><td>Removes blobs from the image which meet specific size and fill requirements. <p>This command is useful for removing objects of a specific size or shape from an image.  It can be used to remove small features
+such as specks, large features such as a company logo, or long, skinny features such as streaks and lines.</p><p>It is important when using this command to ensure that the parameters used do not cause unintentional loss of information.  For example, when using this
+command to remove large specks, it is quite possible that legitimate punctuation symbols could also be removed.</p><p><b>General Operation Notes</b></p><p>In image processing terms, a blob is any set of connected pixels in a binary image.  As such, the detection portion of this algorithm executes against a binarized
+version of the input image, created using the settings defined in the Binarization property.  When tuning this command, review the "Binarized" output image
+to ensure the target objects are visible as distinct black blobs. If they are not, try using different binarization settings.</p><p>In cases where the input image is already a binary image, the Binarization settings have no effect.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.HalftoneRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Halftone_Removal.htm'>Halftone Removal</a>
+</td><td>Removes halftone regions from an image. <p>A halftone pattern is a matrix of small dots used to simulate shades of gray on black and white documents, as shown in the example below.</p><p><svg width="200" height="40"><defs><pattern id="Halftone" patternUnits="userSpaceOnUse" width="5" height="5"><rect width="5" height="5" fill="white" /><circle cx="3" cy="3" r="1" fill="black" /></pattern></defs><rect x="0" y="0" width="200" height="40" stroke="black" fill="url(#Halftone)" /><text x="5" y="28" font-size="24" font-weight="bold">Sample Halftone</text></svg></p><p>Halftone patterns are commonly used to shade elements such as table headers or section headers, and can prevent OCR engines from recognizing the text inside these regions.
+Halftone removal is commonly used for temporary pre-OCR image cleanup, to improve recognition of text printed inside halftone regions. </p><p></p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.HolePunchRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Hole_Punch_Removal.htm'>Hole Punch Removal</a>
+</td><td>Removes circular hole punch artifacts from an image. Hole punches produce solid round aritfacts along the edges of an image, as shown below.
+<p><svg width="100" height="150"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><circle cx="30" cy="10" r="3" fill="black" /><circle cx="70" cy="10" r="3" fill="black" /><rect x="110" y="0" width="100" height="150" stroke="black" fill="white" /><circle cx="118" cy="15" r="3" fill="black" /><circle cx="118" cy="75" r="3" fill="black" /><circle cx="118" cy="135" r="3" fill="black" /></svg></p><p>NOTES ON INPAINTING: If a hole punch intersects other objects on the image, inpainting can produce undesirable effects by inpainting part of the
+hole punch with black.  To prevent this, the Hole Punch Removal command evaulates each hole punch independently.  If the distance from a hole
+punch to the closest object is less than the Inpaint Radius, the fill method will automatically switch to AutoFill.</p><p>See the <a href="https://en.wikipedia.org/wiki/Hole_punch">Wikipedia article on hole punches</a> for information on standard hole punch sizes.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.LineRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Line_Removal.htm'>Line Removal</a>
+</td><td>Removes horizontal and vertical lines from an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.NegativeRegionRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Negative_Region_Removal.htm'>Negative Region Removal</a>
+</td><td>Inverts or removes regions which are inverted (white on black). An negative region is a rectangular area where the feature pixels are white and the background pixels are black, similar to the
+"Negated" label on the original shown below.
+<p><svg width="360" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="10" y="10" width="80" height="30" stroke="transparent" fill="black" /><text x="20" y="30" font-size="16" fill="white">Negated</text><text x="23" y="60" font-size="16" fill="black">Normal</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><text x="140" y="30" font-size="16" fill="black">Negated</text><text x="143" y="60" font-size="16" fill="black">Normal</text><rect x="240" y="0" width="100" height="150" stroke="black" fill="white" /><text x="263" y="60" font-size="16" fill="black">Normal</text><text x="23" y="165" font-size="14" font-weight="bold" fill="green">Original</text><text x="150" y="165" font-size="14" font-weight="bold" fill="green">Invert</text><text x="262" y="165" font-size="14" font-weight="bold" fill="green">Dropout</text></svg></p>
+The output from this command is an image where the detected regions are inverted, as shown in the middle, or removed, as shown at the right.
+<h2>Notes on Inversion</h2><p>The edges of inverted text regions on scanned images are imperfect, and do not represent straight lines.  Because of this, inverting a rectangular region will
+inevitably leave artifacts around the edge.  In most cases, it is best to shrink the detected zone slightly, so that inversion leaves a solid rectangular outline behind.
+The outline can then be removed cleanly using the Line Dropout command.</p><p><svg width="360" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="10" y="10" width="80" height="30" stroke="transparent" fill="black" /><text x="20" y="30" font-size="16" fill="white">Negated</text><text x="23" y="60" font-size="16" fill="black">Normal</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="130" y="10" width="80" height="30" stroke="transparent" fill="black" /><rect x="132" y="12" width="76" height="26" stroke="transparent" fill="white" /><text x="140" y="30" font-size="16" fill="black">Negated</text><text x="143" y="60" font-size="16" fill="black">Normal</text><rect x="240" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="250" y="10" width="80" height="30" stroke="transparent" fill="black" /><rect x="252" y="12" width="76" height="26" stroke="transparent" fill="white" /><text x="263" y="60" font-size="16" fill="black">Normal</text><text x="23" y="165" font-size="14" font-weight="bold" fill="green">Original</text><text x="150" y="165" font-size="14" font-weight="bold" fill="green">Invert</text><text x="262" y="165" font-size="14" font-weight="bold" fill="green">Dropout</text></svg></p>
+Zone shrinking is accomplished by setting the Region Detection / Zone Adjustment property to a negative value.
+
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Photo.Delete.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Photo_Removal.htm'>Photo Removal</a>
+</td><td>Automatically detects and removes photographs.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Despeckle.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Speck_Removal.htm'>Speck Removal</a>
+</td><td>Removes small specks from an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.StreakRemoval.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Feature_Removal/Streak_Removal.htm'>Streak Removal</a>
+</td><td>Removes vertical streaks from an image.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Format Conversion</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoConvert.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Format_Conversion/Auto_Convert.htm'>Auto Convert</a>
+</td><td>Changes the color depth of an image to match the content of the image. Outputs either a color, grayscale, or black and white based on analysis of the image content:
+<ul><li>If the image contains color, the output image will be 24-bit color.</li><li>If the image contains grayscale, the output image will be 8-bit grayscale.</li><li>Otherwise, the image will be output as black and white.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Convert.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Format_Conversion/Convert.htm'>Convert</a>
+</td><td>Changes the color format of an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Threshold.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Format_Conversion/Threshold.htm'>Threshold</a>
+</td><td>Converts an image to black and white using a variety of thresholding methods.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Image Analysis</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoQA.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Auto_QA.htm'>Auto QA</a>
+</td><td>Automatically flags images which meet certain criteria, such as being too dark, too light, or too busy.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ComputeMoments.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Compute_Moments.htm'>Compute Moments</a>
+</td><td>Calculates Hu Moments for an image. Calculates the 7 invariant <a href="https://en.wikipedia.org/wiki/Image_moment">Image Moments</a> described in
+M. K. Hu, "Visual Pattern Recognition by Moment Invariants", IRE Trans. Info. Theory, vol. IT-8, pp.179–187, 1962
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ExtractFeatures.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Extract_Features.htm'>Extract Features</a>
+</td><td>Divides an image into an NxN matrix of cells and generates a vector of N*N features. The resulting vector of features can be used in real time as pages come off the scanner. Because this classification mechanism does not require full text OCR,
+and is hardware accelerated, page classification can be achieved in less than 100 ms. Accuracy can be increased by increasing the number of cells.
+Document types such as invoices (which have a standard header but contain variable information like invoice line items) can be reliably classified by
+restricting the region of interest.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Histogram.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Histogram.htm'>Histogram</a>
+</td><td>Calculates an image histogram.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.MeasureEntropy.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Measure_Entropy.htm'>Measure Entropy</a>
+</td><td>Measures the entropy (amount of change) in an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ProjectionProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Analysis/Projection_Profile.htm'>Projection Profile</a>
+</td><td>Generates a projection profile histogram.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Image Transforms</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoDeskew.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Transforms/Auto_Deskew.htm'>Auto Deskew</a>
+</td><td>Detects the skew angle of an image, and optionally rotates the image to compensate. This command works by rotating a low-resolution copy of the image through a sequence of angles, and analyzing the image at each orientation to determine
+how straight it is.
+<p>The angles to be tested are defined by Maximum Angle and Angle Precision.  The algorithm will iterate from -Maximum Angle to +Maximum Angle in increments of
+Angle Precision, testing the straightness of the image at each angle.  For example, a 5° maximum angle with 0.25° angle precision will test 41 different
+angles: [-5.00°, -4.75°, -4.50°, ..., 0.00°, ..., 4.50°, 4.75°, 5.00°].  Therefore, a higher maximum angle or lower angle precision will result in more distinct
+angles being tested, reducing the speed of the deskew operation, but increasing its angular detection range or accuracy.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.AutoDeskewBasic.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Transforms/Auto_Deskew_Basic.htm'>Auto Deskew Basic</a>
+</td><td>Automatically deskews a document image. Speed can be improved by reducing the Angle Limit, reducing the Precision, or by limiting the Area of Interest to a smaller rectangular area
+containing the horizontally aligned text area. The Coverage property can also be decreased to increase speed; however, doing so could
+result in loss of accuracy. For guaranteed accuracy, set the Coverage property to 100.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.OCR.AutoOrient.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Transforms/Auto_Orient.htm'>Auto Orient</a>
+</td><td>Determines the correct orientation for an image and rotates the image by analyzing the orientation of the characters on the page.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Resize.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Transforms/Resize.htm'>Resize</a>
+</td><td>Resizes an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Rotate.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Image_Transforms/Rotate.htm'>Rotate</a>
+</td><td>Rotates an image by a given angle.
+</td></tr>  <tr>
+     <td class='Category' colspan='2'>Miscellaneous</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.IP.Binarize.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Binarize.htm'>Binarize</a>
+</td><td>Converts an image to 8-bit black and white using various thresholding methods.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ClassifyImage.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Classify_Image.htm'>Classify Image</a>
+</td><td>Compares an image against a set of sample images and classifies the image based upon which sample image it is found to be most similar to.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.DilateErode.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Dilate_Erode.htm'>Dilate Erode</a>
+</td><td>Applies a dilation (thicken) or erosion (thinning) filter to the image. A dilation operation dilates the feature pixels in an image, as shown below.
+<p><svg width="240" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><text x="13" y="20" font-size="16" fill="black">Document</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><text x="130" y="20" font-size="16" font-weight="bold" fill="black">Document</text></svg></p><p>An erosion operation erodes the feature pixels in an image, as shown below.
+<p><svg width="240" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><text x="10" y="20" font-size="16" font-weight="bold" fill="black">Document</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><text x="133" y="20" font-size="16" fill="black">Document</text></svg></p></p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ExecuteProfile.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Execute_Profile.htm'>Execute Profile</a>
+</td><td>Use this command to execute another <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.ExtractChannel.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Extract_Channel.htm'>Extract Channel</a>
+</td><td>Extracts a single channel from the source image.. The channel is extracted to an 8-bit grayscale image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.Filter.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Filter.htm'>Filter</a>
+</td><td>Applies a filter to an image.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.IP.RandomizeDefects.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Miscellaneous/Randomize_Defects.htm'>Randomize Defects</a>
+</td><td>Randomizes image defects such as skew and border noise, thereby creating test images for image cleanup.
+</td></tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

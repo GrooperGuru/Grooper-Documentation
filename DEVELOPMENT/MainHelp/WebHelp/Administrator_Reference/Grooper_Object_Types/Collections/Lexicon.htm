@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Lexicon</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nCollections\nLexicon");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Lexicon.htm\">Collections<\/a> > Lexicon<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.Lexicon.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Lexicon</h1></td>
+<table>
+</tr>
+</table>
+A Lexicon is a dictionary which stores a list of keys or key-value pairs which are indexed for high-speed lookup.
+
+Lexicons are used throughout Grooper to store lists of words, phrases, field values, translations, weightings, and other information.
+
+<br/><br/><b>Inherits from:</b> [Grooper Node]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Type</td>
+    <td><table>
+   <tr><td>Type: [LexiconType], Default: Simple</td></tr>
+   <tr><td>Specifies how entries in the lexicon will be interpreted. Can be one of the following values:<br />
+<ul>
+<li><b>Simple</b>: A simple lexicon contains a list of key values, one value per line.
+<p style="font-family:'Courier New'">
+about<br />
+above<br />
+after<br />
+again<br />
+against<br />
+...<br /></p>
+</li>
+<li><b>Lookup</b>: A lookup lexicon contains key-value pairs delimited by '='.
+<p style="font-family:'Courier New'">
+AL=Alabama<br />
+AK=Alaska<br />
+AZ=Arizona<br />
+AR=Arkansas<br />
+CA=California<br />
+...<br /></p>
+</li>
+<li><b>Vocabulary</b>: A vocabulary lexicon contains key-frequency pairs delimited by '='.
+<p style="font-family:'Courier New'">
+you=22484400<br />
+i=19975318<br />
+the=17594291<br />
+to=13200962<br />
+a=11230036<br />
+...<br /></p>
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Language</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Specifies the language of entries in this lexicon.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Case Sensitive</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Indicates whether the lexicon should match items in a case-sensitive manner.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Included Lexicons</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>A list of lexicons containing values to be included in this lexicon.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Database Link</td>
+  </tr>
+  <tr>    <td>Database Table</td>
+    <td><table>
+   <tr><td>Type: [Database Table]</td></tr>
+   <tr><td>An optional [Database Table] containing values to be included in the lexicon.
+(See [Database Table])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Key Column</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The [Database Table] column to be used as for key values in the lexicon.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Value Column</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>An optional [Database Table] column to be used as for replacement values in the lexicon.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[Culture Data]</td></tr>
+<tr><td>[Database Table]</td></tr>
+<tr><td>[Lexicon]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

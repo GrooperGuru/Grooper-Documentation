@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>OCR Engine Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nOCR Engine Types\nOCR Engine Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"OCR_Engine_Types.htm\">OCR Engine Types<\/a> &gt; OCR Engine Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>OCR Engine</h1>
+OCR Engines extract text from images using optical character recognition.
+
+Each <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a> in Grooper is configured with an OCR Engine.  The OCR Engine selection defines the settings
+which will be exposed to configure the OCR Profile, and controls the runtime component used for text extraction.
+<p>NOTE: Some OCR engines require third-party installations and licensing.</p>
+
+<h2>List of OCR Engine Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='ABBYY_FineReader.htm'>ABBYY FineReader</a></td>
+     <td>ABBYY FineReader is a commercial OCR Engine recognized as a leader in the industry, and represents a premium OCR engine offering within Grooper. <ul><li>Used for Full Text OCR of machine print documents or Zonal OCR of machine print and/or handwriting.</li><li>Performs intensive document structure analysis to determine text flow, making it the best option for generating searchable PDF output.</li><li>Requires separate installation of ABBY FineReader engine.</li><li>Requires purchase of add-on FineReader volume licensing.</li><li>Supports 190 languages.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Voting.htm'>Grooper Voting</a></td>
+     <td>A Grooper OCR which performs OCR using multiple <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profiles</a>, and then combines the results using a voting mechanism. <ul><li>Perform OCR with multiple different image cleanup configurations.</li><li>Perform OCR using multiple different OCR engines.</li><li>Merge and correct results using an intelligent voting mechanism.</li><li>Requires no additional licensing..</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Prime_OCR.htm'>Prime OCR</a></td>
+     <td>Prime OCR is a commercial voting OCR engine which uses multiple OCR engines and methods to improve OCR accuracy. <ul><li>Used for Full text or Zonal OCR of machine print documents.</li><li>Does not support handwriting recognition.</li><li>Requires separate installation of Prime OCR engine.</li><li>Requires purchase of add-on Prime OCR volume licensing.</li><li>Supports 11 languages.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Tesseract_OCR.htm'>Tesseract OCR</a></td>
+     <td>Tessaract is an open source OCR Engine sponsored by Google. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.</li><li>100% free - no additional licensing required to use.</li><li>Supports 60 languages.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Transym_OCR_4.htm'>Transym OCR 4</a></td>
+     <td>Transym OCR is a commercial OCR engine which provides highly accurate English-only OCR. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.</li><li>Requires 1 license per concurrent process.</li><li>English language only.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Transym_OCR_5.htm'>Transym OCR 5</a></td>
+     <td>Transym OCR 5 is a commercial OCR engine which provides highly accurate multilanguage language OCR. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.</li><li>Requires 1 license per concurrent process.</li><li>Supports 28 languages.</li></ul>
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

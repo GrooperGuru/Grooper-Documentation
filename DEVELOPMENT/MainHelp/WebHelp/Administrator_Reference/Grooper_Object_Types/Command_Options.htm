@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Command Options</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nCommand Options");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Command Options<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Command Options</h1>
+Defines options for an <a href='../Object_Command_Types/Object_Command_Types.htm'>Object Command</a> in <a href='../Attended_Client_Types/Attended_Client_Types.htm'>Attended Client</a>.
+
+<br/><br/><b>Inherits from:</b> Connected Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of command the options apply to.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Applies To</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of object the command applies to.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scope</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The activity or control in which the command is relevant. A scope of 'Global' indicates that the command will appear in all controls and during all activities.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Shortcut Keys</td>
+    <td><table>
+   <tr><td>Type: Keys, Default: None</td></tr>
+   <tr><td>Shortcut Keys for accessing the <a href='../Object_Command_Types/Object_Command_Types.htm'>Object Command</a>. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: No key pressed.
+</li>
+<li><b>LButton</b>: The left mouse button.
+</li>
+<li><b>RButton</b>: The right mouse button.
+</li>
+<li><b>Cancel</b>: The CANCEL key.
+</li>
+<li><b>MButton</b>: The middle mouse button (three-button mouse).
+</li>
+<li><b>XButton1</b>: The first x mouse button (five-button mouse).
+</li>
+<li><b>XButton2</b>: The second x mouse button (five-button mouse).
+</li>
+<li><b>Back</b>: The BACKSPACE key.
+</li>
+<li><b>Tab</b>: The TAB key.
+</li>
+<li><b>LineFeed</b>: The LINEFEED key.
+</li>
+<li><b>Clear</b>: The CLEAR key.
+</li>
+<li><b>Return</b>: The RETURN key.
+</li>
+<li><b>Return</b>: The RETURN key.
+</li>
+<li><b>ShiftKey</b>: The SHIFT key.
+</li>
+<li><b>ControlKey</b>: The CTRL key.
+</li>
+<li><b>Menu</b>: The ALT key.
+</li>
+<li><b>Pause</b>: The PAUSE key.
+</li>
+<li><b>Capital</b>: The CAPS LOCK key.
+</li>
+<li><b>Capital</b>: The CAPS LOCK key.
+</li>
+<li><b>KanaMode</b>: The IME Kana mode key.
+</li>
+<li><b>KanaMode</b>: The IME Kana mode key.
+</li>
+<li><b>KanaMode</b>: The IME Kana mode key.
+</li>
+<li><b>JunjaMode</b>: The IME Junja mode key.
+</li>
+<li><b>FinalMode</b>: The IME final mode key.
+</li>
+<li><b>HanjaMode</b>: The IME Hanja mode key.
+</li>
+<li><b>HanjaMode</b>: The IME Hanja mode key.
+</li>
+<li><b>Escape</b>: The ESC key.
+</li>
+<li><b>IMEConvert</b>: The IME convert key.
+</li>
+<li><b>IMENonconvert</b>: The IME nonconvert key.
+</li>
+<li><b>IMEAceept</b>: The IME accept key. Obsolete, use <see cref="F:System.Windows.Forms.Keys.IMEAccept" /> instead.
+</li>
+<li><b>IMEAceept</b>: The IME accept key. Obsolete, use <see cref="F:System.Windows.Forms.Keys.IMEAccept" /> instead.
+</li>
+<li><b>IMEModeChange</b>: The IME mode change key.
+</li>
+<li><b>Space</b>: The SPACEBAR key.
+</li>
+<li><b>PageUp</b>: The PAGE UP key.
+</li>
+<li><b>PageUp</b>: The PAGE UP key.
+</li>
+<li><b>Next</b>: The PAGE DOWN key.
+</li>
+<li><b>Next</b>: The PAGE DOWN key.
+</li>
+<li><b>End</b>: The END key.
+</li>
+<li><b>Home</b>: The HOME key.
+</li>
+<li><b>Left</b>: The LEFT ARROW key.
+</li>
+<li><b>Up</b>: The UP ARROW key.
+</li>
+<li><b>Right</b>: The RIGHT ARROW key.
+</li>
+<li><b>Down</b>: The DOWN ARROW key.
+</li>
+<li><b>Select</b>: The SELECT key.
+</li>
+<li><b>Print</b>: The PRINT key.
+</li>
+<li><b>Execute</b>: The EXECUTE key.
+</li>
+<li><b>PrintScreen</b>: The PRINT SCREEN key.
+</li>
+<li><b>PrintScreen</b>: The PRINT SCREEN key.
+</li>
+<li><b>Insert</b>: The INS key.
+</li>
+<li><b>Delete</b>: The DEL key.
+</li>
+<li><b>Help</b>: The HELP key.
+</li>
+<li><b>D0</b>: The 0 key.
+</li>
+<li><b>D1</b>: The 1 key.
+</li>
+<li><b>D2</b>: The 2 key.
+</li>
+<li><b>D3</b>: The 3 key.
+</li>
+<li><b>D4</b>: The 4 key.
+</li>
+<li><b>D5</b>: The 5 key.
+</li>
+<li><b>D6</b>: The 6 key.
+</li>
+<li><b>D7</b>: The 7 key.
+</li>
+<li><b>D8</b>: The 8 key.
+</li>
+<li><b>D9</b>: The 9 key.
+</li>
+<li><b>A</b>: The A key.
+</li>
+<li><b>B</b>: The B key.
+</li>
+<li><b>C</b>: The C key.
+</li>
+<li><b>D</b>: The D key.
+</li>
+<li><b>E</b>: The E key.
+</li>
+<li><b>F</b>: The F key.
+</li>
+<li><b>G</b>: The G key.
+</li>
+<li><b>H</b>: The H key.
+</li>
+<li><b>I</b>: The I key.
+</li>
+<li><b>J</b>: The J key.
+</li>
+<li><b>K</b>: The K key.
+</li>
+<li><b>L</b>: The L key.
+</li>
+<li><b>M</b>: The M key.
+</li>
+<li><b>N</b>: The N key.
+</li>
+<li><b>O</b>: The O key.
+</li>
+<li><b>P</b>: The P key.
+</li>
+<li><b>Q</b>: The Q key.
+</li>
+<li><b>R</b>: The R key.
+</li>
+<li><b>S</b>: The S key.
+</li>
+<li><b>T</b>: The T key.
+</li>
+<li><b>U</b>: The U key.
+</li>
+<li><b>V</b>: The V key.
+</li>
+<li><b>W</b>: The W key.
+</li>
+<li><b>X</b>: The X key.
+</li>
+<li><b>Y</b>: The Y key.
+</li>
+<li><b>Z</b>: The Z key.
+</li>
+<li><b>LWin</b>: The left Windows logo key (Microsoft Natural Keyboard).
+</li>
+<li><b>RWin</b>: The right Windows logo key (Microsoft Natural Keyboard).
+</li>
+<li><b>Apps</b>: The application key (Microsoft Natural Keyboard).
+</li>
+<li><b>Sleep</b>: The computer sleep key.
+</li>
+<li><b>NumPad0</b>: The 0 key on the numeric keypad.
+</li>
+<li><b>NumPad1</b>: The 1 key on the numeric keypad.
+</li>
+<li><b>NumPad2</b>: The 2 key on the numeric keypad.
+</li>
+<li><b>NumPad3</b>: The 3 key on the numeric keypad.
+</li>
+<li><b>NumPad4</b>: The 4 key on the numeric keypad.
+</li>
+<li><b>NumPad5</b>: The 5 key on the numeric keypad.
+</li>
+<li><b>NumPad6</b>: The 6 key on the numeric keypad.
+</li>
+<li><b>NumPad7</b>: The 7 key on the numeric keypad.
+</li>
+<li><b>NumPad8</b>: The 8 key on the numeric keypad.
+</li>
+<li><b>NumPad9</b>: The 9 key on the numeric keypad.
+</li>
+<li><b>Multiply</b>: The multiply key.
+</li>
+<li><b>Add</b>: The add key.
+</li>
+<li><b>Separator</b>: The separator key.
+</li>
+<li><b>Subtract</b>: The subtract key.
+</li>
+<li><b>Decimal</b>: The decimal key.
+</li>
+<li><b>Divide</b>: The divide key.
+</li>
+<li><b>F1</b>: The F1 key.
+</li>
+<li><b>F2</b>: The F2 key.
+</li>
+<li><b>F3</b>: The F3 key.
+</li>
+<li><b>F4</b>: The F4 key.
+</li>
+<li><b>F5</b>: The F5 key.
+</li>
+<li><b>F6</b>: The F6 key.
+</li>
+<li><b>F7</b>: The F7 key.
+</li>
+<li><b>F8</b>: The F8 key.
+</li>
+<li><b>F9</b>: The F9 key.
+</li>
+<li><b>F10</b>: The F10 key.
+</li>
+<li><b>F11</b>: The F11 key.
+</li>
+<li><b>F12</b>: The F12 key.
+</li>
+<li><b>F13</b>: The F13 key.
+</li>
+<li><b>F14</b>: The F14 key.
+</li>
+<li><b>F15</b>: The F15 key.
+</li>
+<li><b>F16</b>: The F16 key.
+</li>
+<li><b>F17</b>: The F17 key.
+</li>
+<li><b>F18</b>: The F18 key.
+</li>
+<li><b>F19</b>: The F19 key.
+</li>
+<li><b>F20</b>: The F20 key.
+</li>
+<li><b>F21</b>: The F21 key.
+</li>
+<li><b>F22</b>: The F22 key.
+</li>
+<li><b>F23</b>: The F23 key.
+</li>
+<li><b>F24</b>: The F24 key.
+</li>
+<li><b>NumLock</b>: The NUM LOCK key.
+</li>
+<li><b>Scroll</b>: The SCROLL LOCK key.
+</li>
+<li><b>LShiftKey</b>: The left SHIFT key.
+</li>
+<li><b>RShiftKey</b>: The right SHIFT key.
+</li>
+<li><b>LControlKey</b>: The left CTRL key.
+</li>
+<li><b>RControlKey</b>: The right CTRL key.
+</li>
+<li><b>LMenu</b>: The left ALT key.
+</li>
+<li><b>RMenu</b>: The right ALT key.
+</li>
+<li><b>BrowserBack</b>: The browser back key (Windows 2000 or later).
+</li>
+<li><b>BrowserForward</b>: The browser forward key (Windows 2000 or later).
+</li>
+<li><b>BrowserRefresh</b>: The browser refresh key (Windows 2000 or later).
+</li>
+<li><b>BrowserStop</b>: The browser stop key (Windows 2000 or later).
+</li>
+<li><b>BrowserSearch</b>: The browser search key (Windows 2000 or later).
+</li>
+<li><b>BrowserFavorites</b>: The browser favorites key (Windows 2000 or later).
+</li>
+<li><b>BrowserHome</b>: The browser home key (Windows 2000 or later).
+</li>
+<li><b>VolumeMute</b>: The volume mute key (Windows 2000 or later).
+</li>
+<li><b>VolumeDown</b>: The volume down key (Windows 2000 or later).
+</li>
+<li><b>VolumeUp</b>: The volume up key (Windows 2000 or later).
+</li>
+<li><b>MediaNextTrack</b>: The media next track key (Windows 2000 or later).
+</li>
+<li><b>MediaPreviousTrack</b>: The media previous track key (Windows 2000 or later).
+</li>
+<li><b>MediaStop</b>: The media Stop key (Windows 2000 or later).
+</li>
+<li><b>MediaPlayPause</b>: The media play pause key (Windows 2000 or later).
+</li>
+<li><b>LaunchMail</b>: The launch mail key (Windows 2000 or later).
+</li>
+<li><b>SelectMedia</b>: The select media key (Windows 2000 or later).
+</li>
+<li><b>LaunchApplication1</b>: The start application one key (Windows 2000 or later).
+</li>
+<li><b>LaunchApplication2</b>: The start application two key (Windows 2000 or later).
+</li>
+<li><b>Oem1</b>: The OEM 1 key.
+</li>
+<li><b>Oem1</b>: The OEM 1 key.
+</li>
+<li><b>Oemplus</b>: The OEM plus key on any country/region keyboard (Windows 2000 or later).
+</li>
+<li><b>Oemcomma</b>: The OEM comma key on any country/region keyboard (Windows 2000 or later).
+</li>
+<li><b>OemMinus</b>: The OEM minus key on any country/region keyboard (Windows 2000 or later).
+</li>
+<li><b>OemPeriod</b>: The OEM period key on any country/region keyboard (Windows 2000 or later).
+</li>
+<li><b>OemQuestion</b>: The OEM question mark key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>OemQuestion</b>: The OEM question mark key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>Oemtilde</b>: The OEM tilde key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>Oemtilde</b>: The OEM tilde key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>OemOpenBrackets</b>: The OEM open bracket key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>OemOpenBrackets</b>: The OEM open bracket key on a US standard keyboard (Windows 2000 or later).
+</li>
+<li><b>Oem5</b>: The OEM 5 key.
+</li>
+<li><b>Oem5</b>: The OEM 5 key.
+</li>
+<li><b>Oem6</b>: The OEM 6 key.
+</li>
+<li><b>Oem6</b>: The OEM 6 key.
+</li>
+<li><b>Oem7</b>: The OEM 7 key.
+</li>
+<li><b>Oem7</b>: The OEM 7 key.
+</li>
+<li><b>Oem8</b>: The OEM 8 key.
+</li>
+<li><b>OemBackslash</b>: The OEM angle bracket or backslash key on the RT 102 key keyboard (Windows 2000 or later).
+</li>
+<li><b>OemBackslash</b>: The OEM angle bracket or backslash key on the RT 102 key keyboard (Windows 2000 or later).
+</li>
+<li><b>ProcessKey</b>: The PROCESS KEY key.
+</li>
+<li><b>Packet</b>: Used to pass Unicode characters as if they were keystrokes. The Packet key value is the low word of a 32-bit virtual-key value used for non-keyboard input methods.
+</li>
+<li><b>Attn</b>: The ATTN key.
+</li>
+<li><b>Crsel</b>: The CRSEL key.
+</li>
+<li><b>Exsel</b>: The EXSEL key.
+</li>
+<li><b>EraseEof</b>: The ERASE EOF key.
+</li>
+<li><b>Play</b>: The PLAY key.
+</li>
+<li><b>Zoom</b>: The ZOOM key.
+</li>
+<li><b>NoName</b>: A constant reserved for future use.
+</li>
+<li><b>Pa1</b>: The PA1 key.
+</li>
+<li><b>OemClear</b>: The CLEAR key.
+</li>
+<li><b>KeyCode</b>: The bitmask to extract a key code from a key value.
+</li>
+<li><b>Shift</b>: The SHIFT modifier key.
+</li>
+<li><b>Control</b>: The CTRL modifier key.
+</li>
+<li><b>Alt</b>: The ALT modifier key.
+</li>
+<li><b>Modifiers</b>: The bitmask to extract modifiers from a key value.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

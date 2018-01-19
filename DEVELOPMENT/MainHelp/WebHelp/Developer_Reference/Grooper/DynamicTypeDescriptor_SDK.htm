@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>DynamicTypeDescriptor_SDK</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Developer Reference\nGrooper\nDynamicTypeDescriptor_SDK");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Developer_Reference.htm\">Developer Reference<\/a> > <a href=\"Grooper_Namespace_Reference.htm\">Grooper<\/a> > DynamicTypeDescriptor_SDK<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.50 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>DynamicTypeDescriptor</h1>
+<p>Used to dynamically enable/disable or show/hide object properties in a PropertyGrid control.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper_Namespace_Reference.htm'>Grooper</a><br/><b>Inherits from:</b> Object<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns a string that represents the current object.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_AdjustImage.png" /></td>
+    <td>Adjust Image</td>
+    <td>Adjust Image. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_ApplyCleanup.png" /></td>
+    <td>Apply Image Cleanup</td>
+    <td>Apply the selected <a href='../../Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to the selected pages.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Allowed IP Profiles</td>
+    <td>List of <a href='../../Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profiles</a> that can applied to the selected page(s).
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_Classify.png" /></td>
+    <td>Classify</td>
+    <td>Inserts the selected <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a> into a new <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, then sets its Content Type.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Content Type</td>
+    <td>Content Type to assign.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_ClearBatch.png" /></td>
+    <td>Clear Batch</td>
+    <td>Clears the batch This command resets the batch.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_CropImage.png" /></td>
+    <td>Crop Image</td>
+    <td>Crop Image. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_Declassify.png" /></td>
+    <td>Declassify</td>
+    <td>Sets the Content Type of this <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> to nothing.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>&nbsp;</td>
+    <td>Image Threshold: Decrease</td>
+    <td>Decrease image threshold for the selected page.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_DeskewImage.png" /></td>
+    <td>Deskew Image</td>
+    <td>Deskew Image. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.DataReview_FlagItem.png" /></td>
+    <td>Flag Item</td>
+    <td>Flag the selected page or folder with a flag reason.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Flag Reason</td>
+    <td>Message that will be applied to the flag for this item.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_FlagPage.png" /></td>
+    <td>Flag Page</td>
+    <td>Flag the selected page with a flag reason.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Flag Reason</td>
+    <td>Message that will be applied to the flag for this page.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_GoToFirstFlaggedPage.png" /></td>
+    <td>Go To First Flagged Page</td>
+    <td>Moves the focused item to the first flagged page of the batch (if any).
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_ImportPages.png" /></td>
+    <td>Import Pages</td>
+    <td>Import Pages This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>&nbsp;</td>
+    <td>Image Threshold: Increase</td>
+    <td>Increase image threshold for the selected page.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_MarkReviewed.png" /></td>
+    <td>Mark As Reviewed</td>
+    <td>Marks the batch page as being reviewed by the current user.  If the page was previously flagged, the flag is removed.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_MoveToNext.png" /></td>
+    <td>Goto Next Issue</td>
+    <td>Sets the selection to the next loose page or un-classified <a href='../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_NextImageFormat.png" /></td>
+    <td>Image Format: Next</td>
+    <td>Set the next image format for the selected page.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_PrevImageFormat.png" /></td>
+    <td>Image Format: Previous</td>
+    <td>Set the previous image format for the selected page.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_ProcessLoosePages.png" /></td>
+    <td>Process Loose Pages</td>
+    <td>Combines each range of contiguous loose pages into a new document, and attempts to classify each.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Content Scope</td>
+    <td>Choose the <a href='../../Administrator_Reference/Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> or <a href='../../Administrator_Reference/Grooper_Node_Types/Content_Models/Content_Category.htm'>Content Category</a> to which the resulting documents will attempt to be classified.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.DataReview_Reprocess.png" /></td>
+    <td>Reprocess</td>
+    <td>Reprocess the extraction of documents specified by the reprocessing scope.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Reprocessing Scope</td>
+    <td>Sets the scope at which <a href='../../Administrator_Reference/Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> will be re-executed. Can be one of the following values:<br />
+<ul>
+<li><b>CurrentDocument</b>: Only the current document will be reprocessed.</li>
+<li><b>CurrentToEnd</b>: Reprocess from the current document to the end of the batch.</li>
+<li><b>NeedsReview</b>: Reprocess only the items that need review.</li>
+<li><b>EntireBatch</b>: Reprocess the entire batch.</li>
+</ul>
+
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_ReprocessBatch.png" /></td>
+    <td>Reprocess Batch</td>
+    <td>Reprocess all or part of the batch through <a href='../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a>.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Perform Separation</td>
+    <td>Attempt separation on loose pages.
+</td>
+  </tr>  <tr>    <td>Perform Classifcation</td>
+    <td>Re-run classification.  By default, this only attempts to re-classify un-classified folders.
+</td>
+  </tr>  <tr>    <td>Re-Classify All Folders</td>
+    <td>Include folders which are already classified.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_RevertToLoosePages.png" /></td>
+    <td>Revert To Loose Pages</td>
+    <td>Revert all pages in the batch back to loose pages, eliminating all foldering within the batch.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_RotatePageLeft.png" /></td>
+    <td>Rotate Page: Left</td>
+    <td>Rotate Page Left. This command is provided for the statistics collection and the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_RotatePageLeft.png" /></td>
+    <td>Rotate Page: Left</td>
+    <td>Rotate Page Left. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_RotatePageRight.png" /></td>
+    <td>Rotate Page: Right</td>
+    <td>Rotate Page Right. This command is provided for the statistics collection and the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_RotatePageRight.png" /></td>
+    <td>Rotate Page: Right</td>
+    <td>Rotate Page Right. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.Scan_StartScan.png" /></td>
+    <td>Scan Pages</td>
+    <td>Start Scanning. This command is provided for the shortcut key.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ClassifyReview_Train.png" /></td>
+    <td>Train Document</td>
+    <td>Select a <a href='../../Administrator_Reference/Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> for the selected document and train the <a href='../../Administrator_Reference/Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> with its features.
+
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../images/CommandIcons/Grooper.Activities.ImageReview_UndoCleanup.png" /></td>
+    <td>Undo Image Cleanup</td>
+    <td>Replace the selected page(s) with its Undo Image.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

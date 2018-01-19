@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Field Class</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nData Extraction\nField Class");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Data_Column.htm\">Data Extraction<\/a> > Field Class<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.FieldClass.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Field Class</h1></td>
+<table>
+</tr>
+</table>
+A Field Class is a trainable binary classifier, used for locating specific instances of a data pattern on a document.
+
+Field Classes are useful when a data value appears more than one time on a document, and it is necessary to examine the context
+of each data value. For example, a Field Class could be used to determine which date on an invoice document represents the
+Invoice Date, or which paragraph on a legal contract represents a Non-Compete Clause.
+<p>Internally, a Field Class is classifier with two classes: Positive and Negative.  When training is performed, the training
+instance is trained as a positive instance, and all other instances are trained as negative instances.  For example,
+if the Invoice Date field is trained, then the Ship Date and Due Date will be trained as negative instances.</p><p>The instances output from a Field Class will have a confidence value which reflects how closely the context matches
+the training data.</p>
+
+<br/><br/><b>Inherits from:</b> [Grooper Node]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Value Extractor</td>
+    <td><table>
+   <tr><td>Type: [Embedded Extractor]</td></tr>
+   <tr><td>The extractor to use for data values.
+(See [Embedded Extractor])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Feature Extractor</td>
+    <td><table>
+   <tr><td>Type: [Embedded Extractor]</td></tr>
+   <tr><td>The extractor to use for context features. When 'Self' scope is in use, this extractor will execute against the values returned by the Value Extractor.  In all other
+scope modes, this extractor executes against the full document content, and is then trimmed down to meet the scope criteria.
+For example, with zonal scope only features which have a centerpoint inside a context zone will be included.
+(See [Embedded Extractor])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Context Scope Options</td>
+  </tr>
+  <tr>    <td>Context Scope</td>
+    <td><table>
+   <tr><td>Type: [ContextScopeEnum], Default: Zonal</td></tr>
+   <tr><td>Determines the scope of context feature extraction. Can be one of the following values:<br />
+<ul>
+<li><b>Zonal</b>: Context features will be extracted from one or more zones, specified relative to the data value.
+</li>
+<li><b>Flow</b>: Context will include a limited number matching features before and/or after the data value in the text flow.
+</li>
+<li><b>Self</b>: Context will include all matching features which occur inside of or overlap with the data value.
+</li>
+<li><b>Nearest</b>: Context will include a limited number of features which are closest to the data value.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Max Instances</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 0</td></tr>
+   <tr><td>The maximum number of nearby features to include.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Direction Filter</td>
+    <td><table>
+   <tr><td>Type: [CompassDirection], Default: 0</td></tr>
+   <tr><td>Limits the context features included based on their geometric position relative to the data value. A combination of the following flags:<br />
+<ul>
+<li><b>North</b>: Above the data value.  Values on a previous page are also considered north.
+</li>
+<li><b>South</b>: Below the data value.  Values on a subsequent page are also considered south.
+</li>
+<li><b>West</b>: Left of the data value.
+</li>
+<li><b>East</b>: Right of the data value.
+</li>
+<li><b>NorthWest</b>: Above and left of the data value.
+</li>
+<li><b>NorthEast</b>: Above and right of the data value.
+</li>
+<li><b>SouthWest</b>: Below and left of the data value.
+</li>
+<li><b>SouthEast</b>: Below and right of the data value.
+</li>
+<li><b>All</b>: All Directions
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Direction Filter</td>
+    <td><table>
+   <tr><td>Type: [FlowDirection], Default: 0</td></tr>
+   <tr><td>Limits the context features included based on their position in the text flow relative to the data value. Can be one of the following values:<br />
+<ul>
+<li><b>Before</b>: Occurs before the data value in the text flow.
+</li>
+<li><b>After</b>: Occurs after the data value in the text flow.
+</li>
+<li><b>Either</b>: Occurs before or after the data value in the text flow.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Context Zones</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Defines zones relative to a data value from which context features will be extracted. Context zones are specified as relative coordinates around a located value.  The unit of measure is inches.  For example, a
+value of -2 for the left side of a context zone will place the left edge of the context zone 2" left of the value.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Exclusion Extractor</td>
+    <td><table>
+   <tr><td>Type: [Embedded Extractor]</td></tr>
+   <tr><td>An optional extractor which allows data values to be excluded as potential results when specific features appear in the context zones. If this extractor produces any matches within a context zone, the data value will be excluded as a potential result.
+(See [Embedded Extractor])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Distance</td>
+    <td><table>
+   <tr><td>Type: [Double], Default: 0</td></tr>
+   <tr><td>When nearest context mode is in use, specifies the maximum distance, in inches, between a context feature and the data value. A value of 0 indicates no maximum distance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>GeoTag Features</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If enabled, features will be tagged with suffixes which indicate their position relative to the data value. The definition of 'position' depends on the Context Scope:
+<ul><li>When Flow scope is in use, a (b) or (a) suffix will indicate whether the feature occurs before or after the data value in the text flow.</li><li>When Zonal or Nearest scope is in use, a (n), (s), (e), (w), (ne), (nw), (se), or (sw) suffix will indicate the geometric
+position of the feature relative to the data.  A feature occuring on a previous page will be considered (n) of the data value, and
+feature occuring on a subsequent page will be considered (s).</li><li>This option is not available when Self scope is in use, as all context features are located inside the data value.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Classifier Tuning</td>
+  </tr>
+  <tr>    <td>Minimum Feature Count</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 0</td></tr>
+   <tr><td>Indicates the minimum number of features required for a candidate instance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Training Threshold</td>
+    <td><table>
+   <tr><td>Type: [Double], Default: 0%, Range: 0% - 100%</td></tr>
+   <tr><td>Determines the threshold of similarity which triggers negative instance training.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Use Class Frequency</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If true, class frequency will be considered by the classifier.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Output Options</td>
+  </tr>
+  <tr>    <td>Minimum Confidence</td>
+    <td><table>
+   <tr><td>Type: [Double], Default: 0%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum classification confidence value for an instance to be output. A value of zero will include every instance produced by the Value Extractor.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Collation Method</td>
+    <td><table>
+   <tr><td>Type: [CollationType], Default: Individual</td></tr>
+   <tr><td>Controls how results from individual extractors are processed into a final output result. Can be one of the following values:<br />
+<ul>
+<li><b>Individual</b>: All qualifying results will be returned individually.  Use this setting to return a list of multiple candidates.
+</li>
+<li><b>Combine</b>: All qualifying results will be combined into a single instance.
+</li>
+<li><b>Boolean</b>: If any qualifying results are found, returns "true".  Otherwise, returns "false".
+</li>
+</ul>
+ See [Collation Examples] for examples of each different collation method.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Separator</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The separator to be used between each combined instance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Instance Ranking</td>
+    <td><table>
+   <tr><td>Type: [RankingMethod], Default: Confidence</td></tr>
+   <tr><td>Controls the output order of the results returned. Can be one of the following values:<br />
+<ul>
+<li><b>Order</b>: Results are returned in the order in which they appear in the content flow.
+</li>
+<li><b>ReverseOrder</b>: Results are returned in reverse of the order in which they appear in the content flow.
+</li>
+<li><b>Frequency</b>: Results are returned ordered by the number of occurrences of each value in the document. Value which occur more frequently
+will be sorted to the top.  <i>For example, a mortgage file may contain many different SSN values, but the most frequently occurring SSN
+value will be that of the borrower.  In such a case, a Pattern-based extraction with a Instance Ranking based on Frequency will produce
+the correct result for the Borrower SSN field in most cases.</i>
+</li>
+<li><b>Confidence</b>: DO NOT USE.  This ranking method is used internally by Grooper to rank instances extracted by a Field Class during
+context-based extraction, after the confidence value for each instance has been calculated.
+</li>
+<li><b>OcrConfidence</b>:  Results are returned order by the average OCR confidence of all characters which make up the extracted value.
+</li>
+<li><b>ExtractionOrder</b>: Results are returned in the order of the extractor which produced each match. Can be used to prioritize the results from one
+extractor those of over another.
+</li>
+<li><b>ValueLengthAscending</b>: Results are returned in the order of their value lengths, in ascending order.
+</li>
+<li><b>ValueLengthDescending</b>: Returns are returned in the order of their value lengths, in descending order.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[Embedded Extractor]</td></tr>
+<tr><td>[Rectangle]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

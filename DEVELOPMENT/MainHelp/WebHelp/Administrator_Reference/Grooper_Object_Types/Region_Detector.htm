@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Region Detector</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nRegion Detector");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Region Detector<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Region Detector</h1>
+
+
+<br/><br/><b>Inherits from:</b> <a href='Grooper_Object_Types.htm'>Grooper Object</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Minimum Size</td>
+    <td><table>
+   <tr><td>Type: <a href='Unit_Size.htm'>Unit Size</a>, Default: 8pt</td></tr>
+   <tr><td>The minimum size of an inverted text region. Blobs on the Candidates image which are smaller than this will not be further analyzed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Area</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a>, Default: 0.25in</td></tr>
+   <tr><td>The minimum area of a detected region.  For example, a value of 0.25in requires a minimum area of 0.25in². Each blob on the Candidates image which meets the Minimum Size requirement must also have a total area equal to or greater than this value.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Fill</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Double.htm'>Double</a>, Default: 50%, Range: 0% - 100%</td></tr>
+   <tr><td>Specifies the minimum fill percentage of a region. This value is used to filter the obects on the Candidates image by how closely they resemble a rectangle.  A value of 100% will require
+each region on the Candidates image to be a perfectly solid rectangle.  A value of 0% will drop out any arrangement of specks which
+meets the size limits.  
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Connectivity</td>
+    <td><table>
+   <tr><td>Type: MarkerConnectivity, Default: Connect8</td></tr>
+   <tr><td>Specifies the pixel connectivity requirements for region detection. Can be one of the following values:<br />
+<ul>
+<li><b>Connect8</b>: Specifies 8-connectivity, where pixel connections may be horizonal, vertical, or diagonal. <table style="width:50px; text-align:center" border="1"><tr><td style="background:lightgreen">1</td><td style="background:lightgreen">1</td><td style="background:lightgreen">1</td></tr><tr><td style="background:lightgreen">1</td><td>X</td><td style="background:lightgreen">1</td></tr><tr><td style="background:lightgreen">1</td><td style="background:lightgreen">1</td><td style="background:lightgreen">1</td></tr></table>
+</li>
+<li><b>Connect4</b>: Specifies 4-connectivity, where pixel connections may be horizontal or vertical. <table style="width:50px; text-align:center" border="1"><tr><td>0</td><td style="background:lightgreen">1</td><td>0</td></tr><tr><td style="background:lightgreen">1</td><td>X</td><td style="background:lightgreen">1</td></tr><tr><td>0</td><td style="background:lightgreen">1</td><td>0</td></tr></table>
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Zone Adjustment</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The distance by which to adjust all sides of each detected region.  Positive values will expand the region, and negative values will shrink it.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Unit_Size.htm'>Unit Size</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

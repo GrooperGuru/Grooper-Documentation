@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <tocdata>  <item name=\"Scan\" url=\"Administrator_Reference/Grooper_Object_Types/Attended_Activities/Scan.htm\" />    </tocdata>";

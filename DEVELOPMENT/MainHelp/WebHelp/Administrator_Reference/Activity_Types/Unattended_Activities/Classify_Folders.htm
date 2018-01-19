@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Classify Folders</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nUnattended Activities\nClassify Folders");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"A2iA_CheckReader.htm\">Unattended Activities<\/a> &gt; Classify Folders<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Activities.ClassifyFolders.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Classify Folders</h1></td>
+<table>
+</tr>
+</table>
+Runs classification on <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>.
+
+Attempts to automatically assign a Content Type to each <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  The activity is configured with a <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>, which
+defines the settings to be used for classification, and the set of possible content types are the descendants of the Content Model at the specified
+Classification Level.
+<p>Classification is performed as follows, for each folder in scope:</p><ol><li>Load the content for the folder.  The content for a folder includes all descendant pages of the folder, unless the Page Scope property of
+the Content Model is set to FirstPageOnly.  In this case, only content for the first page of each folder is loaded.</li><li>Compare the content to the training for each possible content type.</li><li>Generate a list of content types in descending order by similarity, so that the highest-scoring content types are at the top of the list.</li><li>If the top result has a similarity below the Minimum Similarity specified on the Content Model, classification fails.  In such cases, if a
+Default Content Type has been specified on the Content Model, then the folder will be assigned this type.  Otherwise the folder will be left
+unclassified.</li><li>If the top result and the 2nd result have a similarity difference less than the Minimum Similarity specified on the Content Model, then
+classification fails.  This helps identify and flag documents which are similar to more than one known document type.</li><li>Otherwise, the folder is classified with the content type represented by the top result.</li></ol>
+
+<br/><br/><b>Inherits from:</b> Classify Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Classification Level</td>
+    <td><table>
+   <tr><td>Type: ClassificationLevel, Default: DocType</td></tr>
+   <tr><td>The level at which the set of allowed content types exists, specified relative to the base node indicated by Content Model Scope. Can be one of the following values:<br />
+<ul>
+<li><b>DocType</b>: Classifies to the <a href='../../Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> level.  This setting is only valid when the task is running with Folder scope.
+</li>
+<li><b>Level1</b>: Classifies to level 1 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level2</b>: Classifies to level 2 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level3</b>: Classifies to level 3 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level4</b>: Classifies to level 4 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level5</b>: Classifies to level 5 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level6</b>: Classifies to level 6 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level7</b>: Classifies to level 7 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>Level8</b>: Classifies to level 8 of the <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>.
+</li>
+<li><b>PageType</b>: Classifies to the <a href='../../Grooper_Node_Types/Content_Models/Page_Type.htm'>Page Type</a> level.  This setting is only valid when the task is running with Page scope.
+</li>
+<li><b>FormType</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Content Model Scope</td>
+    <td><table>
+   <tr><td>Type: Content Type</td></tr>
+   <tr><td>The <a href='../../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> or <a href='../../Grooper_Node_Types/Content_Models/Content_Category.htm'>Content Category</a> containing the set of allowed content types.
+(See Content Type)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Model Refresh Interval</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 60, Range: 0 - 2147483647</td></tr>
+   <tr><td>The interval (in seconds) at which content model information will be refreshed from the repository.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>Content Type</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Scanner Settings</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nScanner Settings");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Scanner Settings<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Scanner Settings</h1>
+
+
+<br/><br/><b>Inherits from:</b> Connected Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Basic Settings</td>
+  </tr>
+  <tr>    <td>Resolution</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The resolution at which images will be scanned.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Color Format</td>
+    <td><table>
+   <tr><td>Type: ColorFormat, Default: Color</td></tr>
+   <tr><td>The color format in which images will be captured. Can be one of the following values:<br />
+<ul>
+<li><b>Color</b></li>
+<li><b>Grayscale</b></li>
+<li><b>Bitonal</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Size Mode</td>
+    <td><table>
+   <tr><td>Type: PageSizeMode, Default: Auto</td></tr>
+   <tr><td>The method used to determine the page size. Can be one of the following values:<br />
+<ul>
+<li><b>Auto</b></li>
+<li><b>Standard</b></li>
+<li><b>Custom</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Custom Page Size</td>
+    <td><table>
+   <tr><td>Type: <a href='Rectangle.htm'>Rectangle</a>, Default: (0,0):(0,0)</td></tr>
+   <tr><td>Enter a custom page size, expressed as the area to be scanned.  For example, to scan a 24\" x 24\" page in its entirety, enter (0,0)-(24,24).
+To scan the same page but eliminate a 1\" border, enter (1,1)-(22,22).
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Standard Page Size</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Select a standard page size from the list.  If the page size does not appear in this list, change the Page Size Mode to Custom and then enter a Custom Page Size.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Turbo Mode</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Speeds up the capture process by sampling a lower resolution in the Y direction.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scanning Speed</td>
+    <td><table>
+   <tr><td>Type: ScanSpeed, Default: 0</td></tr>
+   <tr><td>Controls how fast the paper transport moves.  This setting does not affect image quality, but merely allows the speed
+of the transport to be adjusted to accommodate paper condition. Can be one of the following values:<br />
+<ul>
+<li><b>Fast</b></li>
+<li><b>Medium</b></li>
+<li><b>Slow</b></li>
+<li><b>Slowest</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Thresholding</td>
+  </tr>
+  <tr>    <td>Threshold Method</td>
+    <td><table>
+   <tr><td>Type: <a href='../IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a></td></tr>
+   <tr><td>When the Color Format is set to Bitonal, this setting controls the method by which images are converted to black and white.
+(See <a href='../IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Color Management</td>
+  </tr>
+  <tr>    <td>Brightness</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The brightness adjustment to be applied during scanning.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>White Point</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The white point to be applied during scanning.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Black Point</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The black point to be applied during scanning.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Gamma</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Double.htm'>Double</a>, Default: 0</td></tr>
+   <tr><td>The gamma adjustment to be applied during scanning.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Paper Handling</td>
+  </tr>
+  <tr>    <td>Paper End Action</td>
+    <td><table>
+   <tr><td>Type: PaperEndCondition, Default: Eject</td></tr>
+   <tr><td>Controls what action is taken after each page is scanned. Can be one of the following values:<br />
+<ul>
+<li><b>Eject</b></li>
+<li><b>DoNothing</b></li>
+<li><b>Rewind</b></li>
+<li><b>PaperLength</b></li>
+<li><b>RewindAndStage</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Paper Justification</td>
+    <td><table>
+   <tr><td>Type: PaperJustification, Default: Side</td></tr>
+   <tr><td>Indicates whether paper will be fed into the scanner centered, or aligned to the side of the transport. Can be one of the following values:<br />
+<ul>
+<li><b>Side</b></li>
+<li><b>Center</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Rectangle.htm'>Rectangle</a></td></tr>
+<tr><td><a href='../IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version='1.0' encoding='utf-8' ?>  <tocdata>  <item name=\"Add Multiple Items\" url=\"Administrator_Reference/Grooper_Object_Types/Contents/Add_Multiple_Items.htm\" />  <item name=\"Clear Children\" url=\"Administrator_Reference/Grooper_Object_Types/Contents/Clear_Children.htm\" />    </tocdata>";

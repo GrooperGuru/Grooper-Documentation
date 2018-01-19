@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Line Removal</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nFeature Removal\nLine Removal");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Barcode_Removal.htm\">Feature Removal<\/a> &gt; Line Removal<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.LineRemoval.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Line Removal</h1></td>
+<table>
+</tr>
+</table>
+Removes horizontal and vertical lines from an image.
+
+<br/><br/><b>Inherits from:</b> Feature Dropout<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Line Types</td>
+    <td><table>
+   <tr><td>Type: LineOrientations, Default: Both</td></tr>
+   <tr><td>Specifies the orientation of lines which will be removed from the image. Can be one of the following values:<br />
+<ul>
+<li><b>Both</b>: Both horizontal and vertical lines will be removed.
+</li>
+<li><b>Horizontal</b>: Only horizontal lines will be removed.
+</li>
+<li><b>Vertical</b>: Only vertical lines will be removed.
+</li>
+</ul>
+ The Angle Tolerance property controls the allowed variance from true horizontal and vertical lines.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Line Length</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 0.25in</td></tr>
+   <tr><td>The minimum length of lines to be removed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Line Thickness</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 4pt</td></tr>
+   <tr><td>The maximum line thickness.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Line Gap</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 1pt</td></tr>
+   <tr><td>The maximum gap which can appear in a line.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Angle Tolerance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 5°</td></tr>
+   <tr><td>The maximum deviation from a square angle.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Trim Distance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 2px</td></tr>
+   <tr><td>The distance outside of detected lines at which connected components will be trimmed. Review the intermediate image 'Trim Mask' after making changes to this property.  The trim mask includes all pixels
+within a radius of Trim Distance from any detected line, and represents an absolute boundary for the edge of each line.
+<p>This property should be tuned so that lines are removed with minimal damage to objects which intersect the line.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Advanced Line Detection</td>
+    <td><table>
+   <tr><td>Type: HoughLevel, Default: Off</td></tr>
+   <tr><td>Defines the accuracy level of advanced line detection. Can be one of the following values:<br />
+<ul>
+<li><b>Off</b>: Advanced line detection is disabled.
+</li>
+<li><b>Low</b>: Low accuracy setting.  Executes Hough transform at r = 0.25°, Θ = 1px.
+</li>
+<li><b>Medium</b>: Medium accuracy setting.  Executes Hough transform at r = 0.25°, Θ = .5px.
+</li>
+<li><b>High</b>: High accuracy setting.  Executes Hough transform at r = 0.25°, Θ = .25px.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Comb Removal</td>
+  </tr>
+  <tr>    <td>Comb Removal</td>
+    <td><table>
+   <tr><td>Type: CombDetectionType, Default: All</td></tr>
+   <tr><td>A comb is line segment which is shorter than the minimum line length, but is connected to a perpendicular line at one or more ends. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: Comb removal is disabled.
+</li>
+<li><b>Single</b>: Combs with single connectivity will be removed. Single connectivity indicates that the comb connects to a perpendicular line on one end, as shown below:
+<p style="font-family:Courier">
+│G│R│O│O│P│E│R│<br />
+└─┴─┴─┴─┴─┴─┴─┘
+</p><p style="font-family:Courier">
+│PATIENT NAME: │ADMIT DATE:│<br />
+│John R. Smith │06/15/2017 │<br />
+└──────────────┴───────────┘
+</p>
+</li>
+<li><b>Double</b>: Combs with double connectivity will be removed. Double connectivity indicates that the comb connects to a perpendicular line on boths ends, as shown below:
+<p style="font-family:Courier">
+┌─┬─┬─┬─┬─┬─┬─┐<br />
+│G│R│O│O│P│E│R│<br />
+└─┴─┴─┴─┴─┴─┴─┘
+</p><p style="font-family:Courier">
+┌──────────────┬───────────┐<br />
+│PATIENT NAME: │ADMIT DATE:│<br />
+│John R. Smith │06/15/2017 │<br />
+└──────────────┴───────────┘
+</p>
+</li>
+<li><b>All</b>: All combs will be removed..
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Length</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 4pt</td></tr>
+   <tr><td>The minimum length of a line segment which will be considered a comb. This value must be less than the minimum line length.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Fill</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 80%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum fill percentage of a rectangle which will be considered a comb. A perfect comb "│" is a rectangular shape with a fill percentage of 100%.  While few combs found on scanned images will be perfect, most will have a high fill
+percentage.  Other shapes, such as ")" or "I", may fit the size requirements of a comb, but will have a significantly different fill percentage because they are not
+rectangular in shape.
+<p>For single connected combs, the fill percentage must meet or exceed the value specified here.  For double-connected combs, the fill percentage must only be ½ of this value.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Quiet Zone Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 1pt</td></tr>
+   <tr><td>For single-connected combs, specifies a region on either side of the comb which must be relatively clear of feature pixels.
+<p style="font-family:Courier"><font color="red">◄──</font>│<font color="red">──►</font><br />───┴───</p> The Minimum Weight property defines how "clear" this zone must be.
+<p>Designed to prevent skinny vertical characters from being mistaken for combs.  For example,
+a lower-case "j" printed with underline produces a feature closely resembling a comb:</p><p><font color="green" size="4"><u>adjustment</u></font></p><p>In such cases, the "j" can be distinguished from an actual comb by using a quiet zone to check the amount of whitespace on each side.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Weight</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 90%, Range: 0% - 100%</td></tr>
+   <tr><td>When a quiet zone is in use, defines how "clear" the quiet zone must be. In a region which includes the comb itself plus the quiet zone, the percentage of feature pixels belonging to the
+comb must be equal to or greater than the value specified here. A value of 100% will require a completely clear quiet zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Dropout Options</td>
+  </tr>
+  <tr>    <td>Dropout Method</td>
+    <td><table>
+   <tr><td>Type: DropoutMethods, Default: Inpaint</td></tr>
+   <tr><td>Specifies how the area occupied by matching blobs will be filled. Can be one of the following values:<br />
+<ul>
+<li><b>Fill</b>: Pixels removed from the image will be filled using the Fill Color, if one is specified.
+</li>
+<li><b>Inpaint</b>: Pixels removed from the image will be digitally restored, using information from the surrounding area. Image inpainting is a digital restoration technique designed to fill in missing areas of an image seamlessly.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Radius</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 3px</td></tr>
+   <tr><td>Specifies the radius around the area to be filled which will be considered during inpainting.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Method</td>
+    <td><table>
+   <tr><td>Type: InpaintMethod, Default: NavierStokes</td></tr>
+   <tr><td>Specifies the algorithm to be used for inpainting. Can be one of the following values:<br />
+<ul>
+<li><b>Telea</b>: Restore unknown pixels using the weighted sum of approximations by known pixels in the neighborhood. A. Telea, "An image inpainting technique based on the fast marching method", J. GRAPHICS TOOLS, 2004.
+</li>
+<li><b>NavierStokes</b>: Uses the Navier-Stokes equations from fluid dynamics to "flow" surrounding pixels into filled area, the same way a fluid would fill a void. M. Bertalmio, A. L. Bertozzi, G. Sapiro, "Navier-Stokes, Fluid Dynamics, and Image and Video Inpainting", IEEE CVPR, 2001.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fill Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When the Dropout Method is 'Fill', specifies the color to be used.  If no color is specified, the background color of the image will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Mask Dilation Factor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0, Range: -16 - 16</td></tr>
+   <tr><td>Controls the amount of dilation or erosion applied to the mask image. Increase this value to more effectively drop out the edges of objects.  Positive values will dilate the mask features, while negative values
+will erode them.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Binarization Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+   <tr><td>Defines settings for creating the binarized image used during feature detection. A "binarized" image is an 8 bit-per-pixel black and white version of the input image which is used for feature detection.  It is generated from the source image
+at runtime using the thresholding settings defined here, with the goal of producing an image where the features to be detected are clearly visible.
+
+<p>This command outputs an intermediate image named "Binarized" which allows binarization output to be reviewed and tuned.</p><p>Note that if adaptive thresholding is used, it <u>will</u> be applied to images which are already black and white.  Because adaptive thresholding tends to eliminate
+dark areas from the document, it can provide useful preprocessing for tasks such as line detection, where dark areas produce many line candidates which must be analayzed
+and processed.</p>
+(See <a href='../Miscellaneous/Binarize.htm'>Binarize</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Result Type</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>    <th>Member Name</th>
+    <th>Member Type</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>HorizontalLines</td>
+    <td>LineCollection</td>
+    <td>
+</td>
+  </tr>  <tr>    <td>VerticalLines</td>
+    <td>LineCollection</td>
+    <td>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+</table>
+<h2>Line Removal Example</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Original Image</th>
+     <th>Result Image</th>
+  </tr>
+  <tr>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.LineRemoval_Original_Image.jpg' /></td></p></td>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.LineRemoval_Result_Image.jpg' /></td></p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

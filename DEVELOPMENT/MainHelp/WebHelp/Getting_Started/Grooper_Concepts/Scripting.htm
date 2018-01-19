@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Scripting</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+ <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nScripting");
+addTocInfo("Getting Started\nGrooper Concepts\nScripting\nScriptable_Node_Types");
+
+
+	if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Scripting.htm\">Scripting<\/a> &gt; Scriptable_Node_Types<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Scripting<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Scripting</h1>
+<p>Grooper provides an integrated development capability which enables 
+ developers to customize Grooper quickly and easily. &#160;Using VSTA (Visual 
+ Studio Tools for Applications), Grooper integrates with Microsoft Visual 
+ Studio. &#160;All code editing and debugging are performed in an instance 
+ of Visual Studio launched from Grooper Administration.</p>
+<p>Certain Node Types in the <a href="Grooper_Tree_Structure.htm">Grooper 
+ Tree Structure</a> are scriptable, while others are not. &#160;See <a 
+	 href="Scripting.htm#Scriptable_Node_Types">Scriptable Node Types</a> 
+ below for a list of scriptable types. &#160;In Grooper Administration, 
+ a scriptable object will have a &quot;Scripting&quot; tab on its property 
+ panel which contains a Script Manager control.<br />
+<br />
+The environment includes full support for debugging, even in production 
+ processing modules.</p>
+<h2>Overview</h2>
+<ul>
+	<li style="list-style: square;">A Grooper Script is a program that 
+	 runs inside of Grooper. It contains instructions (called script code) 
+	 to make Grooper perform custom tasks. Scripting extends Grooper functionality. 
+	 Any functionality that Grooper does not already handle out of the 
+	 box can be accomplished using Scripting.</li>
+	<li style="list-style: square;">Scripts are written in Visual Basic 
+	 using Visual Studio 2013 Professional and Microsoft .Net framework 
+	 4.5 SDK. </li>
+	<li style="list-style: square;">Before Scripts can be used they must 
+	 be compiled.</li>
+	<li style="list-style: square;">Grooper object types which support 
+	 scripting will include a Scripting tab on the property panel for that 
+	 object containing a Script Manager control. &#160;This control provides 
+	 the functionality for creating and managing scripts, and for launching 
+	 Visual Studio to perform development work. The Script Manager Control 
+	 is used to create, edit, and delete Scripts.</li>
+	<li style="list-style: square;">Grooper Scripts are portable. Scripts 
+	 developed on one machine can be transferred to other machines where 
+	 they can be executed. Script files are <span style="font-style: italic;"><i>Exported</i></span> 
+	 from the Development machine and then <span style="font-style: italic;"><i>Imported</i></span> 
+	 on other machines that need to use the Script.</li>
+	<li style="list-style: square;">Data Connections provide convenient 
+	 database access without the need for storing credentials in script 
+	 code.</li>
+</ul>
+<p style="font-style: italic; font-weight: bold; font-size: 10pt; margin-left: 40px;">NOTE: 
+ &#160;Basic script editing can be performed in the Grooper Script Manager 
+ Control. &#160;However, Microsoft Visual Studio is required to support 
+ advanced script editing features such as debugging and Intellisense. &#160;See 
+ <a href="../Installation_Guide/Installation_Prerequisites.htm#Grooper_Advanced_Scripting">Grooper_Advanced_Scripting</a> 
+ in the System Requirements. Also, VSTA IDE will only support debugging 
+ operations with attached to a 32bit application.</p>
+<h2><a name="Scriptable_Node_Typesbc-1"></a><a name="Scriptable_Node_Types">Scriptable Node Types</a></h2>
+<p>The following Grooper object types support scripting:</p>
+<ul style="list-style: disc;">
+	<li>Batch Process - Modify the flow of a Batch Process. &#160;Gain 
+	 control when batches are completed from any step in the process.</li>
+	<li>Processing Script - Implement a custom batch processing step.</li>
+	<li>Data Model - Validate data. &#160;Customize the Data Review user 
+	 interface. &#160;Gain control when users tab in and out of fields. 
+	 &#160;Perform custom database lookups.</li>
+	<li>Data Type - Validate extracted data elements.</li>
+	<li>IP Profile - Perform custom image cleanup.</li>
+	<li>Report - Build custom reports.</li>
+	<li>Scripted Service - Write a script which executes as a Windows service 
+	 and gains control at regular intervals.</li>
+</ul>
+<h2>Scripting Events</h2>
+<ul>
+	<li style="list-style: square;">An Event is an action or occurrence 
+	 that can be handled by script code.</li>
+	<li style="list-style: square;">For each Script Type, Grooper generates 
+	 a unique set of Events that allows script code to do something specific 
+	 in response to that Event.</li>
+	<li style="list-style: square;">Grooper generates or &quot;fires&quot; 
+	 each Event at a specific time. For example, each time the timer for 
+	 a TimerServiceInstance goes to zero, Grooper generates a &quot;Tick&quot; 
+	 event that script can then handle to do some service-related task.</li>
+</ul>
+<h2>Script Storage and Initialization</h2>
+<p>Script source code is stored in files associated with the scriptable 
+ node. &#160;When scripts are compiled, the associated DLL and PDB (debug 
+ info) files are also stored as files on the node. &#160;Once an object 
+ has a compiled script, the script will be loaded and initialized the next 
+ time the object is loaded. &#160;Once initialized, the script responds 
+ to events raised by Grooper.</p>
+<h2>Scripting Events</h2>
+<p>All Grooper scripts interact with Grooper by responding to events. &#160;The 
+ events available vary depending on the type of object. &#160;For example, 
+ a Data Model exposes events such as AfterExtraction, FieldEnter, FieldExit, 
+ and etc., while a Batch Process exposes events such as BatchCompleting 
+ and BatchCompleted. &#160;The list of events available for each object 
+ type can be found in the Object Reference under the topic for the specific 
+ object type.</p>
+<h2>See Also</h2>
+<p><a href="../../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process.htm">Batch 
+ Process</a></p>
+<p><a href="../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a></p>
+<p><a href="../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Type.htm">Data 
+ Type</a></p>
+<p><a href="../../Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm">IP 
+ Profile</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

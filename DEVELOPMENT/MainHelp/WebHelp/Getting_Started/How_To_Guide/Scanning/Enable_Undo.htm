@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Enable Undo</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nScanning\nEnable Undo");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Use_Separator_Sheets.htm\">Scanning<\/a> &gt; Enable Undo<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>HOW TO: Enable Undo</h1>
+<p>This topic describes how to retain an <a href="javascript:TextPopup(this)" id="HotSpot31041" class="glossterm">Undo 
+ Image</a><script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+TextPopupInit('HotSpot31041', 'POPUP31041');
+//]]></script><span class="glosstext" id="POPUP31041" style="display: none;"> Image file attached to a Batch Page. Typically saved at scan time or during Image Processing prior to any image cleanup being performed.</span> at scan time or during Image 
+ Processing. Enabling undo allows operators to revert a page back to 
+ its original version before image modifications were made. For more information 
+ see the <a href="../../Grooper_Concepts/Undo_Image_Cleanup.htm">Undo 
+ Image Cleanup</a> topic.</p>
+<h2>Option 1 - Configure Scan Settings</h2>
+<ul style="list-style: disc;">
+	<li>In Grooper Administration, navigate to Batch Processing • Processes 
+	 • Working.</li>
+	<li>Select the desired Batch 
+	 Process.</li>
+	<li>Double click the Grooper Scan Batch 
+	 Process Step (typically the first step in the batch process) or 
+	 select the Grooper Scan batch process step, and click the <img src="images/EditStepButton.png" alt="" class="ScreenShotBorder" /> &#160;button.</li>
+	<li>Enable the 'Undo Image' option as shown below.</li>
+	<li>Click OK to close all dialog boxes.</li>
+	<li>Save and publish the Batch Process using the commands on the toolbar.</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/EnableUndo.png" alt="" class="ScreenShot" border="0" /></p>
+<h2>Option 2 - Configure Image Processing Settings</h2>
+<ul style="list-style: disc;">
+	<li>In Grooper Administration, navigate to Batch Processing • Processes 
+	 • Working.</li>
+	<li>Select the desired Batch 
+	 Process.</li>
+	<li>Double click the Grooper Image Processing Batch 
+	 Process Step or select the Grooper Image Processing batch process 
+	 step, and click the <img src="images/EditStepButton.png" alt="" class="ScreenShotBorder" /> 
+	 &#160;button.</li>
+	<li>Enable the 'Undo Image' option as shown below.</li>
+	<li>Click OK to close all dialog boxes.</li>
+	<li>Save and publish the Batch Process using the commands on the toolbar.</li>
+</ul>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/EnableUndo2.png" alt="" class="ScreenShot" border="0" /></p>
+<h2>See Also</h2>
+<p>Batch 
+ Process</p>
+<p>Scan Module</p>
+<p>Scan Settings</p>
+<p>Image Processing 
+ Module</p>
+<p><a href="../../Grooper_Concepts/Undo_Image_Cleanup.htm">Undo 
+ Image Cleanup</a></p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

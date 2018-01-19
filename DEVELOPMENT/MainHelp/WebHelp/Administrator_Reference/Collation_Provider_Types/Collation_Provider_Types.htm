@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Collation Provider Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nCollation Provider Types\nCollation Provider Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Collation_Provider_Types.htm\">Collation Provider Types<\/a> &gt; Collation Provider Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Collation Provider</h1>
+Collation providers define various methods of processing the the output of a <a href='../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> object.
+
+<h2>List of Collation Provider Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Array.htm'>Array</a></td>
+     <td>Matches a list of values arranged in horizontal, vertical, or flow order. This collation method searches through the results from all child extractors and locates instances where N or more matches
+are found in an arrangement which matches one of the enabled Array Layout types.  For each such match, the child result instances
+will be combined (see the Combine Method property) and returned as a single result, which contains the source child extractor
+instances as children.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Combine.htm'>Combine</a></td>
+     <td>Combines instances from child extractors based on the grouping specified in the Group By property.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Individual.htm'>Individual</a></td>
+     <td>Returns all instances from all extractors individually.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Ordered_Array.htm'>Ordered Array</a></td>
+     <td>Finds sequences of values where one result is present for each extractor, in the order in which they appear. For example, assume Extractor 1 matches a name, Extractor 2 matches a street address line, and Extractor 3 matches a city/state/zip line.  Using the vertical array
+layout, this could be used to match:
+<p>John Doe<br />13900 N Harvey<br>Edmond, OK 73013</br></p><p>In horizontal or flow layout, it could match the same information laid out this way:</p><p>John Doe, 13900 N Harvey, Edmond, OK 73013</p><p>For each such match, the child result instances will be combined (see the Combine Method property) and returned as a single result, which contains the source child extractor
+instances as children.</p>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Pattern-Based.htm'>Pattern-Based</a></td>
+     <td>Uses a regular expression to select a sequence of child extractor results. Child extractor results are referenced using @ExtractorName, where ExtractorName is the name of a child (or referenced) extractor.  For example, consider
+the tabular data below, which represents information from a college transcript:
+<p style="font-family:Courier">
+GE140 WORLD CIVILIZATION I 3.00 A 12.00<br />
+PSY212 GENERAL PSYCHOLOGY 3.00 A 12.00<br />
+GE185 HEALTH CONCEPTS 2.00 C 4.00<br /></p><p>Three extractors are created for the Data Type:
+<ul><li><b>Course No</b> - Matches 'GE140', 'PSY212', etc.</li><li><b>Decimal</b> - Matches '3.00', '12.00', etc.</li><li><b>Letter Grade</b> - Matches 'A', 'C', etc.</li></ul></p><p>The following collation expression could then be used to select the entire line:</p><p style="font-family:Courier">@Course_No .*? @Decimal @Letter_Grade @Decimal</p><p>The expression can be further expanded to include group names, mapping values directly to table column names:</p><p style="font-family:Courier">(?&lt;Course_No&gt;@Course_No) <br />
+(?&lt;Description&gt;[^\r]*?) <br />
+(?&lt;Hours&gt;@Decimal) <br />
+(?&lt;Grade&gt;@Letter_Grade) <br />
+(?&lt;Points&gt;@Decimal)</p>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Single_Instance.htm'>Single Instance</a></td>
+     <td>Returns the first instance returned by any extractor and discards all other results.  Useful for implementing a  waterfall
+approach where the most strict format is tried first, follow by less strict formats.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Split.htm'>Split</a></td>
+     <td>Splits the input at each instance found by an extractor.  The Split Position property provides a variety of methods for splitting the input.
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

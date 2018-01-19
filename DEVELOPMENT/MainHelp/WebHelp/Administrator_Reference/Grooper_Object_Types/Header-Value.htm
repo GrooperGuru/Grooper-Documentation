@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Header-Value</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nHeader-Value");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> > Header-Value<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Header-Value</h1>
+Detects the layout of a table automatically by analyzing results from value and header extractors defined on <a href='../Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a> objects.
+
+<p>This table extraction method is designed for structured tables where the following conditions are true:</p><ul><li>Information is presented in horizontal rows and vertical columns.</li><li>A header row is present, where text labels indicate the meaning of the data in each column.</li><li>Table rows occupy one or more full lines of text within the content flow, appearing one after another.</li><li>The values for all "primary" columns are positioned on the same line of text.</li></ul><p>As an example of usage, consider the tabular data provided on invoices. While the location, order, and number of columns in the table may vary from one
+invoice document to the next, all invoice line items will at minimum specify a quantity, unit price, and line total.  For the purposes of Header-Value table extraction,
+these are considered the 'primary' columns.</p><p>Primary columns are a set of required columns which are used to detect table rows.  For each primary column, a <span style="background-color : #C0FFC0">Header Extractor</span>
+and a <span style="background-color : #D0D0FF">Value Extractor</span> should be defined.  A <span style="background-color : #FFC0C0">Footer Extractor</span> may also be defined to provide an absolute lower boundary for the
+last row in the table.</p><table><tr style="font-weight:bold; text-align:center;"><td>Item #</td><td style="background-color : #C0FFC0">Quantity</td><td>Description</td><td style="background-color : #C0FFC0">Unit Price</td><td style="background-color : #C0FFC0">Line Total</td></tr><tr style="vertical-align:top;"><td>WD32837</td><td align="right"><span style="background-color : #D0D0FF">1</span></td><td>Widget, Green<br /><i>Aluminum Trim</i></td><td align="right"><span style="background-color : #D0D0FF">12.50</span></td><td align="right"><span style="background-color : #D0D0FF">12.50</span></td></tr><tr style="vertical-align:top;"><td>WD46738</td><td align="right"><span style="background-color : #D0D0FF">3</span></td><td>Widget, Orange<br /><i>Bronze Trim</i></td><td align="right"><span style="background-color : #D0D0FF">10.25</span></td><td align="right"><span style="background-color : #D0D0FF">30.75</span></td></tr><tr style="vertical-align:top;"><td>WD98574</td><td align="right"><span style="background-color : #D0D0FF">1</span></td><td>Widget, Blue<br /><i>Aluminum Trim</i></td><td align="right"><span style="background-color : #D0D0FF">14.64</span></td><td align="right"><span style="background-color : #D0D0FF">14.64</span></td></tr><tr style="font-weight:bold;"><td style="background-color : #FFC0C0;" align="right" colspan="4">INVOICE TOTAL</td><td style="background-color : #FFC0C0;" align="right">57.89</td></tr></table>
+The general operation of this command is as follows:
+<ul><li>Header detection uses the header extractors defined on primary columns to locate the table header.</li><li>If defined, the Footer Extractor is executed to locate the table footer.</li><li>Row detection uses the value extractors defined on primary columns to locate "primary lines".</li><li>Primary lines are text lines occuring after the header and before the footer which contain at least one value for each primary column.</li><li>If the primary line contains only one possible value for the column, the value is accepted without checkng the header.</li><li>If the primary line contains multiple possible values for the column, header information is used to resolve the conflict.</li><li>Each primary line is then adjusted to consume additional text lines associated with the table row.</li><li>The value extractors for secondary columns are executed against the content of the table row..</li></ul>
+
+<br/><br/><b>Inherits from:</b> <a href='../Table_Extract_Method_Types/Table_Extract_Method_Types.htm'>Table Extract Method</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Header Detection Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='Header_Detector.htm'>Header Detector</a></td></tr>
+   <tr><td>Defines settings which control how header detection is performed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Row Detection Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='Row_Detector.htm'>Row Detector</a></td></tr>
+   <tr><td>Defines settings which control how row detection is performed.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Footer Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>An optional extractor which matches content immediately below the last row of information in the table.
+(See <a href='Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Detect Lines</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Enables or disables line detection during table extraction. When line detection is enabled, horizontal and vertical lines on the document will be used to determine the boundaries of headers, table rows, and etc.
+Disabling line detection can provide a performance increase, but could reduce accuracy on certain table formats.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Max Header Distance</td>
+    <td><table>
+   <tr><td>Type: <a href='String.htm'>String</a></td></tr>
+   <tr><td>The maximum horizontal distance between a value and its associated header.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+<tr><td><a href='Header_Detector.htm'>Header Detector</a></td></tr>
+<tr><td><a href='Row_Detector.htm'>Row Detector</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

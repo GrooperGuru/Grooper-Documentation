@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Negative Region Removal</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nFeature Removal\nNegative Region Removal");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Barcode_Removal.htm\">Feature Removal<\/a> > Negative Region Removal<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.NegativeRegionRemoval.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Negative Region Removal</h1></td>
+<table>
+</tr>
+</table>
+Inverts or removes regions which are inverted (white on black).
+
+An negative region is a rectangular area where the feature pixels are white and the background pixels are black, similar to the
+"Negated" label on the original shown below.
+<p><svg width="360" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="10" y="10" width="80" height="30" stroke="transparent" fill="black" /><text x="20" y="30" font-size="16" fill="white">Negated</text><text x="23" y="60" font-size="16" fill="black">Normal</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><text x="140" y="30" font-size="16" fill="black">Negated</text><text x="143" y="60" font-size="16" fill="black">Normal</text><rect x="240" y="0" width="100" height="150" stroke="black" fill="white" /><text x="263" y="60" font-size="16" fill="black">Normal</text><text x="23" y="165" font-size="14" font-weight="bold" fill="green">Original</text><text x="150" y="165" font-size="14" font-weight="bold" fill="green">Invert</text><text x="262" y="165" font-size="14" font-weight="bold" fill="green">Dropout</text></svg></p>
+The output from this command is an image where the detected regions are inverted, as shown in the middle, or removed, as shown at the right.
+<h2>Notes on Inversion</h2><p>The edges of inverted text regions on scanned images are imperfect, and do not represent straight lines.  Because of this, inverting a rectangular region will
+inevitably leave artifacts around the edge.  In most cases, it is best to shrink the detected zone slightly, so that inversion leaves a solid rectangular outline behind.
+The outline can then be removed cleanly using the Line Dropout command.</p><p><svg width="360" height="170"><rect x="0" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="10" y="10" width="80" height="30" stroke="transparent" fill="black" /><text x="20" y="30" font-size="16" fill="white">Negated</text><text x="23" y="60" font-size="16" fill="black">Normal</text><rect x="120" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="130" y="10" width="80" height="30" stroke="transparent" fill="black" /><rect x="132" y="12" width="76" height="26" stroke="transparent" fill="white" /><text x="140" y="30" font-size="16" fill="black">Negated</text><text x="143" y="60" font-size="16" fill="black">Normal</text><rect x="240" y="0" width="100" height="150" stroke="black" fill="white" /><rect x="250" y="10" width="80" height="30" stroke="transparent" fill="black" /><rect x="252" y="12" width="76" height="26" stroke="transparent" fill="white" /><text x="263" y="60" font-size="16" fill="black">Normal</text><text x="23" y="165" font-size="14" font-weight="bold" fill="green">Original</text><text x="150" y="165" font-size="14" font-weight="bold" fill="green">Invert</text><text x="262" y="165" font-size="14" font-weight="bold" fill="green">Dropout</text></svg></p>
+Zone shrinking is accomplished by setting the Region Detection / Zone Adjustment property to a negative value.
+
+
+<br/><br/><b>Inherits from:</b> Feature Dropout<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Disposition</td>
+    <td><table>
+   <tr><td>Type: NegativeRegionDisposition, Default: Auto</td></tr>
+   <tr><td>Defines the action to be taken for negative regions detected in the image. Can be one of the following values:<br />
+<ul>
+<li><b>Auto</b>: Horizontal regions will be inverted, and vertical regions will be removed.
+</li>
+<li><b>Dropout</b>: Negative regions will be removed.
+</li>
+<li><b>Invert</b>: Negative regions will be inverted.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Trim Factor</td>
+    <td><table>
+   <tr><td>Type: <a href='../Int32.htm'>Int32</a>, Default: 4</td></tr>
+   <tr><td>Defines how aggressively lines will be trimmed. Trimming is a process which isolates solid black regions on an image by eroding away lines which intersect them.  Higher values will erode away thicker lines.
+Review the Candidates intermediate image after making changes to this property.  The objective when tuning this property is to produce a candidates image where each
+inverted text region is represented by a solid black rectangle which does not intersect any other objects.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Region Detection</td>
+    <td><table>
+   <tr><td>Type: <a href='../Region_Settings.htm'>Region Settings</a>, Default: 8pt, 0.25in², 50%</td></tr>
+   <tr><td>Defines setting which control how negated regions are detected.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Dropout Options</td>
+  </tr>
+  <tr>    <td>Dropout Method</td>
+    <td><table>
+   <tr><td>Type: DropoutMethods, Default: Fill</td></tr>
+   <tr><td>Specifies how the area occupied by matching blobs will be filled. Can be one of the following values:<br />
+<ul>
+<li><b>Fill</b>: Pixels removed from the image will be filled using the Fill Color, if one is specified.
+</li>
+<li><b>Inpaint</b>: Pixels removed from the image will be digitally restored, using information from the surrounding area. Image inpainting is a digital restoration technique designed to fill in missing areas of an image seamlessly.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Radius</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a>, Default: 3px</td></tr>
+   <tr><td>Specifies the radius around the area to be filled which will be considered during inpainting.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Inpaint Method</td>
+    <td><table>
+   <tr><td>Type: InpaintMethod, Default: NavierStokes</td></tr>
+   <tr><td>Specifies the algorithm to be used for inpainting. Can be one of the following values:<br />
+<ul>
+<li><b>Telea</b>: Restore unknown pixels using the weighted sum of approximations by known pixels in the neighborhood. A. Telea, "An image inpainting technique based on the fast marching method", J. GRAPHICS TOOLS, 2004.
+</li>
+<li><b>NavierStokes</b>: Uses the Navier-Stokes equations from fluid dynamics to "flow" surrounding pixels into filled area, the same way a fluid would fill a void. M. Bertalmio, A. L. Bertozzi, G. Sapiro, "Navier-Stokes, Fluid Dynamics, and Image and Video Inpainting", IEEE CVPR, 2001.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fill Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When the Dropout Method is 'Fill', specifies the color to be used.  If no color is specified, the background color of the image will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Mask Dilation Factor</td>
+    <td><table>
+   <tr><td>Type: <a href='../Int32.htm'>Int32</a>, Default: 0, Range: -16 - 16</td></tr>
+   <tr><td>Controls the amount of dilation or erosion applied to the mask image. Increase this value to more effectively drop out the edges of objects.  Positive values will dilate the mask features, while negative values
+will erode them.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Binarization Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+   <tr><td>Defines settings for creating the binarized image used during feature detection. A "binarized" image is an 8 bit-per-pixel black and white version of the input image which is used for feature detection.  It is generated from the source image
+at runtime using the thresholding settings defined here, with the goal of producing an image where the features to be detected are clearly visible.
+
+<p>This command outputs an intermediate image named "Binarized" which allows binarization output to be reviewed and tuned.</p><p>Note that if adaptive thresholding is used, it <u>will</u> be applied to images which are already black and white.  Because adaptive thresholding tends to eliminate
+dark areas from the document, it can provide useful preprocessing for tasks such as line detection, where dark areas produce many line candidates which must be analayzed
+and processed.</p>
+(See <a href='../Miscellaneous/Binarize.htm'>Binarize</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Result Type</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>    <th>Member Name</th>
+    <th>Member Type</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>NegatedRegions</td>
+    <td>List(Of RectangleEx)</td>
+    <td>
+</td>
+  </tr>  <tr>    <td>RegionsInverted</td>
+    <td>List(Of RectangleEx)</td>
+    <td>
+</td>
+  </tr>  <tr>    <td>RegionsRemoved</td>
+    <td>List(Of RectangleEx)</td>
+    <td>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+<tr><td><a href='../Region_Settings.htm'>Region Settings</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

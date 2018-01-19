@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Estimate System Sizing Metrics</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nConfiguration and Setup\nEstimate System Sizing Metrics");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Install_a_Stand-Alone_Instance_of_Grooper.htm\">Configuration and Setup<\/a> &gt; Estimate System Sizing Metrics<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Estimate System Sizing Metrics</h1>
+<p>When deploying a new instance of Grooper, it is important to design 
+ the system with enough server processing cores, file storage space, and 
+ database storage space to accommodate the volume of documents to be processed. 
+ &#160;This topic provides information to help IT planners estimate these 
+ metrics.</p>
+<h2>Server Processing Cores</h2>
+<p>The number of server processing cores required to process a specific 
+ volume of documents in Grooper is dependent on many factors:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>The resolution, color depth, physical size, and condition of the 
+	 documents to be processed.</li>
+	<li>The number and type of steps included in the Batch 
+	 Process.</li>
+	<li>The average number of pages per document.</li>
+	<li>The number of document types in the Content 
+	 Model.</li>
+	<li>The number of data elements to be extracted.</li>
+	<li>The responsiveness of external databases and content repositories.</li>
+	<li>The speed of file storage devices.</li>
+	<li>The clock speed of the CPU cores.</li>
+	<li>Etc...</li>
+</ul>
+<p>&#160;</p>
+<p>Testing with actual batches 
+ running through the actual Batch 
+ Process to be used is the only sure way to determine how many processor 
+ cores will be required, but it is possible to estimate the number of cores 
+ required using metrics derived from testing on documents of various sizes 
+ and color depths. &#160;</p>
+<p>&#160;</p>
+<p>For example, in a typical batch process, the two modules requiring the 
+ most processing time are Image 
+ Processing and Full 
+ Text OCR, as these two modules operate at the page level, performing 
+ work on every individual page in each batch. &#160;On a 3.0 GHz processor 
+ core, these modules demonstrate the following performance using the Standard 
+ Full Text OCR 
+ Profile and the Default Scan Cleanup IP 
+ Profile.</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: center; font-size: 10pt; font-weight: bold;">Image 
+		 Type</p></td>
+		<td><p style="text-align: center; font-size: 10pt; font-weight: bold;">Image 
+		 Processing</p></td>
+		<td><p style="text-align: center; font-size: 10pt; font-weight: bold;">Full 
+		 Text OCR</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">140</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">42</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">95</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">12</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">84</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">40</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">58</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">11</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Applying these numbers to a scenario where unattended processes are 
+ performed by services which run 24 hours per day produces the estimated 
+ number of processing cores shown below. &#160;Included in the estimates 
+ are 3 additional cores dedicated to performing classification, data extraction, 
+ and export.</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 25%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">Pages/Day:</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">20,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">40,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">60,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">80,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">100,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">120,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">140,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">160,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">180,000</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">5</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">5</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">5</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">8</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">9</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">10</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">11</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">14</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">15</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">16</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">5</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">5</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">8</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">8</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">9</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">6</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">7</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">8</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">10</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">12</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">13</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">14</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">16</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">19</p></td>
+	</tr>
+</table>
+<h2>File Storage Space</h2>
+<p>The amount of space required for storing files also varies greatly depending 
+ on system configuration. &#160;The following factors have the largest 
+ impact on file storage requirements:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>The resolution and color depth at which documents are scanned.</li>
+	<li>The quality of the documents (noisy images don't compress as well 
+	 as clean images).</li>
+	<li>The percentage of pages on which Full 
+	 Text OCR is being performed.</li>
+	<li>Whether the <a href="../../Grooper_Concepts/Undo_Image_Cleanup.htm">Undo 
+	 Image Cleanup</a> feature is enabled.</li>
+	<li>Whether alternate images are being generated to support the OCR 
+	 process.</li>
+	<li>The amount of time batches are retained in Grooper after export.</li>
+	<li>Etc...</li>
+</ul>
+<p>&#160;</p>
+<p>Again, despite the difficulties in accuracy estimating storage space 
+ requirements, reasonable estimates can be derived using standard metrics. 
+ &#160;For example, the following table provides the average storage space 
+ required (in KB) for a single page for various image sizes and types:</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 16.667%;" />
+	<col style="width: 16.667%;" />
+	<col style="width: 16.667%;" />
+	<col style="width: 16.667%;" />
+	<col style="width: 16.667%;" />
+	<col style="width: 16.667%;" />
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Image 
+		 Type</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Primary</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Thumbnail</font></span></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+		<td colspan="2"><p style="text-align: center;"><span style="font-size: 10pt; 
+															 font-weight: bold;"><font size="2" style="font-size:10pt;">Total 
+		 Size Per Page</font></span></p></td>
+		
+	</tr>
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: center;">&#160;</p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Image</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Image</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">OCR 
+		 Results</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Undo 
+		 Enabled</font></span></p></td>
+		<td><p style="text-align: center;"><span style="font-size: 10pt; 
+												 font-weight: bold;"><font size="2" style="font-size:10pt;">Undo 
+		 Disabled</font></span></p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right;"><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">20 
+		 Kb</font></span></p></td>
+		<td><p style="text-align: right; font-size: 10pt;">3&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">80&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">123&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">103&#160;Kb</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">75&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">3&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">155&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">308&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">233&#160;Kb</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">350&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">3&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">80&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">783&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">433&#160;Kb</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,200&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">3&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">155&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">2558&#160;Kb</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1358&#160;Kb</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Applying the information from the table above to a scenario where an 
+ average of 5X the daily processing volume is stored in Grooper at any 
+ given time and 100% of the pages are processed through OCR will produce 
+ the following total file storage estimates:</p>
+<h3>With Undo Enabled (Sizes in GB)</h3>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 25%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">Pages/Day:</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">20,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">40,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">60,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">80,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">100,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">120,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">140,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">160,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">180,000</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">11.73</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">23.46</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">35.19</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">46.92</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">58.65</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">70.38</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">82.11</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">93.84</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">105.57</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">29.37</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">58.75</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">88.12</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">117.49</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">146.87</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">176.24</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">205.61</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">234.99</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">264.36</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">74.67</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">149.35</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">224.02</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">298.69</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">373.36</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">448.08</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">522.71</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">597.38</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">672.05</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">243.95</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">487.90</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">731.85</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">975.80</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,291.75</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,463.70</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,707.65</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,951.60</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">2,195.55</p></td>
+	</tr>
+</table>
+<h3>Without Undo Enabled (Sizes in GB)</h3>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 25%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<col style="width: 8%;" />
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">Pages/Day:</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">20,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">40,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">60,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">80,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">100,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">120,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">140,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">160,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">180,000</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">9.82</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">19.65</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">29.47</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">39.29</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">49.11</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">58.94</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">68.76</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">78.58</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">88.41</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">B&amp;W 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">22.22</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">44.44</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">66.66</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">88.88</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">111.10</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">133.32</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">155.54</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">177.76</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">199.99</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 200 DPI Letter</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">41.29</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">82.59</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">123.88</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">165.18</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">206.47</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">247.76</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">289.06</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">330.35</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">371.65</p></td>
+	</tr>
+	<tr>
+		<td><span style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Color 300 DPI Legal</font></span></td>
+		<td><p style="text-align: right; font-size: 10pt;">129.51</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">259.02</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">388.53</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">518.04</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">647.54</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">777.05</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">906.56</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,036.07</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">1,165.58</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>NOTE: Grooper will prevent users from scanning when the free space on 
+ the active File 
+ Store falls below .25 GB of free storage space.</p>
+<h2>Database Storage Space</h2>
+<p>Database storage requirements are dependent on many factors also. &#160;The 
+ most prominent factors affecting database storage requirements are as 
+ follows.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>The average number of pages 
+	 stored in Grooper at any given time.</li>
+	<li>The number of pages trained for <a href="../../Grooper_Concepts/Classification.htm">classification</a> 
+	 purposes.</li>
+	<li>The number of fields trained for <a href="../../Grooper_Concepts/Data_Extraction.htm">data 
+	 extraction</a> purposes.</li>
+	<li>The average number of pages 
+	 per folder 
+	 in batches.</li>
+	<li>The logging settings configured on the Grooper 
+	 Root object.</li>
+	<li>Etc...</li>
+</ul>
+<p>&#160;</p>
+<p>With that said, a good general rule of thumb for Grooper database sizing 
+ is around 100 Kb per page 
+ object. &#160;Applying this rule to a scenario where an average of 5X 
+ the daily processing volume is stored in Grooper at any given time will 
+ produce the following total database storage estimates:</p>
+<p style="margin-left: 80px;">&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<col style="width: 10.778%;" />
+	<tr bgcolor="#E0E0FF">
+		<td colspan="9"><p style="font-size: 10pt; font-weight: bold; text-align: center;">Estimated 
+		 Data Storage Based On Pages Per Day (Sizes in GB)</p></td>
+		
+	</tr>
+	<tr bgcolor="#E0E0FF">
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">20,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">40,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">60,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">80,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">100,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">120,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">140,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">160,000</p></td>
+		<td><p style="text-align: right; font-size: 10pt; font-weight: bold;">180,000</p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: right; font-size: 10pt;">9.54</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">19.07</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">28.<span style="text-align: right; 
+		 font-size: 10pt;"><font size="2" style="font-size:10pt;">61</font></span></p></td>
+		<td><p style="text-align: right; font-size: 10pt;">38.15</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">47.68</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">57.22</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">66.76</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">76.29</p></td>
+		<td><p style="text-align: right; font-size: 10pt;">85.83</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

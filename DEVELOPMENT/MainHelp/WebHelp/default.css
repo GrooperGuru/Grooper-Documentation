@@ -1,0 +1,400 @@
+﻿/*Created with Adobe RoboHelp 11.*/
+body {
+	font-size: 12pt;
+	background-color: #ffffff;
+	font-family: Helvetica;
+}
+h1 {
+	margin-top: 8pt;
+	margin-bottom: 2pt;
+	font-weight: bold;
+	font-size: 24pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h2 {
+	margin-top: 8pt;
+	margin-bottom: 2pt;
+	font-size: 18pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h3 {
+	font-weight: bold;
+	margin-top: 8pt;
+	margin-bottom: 2pt;
+	font-size: 14pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h4 {
+	font-weight: bold;
+	margin-top: 8pt;
+	margin-bottom: 2pt;
+	font-size: 12pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h5 {
+	font-weight: bold;
+	font-size: 10pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+h6 {
+	font-weight: bold;
+	font-size: 8pt;
+	x-next-class: ;
+	x-next-type: p;
+}
+p {
+	margin-top: 8pt;
+	margin-bottom: 2pt;
+}
+a {
+	color: rgb(0, 114, 198);
+	display: inline;
+	text-decoration: none;
+}
+a.expandspot {
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+span.expandtext {
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+a.dropspot {
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	text-decoration: none;
+}
+a.glossterm {
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+span.glosstext {
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+ol,
+ul {
+	margin-top: 8pt;
+	margin-bottom:8pt;
+}
+li {
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+}
+img.ScreenShot {
+	box-shadow: 5px 5px 3px #ccc;
+}
+img.ScreenShotBorder {
+	box-shadow: 5px 5px 3px #ccc;
+	border-style: Solid;
+	border-color: #C0C0E0;
+	border-width: 1px;
+}
+table {
+	border-collapse: collapse;
+	margin-top: 8pt;
+	margin-bottom: 8pt;
+}
+th {
+	background-color: #E0E0FF;
+	border-style: Solid;
+	border-color: #C0C0FF;
+	border-width: 1px;
+}
+td {
+	background-color: #ffffff;
+}
+table.PageHeader {
+	border-style: none;
+	margin: 0;
+	padding: 0;
+	color: rgb(35,134,126);
+}
+table.PageHeader td {
+	background-color: transparent;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+table.NoBorder {
+  border:none;
+	border-style: none;
+  border-width: 0px;
+  font-size: 12pt;
+  margin-left: 0px;
+  border-spacing: 0px;
+}
+table.NoBorder td {
+	background-color: transparent;
+  border-style: none;
+  border-color: transparent;
+  border-width: 0px;
+}
+table.NoBorder th {
+  background-color: transparent;
+	border-color: transparent;
+	border-style: None;
+	border-width: 0px;
+}
+table.ObjectProperties {
+	border-style: none;
+	border-color: #c0c0c0;
+	border-width: 1px;
+	font-size: 12pt;
+	margin-left: 10px;
+}
+table.ObjectProperties td {
+	border-style: Solid;
+	border-color: #c0c0c0;
+	border-width: 1px;
+}
+table.ObjectProperties table td{
+  border: none
+}
+
+table.ObjectProperties th {
+	background-color: #e8e8e8;
+	border-color: #c0c0c0;
+	color: #404040;
+	border-style: Solid;
+	border-width: 1px;
+}
+/*Table Header Row*/
+td.Category {
+	background-color: #f8f8f8;
+	color: #404040;
+	font-weight: bold;
+}
+table.ParamList {
+	border-width: 0px;
+	font-size: 12pt;
+}
+table.ParamList td {
+	border-width: 0px;
+	font-size: 12pt;
+}
+tr.Header {
+	text-align: Center;
+	background-color: #D0D0FF;
+	font-weight: bold;
+}
+/*Category row used in GrooperNode object properties*/
+div.Footnote {
+	box-shadow: 5px 5px 3px #ccc;
+	font-style: italic;
+	font-weight: normal;
+	background-color: #ffffd1;
+	border-style: Solid;
+	border-color: #8080ff;
+	border-width: 1px;
+}
+li.GrooperFolder {
+}
+rh-list.Bullets {
+	x-lvl-1-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-2-type: square;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-3-type: circle;
+	x-lvl-3-format: "<x>";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: diamond;
+	x-lvl-4-format: "<x>";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-type: disc;
+	x-lvl-5-format: "<x>";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: square;
+	x-lvl-6-format: "<x>";
+	x-lvl-6-margin: 100px;
+	x-lvl-7-type: circle;
+	x-lvl-7-format: "<x>";
+	x-lvl-7-margin: 120px;
+	x-lvl-8-type: diamond;
+	x-lvl-8-format: "<x>";
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: disc;
+	x-lvl-9-format: "<x>";
+	x-lvl-9-margin: 160px;
+	x-lvl-9-pfx-class: rls-9-Bullets;
+	x-lvl-1-pfx-class: rls-1-Bullets;
+	x-lvl-2-pfx-class: rls-2-Bullets;
+	x-lvl-3-pfx-class: rls-3-Bullets;
+	x-lvl-4-pfx-class: rls-4-Bullets;
+	x-lvl-5-pfx-class: rls-5-Bullets;
+	x-lvl-6-pfx-class: rls-6-Bullets;
+	x-lvl-7-pfx-class: rls-7-Bullets;
+	x-lvl-8-pfx-class: rls-8-Bullets;
+}
+span.rls-9-Bullets {
+	font-size: 8pt;
+}
+span.rls-1-Bullets {
+	font-size: 12pt;
+}
+span.rls-2-Bullets {
+	font-size: 12pt;
+}
+span.rls-3-Bullets {
+	font-size: 12pt;
+}
+span.rls-4-Bullets {
+	font-size: 12pt;
+}
+span.rls-5-Bullets {
+	font-size: 10pt;
+}
+span.rls-6-Bullets {
+	font-size: 10pt;
+}
+span.rls-7-Bullets {
+	font-size: 10pt;
+}
+span.rls-8-Bullets {
+	font-size: 10pt;
+}
+rh-list.BasicNumber {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-1-p-tag: P;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+table.SimpleGridBlue {
+	padding: 0px;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #4F81BD;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #4F81BD;
+}
+table.SimpleGridBlue td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.SimpleGridBlue tr.t1Row td {
+	font-family: Sans-serif;
+	font-size: 12pt;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.SimpleGridBlue tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.BlueHeaderRow {
+	padding: 0px;
+	x-border-spacing: 0px;
+	x-row-pat-1: 1;
+	x-row-pat-1-name: t1Row;
+	x-row-pat-count: 2;
+	x-row-pat-2: 1;
+	x-row-pat-2-name: t2Row;
+	border-left-style: Solid;
+	border-left-width: 1px;
+	border-left-color: #4F81BD;
+	border-top-style: Solid;
+	border-top-width: 1px;
+	border-top-color: #4F81BD;
+	x-1st-row: 1;
+	x-1st-row-name: t1st;
+}
+table.BlueHeaderRow td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+table.BlueHeaderRow tr.t1Row td {
+	font-family: Sans-serif;
+	font-size: 12pt;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.BlueHeaderRow tr.t2Row td {
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #4F81BD;
+	border-bottom-style: Solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #4F81BD;
+}
+table.BlueHeaderRow tr.t1st td {
+	font-size: 12pt;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Sans-serif;
+	background-color: #6672e5;
+	border-right-style: Solid;
+	border-right-width: 1px;
+	border-right-color: #0000ff;
+}
+/*.ParamList {
+  border: none;
+}
+
+.ParamList tr {
+ border: none;
+}
+
+.ParamList td {
+ border: none;
+}*/

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Render Document</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nRendering\nRender Document");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"Render_Document.htm\">Rendering<\/a> &gt; Render Document<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Activities.RenderDocument.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Render Document</h1></td>
+<table>
+</tr>
+</table>
+Renders the native file version stored on a <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> to PDF.
+
+<p>Rendering allows electronic documents of any type to be displayed in Grooper, and allows their textual content to be accessed by Grooper activities
+such as <a href='../../../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> and <a href='../Unattended_Activities/Extraction.htm'>Extraction</a>. Conversion to PDF is achieved by automating the native application to print the document to a Grooper-
+installed printer called the 'Grooper Render Printer', which generates a PDF file from the print stream. This activity can render any electronic
+document format, as long as the following criteria are met:</p><ul><li>An instance of Grooper Render Printer has been installed on the machine(s) where the activity will run, and has been set as the default printer for
+the user account under which the activity will run.</li><li>The native application for the file type has been installed on the machine(s) where the activity will run.</li><li>The native application provides a shell print verb (i.e. when the file is right-clicked in Windows Explorer, a 'Print' option is present).</li></ul><p>Only a single instance of this activity may run on the same machine at the same time.  If the folder does not have a native version, this activity does nothing.</p>
+
+<br/><br/><b>Inherits from:</b> Unattended Activity<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Excluded File Extensions</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Specifies file extensions which should be excluded from the rendering process. Each file extension in the lexicon should be in lower case and preceded by a "." character.
+(See <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>File Extension Mappings</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>Specifies file extension mappings. For example, there are many different file extensions for a text file (.txt, .log, .readme, etc.).  While the .log extension
+may not have a print verb registered, the .txt file extension does.  The entries in this lexicon provide such a mapping for the
+rendering process.  Each lexicon entry should contain the original file extension as the value, and the replacement file extension as the
+replacement value. All file extensions must be in lower case and preceded by a "." character.
+(See <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Overwrite Existing</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, any existing PDF versions will be overwritten.  If false, folders with existing PDF versions will be skipped.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Count Limit</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of pages in a rendered document. If a print job is detected which includes more than the specified number of pages, the print
+job will be canceled and the document will be considered a render error.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Pdfs</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, Native Pdf files will be rendered (printed) and saved to the Batch Folder. Otherwise, the Native Pdf file will be left as is.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Multipart Rendering Options</td>
+  </tr>
+  <tr>    <td>Unknown File Type Disposition</td>
+    <td><table>
+   <tr><td>Type: ProblemDisposition, Default: Flag, Replace</td></tr>
+   <tr><td>When rendering multipart objects such as emails or ZIP files, indicates what should happen if an unknown file type is encountered. A combination of the following flags:<br />
+<ul>
+<li><b>Flag</b>: The item will be flagged.
+</li>
+<li><b>Replace</b>: A replacement page will be generated and inserted into the output.
+</li>
+</ul>
+ If no disposition options are enabled, the item will complete successfully with no indication that a problem occurred.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Error Disposition</td>
+    <td><table>
+   <tr><td>Type: ProblemDisposition, Default: Flag, Replace</td></tr>
+   <tr><td>When rendering multipart objects such as emails or ZIP files, indicates what should happen if a rendering error occurs. A combination of the following flags:<br />
+<ul>
+<li><b>Flag</b>: The item will be flagged.
+</li>
+<li><b>Replace</b>: A replacement page will be generated and inserted into the output.
+</li>
+</ul>
+ If no disposition options are enabled, the item will complete successfully with no indication that a problem occurred.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Damaged PDFs As Images</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Allows damaged PDFs which cannot be combined using normal methods to be combined as images. In some cases, it may not be possible to open a damaged PDF and extract the pages, but it may be possible to render the
+document pages to an image. If this option is enabled, when normal PDF merging fails, and attempt will be made to merge the PDF files
+as images. If this option is disabled, an error will be raised when normal merging fails.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>E-Mail Rendering</td>
+  </tr>
+  <tr>    <td>Body Rendering Preference</td>
+    <td><table>
+   <tr><td>Type: BodyRenderingMethod, Default: PreferHTML</td></tr>
+   <tr><td>Indicates how the body of mail messages should be rendered. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: The message body will not be rendered.
+</li>
+<li><b>PreferText</b>: The message body will be rendered as plain text.  If the message does not include plain text, it will be rendered as HTML.
+</li>
+<li><b>PreferHTML</b>: The message body will be rendered as HTML.  If the message does not include HTML, it will be rendered as plain text.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Attachments</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If true, then attachments of mail messages will be rendered.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Render Headers</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, appends a page to the end of the document containing the RFC822 headers.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>HTML Body Rendering</td>
+  </tr>
+  <tr>    <td>Download Image Resources</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If enabled, external image resources used in HTML message bodies will be downloaded as necessary.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Resource Download Timeout</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 5</td></tr>
+   <tr><td>The timeout, in seconds, for downloading external resources.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Text Rendering</td>
+  </tr>
+  <tr>    <td>Page Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a>, Default: (8.5,11)</td></tr>
+   <tr><td>The size, in inches, of each PDF page.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Margins</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Border.htm'>Border</a>, Default: 0.5</td></tr>
+   <tr><td>The size, in inches, of margins around the edge of each page.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Font Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: Courier</td></tr>
+   <tr><td>Specifies the font that will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Font Size</td>
+    <td><table>
+   <tr><td>Type: Single, Default: 10, Range: 8 - 26</td></tr>
+   <tr><td>Specifies the font size that will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Dialog Box Handling</td>
+  </tr>
+  <tr>    <td>Dialog Response Data Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a></td></tr>
+   <tr><td>A <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> used for generating responses to application-raised dialog boxes. When an application displays a dialog box during rendering, a text representation of the dialog box is generated,
+including the title of the dialog box, the text from each control, and the text from each button.  To generate an automated
+response to a dialog box, the <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> specified here must define a <a href='../../Grooper_Node_Types/Data_Extraction/Data_Format.htm'>Data Format</a> which matches text on the dialog box,
+and returns the name of the button to be clicked as a literal value in the Output Format.
+<p>For example, consider a scenario where the following dialog box is showing up in the Grooper log as unresolved:</p><hr /><p style="font-family:Courier New">Microsoft Office Excel<br />
+This workbook contains one or more links that cannot be updated.<br /><br />
+• To change the source of links, or attempt to update values again, click Edit Links.<br />
+• To leave the links as is, click Continue.<br /><br />
+
+{Continue} {Edit Links...}</p><hr /><p>To handle this dialog, a <a href='../../Grooper_Node_Types/Data_Extraction/Data_Format.htm'>Data Format</a> could be create with a Pattern of 'links that cannot be updated' and a literal value
+of 'Continue' in the Output Format. When this application dialog box is encountered, the Data Type will match the text on the dialog, and
+the button named 'Continue' will be automatically clicked.</p>
+(See <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Button Names</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>A list of button names which will be automatically clicked in cases where none of the formats defined in the
+Dialog Response Data Type produce a match. Supports regular expression syntax.  Matching is <u>not</u> case-sensitive.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Timeout Settings</td>
+  </tr>
+  <tr>    <td>Print Job Start Timeout</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 10</td></tr>
+   <tr><td>The timeout period, in seconds, for a print job to start after the printing application is launched.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Output File Polling Timeout</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 5</td></tr>
+   <tr><td>The timeout period, in seconds, for the output file to be generated after the print job has completed printing.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Print Spooler Recycle Delay</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 5</td></tr>
+   <tr><td>The amount of time, in seconds, for the thread to sleep after recycling the print spooler service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Process Close Timeout</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 2</td></tr>
+   <tr><td>The amount of time, in seconds, for the thread to sleep after recycling the print spooler service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Render Printer Info</td>
+  </tr>
+  <tr>    <td>Render Printer Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The path to which the Grooper Printer Driver is configured to output PDF files.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Print Queue</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Displays the print queue for the default printer.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Registered File Types</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Displays a list of file types on the local machine for which a shell print verb is registered. This property is for informational purposes only. At runtime, rendering will rely on Windows file type registrations, therefore it is
+not necessary to configure any file type registrations here.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Object_Types/Border.htm'>Border</a></td></tr>
+<tr><td><a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Shell_Execute_Info.htm'>Shell Execute Info</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

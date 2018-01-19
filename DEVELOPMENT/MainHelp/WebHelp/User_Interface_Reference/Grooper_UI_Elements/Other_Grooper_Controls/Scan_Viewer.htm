@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Scan Viewer</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper UI Elements\nOther Grooper Controls\nScan Viewer");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; <a href=\"../Grooper_UI_Elements.htm\">Grooper UI Elements<\/a> &gt; <a href=\"Code_Editor.htm\">Other Grooper Controls<\/a> &gt; Scan Viewer<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Scan Viewer</h1>
+<p>Provides document scanning capabilities and displays the contents of a [Batch] in a hierarchical folder view in a single control. This is a combination control combining the ScanControl and the BatchViewer controls.
+</p>
+<p><img src="../../../images/ScreenShots/Grooper.Capture.BatchScanControl.jpg" class="ScreenShotBorder" /></p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>[Scan Control]</td>
+     <td>Provides document scanning capabilities.
+</td>
+  </tr>
+  <tr>
+     <td>[Node Drop Down]</td>
+     <td>Provides a drop-down browser for the Grooper Tree Structure, allowing a node to be selected.
+</td>
+  </tr>
+  <tr>
+     <td>[Batch Viewer]</td>
+     <td>Displays the contents of a [Batch] in a hierarchical folder view. The Batch Viewer control is used throughout Grooper to display and edit the contents of a batch.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Shortcut Keys</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Capture.BatchScanControl_Append.png" height="16" width="16" /></td>
+    <td>Append</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+P</td>
+    <td>Starts the scanning process, appending newly-scanned pages to the end of the currently selected folder.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Scope</td>
+    <td>Specifies how many pages should be scanned. Can be one of the following values:<br />
+<ul>
+<li><b>All</b>: Scan all pages in the feeder.
+</li>
+<li><b>Single</b>: Scan a single page only.
+</li>
+<li><b>Fixed</b>: Scan a specific number of pages.
+</li>
+</ul>
+
+</td>
+  </tr>  <tr>    <td>Page Count</td>
+    <td>When Scope is set to Fixed, specifies the maximum number of pages to be scanned.  A value of 0 will scan all pages in the feeder.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Capture.BatchScanControl_Insert.png" height="16" width="16" /></td>
+    <td>Insert</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+I</td>
+    <td>Starts the scanning process, inserting new pages immediately before or after the current selection.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Insert Position</td>
+    <td>Indicates whether scanned pages should be inserted before or after the current selection. Can be one of the following values:<br />
+<ul>
+<li><b>Before</b>: Newly-scanned pages will be inserted before the selected item.
+</li>
+<li><b>After</b>: Newly-scanned pages will be inserted after the selected item.
+</li>
+</ul>
+
+</td>
+  </tr>  <tr>    <td>Scope</td>
+    <td>Specifies how many pages should be scanned. Can be one of the following values:<br />
+<ul>
+<li><b>All</b>: Scan all pages in the feeder.
+</li>
+<li><b>Single</b>: Scan a single page only.
+</li>
+<li><b>Fixed</b>: Scan a specific number of pages.
+</li>
+</ul>
+
+</td>
+  </tr>  <tr>    <td>Page Count</td>
+    <td>When Scope is set to Fixed, specifies the maximum number of pages to be scanned.  A value of 0 will scan all pages in the feeder.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Capture.BatchScanControl_Replace.png" height="16" width="16" /></td>
+    <td>Replace</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+R</td>
+    <td>Replace the currently selected pages with the result of a scan operation.
+
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>Scope</td>
+    <td>Specifies how many pages should be scanned. Can be one of the following values:<br />
+<ul>
+<li><b>All</b>: Scan all pages in the feeder.
+</li>
+<li><b>Single</b>: Scan a single page only.
+</li>
+<li><b>Fixed</b>: Scan a specific number of pages.
+</li>
+<li><b>Selection</b>: Scan only enough pages to replace the current selection.
+</li>
+</ul>
+
+</td>
+  </tr>  <tr>    <td>Page Count</td>
+    <td>When Scope is set to Fixed, specifies the maximum number of pages to be scanned.  A value of 0 will scan all pages in the feeder.
+</td>
+  </tr></table>
+
+</td>
+</tr>
+  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src="../../../images/CommandIcons/Grooper.Capture.BatchScanControl_Scan.png" height="16" width="16" /></td>
+    <td>Scan</td>
+    <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+S</td>
+    <td>Starts the scanning process, appending newly-scanned pages to the end of the batch.
+
+
+</td>
+</tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

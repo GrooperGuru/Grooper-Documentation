@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Field Profile</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nData Element Profile Types\nField Profile");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Data_Element_Profile_Types.htm\">Data Element Profile Types<\/a> &gt; Field Profile<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Field Profile</h1>
+Defines settings for a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> which apply when processing a specific Content Type.
+
+Field Profiles are created on Data Element Profiles tab of a Content Type, and are generally created
+for one of two purposes:
+<ul><li>To override settings for a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> on a particular Content Type.</li><li>To define zonal extraction parameters for a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> on a particular Content Type.  Once an Field Profile has been created,
+zones may be defined as children of the Field Profile.</li></ul>
+
+<br/><br/><b>Inherits from:</b> <a href='Data_Element_Profile_Types.htm'>Data Element Profile</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>ESP™ Extraction Overrides</td>
+  </tr>
+  <tr>    <td>Override Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>When set to true, indicates that the <a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a> defined in the "Extractor" property below should override the field's Value Extractor.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>Defines an extractor which will override the field's Default Extractor.
+(See <a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Zone Processing</td>
+    <td><table>
+   <tr><td>Type: ZoneProcessingMethod, Default: BestConfidence</td></tr>
+   <tr><td>Controls how results are selected when multiple zones are defined. Can be one of the following values:<br />
+<ul>
+<li><b>BestConfidence</b>: The most confident result is selected as the field value.  In the case of OMR zones, the 'most confident'
+is the zone with the highest black pixel ratio.  In the case of OCR zones, the most confident zone is the one with the highest average OCR character confidence.
+</li>
+<li><b>Concatenate</b>: The results for all zones will be concatenated into a single value.  The Separator String property specifies a separator to use between each value.
+Use this setting to extract OMR results when multiple boxes can be checked, or to extract multi-part field values using multiple zones.
+</li>
+<li><b>SingleValue</b>: Use when a single OMR zone is in use, to specify specific return values for positive and negative reads.
+</li>
+</ul>
+ This setting can be used to implement the following zonal extraction use cases:
+
+<p><u>OMR Single Checkbox</u> - Set Zone Processing to 'SingleValue', and define a child <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zone</a> for the checkbox.  When this mode is active, the field value will be
+set to the positive or negative output value specified on the OMR Zone.</p><p><u>OMR Multiple Choice - Select One</u> - Configure the associated <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> with a value list containing one value for each option.  Set Zone Processing to 'BestConfidence',
+and define a child <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zone</a> for each checkbox.  On each OMR zone, set the 'OMR List Value' to reflect the value associated with that checkbox. NOTE: The confidence value of an OMR
+zone is the black pixel ratio of its region on the page.  As such, the zone which is most 'filled in' will be selected as the field value.</p><p><u>OMR Multiple Choice - Select Multiple</u> - Set Zone Processing to 'Concatenate', and define a child <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zone</a> for each checkbox. Specify a positive value for each
+OMR zone, and leave the negative value blank.  The field output value will be a concatenation of the values for all checked zones.  To separate each value with a delimiter, set
+the Separator String property.</p><p><u>Fields Appearing Multiple Times</u> - In cases where a field value appears multiple times on a document, accuracy can be improved by performing zonal extraction
+at each location, and taking the most confident result. Define a child <a href='../Capture_Zone_Types/Field_Zone.htm'>Field Zone</a> for each appearance of the field value, and set Zone Processing to 'Best Confidence'.</p><p><u>Multi-Part Fields</u> - This can handle cases where multiple zones must be OCR'd to capture a field value.  For example, an address where the city, state, and zip are
+located far apart, but need to be captured into a single field as a combined element.  Set Zone Processing to 'Concatenate', and define a child <a href='../Capture_Zone_Types/Field_Zone.htm'>Field Zone</a> for each segment
+of the field.  The Separator String property can be used to specify a delimiter to be used between each value, such as a space character or comma.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Separator String</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>When Zone Processing is set to 'Concatenate', each value will be separated using this delimiter.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Share Registration</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, all zones defined as a child of this profile will share the same set of registration zones. Enable this property to instruct all zones to share registration information.  This is useful, for example, when many <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zones</a> are created within the
+same Extraction Profile. Rather than creating a <a href='../Capture_Zone_Types/Registration_Zone.htm'>Registration Zone</a> for each <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zone</a>, simply create a <a href='../Capture_Zone_Types/Registration_Zone.htm'>Registration Zone</a> for <em>one</em> of the <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zones</a> and
+enable the 'Share Registration' option.  If multiple <a href='../Capture_Zone_Types/Registration_Zone.htm'>Registration Zones</a> are defined on the child <a href='../Capture_Zone_Types/OMR_Zone.htm'>OMR Zones</a>, the registration offset for all successful registration
+zones will be averaged.  
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Field Property Overrides</td>
+  </tr>
+  <tr>    <td>Default Value</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Overrides the default value for the field on this content type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Read Only</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>If set, overrides the Read Only property of the field on this content type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Required</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>If set, overrides the Required property of the field on this content type.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Visible</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>If set, overrides the Visible property of the field on this content type.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

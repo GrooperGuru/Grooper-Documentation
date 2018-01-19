@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Release Notes</title>
+<link rel="stylesheet" href="../../default.css" type="text/css" />
+ <script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nInstallation Guide\nRelease Notes");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Release_Notes.htm\">Installation Guide<\/a> &gt; Release Notes<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Release Notes</h1>
+<p>Welcome to the release notes for Grooper 2.40. &#160;The sections below 
+ will provide release notes for each version of Grooper. </p>
+<h2>Version 2.40</h2>
+<p>The following sections outline the changes made in version 2.40</p>
+<h2>&#160;</h2>
+<h3><b style="mso-bidi-font-weight: normal;"><span style="mso-bidi-font-weight: normal; 
+													 line-height: normal;">Script 
+ Editing</span><span style="line-height: normal;"> Classification</span></b></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">Editing scripts with Visual Studio now requires 
+ Visual Studio 2013 (replacing Visual Studio 2012)</p>
+<h3 class="MsoNormal">Electronic Document Processing</h3>
+<p style="line-height: normal; margin-left: 40px;">Ability to point Grooper 
+ to a repository of documents, render them into format for OCR</p>
+<p style="line-height: normal; margin-left: 40px;">Case Uses:</p>
+<ul style="list-style: disc;">
+	<li><p style="line-height: normal; margin-left: 40px;">Review large 
+	 document repositories for PPI (Private Personal Information), Credit 
+	 Card, SSNs</p></li>
+	<li><p style="line-height: normal; margin-left: 40px;">Search for specific 
+	 types of documents (invoices, sales orders, etc)</p></li>
+	<li><p style="line-height: normal; margin-left: 40px;">Classify files 
+	 and migrate them to another storage location with proper categorization 
+	 </p></li>
+</ul>
+<h3 class="MsoNormal">Batch Processing Redesign</h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">Processing modules have been replaced with Activities</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Previous 
+		 modules were complex and hard to create. Most tasks didn't require 
+		 an entire application to perform</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Activities 
+		 are lightweight - easy to create and maintain and custom activities 
+		 can be created in minutes.</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Custom 
+		 unattended activities replace Processing Scripts</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">Span Batch activity - ability to move/copy objects 
+ from a current batch into a new batch based upon definable criteria</p>
+<h3 class="MsoNormal"><span style="line-height: normal;">Ad-Hoc Task Processing</span></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">Multithreaded execution of any unattended activity 
+ that can be used only with Test batches.</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Replaces 
+		 'OCR Test Batch dialog</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Found 
+		 in Grooper Admin under 'Tools / Process Tasks'</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Improved Batch Process Designer</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p>Real-time validation on all steps in the process</p></li>
+		<li><p>Configure steps from a single interface - no more popup 
+		 windows</p></li>
+		<li><p>Improved documentation on all activity types and their properties.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Intensive Validation on Publish</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">The 
+		 designed UI only validates the Batch Process and its steps</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">During 
+		 publishing, all objects referenced in the activity's settings 
+		 are also validated</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">New Classification Methods</h3>
+<p class="MsoNormal" style="margin-left: 40px;">Content Models can now 
+ be configured for Lexical or Visual Classification</p>
+<p class="MsoNormal" style="margin-left: 40px;">Lexical Classification 
+ </p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Existing training-based classification</p></li>
+		<li><p class="MsoNormal">Now supports rules-based classification 
+		 also, using rules defined on individual document types</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-left: 40px;">Visual classification</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Classifies documents by how they look. 
+		 Uses same ESP™ training/learning mechanisms</p></li>
+		<li><p class="MsoNormal">Does not require full text OCR</p></li>
+		<li><p class="MsoNormal">Extremely fast - can run in real time 
+		 during scanning</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-left: 40px;">Rules-Based Classification</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Available when Lexical classification 
+		 is in use</p></li>
+		<li><p class="MsoNormal">Rules are defined on individual document 
+		 types</p></li>
+		<li><p class="MsoNormal">Rules are specified as Grooper Data Types:</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Positive Data Type - if the positive 
+			 data type produces any results, the document will be classified 
+			 as this type with no further processing</p></li>
+			<li><p class="MsoNormal">Negative Data Type - If the negative 
+			 data type produces any results, this document type will be 
+			 excluded as a candidate </p></li>
+		</ul>
+		<li><p class="MsoNormal">Can be used stand-alone, or to handle 
+		 exceptions with standard lexical classification</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Extract Features IP Command</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Divides 
+		 an image into NxN matrix of cells, and generates 1 feature for 
+		 each cell.</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Features 
+		 are used for training and classification, similar to keyword features 
+		 in lexical classification.</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Features 
+		 can be based on a variety of measures such as cell intensity, 
+		 gradient angle, COG angle, and COG magnitude.</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-left: 40px;">Intensity Features</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Each document layout has its own unique 
+		 signature</p></li>
+		<li><p class="MsoNormal">ROI can be restricted to a specific area 
+		 of the page</p></li>
+		<li><p class="MsoNormal">Grooper does not need much detail unless 
+		 the documents are similar</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-left: 40px;">COG Angle Features</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Measures the angle between the center 
+		 of each dell and the &quot;center of gravity&quot; for the black 
+		 pixels.</p></li>
+		<li><p class="MsoNormal">Essentially, for each cell, Groper is 
+		 learning &quot;which way is the text?&quot;</p></li>
+		<li><p class="MsoNormal">Can also generate features for COG Magnitude.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Scan-Time Classification &amp; Separation</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Using 
+		 visual classification, Grooper can separate &amp; classify documents 
+		 in real time during scanning.</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Works 
+		 on structures documents only</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Eliminates 
+		 the need for separator sheets in cases where each file starts 
+		 with a standard cover page.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Separation Profile Redesign</h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">New 'Separation Method' property.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 margin-left: 40px;">Separation Methods:</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Events 
+		 - Separate using Separation Events</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">ControlSheets 
+		 - Separate using Control Sheets</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">ChangeInValue 
+		 - Separate when a value on the page changes</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">PatternBased 
+		 - Separate when an extractor produces any result on the page</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">EPI 
+		 - Separate documents with numbered pages</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">EspAutoSeparation 
+		 - Use ESP™ automatic separation</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Conditional Execution of IP Commands</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p>Allows IP Command to be executed conditionally</p></li>
+		<li><p>Based on image information and output from previous IP commands</p></li>
+		<li><p>New IP Command: Execute IP Profile</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">New IP Commands</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Execute 
+		 Profile – Executes another IP Profile.</p></li>
+		<li><p class="MsoNormal">Image Analysis – Generates a variety of 
+		 output values useful for conditional execution.</p></li>
+		<li><p class="MsoNormal">Extract Features – Extracts features for 
+		 visual classification.</p></li>
+		<li><p class="MsoNormal">Sticky Note Detection – Detects color 
+		 sticky notes.</p></li>
+		<li><p class="MsoNormal">Measure Entropy – Measures the amount 
+		 of noise in an image.</p></li>
+		<li><p class="MsoNormal">Auto Crop – Border cropping on color images 
+		 with a non-white<span style="mso-spacerun: yes;">&#160;</span>&#160;background 
+		 color.</p></li>
+		<li><p class="MsoNormal">6 New Color Processing Commands: Adjust 
+		 Saturation, Adjust Tint, Brightness Histogram Stretch, Colorize, 
+		 Posterize, Solarize, Extract Channel.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Sticky Note Detection</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Detects 
+		 color sticky notes on documents.</p></li>
+		<li><p class="MsoNormal">Can run in real time during scanning.</p></li>
+		<li><p class="MsoNormal">Flags pages and forces operator to correct 
+		 them.</p></li>
+		<li><p class="MsoNormal">Simply add Sticky Note Detection to the 
+		 scan IP Profile.</p></li>
+		<li><p class="MsoNormal">Color backgrounds can interfere.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Image Analysis Command</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Generates 
+		 output values useful for conditional execution.</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Intensity – Overall darkness or lightness.</p></li>
+			<li><p class="MsoNormal">Entropy – Amount of change / noise.</p></li>
+			<li><p class="MsoNormal">Color – Individual channels for 7 
+			 color models.</p></li>
+		</ul>
+		<li><p class="MsoNormal">Optional automatic page flagging.</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Minimum / maximum intensity.</p></li>
+			<li><p class="MsoNormal">Maximum entropy.</p></li>
+		</ul>
+		<li><p class="MsoNormal">Optional image classification.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Dynamic Expressions</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Simple 
+		 alternative to Data Model scripting.</p></li>
+		<li><p class="MsoNormal">Are defined on Data Field objects.</p></li>
+		<li><p class="MsoNormal">Expression Types:</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Default Value Expression – Provides 
+			 the initial value for the field.</p></li>
+			<ul style="list-style: disc;">
+				<li><p class="MsoNormal">Establishes the initial value 
+				 for a field.</p></li>
+				<li><p class="MsoNormal">Must evaluate to the initial value 
+				 desired for the field.</p></li>
+				<li><p class="MsoNormal">The value produced must be convertible 
+				 to the field’s base type.</p></li>
+				<li><p class="MsoNormal">Provides significantly more flexibility 
+				 than a static list of variables.</p></li>
+			</ul>
+			<li><p class="MsoNormal">Calculate Expression – Evaluates to 
+			 the expected value for the field.</p></li>
+			<ul style="list-style: disc;">
+				<li><p class="MsoNormal">Must evaluate to the expected 
+				 value for the field.</p></li>
+				<li><p class="MsoNormal">Multiple Calculate Modes:</p></li>
+				<ul style="list-style: disc;">
+					<li><p class="MsoNormal">Validate: The expression is 
+					 used to validate the field value.</p></li>
+					<li><p class="MsoNormal">SetIfEmpty: If the field is 
+					 empty, it will be populated with the calculated value. 
+					 Otherwise, the existing value will be validated.</p></li>
+					<li><p class="MsoNormal">AlwaysSet: The field value 
+					 will be always be set to the calculated value.</p></li>
+				</ul>
+				<li><p class="MsoNormal">Includes summing capabilities 
+				 for Sections and Tables.</p></li>
+			</ul>
+			<li><p class="MsoNormal">Validate Expression – Evaluates to 
+			 a boolean which indicates whether the field value is valid.</p></li>
+			<ul style="list-style: disc;">
+				<li><p class="MsoNormal">Validation expressions evaluate 
+				 to a Boolean (true or false) value.</p></li>
+				<li><p class="MsoNormal">If the expression evaluates to 
+				 false, the field is set to error using the Validate Message.</p></li>
+				<li><p class="MsoNormal">If the expression evaluates to 
+				 true, the field is set to OK.</p></li>
+				<li><p class="MsoNormal">Runs after script validation.</p></li>
+			</ul>
+		</ul>
+		<li><p class="MsoNormal">Are dynamically-compiled .Net code, and 
+		 thus have a broad syntax and range of capabilities.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Improved Regular Expression Editor</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">New 
+		 text view displays control characters and dynamically highlights 
+		 matching text.</p></li>
+		<li><p class="MsoNormal">New UI for generating placeholders.</p></li>
+		<li><p class="MsoNormal">Intellisense in editors.</p></li>
+		<li><p class="MsoNormal">Context menu shortcuts for commonly-used 
+		 regular expression elements.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Document Structure Display</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Highlights 
+		 entire structure of document during data review.</p></li>
+		<li><p class="MsoNormal">Speeds process of finding and repairing 
+		 missing data elements.</p></li>
+		<li><p class="MsoNormal">Enabled from toolbar or context menu of 
+		 the Index Panel control.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Rubberband OCR Enhancements</h3>
+<p class="MsoNormal" style="margin-left: 40px;">Section Rubberband OCR</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Re-extracts a section using content from 
+		 a user-specified region.</p></li>
+		<li><p class="MsoNormal">Can use existing full text content or 
+		 OCR the region.</p></li>
+		<li><p class="MsoNormal">Users can now add, remove, or re-order 
+		 instances of multi-instance sections.</p></li>
+		<li><p class="MsoNormal">Use Cases</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Repair extraction problems</p></li>
+			<li><p class="MsoNormal">User-directed extraction</p></li>
+		</ul>
+	</ul>
+</ul>
+<p class="MsoNormal" style="margin-left: 40px;">Table Rubberband OCR</p>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Runs table row extraction on a user-specified 
+		 region.</p></li>
+		<li><p class="MsoNormal">Can use existing full text content or 
+		 OCR the region.</p></li>
+		<li><p class="MsoNormal">Adds any new rows detected to the table.</p></li>
+		<li><p class="MsoNormal">Does not affect existing table rows, and 
+		 will not duplicate them.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Database Export Activity</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Easily 
+		 map hierarchical data structures to database tables.</p></li>
+		<li><p class="MsoNormal">Can export section and table data.</p></li>
+		<li><p class="MsoNormal">Fields above the exported element in the 
+		 Data Model may be mapped also.</p></li>
+		<li><p class="MsoNormal">In the example to the right, we are exporting 
+		 the ‘Line Items’ table.</p></li>
+		<li><p class="MsoNormal">The output will be one database row per 
+		 table row.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Export Fields from Multiple Folder Levels</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Enables 
+		 direct export of multi-level index data without scripting.</p></li>
+		<li><p class="MsoNormal">Supported by <span style="text-decoration: underline; "><u>CMIS 
+		 Action</u></span> and <span style="text-decoration: underline; "><u>Database 
+		 Export</u></span> activities.</p></li>
+		<li><p class="MsoNormal">Enabled by specifying multiple content 
+		 types in export setup.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Batch Transfer Over CMIS</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Secure 
+		 batch transfer over HTTPS.</p></li>
+		<li><p class="MsoNormal">New Grooper CMIS Server exposes a Grooper 
+		 repository over CMIS.</p></li>
+		<li><p class="MsoNormal">New CMIS Batch Transfer activity triggers 
+		 transfer during a batch process.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Dynamic Type Management</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Positions Grooper’s architecture for future 
+		 growth.</p></li>
+		<li><p class="MsoNormal">Divides Grooper’s functionality into organized 
+		 modular libraries.</p></li>
+		<li><p class="MsoNormal">Allows custom types to be loaded and used 
+		 just like built-in Grooper types.</p></li>
+		<li><p class="MsoNormal">Segments the Grooper library into a hierarchy 
+		 of organized namespaces.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Object Libraries</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal">Scripts which allow custom types to be 
+		 created:</p></li>
+		<ul style="list-style: disc;">
+			<li><p class="MsoNormal">Custom Activities</p></li>
+			<li><p class="MsoNormal">Custom IP Commands</p></li>
+			<li><p class="MsoNormal">Custom OCR Engines</p></li>
+			<li><p class="MsoNormal">Custom Capture Devices</p></li>
+			<li><p class="MsoNormal">Custom Services</p></li>
+		</ul>
+		<li><p class="MsoNormal">Processing Scripts are replaced by custom 
+		 activities.</p></li>
+		<li><p class="MsoNormal">Scripted services are replaced by custom 
+		 services.</p></li>
+		<li><p class="MsoNormal">Types created in an object library can 
+		 be used just like native Grooper types.</p></li>
+	</ul>
+</ul>
+<h3 class="MsoNormal">Improved Help System</h3>
+<ul style="list-style: disc;">
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;">Properties 
+		 are documented more consistently and completely.</p></li>
+		<li><p class="MsoNormal">Single source architecture greatly reduces 
+		 effort to maintain accurate help.</p></li>
+		<li><p class="MsoNormal">Same architecture will enable auto-generated 
+		 developer documentation.</p></li>
+		<li><p class="MsoNormal">SDK Documentation included</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal">&#160;</p>
+<h2>Version 2.30</h2>
+<p>The following sections outline the changes made in version 2.30.</p>
+<p>&#160;</p>
+<h3><span style="line-height: normal;"><b style="mso-bidi-font-weight: normal;">CV-Based 
+ Classification</b></span></h3>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal;"><span 
+	 style="line-height: normal;">Created a new classification method based 
+ upon computer vision, allowing real-time automated document classification 
+ and separation while the scanner runs without the need of control sheets.</span></p>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraph" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l0 level1 lfo1;">Added 
+	 Extract Features IP command which extracts visual features used in 
+	 the new ‘Visual’ classification method.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">CMIS Repository Search</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-list: l3 level1 lfo1; 
+			 mso-add-space: auto; text-indent: -.25in; line-height: normal;">Updated 
+	 to allow searches using the following operators:</p></li>
+	<ul style="list-style: disc;">
+		<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; 
+				 margin-right: 0in; margin-left: .25in; margin-bottom: .0001pt; 
+				 mso-add-space: auto; text-indent: -.25in; line-height: normal; 
+				 mso-list: l3 level2 lfo1;">Equals; Greater Than; Less 
+		 Than; Between</p></li>
+		<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; 
+				 margin-right: 0in; margin-left: .25in; margin-bottom: .0001pt; 
+				 mso-add-space: auto; text-indent: -.25in; line-height: normal; 
+				 mso-list: l3 level1 lfo1;"><span style="mso-add-space: auto; 
+													 text-indent: -.25in; 
+													 line-height: normal; 
+													 mso-list: l3 level2 lfo1;">Search 
+		 operation will retain previous search values, only cleared when/if 
+		 another repository is selected</span></p></li>
+	</ul>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l3 level1 lfo1;">Results 
+	 can be sorted by clicking the column headers in the result set. Clicking 
+	 a column header a second time will sort descending.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l3 level1 lfo1;">AX 
+	 DocId sort order preference added to user options. Default order is 
+	 by DocID ascending, and be adjusted from Tools | Options.</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l3 level1 lfo1;">Searches 
+	 can be performed from within Dashboard, with the search results being 
+	 imported into Production batches if desired.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">Misc CMIS additions</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">Modified 
+	 the CmisTreeViewer to highlight the node that is saved in settings</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">Modified 
+	 the CmisTreeViewer to allow limiting by type</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">New 
+	 Grooper CMIS Server makes Grooper CMIS compliant</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">Added 
+	 a new processing script that allows the migration of batches from 
+	 one Grooper instance to another via CMIS</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">Added 
+	 the BatchProcessId property to the Batch object so that Grooper batch 
+	 processes can be changed via CMIS.</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l4 level1 lfo2;">AX 
+	 CMIS Server has Append/Prepend to existing documents, based upon 'Part 
+	 of Unique Key'.</p></li>
+</ul>
+<p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+	 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; text-indent: -.25in; 
+	 line-height: normal; mso-list: l4 level1 lfo2;">&#160;</p>
+<h3><b style="mso-bidi-font-weight: normal;">Configuration – Services</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraph" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;">Handling 
+	 added to dis-allow the installation of a new web service whose connection 
+	 URL is already used by an existing service.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">Batch Info Viewer</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-bottom: .0001pt; mso-add-space: auto; text-indent: -.25in; 
+			 line-height: normal; mso-list: l2 level1 lfo3; margin-left: 24px;">There 
+	 is now a context menu (short cut menu) for the batch info viewer control, 
+	 allowing the user to merge into the Event Log children events, and 
+	 history events.</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .75in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level2 lfo3;">Use 
+	 reasons: When investigating a problem with a batch process, or batch 
+	 process step by allowing the user to see the entire history for a 
+	 batch.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">Hierarchical Data Modeling 
+ (HDM)</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;"><span 
+	 style="mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; 
+	 mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 color: #000000;"><font color="black" >The data extracted for HDM is now displayed as a 
+	 Data Grid instead of individual text boxes. Done to prevent memory 
+	 overloads on documents with extremely long data extractions</font></span></p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;"><span 
+	 style="mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; 
+	 mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 color: #000000;"><font color="black" >When in HDM data extraction area, FieldSense will 
+	 operate within the current TableRow</font></span></p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;"><span 
+	 style="mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; 
+	 mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 color: #000000;"><font color="black" >Header and Total rows are now available in HDM data 
+	 extraction area.<span style="mso-spacerun: yes;">&#160;</span>&#160;Either 
+	 can be enabled or disabled. Select fields to be totaled</font></span></p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;"><span 
+	 style="mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; 
+	 mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 color: #000000;"><font color="black" >Fields can now be configured to display as multiline 
+	 entries if length of contents require it. This can be disabled if 
+	 desired, with limited data being displayed with &quot;…&quot; at the 
+	 end to indicate more information is available.<span style="mso-spacerun: yes;">&#160;</span>&#160;Setting 
+	 will not affect actual data extracted and exported.</font></span></p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l2 level1 lfo3;"><span 
+	 style="mso-ascii-font-family: Calibri; mso-fareast-font-family: 'Times New Roman'; 
+	 mso-hansi-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; 
+	 color: #000000;"><font color="black" >The label for individual DataType entries in the 
+	 HDM data extraction area can be set to display to the left, above, 
+	 or below the DataType entry. The label can also be disabled to prevent 
+	 it from being displayed at all.</font></span></p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">OCR</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraph" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l0 level1 lfo4;">Fixed 
+	 a problem with OCR synthesis where characters would be returned out 
+	 of order under certain circumstances.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">Help Files</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l0 level1 lfo4;">Added 
+	 HTML support to the help area of the Property Grid control.</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l0 level1 lfo4;">Redesigned 
+	 and improved help system.</p></li>
+</ul>
+<h3><b style="mso-bidi-font-weight: normal;">Miscellaneous Enhancements</b></h3>
+<ul style="list-style: disc;">
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Fixed 
+	 an issue with licenses in License Manager expiring incorrectly.</p></li>
+	<li><p class="MsoListParagraphCxSpFirst" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Within 
+	 Dashboard: The 'In Use By' column in Batchlist control has been removed. 
+	 Additional columns named User Name and Machine Name have been added 
+	 in the Task Viewer control for any locked task.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Modified 
+	 the DatabaseManager to correctly upgrade Grooper database versions.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Added 
+	 a new attribute to Grooper Nodes (System) to control the installed 
+	 Grooper 'system' nodes</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Upgraded 
+	 Atalasoft drivers from version 10.4 to 10.6</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Added 
+	 right-click context menu to the Expression Builder, with selections 
+	 for inserting special characters, creating groups, and building placeholders.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Added 
+	 ‘Show&#160;Control Characters’ option to the Text View tab on Data 
+	 Format objects.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Replaced 
+	 ‘Ignore White Space’ property of DataFormat object with an ‘IgnoreControlCharacters’ 
+	 flag set, which allows any type of control character to be suppressed.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Added 
+	 new LengthAscending and LengthDescending ranking methods to the Data 
+	 Type object.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Added 
+	 new Lexical Weighting Options to the Content Model object.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Updated 
+	 IndexPanel control to use a grid rather than individual text boxes 
+	 to represent tables.</p></li>
+	<li><p class="MsoListParagraphCxSpMiddle" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">Updated 
+	 DataModel object with new layout options for the Index Panel.</p></li>
+	<li><p class="MsoListParagraphCxSpLast" style="margin-top: 0in; margin-right: 0in; 
+			 margin-left: .25in; margin-bottom: .0001pt; mso-add-space: auto; 
+			 text-indent: -.25in; line-height: normal; mso-list: l1 level1 lfo5;">User 
+	 interface which comes up when deleting an object with outstanding 
+	 references has been changed so that you can now go to the object in 
+	 Administration</p></li>
+</ul>
+<h2>&#160;</h2>
+<h2>Version 2.1</h2>
+<p>The following sections outline the changes made in version 2.1.</p>
+<h3>New Functionality</h3>
+<ul style="list-style: disc;">
+	<li><p><span style="font-weight: bold;">Control Sheets</span>. &#160;Added 
+	 Control Sheet object type, allowing special control sheets to be created 
+	 in Grooper Administration and used during the scan process to control 
+	 document separation, classification, image cleanup, and ScanOnce™ 
+	 settings while the scanner is moving. &#160;A new batch Control Sheet 
+	 generation tool was also added to the property panel for Content Model 
+	 objects, allowing Grooper control sheets to be generated for each 
+	 Document Type in the model.</p></li>
+	<li><p><span style="font-weight: bold;">Project Accounting</span>. 
+	 &#160;Added Project object type to allow project-based stat tracking 
+	 and cost accounting across multiple batch processes. &#160;A new <a 
+	 href="../Grooper_Concepts/Reporting.htm#Project_Billing">Project Billing 
+	 Report</a> is included which generates project-based cost accounting 
+	 reports. &#160;Batch Processes now have a new property to indicate 
+	 which project they are associated with.</p></li>
+	<li><p><span style="font-weight: bold;">Cascading Zonal Profiles</span>. 
+	 &#160;Zonal data extraction has been expanded so that zonal profiles 
+	 can be created at any level of a Content Model. &#160;This allows 
+	 zonal recognition to be cascaded from broadly-defined zones at the 
+	 model or category level, to more specific, tightly-defined zones at 
+	 the document type and form type level. &#160;This also provides the 
+	 architectural groundwork for storing and using learned or user-created 
+	 zones at any level of the Content Model.</p></li>
+	<li><p><span style="font-weight: bold;">User-Directed Zone Learning</span>. 
+	 &#160;After a successful Rubberband OCR operation in the Index Panel, 
+	 users may direct Grooper to learn the zone. &#160;If the region overlaps 
+	 with an existing zone, the two zones will be combined into one zone 
+	 covering the union of the two regions. Otherwise, a new zone will 
+	 be created for the field. This lays the groundwork for a feature in 
+	 the next version where Grooper will automatically learn zones from 
+	 successful ESP extractions, and use these to backup the ESP data extraction 
+	 process.</p></li>
+	<li><p><span style="font-weight: bold;">Document-Level Field Registration</span>. 
+	 &#160;Added support for document-level Field Registration Zones. &#160;Previously, 
+	 field registration was strictly at the page level - meaning that Grooper 
+	 would search for the registration text within a specific zone on a 
+	 specific page of the document. &#160;With a document-level registration 
+	 zone, no page number or zone is specified. &#160;Grooper simply finds 
+	 the registration text or pattern anywhere within the document, and 
+	 aligns the zone relative to that location. If multiple matches are 
+	 found, an extraction will be attempted on each instance, and all additional 
+	 results will be returned as alternate field candidates.</p></li>
+	<li><p><span style="font-weight: bold;">Content Type Separation</span>. 
+	 &#160;Separation Profiles can now separate based on the presence of 
+	 a specific document type. &#160;For example, this allows Grooper to 
+	 separate batches of medical records based on the presence of a face 
+	 sheet, eliminating the need to insert patch code separators or control 
+	 sheets. &#160;To use this feature, simply train Grooper with an example 
+	 of the document to be used as a separator, and create a separation 
+	 profile based on that document type. &#160;Run an instance of Grooper 
+	 Classification at the page level, followed by an instance of Grooper 
+	 Separation running at the level above the pages, and configured with 
+	 the separation profile created above.</p></li>
+	<li><p><span style="font-weight: bold;">Shape Detection</span>. &#160;A 
+	 new IP Command named Shape Detection allows shapes such as stamps 
+	 and other recognizable sub-images to the detected on pages in a batch. 
+	 &#160;The command can detect the location and orientation of the shape, 
+	 and the results can be used by Separation Profiles to separate documents 
+	 based on the presence of a stamp, or by a Field Zone to align the 
+	 zone over the detected location of the stamp.</p></li>
+</ul>
+<h3>Miscellaneous Enhancements</h3>
+<ul style="list-style: disc;">
+	<li>Added support for regular expression syntax in the Registration 
+	 Text property of a Registration_Zone. &#160;Registration can now be 
+	 based off of any pattern as well as any text string.</li>
+	<li>Added export and print functionality to the Page Viewer control.</li>
+	<li>Added functionality to Separation Profile objects to allow generation 
+	 and printing of the separator sheets defined in the profile, and updated 
+	 the Remove Foldering command to re-insert separator sheets.</li>
+	<li>Added Label Width and Label Alignment properties to all Data Model 
+	 elements.</li>
+	<li>Added a Find command to the main menu of Grooper Administration, 
+	 allowing any object in the <a href="../Grooper_Concepts/Grooper_Tree_Structure.htm">Grooper 
+	 tree structure</a> to be located by name, type, or ID.</li>
+	<li>Added Back and Forward navigation in Grooper Administration.</li>
+	<li>Miscellaneous improvements to data extraction architecture.</li>
+	<li>Updated the Page Viewer control to support more export formats 
+	 for images.</li>
+</ul>
+<h3>Bug Fixes</h3>
+<ul style="list-style: disc;">
+	<li>Fixed rubberband OCR issue where an exception would be thrown if 
+	 the zone was exceptionally small.</li>
+	<li>Fixed an issue with drag and drop in Grooper Administration where 
+	 an exception would be thrown during the DragOver event in certain 
+	 cases. </li>
+	<li>Fixed an issue where the 'Enable Undo' checkbox on the settings 
+	 page of the Image Processing Module was not properly enabled.</li>
+	<li>Fixed an issue where the Event Viewer Tab in Grooper Administration 
+	 was ignoring the Procedure Name filter.</li>
+</ul>
+<h2>Version 2.0</h2>
+<p>Initial version for public release.</p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

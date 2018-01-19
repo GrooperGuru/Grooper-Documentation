@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Field</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nData Element Types\nData Extraction\nData Field");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Data_Element_Types.htm\">Data Element Types<\/a> &gt; <a href=\"Data_Column.htm\">Data Extraction<\/a> &gt; Data Field<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.DataField.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Data Field</h1></td>
+<table>
+</tr>
+</table>
+Represents a field or table cell.
+
+Fields can be children of <a href='Data_Model.htm'>Data Model</a>, <a href='Data_Section.htm'>Data Section</a>, or <a href='Data_Table.htm'>Data Table</a> objects. When added as the
+child of a Data Model or Data Section the object represents a field.  When added as the child of a
+Data Table, the object represents a column in the table.  Fields object define characteristics such as:
+<ul><li>The appearance of the item in the <a href='../../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a>.</li><li>The default ESP™ Extraction settings.  These settings can be overridden on individual content types.</li><li>Basic settings such as whether the field is required, visible, read only, displays a list, etc.</li><li>Validation mask settings which provide detailed control over what the user can enter.</li><li>Database lookup settings.</li></ul>
+
+<br/><br/><b>Inherits from:</b> <a href='../Data_Element_Types.htm'>Data Element</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Value Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a>, Default: String</td></tr>
+   <tr><td>Defines what type of information this field will contain. Any value extracted or entered into the field which cannot be converted to the Value Type will place the field into an error state.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Value Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+   <tr><td>The default extractor to use for this field. The default extractor can be overridden on individual Content Types using a <a href='../../Data_Element_Profile_Types/Field_Profile.htm'>Field Profile</a>. 
+(See <a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Confidence</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 20%, Range: 0% - 100%</td></tr>
+   <tr><td>The minimum confidence required for extracted values when the ESP™ extraction mode is set to 'Context'.  Any extracted field value with a confidence
+lower than this threshold will be set to error, requiring human review during Data Review.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Sub-Element Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Indicates the subelement of the field's data type to be used as the value for this field. For example, the built-in Address <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> defines Address, City, State, and ZIP as subelements.  To capture only the City
+from the address value, select the Address <a href='../../Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> and indicate "City" as the subelement.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Appearance</td>
+  </tr>
+  <tr>    <td>Alignment</td>
+    <td><table>
+   <tr><td>Type: HorizontalAlignment, Default: Left</td></tr>
+   <tr><td>The text alignment for this field. Can be one of the following values:<br />
+<ul>
+<li><b>Left</b>: The object or text is aligned on the left of the control element.
+</li>
+<li><b>Right</b>: The object or text is aligned on the right of the control element.
+</li>
+<li><b>Center</b>: The object or text is aligned in the center of the control element.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Display Width</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 100</td></tr>
+   <tr><td>The width of the field in pixels. Controls the width of the control which represents the field in the <a href='../../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a>.  If the parent element is a <a href='Data_Table.htm'>Data Table</a>, then this
+value specifies the column width.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Error Color</td>
+    <td><table>
+   <tr><td>Type: Color, Default: 255, 192, 192</td></tr>
+   <tr><td>The background color to use when the field has a validation error.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td>Type: Color, Default: Window</td></tr>
+   <tr><td>The background color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Foreground Color</td>
+    <td><table>
+   <tr><td>Type: Color, Default: WindowText</td></tr>
+   <tr><td>The foreground color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Visible</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>Controls whether this item is visible in the user interface.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Position</td>
+    <td><table>
+   <tr><td>Type: LabelPositionEnum, Default: Left</td></tr>
+   <tr><td>Controls how the label for this item is displayed. Can be one of the following values:<br />
+<ul>
+<li><b>Left</b>: The label is displayed to the left of the item.
+</li>
+<li><b>Above</b>: The label is displayed above the item.
+</li>
+<li><b>Below</b>: The label is displayed below the item.
+</li>
+<li><b>None</b>: The label will not be displayed.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Alignment</td>
+    <td><table>
+   <tr><td>Type: ContentAlignment, Default: MiddleLeft</td></tr>
+   <tr><td>The text alignment to be used for the data element's label. Can be one of the following values:<br />
+<ul>
+<li><b>TopLeft</b>: Content is vertically aligned at the top, and horizontally aligned on the left.
+</li>
+<li><b>TopCenter</b>: Content is vertically aligned at the top, and horizontally aligned at the center.
+</li>
+<li><b>TopRight</b>: Content is vertically aligned at the top, and horizontally aligned on the right.
+</li>
+<li><b>MiddleLeft</b>: Content is vertically aligned in the middle, and horizontally aligned on the left.
+</li>
+<li><b>MiddleCenter</b>: Content is vertically aligned in the middle, and horizontally aligned at the center.
+</li>
+<li><b>MiddleRight</b>: Content is vertically aligned in the middle, and horizontally aligned on the right.
+</li>
+<li><b>BottomLeft</b>: Content is vertically aligned at the bottom, and horizontally aligned on the left.
+</li>
+<li><b>BottomCenter</b>: Content is vertically aligned at the bottom, and horizontally aligned at the center.
+</li>
+<li><b>BottomRight</b>: Content is vertically aligned at the bottom, and horizontally aligned on the right.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Behavior</td>
+  </tr>
+  <tr>    <td>FieldSense™</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Field_Sense_Settings.htm'>Field Sense Settings</a></td></tr>
+   <tr><td>Controls whether FieldSense™ is enabled for this field.
+(See <a href='../../Grooper_Object_Types/Field_Sense_Settings.htm'>Field Sense Settings</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Input Mask</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Mask_Settings.htm'>Mask Settings</a>, Default: Enabled</td></tr>
+   <tr><td>Defines input masking settings.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Multi Line</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Multi_Line_Settings.htm'>Multi Line Settings</a>, Default: Enabled</td></tr>
+   <tr><td>Defines multi-line input settings.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Tooltip</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The tooltip to display when a user hovers the mouse over this field. Include user assistance instructions here.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Read Only</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If set to true, the field will not be editable in the user interface.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Required</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If set to true, a value is required in the field.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Requires Validation</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If set to true, this field will require operator review. When Require Validation is enabled, the field will be created in an error state, and will remain in an error state until a user
+enters and leaves the field in the <a href='../../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a>.  This feature is designed to ensure that a field receives human review.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Character Casing</td>
+    <td><table>
+   <tr><td>Type: CharacterCasing, Default: Normal</td></tr>
+   <tr><td>Controls the character casing of this field. Can be one of the following values:<br />
+<ul>
+<li><b>Normal</b>: The case of characters is left unchanged.
+</li>
+<li><b>Upper</b>: Converts all characters to uppercase.
+</li>
+<li><b>Lower</b>: Converts all characters to lowercase.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Preserve Character Data</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether character-level position and confidence data should be saved. If true, character-level detail will be saved with the data element.  If false, only the raw text of the element's value
+will be saved.  As storing this information increases storage requirements and reduces performance, this feature should only
+be enabled for individual data elements in cases where it is needed.
+<p>Character-level data can be useful in custom activities or custom export sceanrios, and is also used in certain built-in
+Grooper activities.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Rubberband OCR Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td></tr>
+   <tr><td>The <a href='../../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a> to use for rubberband OCR.
+(See <a href='../../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Database Lookup</td>
+  </tr>
+  <tr>    <td>Database Table</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td></tr>
+   <tr><td>The <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a> to use for database lookups keyed on this field. To enable database lookups, perform the following steps:
+<ol><li>Create a <a href='../../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a> object and import a reference to the <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a> on which lookups should be performed.</li><li>Set the Database Table property of the key field (i.e. the field which should trigger database lookups) to the imported table reference.</li><li>Use the Mappings tab to map Grooper fields to their corresponding database columns.</li></ol><br />
+Database lookups will now be performed automatically any time the value of the key field is changed or validated.
+
+(See <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Lookup Mappings</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Mappings between columns in the database table and fields at this level of the <a href='Data_Model.htm'>Data Model</a>. The field on which this lookup is defined must be mapped.  If only the key field is mapped, then the database lookup will
+simply validate that the field value is present in the database table.  If an exact match is not present, the field will be set to error.
+<p>If any additional fields are mapped, then these fields will be populated during the database lookup with the corresponding
+values from the matching database row.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Lookup Behavior</td>
+    <td><table>
+   <tr><td>Type: LookupFlags, Default: 0</td></tr>
+   <tr><td>Controls the behavior of the database lookup. A combination of the following flags:<br />
+<ul>
+<li><b>MatchRequired</b>: Indicates that the field should be set to error if no matches are found.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Expressions</td>
+  </tr>
+  <tr>    <td>Default Value Expression</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generates the default value for the field.  The expression must evaluate to a value matching the Value Type of the field. Below are various examples of default value expressions:
+<p>Default to a literal string value:<br /><span style="font-family: Courier">"None"</span></p><p>Default to a literal numeric value:<br /><span style="font-family: Courier">25.00</span></p><p>Default to the current date and time:<br /><span style="font-family: Courier">DateTime.Now</span></p><p>Default to the current date:<br /><span style="font-family: Courier">DateTime.Today</span></p><p>Default to the current user name:<br /><span style="font-family: Courier">Environment.UserName</span></p><p>Default to the current machine name:<br /><span style="font-family: Courier">Environment.MachineName</span></p><p>Default to the MIME type of the document:<br /><span style="font-family: Courier">Folder.NativeMimeType</span></p><p>Default to the name of the Content Type assigned to the document:<br /><span style="font-family: Courier">ContentTypeName</span></p><p>Default to the "Subject" metadata element of a PDF file:<br /><span style="font-family: Courier">DirectCast(Handler, PdfMimeTypeHandler).Subject</span></p><p>Default to the filename associated with a <a href='../../Content_Link_Types/File_System_Link.htm'>File System Link</a>:<br /><span style="font-family: Courier">DirectCast(Link, FileSystemLink).FilePath</span></p><p>Default to the name of the 2nd directory level associated with a <a href='../../Content_Link_Types/File_System_Link.htm'>File System Link</a>:<br /><span style="font-family: Courier">Link.GetPathSegment(1)</span></p><p>Default to the sender associated with a <a href='../../MIME_Type_Handler_Types/Mail_Message.htm'>Mail Message</a>:<br /><span style="font-family: Courier">DirectCast(Handler, MailMimeTypeHandler).From</span></p><p>Generate a unique idenfier:<br /><span style="font-family: Courier">Guid.NewGuid</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Generated Default Value</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>A preview of the default value for this field with variables inserted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Calculate Expression</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Calculates the expected value for a field.  The expression must evaluate to a value matching the Value Type of the field. Sections, Tables, and Fields which are peers in the <a href='Data_Model.htm'>Data Model</a> hierarchy may be referenced by name.  Below are various examples of calculate expressions:
+<p>Should equal the product of the Quantity and Unit Price fields:<br /><span style="font-family: Courier">Math.Round(Quantity * Unit_Price,2)</span></p><p>Should equal the sum of the Subtotal and Sales Tax fields:<br /><span style="font-family: Courier">Subtotal + Sales_Tax</span></p><p>Should equal the Invoice Date plus 30 days:<br /><span style="font-family: Courier">Invoice_Date.AddDays(30)</span></p><p>Should equal the sum of the 'Line Total' column in the 'Line Items' table.:<br /><span style="font-family: Courier">Line_Items.SumOf("Line Total")</span></p><p>Should equal the sum of the 'Total Hours' field from all instances of the 'Semester' section:<br /><span style="font-family: Courier">Semester.SumOf("Total Hours")</span></p><p>Call a static method named CalculateValue() in the 'Utilities' object library:<br /><span style="font-family: Courier">Utilities.CalculateValue(Instance)</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Calculate Mode</td>
+    <td><table>
+   <tr><td>Type: CalculateModeEnum, Default: Validate</td></tr>
+   <tr><td>When a Calculate Expression is provided, this property controls the behavior when the field is calculated. Can be one of the following values:<br />
+<ul>
+<li><b>Validate</b>: The expression is used to validate the field value.
+</li>
+<li><b>SetIfEmpty</b>: If the field is empty, it will be populated with the calculated value.  Otherwise, the existing value will be validated.
+</li>
+<li><b>AlwaysSet</b>: The field value will be always be set to the calculated value.  In combination with a Read Only setting, this represents a pure calculated field.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Calculate Tolerance</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Decimal.htm'>Decimal</a>, Default: 0</td></tr>
+   <tr><td>The amount of tolerance allowed between a field's value and its calculated value. This setting affects the validation performed by a calculate expression.  If this property is set to 0,
+then the field value must exactly match the calculated value.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Validate Expression</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Defines an expression which determines if the field value is valid or invalid.  The expression must evaluate to a Boolean value. Sections, Tables, and Fields which are peers in the <a href='Data_Model.htm'>Data Model</a> hierarchy may be referenced by name.  A return value of True indicates that the value
+of the field is valid, and false indicates that the field value is invalid.  Below are various examples of validate expressions:
+<p>Invoice Total must be greater than 0 and less than 100,000:<br /><span style="font-family: Courier">(Invoice_Total &gt; 0) And (Invoice_Total &lt; 100000)</span></p><p>Invoice Total must be greater than or equal the Subtotal:<br /><span style="font-family: Courier">Invoice_Total &gt; Subtotal</span></p><p>Invoice Date cannot be older than 90 days:<br /><span style="font-family: Courier">DateTime.Now.Subtract(Invoice_Date).TotalDays &lt;= 90</span></p><p>Invoice No cannot contain a tilde (~) character:<br /><span style="font-family: Courier">Not Invoice_No.Contains("~")</span></p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Validate Message</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>An optional custom message to display when the Validate Expression fails.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>List Settings</td>
+  </tr>
+  <tr>    <td>List Values</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>An <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a> containing values for this field, which can include locally-defined lexicon entries as well as references to external lexicons.
+(See <a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Restrict To List</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If set to true, the field only allows values from the list and does not allow free typing.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Field_Sense_Settings.htm'>Field Sense Settings</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Mask_Settings.htm'>Mask Settings</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Multi_Line_Settings.htm'>Multi Line Settings</a></td></tr>
+<tr><td><a href='../../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td></tr>
+<tr><td><a href='../../Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

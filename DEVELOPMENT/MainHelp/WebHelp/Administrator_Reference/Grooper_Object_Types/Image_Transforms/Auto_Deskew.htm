@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Auto Deskew</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nImage Transforms\nAuto Deskew");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Auto_Deskew.htm\">Image Transforms<\/a> > Auto Deskew<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.AutoDeskew.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Auto Deskew</h1></td>
+<table>
+</tr>
+</table>
+Detects the skew angle of an image, and optionally rotates the image to compensate.
+
+This command works by rotating a low-resolution copy of the image through a sequence of angles, and analyzing the image at each orientation to determine
+how straight it is.
+<p>The angles to be tested are defined by Maximum Angle and Angle Precision.  The algorithm will iterate from -Maximum Angle to +Maximum Angle in increments of
+Angle Precision, testing the straightness of the image at each angle.  For example, a 5° maximum angle with 0.25° angle precision will test 41 different
+angles: [-5.00°, -4.75°, -4.50°, ..., 0.00°, ..., 4.50°, 4.75°, 5.00°].  Therefore, a higher maximum angle or lower angle precision will result in more distinct
+angles being tested, reducing the speed of the deskew operation, but increasing its angular detection range or accuracy.</p>
+
+<br/><br/><b>Inherits from:</b> <a href='../../IP_Command_Types/IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Skew Detection</td>
+  </tr>
+  <tr>    <td>Processing Resolution</td>
+    <td><table>
+   <tr><td>Type: ProcessingResolution, Default: Dpi50</td></tr>
+   <tr><td>The image resolution at which skew detection will be performed. Can be one of the following values:<br />
+<ul>
+<li><b>FullResolution</b></li>
+<li><b>Dpi10</b></li>
+<li><b>Dpi15</b></li>
+<li><b>Dpi20</b></li>
+<li><b>Dpi25</b></li>
+<li><b>Dpi30</b></li>
+<li><b>Dpi40</b></li>
+<li><b>Dpi50</b></li>
+<li><b>Dpi75</b></li>
+<li><b>Dpi100</b></li>
+<li><b>Dpi150</b></li>
+<li><b>Dpi200</b></li>
+<li><b>Dpi250</b></li>
+<li><b>Dpi300</b></li>
+</ul>
+ Represents a trade-off between speed and accuracy during skew detection.  Lower resolutions increase speed, at the risk of reduced accuracy.
+Most standard document images can be deskewed accurately at 25 DPI or lower.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Angle</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 5°, Range: 0° - 45°</td></tr>
+   <tr><td>The maximum skew angle to detect. Increasing the maximum skew angle increases processing time, because it increases the total number of distinct angles to be tested.
+Skew angles outside of this range will not be detected.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Angle Precision</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 0.25°, Range: 0° - 1°</td></tr>
+   <tr><td>The precision at which skew angles are detected. Represents the angle increment, in degrees, for each iteration of skew angle detection.  The default is 0.25°, meaning that images
+will be deskewed to a precision of 1/4°.  Decreasing the angle precision increases processing time, as more distinct angles will be tested.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Interpolation Mode</td>
+    <td><table>
+   <tr><td>Type: RotateInterpolationMode, Default: Linear</td></tr>
+   <tr><td>The interpolation mode to use during skew detection. Can be one of the following values:<br />
+<ul>
+<li><b>Linear</b>: Linear interpolation is slower but more accurate than the Nearest Neighbor interpolation. It is faster but less accurate than Cubic Interpolation. Linear
+interpolation sets the destination pixel based on analysis of the surrounding 4 pixels in the source image.
+</li>
+<li><b>Cubic</b>: The most accurate, but slowest interpolation method.  Sets destination pixels based on a 16-pixel neighborhood in the source image.
+</li>
+<li><b>NearestNeighbor</b>: This is the fastest and least accurate interpolation mode.  This simply sets the destination pixel to the value of the closest source pixel.
+</li>
+</ul>
+ This is the interpolation method internally during skew detection.  Affects the speed and accuracy of skew angle detection, but does not impact the
+quality of the final rotated image.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Border Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 0, Range: 0 - 2</td></tr>
+   <tr><td>The size, in inches, of a border around the edge of the image which will be ignored during skew detection. In some cases, edge artifacts may interfere with deskewing.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Skew Correction</td>
+  </tr>
+  <tr>    <td>Detect Only</td>
+    <td><table>
+   <tr><td>Type: <a href='../Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, the skew angle will be detected, but the image will not be rotated to compensate.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Interpolation Mode</td>
+    <td><table>
+   <tr><td>Type: RotateInterpolationMode, Default: Linear</td></tr>
+   <tr><td>The interpolation mode to use when rotating the final image to correct a detected skew angle. Can be one of the following values:<br />
+<ul>
+<li><b>Linear</b>: Linear interpolation is slower but more accurate than the Nearest Neighbor interpolation. It is faster but less accurate than Cubic Interpolation. Linear
+interpolation sets the destination pixel based on analysis of the surrounding 4 pixels in the source image.
+</li>
+<li><b>Cubic</b>: The most accurate, but slowest interpolation method.  Sets destination pixels based on a 16-pixel neighborhood in the source image.
+</li>
+<li><b>NearestNeighbor</b>: This is the fastest and least accurate interpolation mode.  This simply sets the destination pixel to the value of the closest source pixel.
+</li>
+</ul>
+ Controls the quality of the final deskewed image.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The color used to fill in edges exposed by rotation. If no background color is specified, the dominant background color of the image will be used.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Resize</td>
+    <td><table>
+   <tr><td>Type: <a href='../Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, the image will be enlarged so that the entire rotated image fits into the destination image.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Result Type</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>    <th>Member Name</th>
+    <th>Member Type</th>
+    <th>Description</th>
+  </tr>  <tr>    <td>StdDevX</td>
+    <td>Dictionary`2</td>
+    <td>
+</td>
+  </tr>  <tr>    <td>StdDevY</td>
+    <td>Dictionary`2</td>
+    <td>
+</td>
+  </tr></table>
+
+<h2>Auto Deskew Example</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Original Image</th>
+     <th>Result Image</th>
+  </tr>
+  <tr>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.AutoDeskewBasic_Original_Image.jpg' /></td></p></td>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.AutoDeskewBasic_Result_Image.jpg' /></td></p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

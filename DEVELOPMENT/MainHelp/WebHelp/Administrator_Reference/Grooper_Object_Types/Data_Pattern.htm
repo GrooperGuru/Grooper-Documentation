@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Pattern</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nData Pattern");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> &gt; Data Pattern<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Pattern</h1>
+Defines an extractor which returns all instances of data matching a regular expression.
+
+Includes settings which control how the input will be preprocessed, and how extracted values
+will be validated and filtered into a final result set.
+
+<br/><br/><b>Inherits from:</b> Embedded Object<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Mode</td>
+    <td><table>
+   <tr><td>Type: ExtractionMode, Default: RegEx</td></tr>
+   <tr><td>Specifies the extraction mode. Can be one of the following values:<br />
+<ul>
+<li><b>RegEx</b>: Normal regular expression mode.  Finds all instances which are a 100% match for the regular expression.  RegEx mode
+supports the full suntax and feature set of <a href="https://msdn.microsoft.com/en-us/library/az24scfc.aspx" target="_blank">Microsoft
+.Net Framework Regular Expressions</a>.
+</li>
+<li><b>FuzzyRegEx</b>: Fuzzy regular expression mode.  Finds all instances which match the regular expression to a specific percentage of similarity. FuzzyRegEx mode supports <em>most</em> of the syntax and features of RegEx mode, with a handful of exceptions noted below.
+<p>Processing time for FuzzyRegEx is proportional to the <em>perplexity</em> of the regular expression.  Perplexity is the number of possible
+permutations of the pattern, which in turn defines the number of passes which must be made through the content.</p><p>For example, A{1,2}B{1,2}C{1,2} has a perplexity of 2 * 2 * 2 = 8.  (ABC, ABCC, ABBC, ABBCC, AABC, AABCC, AABBC, AABBCC).  If we
+allow each element to range from {1,4}, the perplexity is 4 * 4 * 4 = 64. The expression [0-9]{4} (miles|kilometers) has a perplexity
+of 2.  If we change it to [0-9]{1,5} (miles|kilometers), the perplexity becomes 10. </p><p>Note that FuzzyRegEx supports an option which is unavailable in RegEx.  (?r) will turn on required mode, and (?-r) will turn it
+off.  At the start of a FuzzyRegEx, required mode always defaults to off.  Once turned on, required mode will stay on until it is turned
+off.  This mechanism can be used, for example, to require the start of a new line.</p><p>The following regular expression features are NOT supported in FuzzyRegEx mode:
+<ul><li>Quantifiers: + and *.  Also, the 'few times as possible' construct (i.e. \w*?) is not supported.</li><li>Character Escapes: \a \b \e \nnn \cX \cx \unnnn.</li><li>Character Classes: \p{name} abd \P{name}</li><li>Grouping Constructs: Only basic named and unnamed group constructs are supported </li><li>Other: Anchors other than ^ and $, Backreference Constructs, and Alternation Constructs are unsupported.</li></ul></p>
+</li>
+<li><b>FuzzyList</b>: Fuzzy list mode.  Finds all instances which match an entry in the vocabulary.  In this mode, no Value Pattern is required, since the values to be
+matched are specified as lexicon entries. To configure fuzzy list mode, edit the lookup Lookup Options as follows: (1) define one or more vocabulary entries; and (2) specify
+the required match percentage.  The extractor will return all instances which match an entry in the lexicon to the specified degree of similarity.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Case Sensitive</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Determines whether the regular expression will be evaluated with case-sensitivity on or off.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Preprocessing Options</td>
+    <td><table>
+   <tr><td>Type: <a href='Text_Preprocessor.htm'>Text Preprocessor</a></td></tr>
+   <tr><td>Specifies options for processing text prior to running the regular expression.
+(See <a href='Text_Preprocessor.htm'>Text Preprocessor</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Regional Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='Region_Settings.htm'>Region Settings</a>, Default: (empty)</td></tr>
+   <tr><td>Defines multilanguage options used for data extraction.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Expression Lexicon</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td></tr>
+   <tr><td>A <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> containing @Variables to be used in the regular expression.
+(See <a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Fuzzy Matching Options</td>
+  </tr>
+  <tr>    <td>Minimum Similarity</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Double.htm'>Double</a>, Default: 90%, Range: 1% - 99%</td></tr>
+   <tr><td>When Extraction Mode is set to FuzzyRegEx, specifies the minimum similarity for fuzzy matches.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Match Mode</td>
+    <td><table>
+   <tr><td>Type: FuzzyMatchMode, Default: LeastCost</td></tr>
+   <tr><td>Defines how multiple overlapping matches are resolved when FuzzyRegEx is in use. Can be one of the following values:<br />
+<ul>
+<li><b>LeastCost</b>: Matches the least cost (highest confidence) result.  If the confidence of two results are equal, then the longer result will be matched.  If both results
+also have the same length, then the item appearing first in the text flow will be matched.
+</li>
+<li><b>BestValue</b>: Matches the longest result which is below the minimum confidence.  If two overlapping results have the same length, then the result with the highest
+confidence will be matched.  If both results have equal confidence, then the result appearing first in the text flow will be matched.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Fuzzy Match Weightings</td>
+    <td><table>
+   <tr><td>Type: <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+   <tr><td>When Extraction Mode is set to FuzzyRegEx, specifies a lexicon containing fuzzy match weightings. Fuzzy match weightings allow the cost of swapping characters to be customized, to account for OCR engine confusion between characters which have
+a similar visual appearance.  By default during fuzzy matching, swapping a character has a cost of 1.  This would cause DBGRBBS and DEGREES to have a distance
+of 3, as 3 character swaps are required.  With a word length of 6, this produces a 50% match.  However, if we adjust weightings so that it only costs
+0.25 to convert a B to an E, the distance is now 0.75, producing an 87.5% match.
+<p>Each lexicon entry specifies a cost for converting character A to character B.  Therefore, each entry must contain exactly two characters in the key.  The first character
+represents the OCR character being matched, and is case-sensitive.  The second character represents the lexicon character, and is NOT case-sensitive.  The value indicates
+a percentage of the base cost which should be used.   In the example weightings shown below, the first entry specifies a cost of 0.25 to convert a 1 to an I</p><p>
+1I=0.25<br />
+lI=0.25<br />
+BE=0.25<br />
+EB=0.25<br />
+3B=0.50<br /></p><p>The base cost of swapping characters can be modified by adding a Swap entry as shown below.  It is not necessary to adjust the individual entries when changing this value,
+as the individual entries will be automatically scaled by the base cost. For example, the actual cost of swapping 1 for I will be 0.50 (base cost of 2.0 * 0.25).</p><p>
+Swap=2.0<br />
+1I=0.25<br />
+lI=0.25<br />
+BE=0.25<br />
+EB=0.25<br />
+3B=0.50<br /></p>
+(See <a href='Embedded_Lexicon.htm'>Embedded Lexicon</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Regular Expression</td>
+  </tr>
+  <tr>    <td>Value Pattern</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>A regular expression pattern which identifies data to be extracted. Regular expressions take the general form character set{quantifier}.  For example:
+<ul><li>[0-9]{5} will find all numeric values with a length of 5 characters.</li><li>[0-9]{5,8} will find all numeric values with a length of 5 to 8 characters.</li><li>A-Z{3,12} will find all alpha values with a length of 3 to 12 characters.</li><li>[0-9A-Z]{6} will find all alphanumeric values with a length of 6.</li></ul>
+Grooper's regular expression implementation is based on Microsoft .Net Framework regular expressions, which are extensively discussed
+in Microsoft documentation.  See <a href="https://msdn.microsoft.com/en-us/library/hs600312.aspx" target="_blank">.Net Framework Regular Expressions</a> or
+<a href="https://msdn.microsoft.com/en-us/library/az24scfc.aspx" target="_blank">Regular Expression Language - Quick Reference</a> for a good
+starting point.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Look Ahead Pattern</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>A non-capturing regular expression defining a pattern which must occur immediately before the main pattern.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Look Behind Pattern</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>A non-capturing regular expression defining a pattern which must occur immediately after the main pattern.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Output Format</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>An optional format string which indicates the output format for the data. <p>The output format can contain (a) literal characters and (b) placeholders for groups captured in the regular expression.
+Placeholders take the general form {GroupName}, and can be expanded to include a typecast and format {GroupName:TypeCast:FormatSpecifier}.  Examples:</p><ul><li>{LastName}, {FirstName} - Outputs 'Smith, John' in a case where the value of LastName is 'Smith' and the value of FirstName is 'John'.</li><li>{ItemNo:Integer:0000} - Outputs '0192' in a case where the value of 'ItemNo' is '192'.</li></ul><b>TypeCast</b><p>Valid typecasts include DateTime, Decimal, Double, Integer, and String.  If an extracted value cannot be converted to the specified type, the value
+will be excluded from the output.  Two special typecasts are provided to assist with translation of values captured with the @Number and
+@Alpha variables.  A typecast of 'Number' will convert all alpha characters which resemble numbers to their numeric equivalents.  A typecase of 'Alpha'
+will perform the exact inverse of this operation, converting all numeric characters which resemble alpha characters to their alpha equivalents.</p><b>GroupName</b><p>The GroupName must reference a named group defined within the regular expression.</p><b>FormatSpecifier</b><p>A valid .Net format specifier for the type indicated in the typecast. Please see the following links for complete documentation:</p><ul><li><a href="https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx" target="_blank">Standard DateTime Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx" target="_blank">Custom DateTime Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx" target="_blank">Standard Numeric Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/0c899ak8(v=vs.110).aspx" target="_blank">Custom Numeric Formats</a></li></ul><p>Commonly-Used Format Strings</p><table><tr><th>Type</th><th>Specifier</th><th>Description</th><th>Example</th></tr><tr><td>DateTime</td><td>d</td><td>Short date format</td><td>6/15/2009 </td></tr><tr><td>DateTime</td><td>D</td><td>Long date format</td><td>Monday, June 15, 2009</td></tr><tr><td>DateTime</td><td>f</td><td>Full date/time (short time)</td><td> Monday, June 15, 2009 1:45 PM</td></tr><tr><td>DateTime</td><td>F</td><td>Full date/time (long time)</td><td>Monday, June 15, 2009 1:45:30 PM</td></tr><tr><td>Numeric</td><td>c0</td><td>Currency (Precision 0)</td><td>$123</td></tr><tr><td>Numeric</td><td>c2</td><td>Currency (Precision 2)</td><td>$123.45</td></tr><tr><td>Numeric</td><td>n0</td><td>Number (Precision 0)</td><td>123</td></tr><tr><td>Numeric</td><td>n2</td><td>Number (Precision 2)</td><td>123.45</td></tr></table>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Lookup and Translation</td>
+  </tr>
+  <tr>    <td>Lookup Options</td>
+    <td><table>
+   <tr><td>Type: <a href='Lookup_Options.htm'>Lookup Options</a></td></tr>
+   <tr><td>Defines lookup, translation, and fuzzy matching options for the captured value. To specify lookup options for a named group within the regular expression, use the 'Group Lookup Options' property.
+(See <a href='Lookup_Options.htm'>Lookup Options</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Group Lookup Options</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Defines lookup, translation, and fuzzy matching options for named groups within the regular expression. To specify lookup options for the captured value as a whole, use the 'Lookup Options' property.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Local Vocabulary Entries</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Provides a shortcut to edit the local vocabulary entries stored in Lookup Options.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Output Options</td>
+  </tr>
+  <tr>    <td>Maximum Result Count</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>If set, limits the number of results returned.  A value of zero indicates no limit. In cases where only the first match is needed, setting this property to a value of 1 will improve performance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Remove Control Characters</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, all control characters except SPACE will be converted to SPACE characters. CR/LF pairs will be replaced by a single SPACE character.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Align Output</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If an Output Format is specified and this property is True, then the output value will be re-aligned with the original OCR results. In cases where the Output Format is being using for correction, ensures that literal characters from the output format are lined
+up with their closest OCR counterpart.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Restrict Zone</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If enabled, restricts the bounding zone to the data included in the output format. Restricts the highlight zone for the extracted data to the zone covered by the data elements used in the output format.
+This is useful in situations where surrounding data is used to identify the target data, but is not actually part of the field value.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Result Filter</td>
+    <td><table>
+   <tr><td>Type: <a href='Instance_Filter.htm'>Instance Filter</a></td></tr>
+   <tr><td>Specifies options for filtering output instances.
+(See <a href='Instance_Filter.htm'>Instance Filter</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>nGram Options</td>
+  </tr>
+  <tr>    <td>nGram Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 1, Range: 1 - 5</td></tr>
+   <tr><td>When set to a value greater than 1, enables nGram capture mode.  The output will include all possible cominations of N
+contiguous elements.  "Contigous" is defined as any two matches where the nGram Separator expression matches the text between them. An nGram is a sequence of words: 1 word is a unigram, 2 words are a bigram, 3 words are a trigram, and so on.  Example:
+<ul><li>Input: The quick brown fox jumped over the log.</li><li>Pattern: \w+</li><li>Output - nGram Size 1: The, quick, brown, fox, jumped, over, the, log</li><li>Output - nGram Size 3: The quick brown, quick brown fox, brown fox jumped, fox jumped over, jumped over the, over the log.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>nGram Separator</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>When nGram extraction is active, this regular expression defines allowable separators. If the pattern is blank, the default behavior is to allow nGrams which are separated by 0 characters or 1 space character.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>nGram Format String</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>When nGram extraction is active, defines an optional format string which transforms the final output value. A .Net composite format string where {0} indicates the entire match, {1} indicates nGram element 1, {2} indicates nGram element 2,
+and so on.  For example, an nGram match on "quick brown fox" with the format string "phrase_{1}_{2}_{3}" would produce the output value
+"phrase_quick_brown_fox".
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='Embedded_Lexicon.htm'>Embedded Lexicon</a></td></tr>
+<tr><td><a href='Group_Lookup_Options.htm'>Group Lookup Options</a></td></tr>
+<tr><td><a href='Instance_Filter.htm'>Instance Filter</a></td></tr>
+<tr><td><a href='../Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td></tr>
+<tr><td><a href='Lookup_Options.htm'>Lookup Options</a></td></tr>
+<tr><td><a href='Region_Settings.htm'>Region Settings</a></td></tr>
+<tr><td><a href='Text_Preprocessor.htm'>Text Preprocessor</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

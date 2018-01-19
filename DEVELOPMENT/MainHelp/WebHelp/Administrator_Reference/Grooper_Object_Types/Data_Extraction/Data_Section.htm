@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Section</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nData Extraction\nData Section");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Data_Column.htm\">Data Extraction<\/a> > Data Section<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.DataSection.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Data Section</h1></td>
+<table>
+</tr>
+</table>
+A Data Section allows the content of a document to be subdivided into sections for further processing.  Sections can be used for a variety of purposes, including but not limited to the following:
+<ul><li>To identify and extract repeating sections of a document.</li><li>To break a document down into a hierarchy of sections and subsections, representing the structure of the document's content.</li><li>To reorder text flow in situations where a document has multiple columns of information.</li><li>To simplify data extraction on complex documents.</li></ul>
+
+<br/><br/><b>Inherits from:</b> [Container Data Element]<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Extract Method</td>
+    <td><table>
+   <tr><td>Type: [Section Extract Method]</td></tr>
+   <tr><td>Specifies how section instances will be identified and extracted.
+(See [Section Extract Method])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scope</td>
+    <td><table>
+   <tr><td>Type: [CaptureScope], Default: MultiInstance</td></tr>
+   <tr><td>Defines the cardinality of the section, and determines how multiple extraction results will be handled. Can be one of the following values:<br />
+<ul>
+<li><b>MultiInstance</b>: Defines a multi-instance section.  Each extractor result will produce one section instance.
+</li>
+<li><b>SingleInstance</b>: Only the first matching section instance will be returned.
+</li>
+<li><b>CombineColumns</b>: Combines all matching instances in column read order, and returns a single section instance.  Use this setting to re-order content flow when working with multi-column data.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Separator String</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>The separator to be used between each combined instance when CombineColumns is in use.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Miss Disposition</td>
+    <td><table>
+   <tr><td>Type: [MissDispositionEnum], Default: NoInstance</td></tr>
+   <tr><td>Defines what will happen if section extraction fails. Can be one of the following values:<br />
+<ul>
+<li><b>NoInstance</b>: If the Main Extractor produces no results, then no section instances will be created.
+</li>
+<li><b>DefaultToParent</b>: If the Main Extractor produces no results, a section instance will be created from the source content.
+</li>
+<li><b>BlankInstance</b>: If the Main Extractor produces no results, a blank section instance will be created.
+</li>
+<li><b>UseDefaultZone</b>: If the Main Extractor produces no results, a section instance will be created using the Default Zone.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Default Zone</td>
+    <td><table>
+   <tr><td>Type: [Rectangle], Default: (0,0):(0,0)</td></tr>
+   <tr><td>The default zone to be used when section extraction fails.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>OCR Profile</td>
+    <td><table>
+   <tr><td>Type: [OCR Profile]</td></tr>
+   <tr><td>If an OCR Profile is specified here, once the boundaries of the section have been determined, this zone will be re-OCR'd using this profile.
+(See [OCR Profile])</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Resynthesize</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If enabled, the contents of each section instance will be resynthesized. When this option is enabled, section instances may not span multiple columns or pages.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: [String]</td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Appearance</td>
+  </tr>
+  <tr>    <td>Collapsable</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Indicates whether the section can be collapsed and expanded in the [Index Panel].
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Hide Border</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If set to true, no border will be displayed around the section in user interfaces.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: Control</td></tr>
+   <tr><td>The background color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Foreground Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: ControlText</td></tr>
+   <tr><td>The foreground color for this item.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Visible</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: True</td></tr>
+   <tr><td>Controls whether this item is visible in the user interface.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Position</td>
+    <td><table>
+   <tr><td>Type: [LabelPositionEnum], Default: Left</td></tr>
+   <tr><td>Controls how the label for this item is displayed. Can be one of the following values:<br />
+<ul>
+<li><b>Left</b>: The label is displayed to the left of the item.
+</li>
+<li><b>Above</b>: The label is displayed above the item.
+</li>
+<li><b>Below</b>: The label is displayed below the item.
+</li>
+<li><b>None</b>: The label will not be displayed.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Label Alignment</td>
+    <td><table>
+   <tr><td>Type: [ContentAlignment], Default: MiddleLeft</td></tr>
+   <tr><td>The text alignment to be used for the data element's label. Can be one of the following values:<br />
+<ul>
+<li><b>TopLeft</b>: Content is vertically aligned at the top, and horizontally aligned on the left.
+</li>
+<li><b>TopCenter</b>: Content is vertically aligned at the top, and horizontally aligned at the center.
+</li>
+<li><b>TopRight</b>: Content is vertically aligned at the top, and horizontally aligned on the right.
+</li>
+<li><b>MiddleLeft</b>: Content is vertically aligned in the middle, and horizontally aligned on the left.
+</li>
+<li><b>MiddleCenter</b>: Content is vertically aligned in the middle, and horizontally aligned at the center.
+</li>
+<li><b>MiddleRight</b>: Content is vertically aligned in the middle, and horizontally aligned on the right.
+</li>
+<li><b>BottomLeft</b>: Content is vertically aligned at the bottom, and horizontally aligned on the left.
+</li>
+<li><b>BottomCenter</b>: Content is vertically aligned at the bottom, and horizontally aligned at the center.
+</li>
+<li><b>BottomRight</b>: Content is vertically aligned at the bottom, and horizontally aligned on the right.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Child Element Options</td>
+  </tr>
+  <tr>    <td>Child Label Width</td>
+    <td><table>
+   <tr><td>Type: [Int32], Default: 100, Range: 60 - 300</td></tr>
+   <tr><td>The width to be used for child field labels.  Only applicable when the child item's Label Position property is set to Left.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Show Fields in Grid</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>If enabled, child field will be displayed in a grid in the [Index Panel], rather than as individual controls.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Field Label Background Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: Control</td></tr>
+   <tr><td>The background color to be used for field labels when 'Show Fields in Grid' is enabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Field Label Foreground Color</td>
+    <td><table>
+   <tr><td>Type: [Color], Default: ControlText</td></tr>
+   <tr><td>The foreground color to be used for field labels when 'Show Fields in Grid' is enabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Behavior</td>
+  </tr>
+  <tr>    <td>Preserve Character Data</td>
+    <td><table>
+   <tr><td>Type: [Boolean], Default: False</td></tr>
+   <tr><td>Indicates whether character-level position and confidence data should be saved. If true, character-level detail will be saved with the data element.  If false, only the raw text of the element's value
+will be saved.  As storing this information increases storage requirements and reduces performance, this feature should only
+be enabled for individual data elements in cases where it is needed.
+<p>Character-level data can be useful in custom activities or custom export sceanrios, and is also used in certain built-in
+Grooper activities.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Rubberband OCR Profile</td>
+    <td><table>
+   <tr><td>Type: [OCR Profile]</td></tr>
+   <tr><td>The [OCR Profile] to use for rubberband OCR.
+(See [OCR Profile])</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>[OCR Profile]</td></tr>
+<tr><td>[Rectangle]</td></tr>
+<tr><td>[Section Extract Method]</td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

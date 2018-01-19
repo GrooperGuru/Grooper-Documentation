@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Source Manager Control</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper Configuration\nControls\nData Source Manager Control");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> > <a href=\"../Grooper_Configuration.htm\">Grooper Configuration<\/a> > <a href=\"Data_Source_Manager_Control.htm\">Controls<\/a> > Data Source Manager Control<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Source Manager Control</h1>
+<p>Provides a user interface for configuring database connections to Grooper Repositories.
+</p>
+<p><img src="../../../images/ScreenShots/GrooperConfig.DataSourceManagerControl.jpg" class="ScreenShotBorder" /></p>
+<h2>Toolbar Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Cancel.png" /></td>
+     <td>Cancel</td>
+     <td>Cancel changes.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Initialize.png" /></td>
+     <td>Initialize</td>
+     <td>Initialize a new Grooper repository using the selected repository connection.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Refresh.png" /></td>
+     <td>Refresh</td>
+     <td>Refresh the list of repository connections.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Save.png" /></td>
+     <td>Save</td>
+     <td>Save changes.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Set_Default.png" /></td>
+     <td>Set Default</td>
+     <td>Set the selected repository as the default repository.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Test_Connection.png" /></td>
+     <td>Test Connection</td>
+     <td>Tests the selected connection. Please note that testing a connection will also update the repository name in the list of repositories.  If the name of a Grooper repository is
+changed in Grooper Administration, the name reflected in the list of connections can only be updated by testing the connection in Grooper Configuration.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Tools___Install_SQL_Express.png" /></td>
+     <td>Tools / Install SQL Express</td>
+     <td>Install an instance of SQL Server Express on the local machine.
+</td>
+  </tr>
+</table>
+<h2>Context Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>
+     <th></th>
+     <th>Command Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/GrooperConfig.DataSourceManagerControl.Purge.png" /></td>
+     <td>Purge</td>
+     <td>Deletes all database tables, and clears the file store for the selected repository, returning it to a pre-initialized state. WARNING: This command will delete all data in the selected repository!
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Tesseract OCR</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nTesseract OCR");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../whd_show0.gif","../../whd_show2.gif","../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../whd_hide0.gif","../../whd_hide2.gif","../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../whd_prev0.gif","../../whd_prev2.gif","../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../whd_next0.gif","../../whd_next2.gif","../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", ">", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"Grooper_Object_Types.htm\">Grooper Object Types<\/a> > Tesseract OCR<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Tesseract OCR</h1>
+Tessaract is an open source OCR Engine sponsored by Google.
+
+<ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.</li><li>100% free - no additional licensing required to use.</li><li>Supports 60 languages.</li></ul>
+
+<br/><br/><b>Inherits from:</b> <a href='../OCR_Engine_Types/OCR_Engine_Types.htm'>OCR Engine</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>			Processing Options</td>
+  </tr>
+  <tr>    <td>OCR Engine Mode</td>
+    <td><table>
+   <tr><td>Type: EngineMode, Default: TesseractOnly</td></tr>
+   <tr><td>
+Specifies the OCR engine mode:
+TesseractOnly - Normal paragraph extraction.
+CubeOnly - Extracts the minimal number of paragraphs (either one paragraph per block or only paragraphs which start with a dropped capital).
+TesseractAndCube - This setting is deprecated and will be removed in future versions. Each line is extracted to a separate paragraph formatted with spaces.
+Default -  Each line is extracted to a separate paragraph without space formatting, blank spaces are to separate words only.
+ Can be one of the following values:<br />
+<ul>
+<li><b>TesseractOnly</b></li>
+<li><b>CubeOnly</b></li>
+<li><b>TesseractAndCube</b></li>
+<li><b>Default</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>OCR Language</td>
+    <td><table>
+   <tr><td>Type: OcrLanguage, Default: English</td></tr>
+   <tr><td>
+Specifies the language of the text to Ocr.
+ Can be one of the following values:<br />
+<ul>
+<li><b>English</b></li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Segmentation Mode</td>
+    <td><table>
+   <tr><td>Type: PageSegMode, Default: OsdOnly</td></tr>
+   <tr><td>Specifies the page segmentation mode. Can be one of the following values:<br />
+<ul>
+<li><b>OsdOnly</b>: 
+Orientation and script detection (OSD) only.
+
+</li>
+<li><b>AutoOsd</b>: 
+Automatic page segmentation with orientation and script detection (OSD).
+
+</li>
+<li><b>AutoOnly</b>: 
+Automatic page segmentation, but no OSD, or OCR.
+
+</li>
+<li><b>Auto</b>: 
+Fully automatic page segmentation, but no OSD.
+
+</li>
+<li><b>SingleColumn</b>: 
+Assume a single column of text of variable sizes.
+
+</li>
+<li><b>SingleBlockVertText</b>: 
+Assume a single uniform block of vertically aligned text.
+
+</li>
+<li><b>SingleBlock</b>: 
+Assume a single uniform block of text.
+
+</li>
+<li><b>SingleLine</b>: 
+Treat the image as a single text line.
+
+</li>
+<li><b>SingleWord</b>: 
+Treat the image as a single word.
+
+</li>
+<li><b>CircleWord</b>: 
+Treat the image as a single word in a circle.
+
+</li>
+<li><b>SingleChar</b>: 
+Treat the image as a single character.
+
+</li>
+<li><b>Count</b>: 
+Number of enum entries.
+
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Allowed Characters</td>
+    <td><table>
+   <tr><td>Type: <a href='String.htm'>String</a></td></tr>
+   <tr><td>
+The set of allowed characters for the OCR process.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Image Default Resolution</td>
+    <td><table>
+   <tr><td>Type: <a href='Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>
+Default image resolution dpi.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Merge Broken Characters</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>
+Merge suspect partitions.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>		Image Cleanup</td>
+  </tr>
+  <tr>    <td>Vigorously remove Noise</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>
+Vigorously remove noise.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Do not remove Noise Blobs</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>
+Don't remove noise blobs.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>	Miscellaneous</td>
+  </tr>
+  <tr>    <td>	Unrecognized Character</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>
+Output character for unidentified blobs.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>	Vertical Detection</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>
+Enable vertical detection.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>	Vertical Text Page Mode Force</td>
+    <td><table>
+   <tr><td>Type: <a href='Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>
+Force using vertical text page mode.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>	Vertical Textlines Fraction</td>
+    <td><table>
+   <tr><td>Type: <a href='Double.htm'>Double</a>, Default: 0</td></tr>
+   <tr><td>
+Fraction of textlines deemed vertical to use vertical page mode.
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

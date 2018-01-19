@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Tree Structure</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nGrooper Tree Structure");
+addTocInfo("Getting Started\nGrooper Concepts\nGrooper Tree Structure\nValues");
+
+
+	if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Grooper_Tree_Structure.htm\">Grooper Tree Structure<\/a> &gt; Values<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Grooper Tree Structure<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Tree Structure</h1>
+<p><img src="images/TreeStructure.png" class="ScreenShot" alt="" align="right" border="0" />A Grooper repository is represented as a hierarchical 
+ tree structure. &#160;At the root of this tree structure is the root 
+ node, and immediately below the root is a hierarchy of predefined 
+ folders which organize Grooper objects by functionality, as shown in the 
+ image to the right. &#160;For example, the 'Batch Processing' folder, 
+ as its name implies, contains objects related to the processing of batches, 
+ such as Batches, 
+ Control 
+ Sheets, Batch 
+ Processes, and etc. &#160;The predefined folders at the root of the 
+ Grooper tree structure are read-only, and cannot be modified, moved, or 
+ renamed. &#160;</p>
+<p>The tree structure is made of Grooper 
+ Objects, sometimes called &quot;nodes&quot;, which represent everything 
+ from a page within a batch to an image cleanup profile. &#160;Administrators 
+ configure Grooper by using Grooper Administration to browse and edit objects 
+ in the tree structure. &#160;End users working in batches are also editing 
+ objects in the Grooper tree structure. &#160;</p>
+<p>Each folder in Grooper is designed to store specific object types. &#160;For 
+ example, the 'Data Types' folder will only allow Data 
+ Type objects to be created or stored inside of it, with the exception 
+ that subfolders can be created to organize the Data Types.</p>
+<h2>Grooper Objects</h2>
+<p>All Grooper objects are derived from a common base object definition 
+ which defines the properties and behaviors common to all Grooper objects. 
+ &#160;Some of these properties are as follows:</p>
+<h3>Name</h3>
+<p>All Grooper objects have a name, and the name of an object must be unique 
+ within the scope of the parent object. &#160;Two objects with the same 
+ name may not exist in the same parent folder.</p>
+<h3>Attributes</h3>
+<p>Each Grooper object has a set of attribute flags, defined as follows:</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<th>Attribute Name</th>
+		<th>Attribute Description</th>
+	</tr>
+	<tr>
+		<td>IsReadOnly</td>
+		<td>Indicates that the item cannot be edited by users.</td>
+	</tr>
+	<tr>
+		<td>ContentsReadOnly</td>
+		<td>Indicates that users cannot remove or add child items.</td>
+	</tr>
+	<tr>
+		<td>FullReadOnly</td>
+		<td>This flag is a combination of IsReadOnly and ContentsReadOnly.</td>
+	</tr>
+	<tr>
+		<td>ContentsSorted</td>
+		<td>If set, the contents of the item will be sorted alphabetically 
+		 whenever items are added or renamed.</td>
+	</tr>
+	<tr>
+		<td>System</td>
+		<td>The object is a system object. &#160;System objects are read-only 
+		 and cannot be modified, deleted, or renamed.</td>
+	</tr>
+	<tr>
+		<td>Has ACL</td>
+		<td>Indicates whether an Access Control List has been created for 
+		 the item.</td>
+	</tr>
+</table>
+<h3>Access Control List</h3>
+<p>Every Grooper object can have an Access Control List (ACL) which defines 
+ a list of users and groups, along with the security rights each of those 
+ entities has to the object. &#160;Objects inherit the ACL of their parent 
+ object, unless the parent ACL is overridden by defining an ACL for the 
+ child object. &#160;ACLs are created and managed on the Security Tab of 
+ the Node 
+ Properties Tab.</p>
+<h3>Properties</h3>
+<p>Each Grooper object type has custom properties which apply only to that 
+ type. &#160;For example, a CMIS 
+ Connection object stores a URL, a user name, and a password for the 
+ target CMIS server. &#160;These properties are specific to each object 
+ type, and are documented in the help topics for each object type.</p>
+<h3>Files</h3>
+<p>Every Grooper object has the capability to store any number of files. 
+ &#160;For example, Batch 
+ Page objects store a &quot;primary image&quot; which is used to display 
+ the page, a thumbnail image, and may also store various other versions 
+ of the image created during <a href="Batch_Processing.htm">Batch Processing</a>. 
+ &#160;OCR results extracted from the page are also stored as files on 
+ the Batch Page object. &#160;Scripts are also stored as files on the object 
+ they are associated with. &#160;A list of all files associated with a 
+ node can be viewed using the Files Tab of the Node 
+ Properties Tab.</p>
+<h3><a name="Valuesbc-1"></a><a name="Values">Values</a></h3>
+<p>Each object also has a collection of name-value pairs which are used 
+ by activities and scripts to store information associated with that node. 
+ &#160;For example, the Read Barcodes IP Command stores a serialized list 
+ of BarCodeInstance objects in a value on BatchPage objects named &quot;Barcodes&quot;. 
+ &#160;Third parties are free to store information in the values collection, 
+ but should avoid storing large amounts of data and should avoid using 
+ value names which begin with &quot;Grooper&quot;.</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

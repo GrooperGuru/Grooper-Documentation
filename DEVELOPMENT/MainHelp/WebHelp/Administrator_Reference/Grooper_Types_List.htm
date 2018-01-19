@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Types List</title>
+<link rel="StyleSheet" href="../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Types List");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../Index.htm", "", "&gt;", "Home", "../Start_Page.htm");
+document.write("<a href=\"Administrator_Reference.htm\">Administrator Reference<\/a> &gt; Grooper Types List<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Types List</h1>
+Grooper Objects are the primary base class from which all Grooper Types are derived.
+The following list displays all Grooper Types currently defined in Grooper:
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:1%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <col style='width:24%'/>
+  <tr>    <th></th>
+    <th>Display Name</th>
+    <th>Description</th>
+    <th>Related Types</th>
+  </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Activity_Types/Activity_Types.htm'>Activity</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Activities define work to be performed on objects in a batch, and define settings which control how the work is performed.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Banking.A2iACheckReader.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/A2iA_CheckReader.htm'>A2iA CheckReader</a></td>
+      <td>Performs check recognition using A2iA CheckReader. Runs with folder scope only.  The first page in the folder to be processed must be the front image of a check.  Once A2iA recognition has run, the resulting
+values are stored to the fields indicated in t...</td>
+      <td><a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Microfilm.AnalyzeStrips.Normal.png /></td>
+      <td><a href='Activity_Types/Microfilm_Processing/Analyze_Strips.htm'>Analyze Strips</a></td>
+      <td>Category: Microfilm Processing. Performs a horizontal projection profile on each page of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> (where each <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> is a strip of a microfilm reel) and stores the result
+as text files on the <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> objects. 
+This Activity is intended to be...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Banking.cheque.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Checkify.htm'>Checkify</a></td>
+      <td>Performs custom processing on check and supporting document images for Check21 Batches 
+Finds check image(s) in the batch, moves them to the front of the batch and ensures that each check front image has a back image.
+At the end of the process, two subf...</td>
+      <td><a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ClassifyReview.Normal.png /></td>
+      <td><a href='Activity_Types/Human_Review/Classification_Review.htm'>Classification Review</a></td>
+      <td>Provides a user interface for reviewing the structure of a batch after <a href='../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> and/or <a href="Activity_Types/Object_Application_Execution/Separation.htm">Separation</a>. The user interface for the Classification Review activity includes the <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a> Batch View control.
+</td>
+      <td><a href='Grooper_Object_Types/Classification_Viewer_Settings.htm'>Classification Viewer Settings</a>, <a href='Grooper_Object_Types/Command_Options.htm'>Command Options</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ClassifyFolders.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Classify_Folders.htm'>Classify Folders</a></td>
+      <td>Runs classification on <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>. Attempts to automatically assign a Content Type to each <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  The activity is configured with a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>, which
+defines the settings to be used for classification, and the set of possible conten...</td>
+      <td>Content Type</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ClassifyPages.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Classify_Pages.htm'>Classify Pages</a></td>
+      <td>Runs classification on <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a>. This activity generates a list of <a href='Grooper_Node_Types/Content_Models/Page_Type.htm'>Page Type</a> candidates and stores it to the page object.  This activity must run before <a href="Activity_Types/Object_Application_Execution/Separation.htm">Separation</a> under the
+following circumstances:
+<ul><li>If the configured Separation Profile...</td>
+      <td>Content Type</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisBatchTransfer.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/CMIS_Batch_Transfer.htm'>CMIS Batch Transfer</a></td>
+      <td>Transfers a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> to another Grooper repository, optionally launching the batch into a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>
+in the target repository. This activity is designed to facilitate distributed applications, providing a secure mechanism for moving batches between G...</td>
+      <td><a href='Grooper_Object_Types/CMIS_Folder.htm'>CMIS Folder</a>, <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Microfilm.ConsolidatePages.Normal.png /></td>
+      <td><a href='Activity_Types/Microfilm_Processing/Consolidate_Pages.htm'>Consolidate Pages</a></td>
+      <td>
+Category: Microfilm Processing. A prerequisite for running this Activity is the <a href='Activity_Types/Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a> Activity. After running the <a href='Activity_Types/Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a> Activity, each
+Frame Folder contains either one or two <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a> that were contained within the frame. The Con...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ContentAction.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Content_Action.htm'>Content Action</a></td>
+      <td>Performs an action on the content associated with <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> objects. In the scope of this activity, "content" refers to the sequence of pages assocated with a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  For example,
+this activity can be used to split multipage content into in...</td>
+      <td><a href='IP_Command_Types/Format_Conversion/Auto_Convert.htm'>Auto Convert</a>, <a href='Grooper_Object_Types/Folder_PDF_Generator.htm'>Folder PDF Generator</a>, <a href='Grooper_Object_Types/Folder_TIF_Generator.htm'>Folder TIF Generator</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.CorrectOCR.Normal.png /></td>
+      <td><a href="Activity_Types/Ocr_Processing/Correct_OCR.htm">Correct OCR</a></td>
+      <td>Corrects OCR results for a document, or for a data element on a document. Performs word splitting and OCR spell correction.
+</td>
+      <td><a href='Data_Element_Types/Data_Element_Types.htm'>Data Element</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.DataReview.Normal.png /></td>
+      <td><a href='Activity_Types/Human_Review/Data_Review.htm'>Data Review</a></td>
+      <td>Provides a user interface for entering data or validating the results of <a href='Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a>. The user interface for the Data Review activity includes the <a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a> Batch View control.
+</td>
+      <td><a href='Grooper_Object_Types/Command_Options.htm'>Command Options</a>, <a href='Grooper_Object_Types/Index_Navigator_Settings.htm'>Index Navigator Settings</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.DatabaseExport.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Database_Export.htm'>Database Export</a></td>
+      <td>Exports metadata from a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object to a <a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>. Allows <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a> from multiple levels of a <a href='Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> to be mapped to columns in a <a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>.
+</td>
+      <td>Content Type, <a href='Data_Element_Types/Data_Element_Types.htm'>Data Element</a>, <a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Deduplicate.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/Deduplicate.htm'>Deduplicate</a></td>
+      <td>Detects duplicate documents.
+</td>
+      <td>Content Type</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Microfilm.DetectFrames.Normal.png /></td>
+      <td><a href='Activity_Types/Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a></td>
+      <td>Category: Microfilm Processing. Analyzes horizontal projection profile data stored on a set of microfilm strips to detect microfilm frames and creates one batch folder per frame. 
+A prerequite for running this Activity is the <a href='Activity_Types/Microfilm_Processing/Analyze_Strips.htm'>Analyze Strips</a> Activity. A...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.DetectLanguage.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Detect_Language.htm'>Detect Language</a></td>
+      <td>Detects the dominant language of each <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> of the <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> and marks the page with the appropriate language code identifier.
+</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Microfilm.DetectPages.Normal.png /></td>
+      <td><a href='Activity_Types/Microfilm_Processing/Detect_Pages.htm'>Detect Pages</a></td>
+      <td>Category: Microfilm Processing. For each Frame Folder, this Activity detects and extracts Page Images from the Frame Image and creates child batch page objects under the Frame Folder. 
+A prerequite for running this Activity is the <a href='Activity_Types/Microfilm_Processing/Detect_Frames.htm'>Detect Frames</a> Activit...</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.DisposeBatch.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/Dispose_Batch.htm'>Dispose Batch</a></td>
+      <td>Dispose Batch is an unattended activity designed to dispose of <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a> when they have completed processing through a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>. This activity can delete <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a>, move them to archival, or migrate their contents between Grooper <a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Stores</a>.  Pl...</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Store</a>, <a href='Grooper_Node_Types/Miscellaneous/Folder.htm'>Folder</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ExportDocument.Normal.png /></td>
+      <td><a href='Activity_Types/Export/Document_Export.htm'>Document Export</a></td>
+      <td>Exports document content using an <a href='Export_Provider_Types/Export_Provider_Types.htm'>Export Provider</a>.
+</td>
+      <td><a href='Export_Provider_Types/Export_Provider_Types.htm'>Export Provider</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ExecuteCommand.Normal.png /></td>
+      <td><a href="Activity_Types/Object_Application_Execution/Execute_Command.htm">Execute Command</a></td>
+      <td>Executes a command defined for a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object or <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> object.
+</td>
+      <td><a href='Object_Command_Types/Object_Command_Types.htm'>Object Command</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Extraction.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a></td>
+      <td>Extraction is an unattended activity which performs data extraction on folders in a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity can only run with Folder scope.  The folders to be extracted must be classified, and the assigned content type must have a <a href='Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>.
+</td>
+      <td>Content Type</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.FullTextOcr.Normal.png /></td>
+      <td><a href="Activity_Types/Ocr_Processing/Full_Text_OCR.htm">Full Text OCR</a></td>
+      <td>Applies an <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a> to pages in a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity can only run at page scope.  The selected OCR Profile will be executed against the primary image for each page, and the OCR results
+will be stored to the page object.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ImageProcessing.Normal.png /></td>
+      <td><a href="Activity_Types/Object_Application_Execution/Image_Processing.htm">Image Processing</a></td>
+      <td>Applies an <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to pages in a  <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profiles</a> apply a list of image processing commands to pages in a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, and are used for image cleanup and/or image feature detection.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ImageReview.Normal.png /></td>
+      <td><a href='Activity_Types/Human_Review/Image_Review.htm'>Image Review</a></td>
+      <td>Image Review is an attended activity which provides a user interface optimized for quickly reviewing and/or correcting the
+results of <a href='../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> or <a href="Activity_Types/Object_Application_Execution/Separation.htm">Separation</a>. The user interface for the Image Review activity includes the <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a> and Thum...</td>
+      <td><a href='Grooper_Object_Types/Command_Options.htm'>Command Options</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.LaunchProcess.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/Launch_Process.htm'>Launch Process</a></td>
+      <td>Launches an external process, optionally waiting for that process to terminate.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.LinkAction.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/Link_Action.htm'>Link Action</a></td>
+      <td>Performs an action on the <a href='Content_Link_Types/Content_Link_Types.htm'>Content Link</a> associated with a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</td>
+      <td><a href='Object_Command_Types/Object_Command_Types.htm'>Object Command</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.MimeTypeAction.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/MIME_Type_Action.htm'>MIME Type Action</a></td>
+      <td>Performs an action on the MIME Type Handler associated with a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</td>
+      <td><a href='Object_Command_Types/Object_Command_Types.htm'>Object Command</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.PdfTextExtract.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/PDF_Text_Extract.htm'>PDF Text Extract</a></td>
+      <td>Performs text extraction from PDF files.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Redaction.Normal.png /></td>
+      <td><a href="Activity_Types/Object_Application_Execution/Redaction.htm">Redaction</a></td>
+      <td>Applies a Redaction Profile to pages in a batch. Redaction performs permanent image-based redaction of information based on settings defined in a Redaction Profile.
+</td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a>, <a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.RenderDocument.Normal.png /></td>
+      <td><a href='Activity_Types/Rendering/Render_Document.htm'>Render Document</a></td>
+      <td>Renders the native file version stored on a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> to PDF. <p>Rendering allows electronic documents of any type to be displayed in Grooper, and allows their textual content to be accessed by Grooper activities
+such as <a href='../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a> and Extrac...</td>
+      <td><a href='Grooper_Object_Types/Border.htm'>Border</a>, <a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Shell_Execute_Info.htm'>Shell Execute Info</a>, <a href='Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Review.Normal.png /></td>
+      <td><a href='Activity_Types/Human_Review/Review.htm'>Review</a></td>
+      <td>Provides a configurable user interface for human review of documents or pages in a batch. The <a href='Attended_Client_Types/Attended_Client_Types.htm'>Attended Client</a> provides the user interface for this Activity. This client will display one or more <a href='Batch_View_Types/Batch_View_Types.htm'>Batch View</a> controls as indicated by the
+Activity's confi...</td>
+      <td><a href='Grooper_Object_Types/Batch_View_Configuration.htm'>Batch View Configuration</a>, <a href='Grooper_Object_Types/Command_Options.htm'>Command Options</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Scan.Normal.png /></td>
+      <td><a href='Activity_Types/Attended_Activities/Scan.htm'>Scan</a></td>
+      <td>Scan is an attended activity which provides a user interface optimized for creating batches and scanning/importing pages. Scan is typically the first step in a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>. The user interface for the Scan activity includes the <a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a> Batch View...</td>
+      <td><a href='Grooper_Object_Types/Batch_Scan_Control_Settings.htm'>Batch Scan Control Settings</a>, <a href='Grooper_Object_Types/Command_Options.htm'>Command Options</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Separation.Normal.png /></td>
+      <td><a href="Activity_Types/Object_Application_Execution/Separation.htm">Separation</a></td>
+      <td>Applies a <a href='Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> to pages in a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. This activity will apply the specified <a href='Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a> to all pages which are immediate
+children of the folder being processed.  To separate loose pages in the root of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, run this activit...</td>
+      <td><a href='Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.SpawnBatch.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/Spawn_Batch.htm'>Spawn Batch</a></td>
+      <td>Creates a new batch using a filtered set of level 1 folders from the current batch. <p>Copies one or more level 1 folder objects from the batch to a new batch, optionally launching the new
+batch into a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.  If no items in the batch match the...</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, Content Type, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.TrainLexicon.Normal.png /></td>
+      <td><a href='Activity_Types/Miscellaneous/Train_Lexicon.htm'>Train Lexicon</a></td>
+      <td>Executes an extractor and populates a <a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a> with the results.
+</td>
+      <td><a href='Data_Element_Types/Data_Element_Types.htm'>Data Element</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Banking.ImageCashLetter.Normal.png /></td>
+      <td><a href='Activity_Types/Unattended_Activities/X9.37_Merge.htm'>X9.37 Merge</a></td>
+      <td>Creates a X9.37 Deposit file from a batch of check payment information. Runs at Batch or Folder level Scope. In either case, all child nodes of the basenode are looked at to see if they match the configured
+' document type and if they do they will be pro...</td>
+      <td><a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Batch Objects represent items that can appear in Batches. Currently these are <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a> and <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a>.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchFolder.Normal.png /></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a></td>
+      <td>The Batch Folder object represents a logical folder within the structure of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. A Batch Folder can contain other Batch Folder objects as well as <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a>. A folder which has a Content Type assigned (<a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> or <a href='Grooper_Node_Types/Content_Models/Form_Type.htm'>Form Type</a>) is
+consider...</td>
+      <td><a href='Content_Link_Types/Content_Link_Types.htm'>Content Link</a>, Content Type, <a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a>, <a href='Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchPage.Normal.png /></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a></td>
+      <td>The Batch Page object represents a logical page within a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>. Page objects can be created from individual images, such as during scanning or image file import. Page objects can also be created when an
+electronic document is imported. During electroni...</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a>, <a href='Grooper_Object_Types/Image_Info.htm'>Image Info</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Batch_View_Types/Batch_View_Types.htm'>Batch View</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Batch Views are controls that display Grooper <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a> in the <a href='Attended_Client_Types/Attended_Client_Types.htm'>Attended Client</a> Application.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Displays the contents of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> in a hierarchical folder view. The Batch Viewer control is used throughout Grooper to display and edit the contents of a batch.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Displays the contents of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, along with a list of Classification Candidates.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a></td>
+      <td>Displays <a href='Data_Instance_Types/Document_Instance.htm'>Document Instance</a> objects, providing a user interface for reviewing and editing the data elements associated with a document. The Index Navigator Panel is a hierarchy of Index Panel Control objects, designed to allow editing of the hierarchic...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a></td>
+      <td>Provides document scanning capabilities and displays the contents of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> in a hierarchical folder view in a single control. This is a combination control combining the ScanControl and the BatchViewer controls.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Batch_View_Types/Thumbnail_Viewer.htm'>Thumbnail Viewer</a></td>
+      <td>Provides a thumbnail-based view of a <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Capture_Device_Types/Capture_Device_Types.htm'>Capture Device</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Capture Devices provide connectivity to hardware capture devices, such as ISIS or TWAIN document scanners.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Device_Types/Color_Trac_Capture_Device.htm'>Color Trac Capture Device</a></td>
+      <td>Provides connectivity to ColorTrac large format scanners.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Device_Types/Import_Capture_Device.htm'>Import Capture Device</a></td>
+      <td>Implements a virtual scanner by importing from a file system directory. This scanner device does not use an actual document scanner.  Instead, it is configured with a file system path.  Each time a scan is initiated,
+the contents of the folder are import...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Device_Types/ISIS_Capture_Device.htm'>ISIS Capture Device</a></td>
+      <td>Provides connectivity to document scanners using the ISIS protocol. Properties for an ISIS capture device depend on which device is currently selected.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Device_Types/TWAIN_Capture_Device.htm'>TWAIN Capture Device</a></td>
+      <td>Provides connectivity to document scanners using the TWAIN protocol. Properties for a TWAIN capture device depend on which device is currently selected.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Capture_Protocol_Types/Capture_Protocol_Types.htm'>Capture Protocol</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Capture Protocols define a system of rules governing how Applications communicate with Capture-related devices such as Scanners.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Protocol_Types/Direct.htm'>Direct</a></td>
+      <td>Direct Capture Protocol. 
+This is used to simulate scanning from a device.  For example, scanning may be simulated by importing files from the Windows file system.
+
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Protocol_Types/ISIS.htm'>ISIS</a></td>
+      <td>ISIS Scanner Capture Protocol.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Protocol_Types/TWAIN.htm'>TWAIN</a></td>
+      <td>TWAIN Scanner Capture Protocol.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Capture_Zone_Types/Capture_Zone_Types.htm'>Capture Zone</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Capture Zones associate regions on a page with Data Elements in a <a href='Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, and are used to facilitate zonal data capture.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Zone_Types/Field_Zone.htm'>Field Zone</a></td>
+      <td>Field Zones associate a <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> with a region of the document, and optionally specify zonal extraction parameters. Field Zones can use OCR or barcode recognition to read a field value from the zone.<br /><br />
+They are created as the child of an E...</td>
+      <td><a href='IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Zone_Types/OMR_Zone.htm'>OMR Zone</a></td>
+      <td>OMR Zones are used for Optical Mark Recognition (OMR), to read the state of checkboxes and determine if they are checked or unchecked. OMR Zones work by measuring the black pixel ratio in each zone.<br /><br />
+There are 3 possible configurations for OMR...</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Capture_Zone_Types/Registration_Zone.htm'>Registration Zone</a></td>
+      <td>Registration zones are used to align <a href='Capture_Zone_Types/Field_Zone.htm'>Field Zones</a> and <a href='Capture_Zone_Types/OMR_Zone.htm'>OMR Zones</a> prior to zonal extraction. When documents are scanned, pages shift slightly, causing alignment issues with zonal extraction.  Registration zones correct this
+shift by aligning zones relat...</td>
+      <td><a href='IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a>, <a href='Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Classify Metheds define classification mechanisms which are used in <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Models</a>.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Classify_Method_Types/Lexical.htm'>Lexical</a></td>
+      <td>Classifies documents or pages based on the their text content. Lexical classification measures document similarity by analyzing the frequency of features which appear in the document.
+In the simplest case, a "feature" is an individual word, and training ...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Classify_Method_Types/Visual.htm'>Visual</a></td>
+      <td>Classifies documents or pages based on their visual appearance. Visual classification does not require OCR, and can be used in real time during scanning.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Collation_Provider_Types/Collation_Provider_Types.htm'>Collation Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Collation providers define various methods of processing the the output of a <a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> object.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Array.htm'>Array</a></td>
+      <td>Matches a list of values arranged in horizontal, vertical, or flow order. This collation method searches through the results from all child extractors and locates instances where N or more matches
+are found in an arrangement which matches one of the enab...</td>
+      <td><a href='Layout_Provider_Types/Flow.htm'>Flow</a>, <a href='Layout_Provider_Types/Horizontal.htm'>Horizontal</a>, <a href='Layout_Provider_Types/Vertical.htm'>Vertical</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Combine.htm'>Combine</a></td>
+      <td>Combines instances from child extractors based on the grouping specified in the Group By property.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Individual.htm'>Individual</a></td>
+      <td>Returns all instances from all extractors individually.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Ordered_Array.htm'>Ordered Array</a></td>
+      <td>Finds sequences of values where one result is present for each extractor, in the order in which they appear. For example, assume Extractor 1 matches a name, Extractor 2 matches a street address line, and Extractor 3 matches a city/state/zip line.  Using t...</td>
+      <td><a href='Layout_Provider_Types/Flow.htm'>Flow</a>, <a href='Layout_Provider_Types/Horizontal.htm'>Horizontal</a>, <a href='Layout_Provider_Types/Vertical.htm'>Vertical</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Pattern-Based.htm'>Pattern-Based</a></td>
+      <td>Uses a regular expression to select a sequence of child extractor results. Child extractor results are referenced using @ExtractorName, where ExtractorName is the name of a child (or referenced) extractor.  For example, consider
+the tabular data below, w...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Single_Instance.htm'>Single Instance</a></td>
+      <td>Returns the first instance returned by any extractor and discards all other results.  Useful for implementing a  waterfall
+approach where the most strict format is tried first, follow by less strict formats.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Collation_Provider_Types/Split.htm'>Split</a></td>
+      <td>Splits the input at each instance found by an extractor.  The Split Position property provides a variety of methods for splitting the input.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Content_Link_Types/Content_Link_Types.htm'>Content Link</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Content Links define references to content stored outside of Grooper, such as file on a file system or a document in
+a <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisConnection.Normal.png /></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Defines a reference to a document in a <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>.
+</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FileSystem.Normal.png /></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Defines a link to a file stored on the Windows file system.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.FtpFolder.Normal.png /></td>
+      <td><a href="Content_Link_Types/Ftp_Link.htm">FTP Link</a></td>
+      <td>Defines a reference to a file on an Ftp file server.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Mail.Normal.png /></td>
+      <td><a href='Content_Link_Types/Mail_Link.htm'>Mail Link</a></td>
+      <td>Defines a reference to an email on an IMAP mail server.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.SshImportProvider.Normal.png /></td>
+      <td><a href='Content_Link_Types/SFTP_Link.htm'>SFTP Link</a></td>
+      <td>Defines a reference to a file on a SSH/SFTP file server.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Data_Element_Types/Data_Element_Types.htm'>Data Element</a></b></td><td colspan='2' style='background-color:#E0E0FF';>
+Represents an element of data.
+
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataColumn.Normal.png /></td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a></td>
+      <td>Represents a column in a <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a>.
+</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Field_Sense_Settings.htm'>Field Sense Settings</a>, <a href='Grooper_Object_Types/Mask_Settings.htm'>Mask Settings</a>, <a href='Grooper_Object_Types/Multi_Line_Settings.htm'>Multi Line Settings</a>, <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataField.Normal.png /></td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a></td>
+      <td>Represents a field or table cell. Fields can be children of <a href='Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>, or <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> objects. When added as the
+child of a Data Model or Data Section the object represents a field.  When added as the child of a
+Data Table, the objec...</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Field_Sense_Settings.htm'>Field Sense Settings</a>, <a href='Grooper_Object_Types/Mask_Settings.htm'>Mask Settings</a>, <a href='Grooper_Object_Types/Multi_Line_Settings.htm'>Multi Line Settings</a>, <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataModel.Normal.png /></td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a></td>
+      <td>Defines the data elements for a content type. <p>A Data Model is a hierarchy of <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>, <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a>, <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a>, and <a href='Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a> objects which define the internal data structure
+of a content type.  A Data Model can be as simple as a list of ...</td>
+      <td><a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataSection.Normal.png /></td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a></td>
+      <td>A Data Section allows the content of a document to be subdivided into sections for further processing.  Sections can be used for a variety of purposes, including but not limited to the following:
+<ul><li>To identify and extract repeating sections of a do...</td>
+      <td><a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Section_Extract_Method_Types/Section_Extract_Method_Types.htm'>Section Extract Method</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataTable.Normal.png /></td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a></td>
+      <td> Data Table objects are used to describe tabular data for the purposes of <a href='../Getting_Started/Grooper_Concepts/Data_Extraction.htm'>Data Extraction</a> and <a href='Activity_Types/Human_Review/Data_Review.htm'>Data Review</a>.
+The columns in the table are defined by adding child <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> elements to a Data Table object.
+</td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a>, <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>, <a href='Table_Extract_Method_Types/Table_Extract_Method_Types.htm'>Table Extract Method</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Data_Element_Profile_Types/Data_Element_Profile_Types.htm'>Data Element Profile</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Data Element Profiles store settings for Data Elements such as sections, tables, and fields on a Content Type.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Data_Element_Profile_Types/Field_Profile.htm'>Field Profile</a></td>
+      <td>Defines settings for a <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> which apply when processing a specific Content Type. Field Profiles are created on Data Element Profiles tab of a Content Type, and are generally created
+for one of two purposes:
+<ul><li>To override settings for a ...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Data_Element_Profile_Types/Section_Profile.htm'>Section Profile</a></td>
+      <td>Defines settings for a <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a> which apply when processing a specific Content Type.
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Section_Extract_Method_Types/Section_Extract_Method_Types.htm'>Section Extract Method</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Data_Element_Profile_Types/Table_Profile.htm'>Table Profile</a></td>
+      <td>Defines settings for a <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> which apply when processing a specific Content Type.
+</td>
+      <td><a href='Table_Extract_Method_Types/Table_Extract_Method_Types.htm'>Table Extract Method</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Grooper_Object_Types/Data_Instance.htm'>Data Instance</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Defines an instance of text data on a document.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataModel.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Document_Instance.htm'>Document Instance</a></td>
+      <td>Represents the entire content of a document, and serves as the root of the <a href='Grooper_Object_Types/Data_Instance.htm'>DataInstance</a> hierarchies generated by the <a href='Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity. DocumentInstance objects may have <a href='Data_Instance_Types/Field_Instance.htm'>FieldInstance</a>, <a href='Data_Instance_Types/Table_Instance.htm'>TableInstance</a>, and <a href='Data_Instance_Types/Section_Instance.htm'>SectionInstance</a> objects as children.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FieldClass.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Field_Class_Instance.htm'>Field Class Instance</a></td>
+      <td>Represent a DataInstance captured by a <a href='Grooper_Node_Types/Data_Extraction/Field_Class.htm'>Field Class</a>.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataField.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Field_Instance.htm'>Field Instance</a></td>
+      <td>Represents the value of a <a href='Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> object.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataSection.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Section_Instance.htm'>Section Instance</a></td>
+      <td>Represents the value of a <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a> object.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.TableCellInstance.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Table_Cell_Instance.htm'>Table Cell Instance</a></td>
+      <td>Represents the value of a table cell. TableCellInstance objects exist as children of a <a href='Data_Instance_Types/Table_Row_Instance.htm'>TableRowInstance</a> object, and do not have children.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataTable.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Table_Instance.htm'>Table Instance</a></td>
+      <td>Represents an instance of a <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> object on a document. A TableInstance exists as the child of a <a href='Data_Instance_Types/Document_Instance.htm'>DocumentInstance</a> or <a href='Data_Instance_Types/Section_Instance.htm'>SectionInstance</a>, and contains one or more <a href='Data_Instance_Types/Table_Row_Instance.htm'>TableRowInstance</a> objects as children.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.TableRowInstance.Normal.png /></td>
+      <td><a href='Data_Instance_Types/Table_Row_Instance.htm'>Table Row Instance</a></td>
+      <td>Represents a table row in a <a href='Data_Instance_Types/Table_Instance.htm'>TableInstance</a>.   TableRowInstance objects exist as children of <a href='Data_Instance_Types/Table_Instance.htm'>TableInstance</a> object, and contain one or more TableCellInstance objects - one for each child TableColumn defined by the <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>DataTable</a>.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Data_Instance_Types/Text_Line_Instance.htm'>Text Line Instance</a></td>
+      <td>Represents a line of text.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Database_Connection_Settings_Types/Database_Connection_Settings_Types.htm'>Database Connection Settings</a></b></td><td colspan='2' style='background-color:#E0E0FF';></td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Database_Connection_Settings_Types/ODBC_Connection_Settings.htm'>ODBC Connection Settings</a></td>
+      <td>Defines a connection to an ODBC data source.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+      <td>Repository connections define the parameters for connecting to a Grooper database.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Database_Connection_Settings_Types/Sql_Connection_Settings.htm'>Sql Connection Settings</a></td>
+      <td>
+Allows selection of a SQL Server instance name in a PropertyGrid.
+
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Edge_Adjustment_Types/Edge_Adjustment_Types.htm'>Edge Adjustment</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Defines a mechanism for adjusting edges of a region in <a href='Section_Extract_Method_Types/Geometric.htm'>Geometric</a> section extraction.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Edge_Adjustment_Types/Absolute.htm'>Absolute</a></td>
+      <td>Adjusts the edge to a specific absolute position.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Edge_Adjustment_Types/Anchor.htm'>Anchor</a></td>
+      <td>Adjusts the edge relative to a text element on the document.
+</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Edge_Adjustment_Types/Edge_of_Page.htm'>Edge of Page</a></td>
+      <td>Adjusts the edge to the full bounds of the page.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Export_Provider_Types/Export_Provider_Types.htm'>Export Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Export providers define export connectivity to external systems such as file systems, content management repositories, mail servers, and etc.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisConnection.Normal.png /></td>
+      <td><a href='Export_Provider_Types/CMIS_Export.htm'>CMIS Export</a></td>
+      <td>Provides export connectivity to CMIS-compliant content management platforms. CMIS Export relies on settings defined by <a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a> objects.  As such, it is important (a) that any
+folder to be exported has a Content Type assigned; and (b) that t...</td>
+      <td><a href='Grooper_Object_Types/CMIS_Folder.htm'>CMIS Folder</a>, <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FileSystem.Normal.png /></td>
+      <td><a href='Export_Provider_Types/File_System_Export.htm'>File System Export</a></td>
+      <td>Provides export connectivity to the Windows file system.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.FtpFolder.Normal.png /></td>
+      <td><a href="Export_Provider_Types/Ftp_Export.htm">FTP Export</a></td>
+      <td>Provides export connectivity over the Ftp and Ftps protocols.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Mail.Normal.png /></td>
+      <td><a href='Export_Provider_Types/Mail_Export.htm'>Mail Export</a></td>
+      <td>Provides export connectivity to IMAP mail servers. Only documents with a MIME type of message/rfc822 may be exported using this provider.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.SshImportProvider.Normal.png /></td>
+      <td><a href='Export_Provider_Types/SFTP_Export.htm'>SFTP Export</a></td>
+      <td>Provides export connectivity over the SFTP protocol.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Grooper Nodes are objects which appear in the <a href='../Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm'>Grooper Tree Structure</a>.  Every object at every level of the tree structure, including folders,
+are considered Grooper Nodes.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Batch.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td>
+      <td>A Batch is a hierarchy of folders and pages which serves as the fundamental unit of capture in Grooper. Batches can exist in one of two environments: Test or Production.  Test batches are only visible to administrators working in Grooper Administration.  ...</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchProcess.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a></td>
+      <td>A Batch Process defines a list of steps through which batches will be processed.  Batch Processes are assigned to batches when they are created, and can be applied to existing batches in <a href='../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>
+and <a href='../User_Interface_Reference/Grooper_Dashboard.htm'>Grooper Dashboard</a>. Batch Processes m...</td>
+      <td>Content Type, <a href='Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchProcess.OverlayOnFolder.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Folder.htm'>Batch Process Folder</a></td>
+      <td>Represents the 'Batch Processing  / Processes' folder found in the root of a Grooper repository.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchProcessStep.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td>
+      <td>Represents a logical step in a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>. A Batch Process Step defines an activity to be performed as part of a batch process.  Activities fall into two broad categories:
+<ul><li><b>Attended Activities</b> - Activities which require a human operato...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchProcessingFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Processing_Folder.htm'>Batch Processing Folder</a></td>
+      <td>Represents the 'Batch Processing' folder found in the root of a Grooper repository.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.BatchesFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batches_Folder.htm'>Batches Folder</a></td>
+      <td>A Batches Folder object is a folder which contains <a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batches</a>.  Any folder under the 'Batch Processing • Batches' node is considered a Batches Folder. This object does not have any configurable properties or
+functional use other than to display a user int...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisConnection.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a></td>
+      <td>A CMIS Connection object represents a connection to CMIS-compliant content server.
+For a detailed overview of CMIS, please refer to the <a href='../Getting_Started/Grooper_Concepts/Content_Management_System_Connectivity.htm'>Content Management System Connectivity</a> topic.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisContentType.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a></td>
+      <td>A CMIS Content Type represents a content type defined in a <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>.  These objects are not
+created directly, but created when content types are imported from the property panel of a CMIS Repository object.
+CMIS Content Types are used to create...</td>
+      <td><a href='Grooper_Object_Types/CMIS_Folder.htm'>CMIS Folder</a>, Content Type, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisRepository.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a></td>
+      <td>A CMIS Repository object represents a logical repository managed by a CMIS server.
+CMIS Repository objects are not created directly - they are created by importing a repository
+using the property panel of a <a href='Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a> object.  For a detailed over...</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ContentCategory.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Content_Category.htm'>Content Category</a></td>
+      <td>A Content Category is a container for other Content Category and <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> objects within a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>. Content Categories are used to organize the <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Types</a> in a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> into a hierarchy.  This could be done for
+pure organizati...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ContentModel.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a></td>
+      <td>A Content Model defines the taxonomy of a document set, in terms of the <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Types</a> it contains, and the Data Elements which appear on
+each document type. Content Models and the Content Types they contain also store classification training data,...</td>
+      <td><a href='Classify_Method_Types/Classify_Method_Types.htm'>Classify Method</a>, Content Type</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.ControlSheet.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Control_Sheet.htm'>Control Sheet</a></td>
+      <td>
+A Control Sheet Object is a special page that can be printed out and inserted into stacks of pages that are to be scanned to dynamically perform various functions within
+Grooper as the pages are scanned.  
+ When a Control Sheet is scanned, it changes ...</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, Content Type, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataConnection.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td>
+      <td>A Data Connection object represents a connection to a database, storing all information
+necessary to access the database.  These objects provide a connection basis for <a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a> objects,
+and are also used directly in scripts to avoid storing auth...</td>
+      <td><a href='Database_Connection_Settings_Types/Database_Connection_Settings_Types.htm'>Database Connection Settings</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataExtractionFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Data_Extraction/Data_Extraction_Folder.htm'>Data Extraction Folder</a></td>
+      <td>Represents the 'Data Extraction' folder found in the root of a Grooper repository.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataFormat.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Data_Extraction/Data_Format.htm'>Data Format</a></td>
+      <td> Data Format objects are children of <a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a> objects, and represent a distinct format for the Data Type.
+For example, a date could appear on one document as 05/17/2013, and as May 17, 2013 on another document.
+Each of these formats is defined by a D...</td>
+      <td><a href='Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataType.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a></td>
+      <td>A Data Type defines extraction logic for a distinct type of data, such as a field value or a table row.  Each data type defines one or more
+extractors, along with settings which control how the extractor results are transformed into a final result set. A...</td>
+      <td><a href='Collation_Provider_Types/Collation_Provider_Types.htm'>Collation Provider</a>, <a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a>, <a href='Grooper_Object_Types/Data_Pattern.htm'>Data Pattern</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a>, <a href='Grooper_Object_Types/Instance_Filter.htm'>Instance Filter</a>, <a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DatabaseTable.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td>
+      <td>A Database Table object represents an externally-stored database table which can be queried from Grooper. Database Table objects do not store a copy of the data, but rather provide a placeholder object which can be used to
+reference the database table an...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DocumentType.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td>
+      <td>A Document Type is an object in a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> which represents a distinct type of document, such as an invoice or contract.  Document Types
+are ultimately assigned to documents in a batch in a process called <em>classification</em> Document Types are...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FieldClass.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Data_Extraction/Field_Class.htm'>Field Class</a></td>
+      <td>A Field Class is a trainable binary classifier, used for locating specific instances of a data pattern on a document. Field Classes are useful when a data value appears more than one time on a document, and it is necessary to examine the context
+of each ...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.FileStore.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Store</a></td>
+      <td>A File Store defines a storage location where Grooper can store content files associated with nodes in the Grooper tree structure. Files are stored for a variety of purposes in Grooper, including but not limited to:
+<ul><li>Scanned and imported images ar...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Folder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Miscellaneous/Folder.htm'>Folder</a></td>
+      <td>Represents a folder object in which objects can be stored.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FormType.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Form_Type.htm'>Form Type</a></td>
+      <td>A Form Type represents a variation or version of a <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.GrooperRoot.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Miscellaneous/Grooper_Root.htm'>Grooper Root</a></td>
+      <td>Represents the root node of a Grooper repository. All <a href='Grooper_Object_Types/Grooper_Object_Types.htm'>Grooper Object Types</a> in a Grooper repository are stored as children or descendants of the root node. The root node also stores several settings which
+apply to the repository.
+</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Store</a>, <a href='Grooper_Node_Types/Infrastructure/License_Server.htm'>License Server</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.InfrastructureFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Infrastructure_Folder.htm'>Infrastructure Folder</a></td>
+      <td>Represents the 'Infrastructure' folder found in the root of a Grooper repository.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.IpGroup.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Group.htm'>IP Group</a></td>
+      <td>An IP Group is a container object which is used to create hierarchy and within an <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>.  IP Groups may contain <a href='Grooper_Node_Types/Profiles/IP_Step.htm'>IP Step</a> or other IP Group objects as children. Groups can be used for a variety of purposes:
+<ul><li>To organize complex IP Profiles....</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.IpProfile.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+      <td>An IP Profile defines a sequence of image processing operations which are to be applied to an image. IP Profiles can have <a href='Grooper_Node_Types/Profiles/IP_Step.htm'>IP Step</a> and <a href='Grooper_Node_Types/Profiles/IP_Group.htm'>IP Group</a> objects as children.  A simple IP Profile might be a sequence of <a href='Grooper_Node_Types/Profiles/IP_Step.htm'>IP Step</a> objects,
+each specifying an IP ...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.IpStep.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Step.htm'>IP Step</a></td>
+      <td>Represents an individual image processing operation in an <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>.  Specifies an <a href='IP_Command_Types/IP_Command_Types.htm'>IP Command</a> to execute, along with options which control
+how the step behaves.
+</td>
+      <td><a href='IP_Command_Types/IP_Command_Types.htm'>IP Command</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Lexicon.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+      <td>A Lexicon is a dictionary which stores a list of keys or key-value pairs which are indexed for high-speed lookup. Lexicons are used throughout Grooper to store lists of words, phrases, field values, translations, weightings, and other information.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a>, <a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>, <a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.LicenseServer.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/License_Server.htm'>License Server</a></td>
+      <td>A License Server object is used to store connection information for a running instance of <a href='../Getting_Started/Grooper_Concepts/Grooper_License_Server.htm'>Grooper License Server</a>. That information is made available to Grooper processes which need to check out licenses.  While multiple license server
+connections can b...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Machine.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Machine.htm'>Machine</a></td>
+      <td>The Machine object represents the a server or workstation in the Grooper Enterprise. Selecting a Machine in the
+<a href='Grooper_Node_Types/Infrastructure/Machines_Folder.htm'>Machines Folder</a> will display a panel with a performance section, a Services Installed section and a Details section.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Machines_Folder.htm'>Machines Folder</a></td>
+      <td>The Machines Folder provides a consolidated list of servers and workstation in the infrastructure,
+as well as a consolidated list of service instances installed.  From this panel, critical statistics such as
+processor usage, disk space usage, and memory...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.ObjectLibrary.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Object_Library.htm'>Object Library</a></td>
+      <td>An Object Library is a .Net library of custom objects to be used in Grooper.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.OCR.OcrProfile.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td>
+      <td>Defines settings which control how OCR is performed.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Grooper_Object_Types/Size_Ex_F.htm'>Size Ex F</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.PageType.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Page_Type.htm'>Page Type</a></td>
+      <td>A Page Type represents a logical page within a <a href='Grooper_Node_Types/Content_Models/Form_Type.htm'>Form Type</a>. A Form Type with 5 pages will contain 5 Page Types as children.
+Page Types are not configured manually by users, but created internally by Grooper as documents are trained into a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>...</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ProfilesFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/Profiles_Folder.htm'>Profiles Folder</a></td>
+      <td>Represents the 'Global Resources' folder found in the root of a Grooper repository.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Project.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a></td>
+      <td>A Project is defined as a collection of billing items, and can be assigned to <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Processes</a>. Projects are necessary when using the system Project Billing <a href='Report_Types/Report_Types.htm'>Report</a>. The Project Billing report will calculate a total for each billing item's statistic and...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Reporting.Report.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Reports/Report_Instance.htm'>Report Instance</a></td>
+      <td>Represents a named configuration of a Grooper Report. Report Instances are used by applications such as <a href='../User_Interface_Reference/Grooper_Dashboard.htm'>Grooper Dashboard</a> and <a href='../User_Interface_Reference/Grooper_Kiosk.htm'>Grooper Kiosk</a> to display reports. For example, consider the
+System Report 'Scan Volume' which contains properties named Star...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.ScannerProfile.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/Scanner_Profile.htm'>Scanner Profile</a></td>
+      <td>Defines a connection to a capture device, and settings which control how the device operates. Scanner Profiles are typically created and edited using the <a href='../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm'>Scan Control</a> - a component of the Batch Scan Control used by the <a href='Activity_Types/Attended_Activities/Scan.htm'>Scan</a>
+activity.  To create, ed...</td>
+      <td><a href='IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>, <a href='Protocol_Settings_Types/Protocol_Settings_Types.htm'>Protocol Settings</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.ScannerProfileFolder.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/Scanner_Profile_Folder.htm'>Scanner Profile Folder</a></td>
+      <td>The Scanner Profiles Folder stores <a href='Grooper_Node_Types/Profiles/Scanner_Profile.htm'>Scanner Profile</a> objects created by the <a href='../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm'>Scan Control</a>, and provides
+a user interface for creating, configuring, and testing Scanner Profiles in Grooper Administration.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.SeparationProfile.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Profiles/Separation_Profile.htm'>Separation Profile</a></td>
+      <td>Separation Profiles are used to specify how pages will be separated into documents and folders within a batch.
+</td>
+      <td><a href='Separation_Provider_Types/Separation_Provider_Types.htm'>Separation Provider</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.TrainingPage.Normal.png /></td>
+      <td><a href='Grooper_Node_Types/Content_Models/Training_Page.htm'>Training Page</a></td>
+      <td>A Training Page represents an individual page which was used to train a Page Type.
+Training pages are not created or configured by users - they are created and managed internally
+by Grooper as documents are trained into a <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>. Do not delete ...</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Import_Provider_Types/Import_Provider_Types.htm'>Import Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Import providers enable import of file-based content from a variety of sources such as file systems, mail servers, and content repositories.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.CmisConnection.Normal.png /></td>
+      <td><a href='Import_Provider_Types/CMIS_Import.htm'>CMIS Import</a></td>
+      <td>Provides import connectivity to CMIS-compliant content management platforms. CMIS Import relies on settings defined by <a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a> objects.  As such, it is important that the relevant
+CMIS type has been imported, and that a corresponding Grooper ...</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, <a href='Grooper_Node_Types/Infrastructure/CMIS_Repository.htm'>CMIS Repository</a>, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FileSystem.Normal.png /></td>
+      <td><a href='Import_Provider_Types/File_System_Import.htm'>File System Import</a></td>
+      <td>Provides import connectivity to file systems. See the File System Action activity for follow-up actions which can be performed in a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.FtpFolder.Normal.png /></td>
+      <td><a href='Import_Provider_Types/FTP_Import.htm'>FTP Import</a></td>
+      <td>Provides import connectivity to ftp servers.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Mail.Normal.png /></td>
+      <td><a href='Import_Provider_Types/Mail_Import.htm'>Mail Import</a></td>
+      <td>Provides mail message import capabilites over the IMAP protocol. Mail messages are imported to Grooper as Electronic Documents in RFC822 (https://www.ietf.org/rfc/rfc0822.txt) format.
+The <a href='Activity_Types/Rendering/Render_Document.htm'>Render Document</a> activity can be used to generate a PDF version...</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, <a href='Grooper_Node_Types/Data_Extraction/Data_Type.htm'>Data Type</a>, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.SshImportProvider.Normal.png /></td>
+      <td><a href='Import_Provider_Types/SFTP_Import.htm'>SFTP Import</a></td>
+      <td>Provides import connectivity to SSH/SFTP servers.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Embedded_Lexicon.htm'>Embedded Lexicon</a>, <a href='Grooper_Object_Types/Folder_Level_Info.htm'>Folder Level Info</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='IP_Command_Types/IP_Command_Types.htm'>IP Command</a></b></td><td colspan='2' style='background-color:#E0E0FF';>IP commands perform image processing work, such as image cleanup, format conversion, or feature detection.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AdjustSaturation.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Adjust_Saturation.htm'>Adjust Saturation</a></td>
+      <td>Adjusts the saturation (color intensity) in an image.  
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AdjustTint.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Adjust_Tint.htm'>Adjust Tint</a></td>
+      <td>Adjusts the tint in an image.  
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoAdjustLevels.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Auto_Adjust_Levels.htm'>Auto Adjust Levels</a></td>
+      <td>The Adjust Levels command corrects the tonal range and color balance by adjusting the shadow, midtone, and highlights of an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoBorderCrop.Normal.png /></td>
+      <td><a href='IP_Command_Types/Border_Cleanup/Auto_Border_Crop.htm'>Auto Border Crop</a></td>
+      <td>Detects black borders around the edge of an image, crops the image to remove the border, and cleans up remaining edge artifacts. <p>This command is designed to remove edge artifacts produced by document scanners.  This includes solid black borders as show...</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='IP_Command_Types/Border_Cleanup/Border_Fill.htm'>Border Fill</a>, <a href='Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoBorderInvert.Normal.png /></td>
+      <td><a href='IP_Command_Types/Border_Cleanup/Auto_Border_Invert.htm'>Auto Border Invert</a></td>
+      <td>Detects dark borders around the edge of an image and inverts or fills the area occupied by the border.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoColorBalance.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Auto_Color_Balance.htm'>Auto Color Balance</a></td>
+      <td>Automatically corrects the color and contrast of an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoConvert.Normal.png /></td>
+      <td><a href='IP_Command_Types/Format_Conversion/Auto_Convert.htm'>Auto Convert</a></td>
+      <td>Changes the color depth of an image to match the content of the image. Outputs either a color, grayscale, or black and white based on analysis of the image content:
+<ul><li>If the image contains color, the output image will be 24-bit color.</li><li>If th...</td>
+      <td><a href='IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a>, <a href='IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoDeskew.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Transforms/Auto_Deskew.htm'>Auto Deskew</a></td>
+      <td>Detects the skew angle of an image, and optionally rotates the image to compensate. This command works by rotating a low-resolution copy of the image through a sequence of angles, and analyzing the image at each orientation to determine
+how straight it i...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoDeskewBasic.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Transforms/Auto_Deskew_Basic.htm'>Auto Deskew Basic</a></td>
+      <td>Automatically deskews a document image. Speed can be improved by reducing the Angle Limit, reducing the Precision, or by limiting the Area of Interest to a smaller rectangular area
+containing the horizontally aligned text area. The Coverage property can ...</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.OCR.AutoOrient.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Transforms/Auto_Orient.htm'>Auto Orient</a></td>
+      <td>Determines the correct orientation for an image and rotates the image by analyzing the orientation of the characters on the page.
+</td>
+      <td><a href='IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoQA.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Auto_QA.htm'>Auto QA</a></td>
+      <td>Automatically flags images which meet certain criteria, such as being too dark, too light, or too busy.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AutoWhiteBalance.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Auto_White_Balance.htm'>Auto White Balance</a></td>
+      <td>Automatically adjusts the white point in an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ReadBarcodes.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a></td>
+      <td>Detects and reads barcode data.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.BarcodeDropout.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Barcode_Removal.htm'>Barcode Removal</a></td>
+      <td>Removes barcodes from an image.
+</td>
+      <td><a href='IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a>, <a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Binarize.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+      <td>Converts an image to 8-bit black and white using various thresholding methods.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.BlankPageDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Blank_Page_Detection.htm'>Blank Page Detection</a></td>
+      <td>Determines if a page is blank based on a threshold of black pixels.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.BlobRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Blob_Removal.htm'>Blob Removal</a></td>
+      <td>Removes blobs from the image which meet specific size and fill requirements. <p>This command is useful for removing objects of a specific size or shape from an image.  It can be used to remove small features
+such as specks, large features such as a compa...</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.BorderFill.Normal.png /></td>
+      <td><a href='IP_Command_Types/Border_Cleanup/Border_Fill.htm'>Border Fill</a></td>
+      <td>Drops out artifacts around the edge of an image.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.BrightnessContrast.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Brightness_Contrast.htm'>Brightness Contrast</a></td>
+      <td>Modifies the brightness and/or contrast of an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ClassifyImage.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Classify_Image.htm'>Classify Image</a></td>
+      <td>Compares an image against a set of sample images and classifies the image based upon which sample image it is found to be most similar to.
+</td>
+      <td><a href='Grooper_Object_Types/Sample_Image_Collection.htm'>Sample Image Collection</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ColorDetect.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Color_Detection.htm'>Color Detection</a></td>
+      <td>Detects whether an image contains color, grayscale, or black and white content, optionally converting the image to the detected color depth.
+</td>
+      <td><a href='Grooper_Object_Types/Unit_Size.htm'>Unit Size</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ColorDropout.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Color_Dropout.htm'>Color Dropout</a></td>
+      <td>Replaces pixels in a specific color range with a replacement color. This command has several possible uses:
+<ul><li><u>Replace all colors. </u> - Leave the Target Color empty.</li><li><u>Replace all shades of gray. </u> - Leave the Target Color empty, an...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Colorize.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Colorize.htm'>Colorize</a></td>
+      <td>This command can be used to replace the hue, saturation and luminance values in an
+image with those of the specified base color. 
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ComputeMoments.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Compute_Moments.htm'>Compute Moments</a></td>
+      <td>Calculates Hu Moments for an image. Calculates the 7 invariant <a href="https://en.wikipedia.org/wiki/Image_moment">Image Moments</a> described in
+M. K. Hu, "Visual Pattern Recognition by Moment Invariants", IRE Trans. Info. Theory, vol. IT-8, pp.179–187...</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ContrastStretch.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Contrast_Stretch.htm'>Contrast Stretch</a></td>
+      <td>Adjusts the contrast of an image so that the lightest pixels are 100% white, and darkest pixels are 100% black.</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Convert.Normal.png /></td>
+      <td><a href='IP_Command_Types/Format_Conversion/Convert.htm'>Convert</a></td>
+      <td>Changes the color format of an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.CornerDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Corner_Detection.htm'>Corner Detection</a></td>
+      <td>Detects corners using Harris corner detection.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Crop.Normal.png /></td>
+      <td><a href='IP_Command_Types/Border_Cleanup/Crop.htm'>Crop</a></td>
+      <td>Crops borders of an image by a specified amount.
+</td>
+      <td><a href='Grooper_Object_Types/Border.htm'>Border</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.DilateErode.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Dilate_Erode.htm'>Dilate Erode</a></td>
+      <td>Applies a dilation (thicken) or erosion (thinning) filter to the image.</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.EdgeDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Edge_Detection.htm'>Edge Detection</a></td>
+      <td>Detects edges in an image using a Sobel filter.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ExecuteProfile.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Execute_Profile.htm'>Execute Profile</a></td>
+      <td>Use this command to execute another <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>.
+</td>
+      <td><a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ExtractChannel.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Extract_Channel.htm'>Extract Channel</a></td>
+      <td>Extracts a single channel from the source image.. The channel is extracted to an 8-bit grayscale image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ExtractFeatures.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Extract_Features.htm'>Extract Features</a></td>
+      <td>Divides an image into an NxN matrix of cells and generates a vector of N*N features. The resulting vector of features can be used in real time as pages come off the scanner. Because this classification mechanism does not require full text OCR,
+and is har...</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Filter.htm'>Filter</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Filter.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Filter.htm'>Filter</a></td>
+      <td>Applies a filter to an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.AdjustGamma.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Gamma_Adjust.htm'>Gamma Adjust</a></td>
+      <td>Controls the gamma correction level.
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.HalftoneRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Halftone_Removal.htm'>Halftone Removal</a></td>
+      <td>Removes halftone regions from an image.</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Region_Detector.htm'>Region Detector</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Histogram.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Histogram.htm'>Histogram</a></td>
+      <td>Calculates an image histogram.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.HolePunchRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Hole_Punch_Removal.htm'>Hole Punch Removal</a></td>
+      <td>Removes circular hole punch artifacts from an image.</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Unit_Range.htm'>Unit Range</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Invert.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Invert.htm'>Invert</a></td>
+      <td>Inverts images which are negated.</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.LineDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Line_Detection.htm'>Line Detection</a></td>
+      <td>Detects lines in an image using a <a href="https://en.wikipedia.org/wiki/Hough_transform">Hough Transform</a>. This command does not produce an end result by itself, but rather is used in other IP commands, such as <a href='IP_Command_Types/Feature_Detection/Sticky_Note_Detection.htm'>Sticky Note Detection</a>, to
+detect line...</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.LineRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Line_Removal.htm'>Line Removal</a></td>
+      <td>Removes horizontal and vertical lines from an image.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.MeasureEntropy.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Measure_Entropy.htm'>Measure Entropy</a></td>
+      <td>Measures the entropy (amount of change) in an image.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.NegativeRegionRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Negative_Region_Removal.htm'>Negative Region Removal</a></td>
+      <td>Inverts or removes regions which are inverted (white on black).</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Region_Settings.htm'>Region Settings</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ReadPatchCodes.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Patch_Code_Detection.htm'>Patch Code Detection</a></td>
+      <td>The Detect Patch Codes command is used to determine if an image contains a patch
+code.  This command is frequently used for Separation.  This command returns true
+if a patch code is detected and false if one is not.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Photo.Delete.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Photo_Removal.htm'>Photo Removal</a></td>
+      <td>Automatically detects and removes photographs.
+</td>
+      <td><a href='Grooper_Object_Types/Region_Settings.htm'>Region Settings</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Posterize.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Posterize.htm'>Posterize</a></td>
+      <td>Generates an image made up of primary and secondary colors of the source image.
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ProjectionProfile.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Analysis/Projection_Profile.htm'>Projection Profile</a></td>
+      <td>Generates a projection profile histogram.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.RandomizeDefects.Normal.png /></td>
+      <td><a href='IP_Command_Types/Miscellaneous/Randomize_Defects.htm'>Randomize Defects</a></td>
+      <td>Randomizes image defects such as skew and border noise, thereby creating test images for image cleanup.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Resize.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Transforms/Resize.htm'>Resize</a></td>
+      <td>Resizes an image.
+</td>
+      <td><a href='Grooper_Object_Types/Unit_Size.htm'>Unit Size</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Rotate.Normal.png /></td>
+      <td><a href='IP_Command_Types/Image_Transforms/Rotate.htm'>Rotate</a></td>
+      <td>Rotates an image by a given angle.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.ShapeDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Shape_Detection.htm'>Shape Detection</a></td>
+      <td>Detects regions within an image which are similar to a sample image. This command can be used to detect stamps, seals, logos, and other visual elements in an image.  The output from Shape Detection
+can be used in several ways throughout Grooper:
+<ul><li...</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, <a href='Grooper_Object_Types/Sample_Image_Collection.htm'>Sample Image Collection</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Solarize.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Solarize.htm'>Solarize</a></td>
+      <td>Use this command to adjust the curves to generate a classic "solarize" effect.
+</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Despeckle.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Speck_Removal.htm'>Speck Removal</a></td>
+      <td>Removes small specks from an image.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a>, <a href='Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.StickyNoteDetection.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Detection/Sticky_Note_Detection.htm'>Sticky Note Detection</a></td>
+      <td>Detects color sticky notes, optionally flagging the pages on which they are detected. This command is useful in helping scan operators identify pages with sticky notes attached at scan time, so that any corrective
+action can be taken before the batch is ...</td>
+      <td><a href='Grooper_Object_Types/Unit_Size.htm'>Unit Size</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.StreakRemoval.Normal.png /></td>
+      <td><a href='IP_Command_Types/Feature_Removal/Streak_Removal.htm'>Streak Removal</a></td>
+      <td>Removes vertical streaks from an image.
+</td>
+      <td><a href='IP_Command_Types/Miscellaneous/Binarize.htm'>Binarize</a></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.SwapChannels.Normal.png /></td>
+      <td><a href='IP_Command_Types/Color_Adjustment/Swap_Channels.htm'>Swap Channels</a></td>
+      <td>Converts RGB to BGR.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.IP.Threshold.Normal.png /></td>
+      <td><a href='IP_Command_Types/Format_Conversion/Threshold.htm'>Threshold</a></td>
+      <td>Converts an image to black and white using a variety of thresholding methods.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Layout_Provider_Types/Layout_Provider_Types.htm'>Layout Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Layout Providers define the various layouts in which arrays can be detected.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Layout_Provider_Types/Flow.htm'>Flow</a></td>
+      <td>Detects cases where the array elements occur one after another in the text flow of the document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Layout_Provider_Types/Horizontal.htm'>Horizontal</a></td>
+      <td>Detects cases where the array elements are arranged in a horizontal row.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Layout_Provider_Types/Vertical.htm'>Vertical</a></td>
+      <td>Detects cases where the array elements are arranged in a vertical column.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></b></td><td colspan='2' style='background-color:#E0E0FF';>MIME type handlers define properties and commands which may be applied to a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object with a specific MIME type.
+</td></tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Mail.Normal.png /></td>
+      <td><a href='MIME_Type_Handler_Types/Mail_Message.htm'>Mail Message</a></td>
+      <td>
+Handles the message/rfc822 Mime Type.
+
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.mime_pdf.Normal.png /></td>
+      <td><a href='MIME_Type_Handler_Types/PDF_Document.htm'>PDF Document</a></td>
+      <td>MIME type handler for PDF document types.  Defines the PDF-specific properties and commands which may be appied to a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</td>
+      <td></td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.mime_zip.Normal.png /></td>
+      <td><a href='MIME_Type_Handler_Types/ZIP_Archive.htm'>ZIP Archive</a></td>
+      <td>Mime type handler for Zip Archive files.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='OCR_Engine_Types/OCR_Engine_Types.htm'>OCR Engine</a></b></td><td colspan='2' style='background-color:#E0E0FF';>OCR Engines extract text from images using optical character recognition.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/ABBYY_FineReader.htm'>ABBYY FineReader</a></td>
+      <td>ABBYY FineReader is a commercial <a href='OCR_Engine_Types/OCR_Engine_Types.htm'>OCR Engine</a> recognized as a leader in the industry, and represents a premium OCR engine offering within Grooper. <ul><li>Used for Full Text OCR of machine print documents or Zonal OCR of machine print and/or handwriting.<...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/Grooper_Voting.htm'>Grooper Voting</a></td>
+      <td>A Grooper OCR which performs OCR using multiple <a href='Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profiles</a>, and then combines the results using a voting mechanism. <ul><li>Perform OCR with multiple different image cleanup configurations.</li><li>Perform OCR using multiple different OCR engines.</li...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/Prime_OCR.htm'>Prime OCR</a></td>
+      <td>Prime OCR is a commercial voting OCR engine which uses multiple OCR engines and methods to improve OCR accuracy. <ul><li>Used for Full text or Zonal OCR of machine print documents.</li><li>Does not support handwriting recognition.</li><li>Requires separat...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/Tesseract_OCR.htm'>Tesseract OCR</a></td>
+      <td>Tessaract is an open source OCR Engine sponsored by Google. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.</li><li>100% free - no addit...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/Transym_OCR_4.htm'>Transym OCR 4</a></td>
+      <td>Transym OCR is a commercial OCR engine which provides highly accurate English-only OCR. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed with Grooper.<...</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='OCR_Engine_Types/Transym_OCR_5.htm'>Transym OCR 5</a></td>
+      <td>Transym OCR 5 is a commercial OCR engine which provides highly accurate multilanguage language OCR. <ul><li>Used for Full Text and Zonal OCR of documents containing machine print characters.</li><li>Does not support handwriting.</li><li>Fully installed wi...</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Report_Types/Report_Types.htm'>Report</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Defines a Grooper Report.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Batch_Statistics.htm'>Batch Statistics</a></td>
+      <td>Aggregates all Processing Activity statistics for a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, <a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Data_Capture_Automation.htm'>Data Capture Automation</a></td>
+      <td>Displays statistics for the Date Extraction and <a href='Activity_Types/Human_Review/Data_Review.htm'>Data Review</a> Attended Activities.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, <a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Data_Review_Operators.htm'>Data Review Operators</a></td>
+      <td>Displays the top <a href='Activity_Types/Human_Review/Data_Review.htm'>Data Review</a> operators for Records Viewed, Records Edited or Keystrokes for a given date range.
+</td>
+      <td><a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Keystrokes.htm'>Keystrokes</a></td>
+      <td>Provides Keystroke quantities for all published <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Processes</a>, or for a single Batch Process.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, <a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Pages_Scanned.htm'>Pages Scanned</a></td>
+      <td>Displays a bar chart indicating the quantity of pages scanned by User, Machine or <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+      <td><a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Production_Batches.htm'>Production Batches</a></td>
+      <td>Displays the quantity of Production Batches grouped by <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, Processing Activity, Processing Step or by Batch Status.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Project_Billing.htm'>Project Billing</a></td>
+      <td>Calculates <a href='Grooper_Object_Types/Billing_Item.htm'>Billing Item</a> quantities and optional dollar amounts for a configured <a href='Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a> and date range.
+</td>
+      <td><a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a>, <a href='Grooper_Node_Types/Batch_Processing/Project.htm'>Project</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Query_Report.htm'>Query Report</a></td>
+      <td>Represents a Tabular Grooper Report based on data returned by an SQL Query.
+</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Scan_Operator_Efficiency.htm'>Scan Operator Efficiency</a></td>
+      <td>Reports Scan Operator statistics.
+</td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>, <a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Report_Types/System_Reports/Scan_Volume.htm'>Scan Volume</a></td>
+      <td>Displays Scanned Page quantities. Results can be filtered by Date Range and by <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+      <td><a href='Grooper_Object_Types/Date_Range.htm'>Date Range</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Section_Extract_Method_Types/Section_Extract_Method_Types.htm'>Section Extract Method</a></b></td><td colspan='2' style='background-color:#E0E0FF';>A Section Extract Method defines an extraction method for use with <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a> objects.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Section_Extract_Method_Types/Divider.htm'>Divider</a></td>
+      <td>Identifies <a href='Data_Instance_Types/Section_Instance.htm'>Section Instances</a> by splitting the input content at each occurence of a specific text pattern. This method is useful for processing content with repeating sections of information which occur sequentially in
+the text flow of the document.
+<p...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Section_Extract_Method_Types/Fixed.htm'>Fixed</a></td>
+      <td>Identifies section instances using a fixed geometric region. Outputs a single section instance containing all character data bounded by a rectangular region on a specific page. If the document does not contain the page
+specified, an empty result set will...</td>
+      <td><a href='Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Layout_Provider_Types/Flow.htm'>Flow</a></td>
+      <td>Identifies <a href='Data_Instance_Types/Section_Instance.htm'>Section Instances</a> using an extractor to match segments of text.  For each match, the character data between the starting
+and ending position will become an output <a href='Data_Instance_Types/Section_Instance.htm'>Section Instance</a>. This method is useful in cases where (a) the section conte...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Section_Extract_Method_Types/Geometric.htm'>Geometric</a></td>
+      <td>Defines a rectangular region using anchors, and extracts the character data bounded by the region as a <a href='Data_Instance_Types/Section_Instance.htm'>Section Instance</a>.  Geometric section extraction is performed as follows:
+<ol><li>The Main Extractor establishes the initial region.</li><li>Each edge...</td>
+      <td><a href='Grooper_Object_Types/Border.htm'>Border</a>, <a href='Edge_Adjustment_Types/Edge_Adjustment_Types.htm'>Edge Adjustment</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Separation_Provider_Types/Separation_Provider_Types.htm'>Separation Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';></td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/Change_in_Value_Separation.htm'>Change in Value Separation</a></td>
+      <td>A new folder is created each time the extracted value changes.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/Control_Sheet_Separation.htm'>Control Sheet Separation</a></td>
+      <td>Separate the batch using Grooper <a href='Grooper_Node_Types/Batch_Processing/Control_Sheet.htm'>Control Sheets</a>.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/EPI_Separation.htm'>EPI Separation</a></td>
+      <td>Performs Separation using embedded page information (EPI). The Provided Extractor should be a Data Type which returns a 1-based integer page
+number. When this binding method is in use, Grooper applies the following logic: 1) If the page number is 1, crea...</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/ESP_Auto_Separation.htm'>ESP Auto Separation</a></td>
+      <td>Performs separation using ESP™ automatic separation.  Requires that classification has previously been run at page level.
+</td>
+      <td><a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/Event-Based_Separation.htm'>Event-Based Separation</a></td>
+      <td>Separate the batch based on Separation Events. Separation events can separate based on patch codes, barcodes, blank pages, detected shapes, or page content types.
+</td>
+      <td><a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>, <a href='Grooper_Object_Types/Separation_Event.htm'>Separation Event</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/Pattern-Based_Separation.htm'>Pattern-Based Separation</a></td>
+      <td>A new folder will be created if the extractor produces any results on the page.
+</td>
+      <td>Content Type, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Separation_Provider_Types/Undo_Separation.htm'>Undo Separation</a></td>
+      <td>Flattens a <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> by recursively removing all children <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>, leaving only loose pages. No action will be taken if the BaseFolder does not conatin any children <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folders</a>.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Service_Instance_Types/Service_Instance_Types.htm'>Service Instance</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Service Instances represent processes which may be installed as Grooper services, such as the <a href='Service_Instance_Types/Grooper_Licensing.htm'>Grooper Licensing</a> service or the <a href='Service_Instance_Types/Task_Processing.htm'>Task Processing</a> service.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/ApplicationXtender_CMIS_Server.htm'>ApplicationXtender CMIS Server</a></td>
+      <td>Exposes an EMC ApplicationXtender repository over CMIS. For a specific AX data source, exposes each of the AX applications as a CMIS repository.  Each repository has a single content type
+with properties matching the field layout of the corresponding AX ...</td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a>, <a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/Grooper_CMIS_Server.htm'>Grooper CMIS Server</a></td>
+      <td>Provides web-based connectivity to a Grooper repository over the CMIS protocol.
+</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/Grooper_Content_Manager_CMIS_Server.htm'>Grooper Content Manager CMIS Server</a></td>
+      <td>Exposes a Grooper Content Manager repository over CMIS. Each Grooper Content Manager project corresponds to a CMIS repository.
+</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/Grooper_Licensing.htm'>Grooper Licensing</a></td>
+      <td>Distributes runtime licenses to Grooper applications. An instance of Grooper Licensing is required in all deployment scenarios with the exception of a stand-alone installation.  In a
+stand-alone system, simply install licenses into the pre-installed 'Loc...</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/Import_Watcher.htm'>Import Watcher</a></td>
+      <td>Import Watcher is a service which polls an <a href='Import_Provider_Types/Import_Provider_Types.htm'>Import Provider</a> for new documents, and imports them based on rules.
+</td>
+      <td><a href='Import_Provider_Types/Import_Provider_Types.htm'>Import Provider</a>, <a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/License_Renewal_Service.htm'>License Renewal Service</a></td>
+      <td>Performs usage reporting when the Grooper pay-as-you-go licensing model is in use.
+</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/System_Maintenance_Service.htm'>System Maintenance Service</a></td>
+      <td>Provides Grooper system maintenance services. A timer service that clears Log and Stat entries older than the specified retention periods.
+</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Service_Instance_Types/Task_Processing.htm'>Task Processing</a></td>
+      <td>The Task Processing service executes Unattended Activities, which perform the work associated with a step in a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+      <td><a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Storage_Type_Types/Storage_Type_Types.htm'>Storage Type</a></b></td><td colspan='2' style='background-color:#E0E0FF';></td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Boolean.htm'>Boolean</a></td>
+      <td>Represents a Boolean (true or false) value.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/DateTime.htm'>DateTime</a></td>
+      <td>Represents an instant in time, typically expressed as a date and/or time of day.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Decimal.htm'>Decimal</a></td>
+      <td>Represents a decimal value.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Double.htm'>Double</a></td>
+      <td>Represents a 64-bit floating point value.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/GUID.htm'>GUID</a></td>
+      <td>Represents a globally unique identifier (GUID). See <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier">Wikipedia - Universally unique identifier</a> for a general overview of GUID and their
+applications.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Int16.htm'>Int16</a></td>
+      <td>Represents a 16-bit integer value.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Int32.htm'>Int32</a></td>
+      <td>Represents a 32-bit integer value.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/Int64.htm'>Int64</a></td>
+      <td>Represents a 64-bit integer value.
+</td>
+      <td><a href='Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/String.htm'>String</a></td>
+      <td>String values can store any type of text information.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Storage_Type_Types/URL.htm'>URL</a></td>
+      <td>A Uniform Resource Locator (URL) is a string of characters used to identify a web resource, such as a web page on an HTTP server, or a file on an FTP server.
+</td>
+      <td></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Table_Extract_Method_Types/Table_Extract_Method_Types.htm'>Table Extract Method</a></b></td><td colspan='2' style='background-color:#E0E0FF';>Defines settings and logic for a <a href='Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a> extraction method.
+</td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Table_Extract_Method_Types/Header-Value.htm'>Header-Value</a></td>
+      <td>Detects the layout of a table automatically by analyzing results from value and header extractors defined on <a href='Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a> objects. <p>This table extraction method is designed for structured tables where the following conditions are true:</p><ul><li>Infor...</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a>, <a href='Grooper_Object_Types/Header_Detector.htm'>Header Detector</a>, <a href='Grooper_Object_Types/Row_Detector.htm'>Row Detector</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Table_Extract_Method_Types/Infer_Grid.htm'>Infer Grid</a></td>
+      <td>Extracts tables which have both row and column headers, by infering a grid from the header positions. <p>For example, consider a <a href='Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> object with 4 <a href='Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Columns</a>: Month, Revenue, Expenses, and Profit.  To extract the data shown below into this ta...</td>
+      <td><a href='Data_Element_Types/Data_Extraction/Data_Column.htm'>Data Column</a>, <a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Table_Extract_Method_Types/Row_Match.htm'>Row Match</a></td>
+      <td>Uses an extractor to match each row.
+</td>
+      <td><a href='Grooper_Object_Types/Embedded_Extractor.htm'>Embedded Extractor</a></td>
+    </tr><tr><td colspan='2' style='background-color:#E0E0FF';><b><a href='Variable_Provider_Types/Variable_Provider_Types.htm'>Variable Provider</a></b></td><td colspan='2' style='background-color:#E0E0FF';></td></tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Alpha_Provider.htm'>Alpha Provider</a></td>
+      <td>Defines a character set which includes all latin letters, plus all decimal digits which look like letters. ('A-Za-z013568')
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Decimal_Digits.htm'>Currency Decimal Digits</a></td>
+      <td>Inserts the number of digits to the right of the decimal point in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Decimal_Separators.htm'>Currency Decimal Separators</a></td>
+      <td>For the language of the current document, returns a character set including all possible separators between the whole and fractional part of a currency value.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Group_Digits.htm'>Currency Group Digits</a></td>
+      <td>Inserts the number of digits in each group of digits for the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Group_Separators.htm'>Currency Group Separators</a></td>
+      <td>For the language of the current document, returns a character set including all possible separators between digit groups in a currency value.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Labels.htm'>Currency Labels</a></td>
+      <td>Inserts a pipe-delimited list all possible currency labels for the culture of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Currency_Symbols.htm'>Currency Symbols</a></td>
+      <td>Inserts a character set containing all single-character currency symbols for the culture of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Day_Names.htm'>Day Names</a></td>
+      <td>Inserts a pipe-delimited list of day names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Day_Names_Abbreviated.htm'>Day Names Abbreviated</a></td>
+      <td>Inserts a pipe-delimited list of abbreviated day names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Day_Names_Shortest.htm'>Day Names Shortest</a></td>
+      <td>Inserts a pipe-delimited list of the shortest possible abbreviated day names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Digits.htm'>Digits</a></td>
+      <td>Inserts a character set containing decimal digits in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Group_Vocabulary_Provider.htm'>Group Vocabulary Provider</a></td>
+      <td>Inserts a pipe-delimited list containing all vocabulary entries for a specific group.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Letters.htm'>Letters</a></td>
+      <td>Inserts a character set containing all letters in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Letters_Lower.htm'>Letters Lower</a></td>
+      <td>Inserts a character set containing all lower case letters in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Letters_Upper.htm'>Letters Upper</a></td>
+      <td>Inserts a character set containing all upper case letters in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Month_Names.htm'>Month Names</a></td>
+      <td>Inserts a pipe-delimited list of month names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Month_Names_Abbreviated.htm'>Month Names Abbreviated</a></td>
+      <td>Inserts a pipe-delimited list of abbreviated month names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Month_Names_Genetive.htm'>Month Names Genetive</a></td>
+      <td>Inserts a pipe-delimited list of genetive month names in the language of the current document.
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Number_Provider.htm'>Number Provider</a></td>
+      <td>Defines a character set which includes all digits, plus all Latin alpha characters which look like digits. ('0-9IilOoGgSsBUuD')
+</td>
+      <td></td>
+    </tr>    <tr>      <td>&nbsp;</td>
+      <td><a href='Variable_Provider_Types/Vocabulary.htm'>Vocabulary</a></td>
+      <td>Inserts a pipe-delimited list containing all vocabulary entries.
+</td>
+      <td></td>
+    </tr></table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Review Testing Dialog</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper™ Core Library\nForms\nData Review Testing Dialog");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../User_Interface_Reference.htm\">User Interface Reference<\/a> > <a href=\"Adjust_Binary_Image_Dialog.htm\">Grooper™ Core Library<\/a> > <a href=\"Adjust_Binary_Image_Dialog.htm\">Forms<\/a> > Data Review Testing Dialog<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Review Testing Dialog</h1>
+<p>Provides a user interface which simulates the <a href='../../../Administrator_Reference/Activity_Types/Attended_Activities/Data_Review.htm'>Data Review</a> activity in <a href='../../Grooper_Administration/Grooper_Administration.htm'>Grooper Administration</a>.
+</p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='../Controls/Index_Panel.htm'>Index Panel</a></td>
+     <td>Displays Document Instance objects, providing a user interface for reviewing and editing the data elements associated with a document. The Index Panel is a hierarchy of Index Panel Control objects, designed to allow editing of the hierarchical Data Instance objects produced by
+the <a href='../../../Administrator_Reference/Activity_Types/Unattended_Activities/Extraction.htm'>Extraction</a> activity.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Controls/Page_Viewer.htm'>Page Viewer</a></td>
+     <td>Displays image-based documents.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../../Grooper™_Image_Processing_Library/Controls/Image_Viewer.htm'>Image Viewer</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href='../Controls/Instance_Viewer.htm'>Instance Viewer</a></td>
+     <td>Displays Data Instance objects, allowing their contents to be exlored.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../Controls/Page_Viewer.htm'>Page Viewer</a></td>
+     <td>Displays image-based documents.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../../Grooper™_Image_Processing_Library/Controls/Image_Viewer.htm'>Image Viewer</a></td>
+     <td></td>
+  </tr>
+  <tr>
+     <td><a href='../Controls/Instance_Text_Viewer.htm'>Instance Text Viewer</a></td>
+     <td>Displays the text associated with a Data Instance, optionally showing control characters.
+</td>
+  </tr>
+  <tr>
+     <td><a href='../../Grooper™_OCR_Library/Controls/OCR_Character_Viewer.htm'>OCR Character Viewer</a></td>
+     <td>Displays the list of individual characters associated with a set of OCR results.
+</td>
+  </tr>
+</table>
+<h2>Toolbar Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>
+     <th>&nbsp;</th>
+     <th>Command Name</th>
+     <th>Shortcut Keys</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Auto_Train.png" /></td>
+     <td>Auto Train</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Enables automatic training for each processed document. When enabled, each time a document is completed training will be automatically performed, and the next document
+to be displayed will be re-extracted using the new training.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Close.png" /></td>
+     <td>Close</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Close the Data Review window.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Edit_Data_Model.png" /></td>
+     <td>Edit Data Model...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>View or edit the properties of the <a href='../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm'>Data Model</a> associated with the currently displayed document. Displays the Node Properties Dialog.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Extract.png" /></td>
+     <td>Extract</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Execute extraction on the currenlty displayed document.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Field___Add.png" /></td>
+     <td>Field / Add...</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+Ins</td>
+     <td>Add a new field to the <a href='../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm'>Data Model</a>. Displays the <a href='../../Grooper™_Base_Library/Forms/New_Item_Dialog.htm'>New Item Dialog</a> to specify the name of the new field.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Field___Delete.png" /></td>
+     <td>Field / Delete</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+Del</td>
+     <td>Delete the currently focused field from the <a href='../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm'>Data Model</a>.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Field___Edit.png" /></td>
+     <td>Field / Edit...</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+F12</td>
+     <td>View or edit the properties of the currenlty focused field. Displays the Node Properties Dialog.
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+     <td>Field / Go To Field Object</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Close the Data Review screen and navigate to the currently focused field.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Field___Move_Down.png" /></td>
+     <td>Field / Move Down</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+Down</td>
+     <td>Move the currently focused field down.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Field___Move_Up.png" /></td>
+     <td>Field / Move Up</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+Shift+Up</td>
+     <td>Move the currently focused field up.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Move_to_the_next_document_in_the_batch.png" /></td>
+     <td>Move to the next document in the batch.</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Go to the next document.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Move_to_the_previous_document_in_the_batch.png" /></td>
+     <td>Move to the previous document in the batch.</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Go to the previous document.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../../../images/CommandIcons/Grooper.Core.frmDataReview.Train.png" /></td>
+     <td>Train</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Perform extraction training on the currently displayed document.
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+<div style="width: 100%; position: relative;" id="footer">
+	<hr align="center" />
+	<p style="font-size: 10pt;">2015 by BIS - <a href="http://www.bisok.com" 
+												 target="_blank">http://www.bisok.com</a> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Extraction</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nData Extraction");
+addTocInfo("Getting Started\nGrooper Concepts\nData Extraction\nESP_Extraction");
+
+
+	if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Data_Extraction.htm\">Data Extraction<\/a> &gt; ESP_Extraction<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Data Extraction<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Extraction</h1>
+<p>Data Extraction is the process of extracting data elements from documents 
+ in a Batch. 
+ &#160;A &quot;document&quot;, for the purposes of this discussion, is 
+ a Batch 
+ Folder object which has been classified as a Document 
+ Type. When a folder is assigned a Document Type, it becomes a logical 
+ &quot;document&quot; and inherits all of the data elements defined for 
+ that document type, allowing it to be indexed manually by a user, or automatically 
+ using data extraction techniques. The results of a data extraction operation 
+ is a hierarchy of <a href="Data_Instance_Objects.htm">Data Instances</a>, which 
+ are stored with the corresponding Batch 
+ Folder object.</p>
+<p>Data extraction work is performed by the Extraction 
+ Activity, and the Data 
+ Review Activity typically follows to allow human review of exceptions, 
+ such as a required field failing to read or a field value with an invalid 
+ format. The Index 
+ Panel control used within Data Review provides an interface for quick, 
+ efficient review of data elements acquired during the extraction process.</p>
+<h2>Data Models - Defining Data Elements</h2>
+<p>A Data 
+ Model describes the structure of data inside a specific document using 
+ a hierarchy of data elements such as Sections, 
+ Tables, 
+ and Fields. 
+ &#160;A simple data model can be nothing more than list of fields, but 
+ Grooper's data models are hierarchical in nature, allowing complex documents 
+ to be broken down into any number of sections, sub-sections, tables, and 
+ fields. &#160;A data model and its child data elements collectively describe 
+ all of the data elements on a document type with which Grooper will interact, 
+ and also define properties which control the behavior and appearance of 
+ the data elements in the Index 
+ Panel control.</p>
+<p>Data Models are defined as children of individual Content 
+ Types, and can be created using the 'Create Data Model' command on 
+ the property panel for any Content 
+ Model, Content 
+ Category, or Document 
+ Type object. &#160;Once a data model has been created, Sections, 
+ Tables, 
+ and Fields 
+ may be created as children of the data model. &#160;The data elements 
+ defined in a data model apply to the content type on which the data model 
+ is defined, as well as any child content types which inherit from that 
+ content type.</p>
+<h2>Data Model Inheritance</h2>
+<p>Data Models inherit the data elements of parent content types. &#160;For 
+ example, consider the scenario below where the 'Invoice' Data Model defines 
+ 4 fields. &#160;These 4 fields will be inherited by all document types 
+ in the Content Model, and the Index Panel preview for the 'Generic Invoice' 
+ Document Type reflects this. &#160;This 'BIS Invoice' document type then 
+ defines its own Data Model, containing one field named 'Discount Date'. 
+ &#160;As shown in the Index Panel preview for 'BIS Invoice' this results 
+ in a set of fields which combine the data elements defined directly on 
+ the Data Model for the Document Type with those inherited from the Content 
+ Model, producing a total of 5 fields.</p>
+<table class="ObjectProperties" style="border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<col style="width: 29.009%;" />
+	<col style="width: 37.658%;" />
+	<col style="width: 33.333%;" />
+	<tr style="text-align: center;">
+		<th>Data Model</th>
+		<th>'Generic Invoice' Preview</th>
+		<th>'BIS Invoice' Preview</th>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><img src="images/DataExtraction_SampleDataModel.jpg" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="images/DataExtraction_BasePreview.gif" class="ScreenShot" alt="" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="images/DataExtraction_InheritedPreview.gif" class="ScreenShot" alt="" border="0" /></p></td>
+	</tr>
+</table>
+<h2>Field Extraction</h2>
+<p>Grooper supports a variety of data extraction methods for fields, as 
+ outlined below.</p>
+<h3><a name="ESP_Extractionbc-1"></a><a name="ESP_Extraction">ESP™ Extraction</a></h3>
+<p>ESP™ extraction works from a full-text OCR of the document, extracting 
+ data based on its format and optionally the context surrounding the data, 
+ without regard for the physical location of the data on the document. 
+ &#160;There are two methods of ESP™ extraction:</p>
+<h4>Pattern-Based Extraction</h4>
+<p>Extracts data solely based on its format, using a Data 
+ Type to define the format. &#160;Pattern-based extraction finds all 
+ instances of data matching the format defined by the Data Type, returning 
+ the resulting list of candidates sorted in an order specified by the Instance 
+ Ranking property of the Data Type. &#160;The top result in this list of 
+ candidates will be selected as the field value. &#160;</p>
+<p>For example, the document shown below contains two date values. &#160;A 
+ pattern-based extraction using the built-in 'Date' Data Type will identify 
+ all instances of the data, as shown below. &#160;Depending on the value 
+ of the Instance Ranking property of the Data Type, one of these instances 
+ will be selected as the field value.<br />
+</p>
+<p style="text-align: center;"><img src="images/DataExtraction_PatternExample.jpg" class="ScreenShotBorder" alt="" /></p>
+<p>&#160;</p>
+<p>Pattern-based extraction is useful in the following situations:</p>
+<ul style="list-style: disc;">
+	<li><span style="text-decoration: underline; "><u>Single Instance Data</u></span>. 
+	 &#160;Only one instance of the Data Type is present in the document 
+	 content. &#160;For example, in a situation where there is only one 
+	 date value on a document, a field configured with pattern-based extraction 
+	 using the built-in 'Date' Data Type would perform extraction reliably.</li>
+	<li><span style="text-decoration: underline; "><u>First or Last Instance 
+	 on Document</u></span>. &#160;The first instance or last instance of the 
+	 Data Type on the document should be considered the correct one. &#160;In 
+	 this case, setting the Instance Ranking property of the Data Type 
+	 to 'Order' or 'Reverse Order' will ensure that either the first instance 
+	 or last instance found on the document will be used as the field value.</li>
+	<li><span style="text-decoration: underline; "><u>Most Commonly Occurring 
+	 Value on Document</u></span>. &#160;Multiple instances of the Data Type 
+	 are present, but the most commonly-occurring value should be used. 
+	 &#160;If the Instance Ranking of the Data Type is set to &quot;Frequency&quot;, 
+	 Grooper will sort the results so that the most frequently occurring 
+	 values are at the top of the list, leaving the most frequently occurring 
+	 value as the top candidate for the field. &#160;For example, this 
+	 could be used to extract the SSN of the primary borrower from a mortgage 
+	 file. &#160;While there could be 10 or 20 different SSNs appearing 
+	 in a mortgage file, the most frequently occurring value is likely 
+	 that of the primary borrower. &#160;</li>
+	<li><span style="text-decoration: underline; "><u>Extend Pattern to Include 
+	 Context</u></span>. &#160;Multiple instances of the data are present, 
+	 but the Data Type defines a pattern which includes surrounding context 
+	 to uniquely identify the correct instance.</li>
+</ul>
+<h4>Context-Based</h4>
+<p>Context-based extraction extends pattern-based extraction so that the 
+ list of extracted candidates is ranked more intelligently. &#160;Rather 
+ than ranking candidates by order or frequency, context-based extraction 
+ ranks candidates by comparing the surrounding context of keywords, data 
+ types, and image-based features to examples on which Grooper has been 
+ trained.</p>
+<p>Context-based extraction uses a Field 
+ Class object for extraction, rather than a simple data type. &#160;Field 
+ Classes are configured with a Context Zone property, which defines the 
+ extent of the region around each candidate to be considered during the 
+ ranking process. &#160;The example below shows the context zone for each 
+ of the candidate instance. &#160;All features with a center point inside 
+ this zone will be included. &#160;As mentioned previously, features can 
+ be keywords, data types, or image-based features depending on the configuration 
+ of the Field Class.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/DataExtraction_ContextExample.jpg" class="ScreenShotBorder" alt="" /> 
+ </p>
+<p>&#160;</p>
+<p>For each of the candidates, Grooper will compare the set of features 
+ in the context zone to what has been learned from previously processed 
+ documents, generating a confidence value for each, as shown below. &#160;Since 
+ the '11/24/2012' value is surrounded by words like &quot;invoice&quot; 
+ and &quot;date&quot; which are statistically likely to appear near an 
+ invoice date, it has a higher confidence and will be used as the value 
+ for the field.</p>
+<p>&#160;</p>
+<p><img src="images/DataExtraction_ContextResults.gif" alt="" style="border: none;" border="0" /></p>
+<h3>Zonal Extraction</h3>
+<p>Zonal extraction extracts data from a specific zone on a specific page 
+ of a document, using OCR (optical character recognition), barcode recognition, 
+ or OMR (optical mark recognition). &#160;Zonal extraction is configured 
+ using the Extraction 
+ Profiles Control on the property panel of a Content 
+ Model, Content 
+ Category, Document 
+ Type, or Form 
+ Type object. &#160;</p>
+<p>Zonal extraction can be specified at any level of a Content 
+ Model, and overridden at any level below that. &#160;For example, 
+ a default zone for extraction of an invoice number could be created at 
+ the root of a Content Model named 'Invoices', and then overridden on the 
+ 'ACME Products' document type to provide a more specific location for 
+ the field on that document type.</p>
+<p>For complete documentation on zonal data extraction, refer to the documentation 
+ for the Extraction 
+ Profiles Control.</p>
+<h2>Sections</h2>
+<p>Data 
+ Section objects can be used to divide a document into sections which 
+ can be processed independently. &#160;Sections can be created at the root 
+ of the Data Model, or as children of another section, and may contain 
+ other sections, tables, or fields. The child elements of a section perform 
+ their extraction from the content of the section rather than from the 
+ content of the entire document. &#160;This greatly simplifies the extraction 
+ logic for elements inside the section, allowing them to focus on only 
+ the logic needed to extract from the content of an individual section.</p>
+<p>&#160;</p>
+<p>Sections have a variety of uses with Grooper:</p>
+<ul style="list-style: disc;">
+	<li>To segment the content of a complex document into manageable entities, 
+	 reducing the complexity of data extraction logic.</li>
+	<li><p>To represent the true structure and organization of data inside 
+	 a document, and present it to users in a way which follows the layout 
+	 of data on the document.</p></li>
+	<li><p>To reorganize document content to match the intended flow of 
+	 a document. &#160;For example, by identifying multiple columns on 
+	 a document and concatenating them into a single, contiguous flow of 
+	 content.</p></li>
+</ul>
+<p>Consider the college transcript shown below, where information is first 
+ grouped into two main columns, and then subdivided by semester. &#160;Sections 
+ can be used to (a) reorganize the content flow to reflect that the document 
+ contains 2 columns of information which flow from left to right, and (b) 
+ identify the individual semesters and treat them as separate entities.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/DataExtraction_SectionSample.jpg" class="ScreenShotBorder" alt="" /></p>
+<p>&#160;</p>
+<p>Sections allow Grooper to extract and present the data in a format which 
+ mirrors that of the document, as shown below. &#160;While it is quite 
+ clear that the individual semesters have been identified, what is less 
+ apparent is that they content flow of the document has also been reorganized 
+ to reflect that two columns of information are present, and that the flow 
+ of information starts with the left column and then flows to the right 
+ column.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="images/DataExtraction_SectionPreview.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>For more information on configuring sections, see the documentation 
+ for the Data 
+ Section object.</p>
+<h2>Tables</h2>
+<p>Grooper can extract tabular data using a Data 
+ Table object. &#160;Data Tables can only have Data 
+ Field objects as children - one for each column of the table to be 
+ extracted. &#160;For example, the Data Table used inside the semester 
+ sections of the transcript document shown above is defined as shown below. 
+ &#160;</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="66.667%" align="center" border="1">
+	<col style="width: 43.513%;" />
+	<col style="width: 56.487%;" />
+	<tr style="text-align: center;">
+		<td><b>Table Definition</b></td>
+		<td><b>Table Preview</b></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;"><img src="images/DataExtraction_TableDefinition.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="images/DataExtraction_TablePreview.gif" class="ScreenShot" alt="" border="0" /></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Extraction logic for a Data Table is based on the Data Type configured 
+ for the table object, and can be configured in one of three different 
+ ways:</p>
+<ol style="list-style: decimal;">
+	<li>Specify a Data Type which matches each row and provides named subexpressions 
+	 with the same name as each column. &#160;Grooper will automatically 
+	 map the named subexpressions to the appropriate table columns with 
+	 matching names. &#160;(As group names in regular expressions cannot 
+	 contain spaces, use the underscore (_) character to represent a space 
+	 in the regular expression group name, or simply ensure that the column 
+	 names do not contain spaces.)</li>
+	<li>Specify a Data Type to match the entire row, and then define extraction 
+	 on each Data Field object to extract its value from the content of 
+	 the row.</li>
+	<li>Specify a Data Type which contains child Data Types or Data Formats 
+	 with the same name as each column.</li>
+</ol>
+<p>&#160;</p>
+<h2>See Also</h2>
+<p><a href="Classification.htm">Classification</a><br />
+Data 
+ Model<br />
+Data 
+ Section<br />
+Data 
+ Table<br />
+Data 
+ Field<br />
+<a href="Data_Instance_Objects.htm">Data Instances</a><br />
+<br />
+</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Auto Border Invert</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nIP Command Types\nBorder Cleanup\nAuto Border Invert");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../IP_Command_Types.htm\">IP Command Types<\/a> &gt; <a href=\"Auto_Border_Crop.htm\">Border Cleanup<\/a> &gt; Auto Border Invert<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.AutoBorderInvert.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Auto Border Invert</h1></td>
+<table>
+</tr>
+</table>
+Detects dark borders around the edge of an image and inverts or fills the area occupied by the border.
+
+<br/><br/><b>Inherits from:</b> Border Detect<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Operation</td>
+    <td><table>
+   <tr><td>Type: OperationType, Default: InvertFillSides</td></tr>
+   <tr><td>Specifies how the detected border should be removed. Can be one of the following values:<br />
+<ul>
+<li><b>Fill</b>: The detected border area will be filled with solid white.
+</li>
+<li><b>Invert</b>: The detected border area will be inverted.
+</li>
+<li><b>InvertFillSides</b>: The detected border area will be inverted, except that the left and right sides will be filled with solid white.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Border Region Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a>, Default: 0.25in</td></tr>
+   <tr><td>Defines the maximum size of a border region on each side of the image.  Any detected border which exceeds this limit will be ignored. Review the "Zoning" output image to see the resulting region overlayed on the image in <Span style="color: red;"><font color="red" ><b>red</b></font></Span>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Border Weight</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Double.htm'>Double</a>, Default: 90%, Range: 0% - 100%</td></tr>
+   <tr><td>The fill percentage required for border detection. A value of 100% will require a perfectly solid border.  Lower values allow increasing imperfection in the border.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Minimum Border Thickness</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a>, Default: 1pt</td></tr>
+   <tr><td>The minimum thickness of an edge artifact which will be considered a border.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Border Inset</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a>, Default: 0.05in</td></tr>
+   <tr><td>Defines the maximum distance from the edge of the image for a detected border. Review the "Zoning" output image to see the resulting region overlayed on the image in <Span style="color: darkcyan;"><font color="darkcyan" ><b>cyan</b></font></Span>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Post Processing</td>
+  </tr>
+  <tr>    <td>Remove Corner Artifacts</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>If set to true, artifacts left behind in the corners of the border will be removed. This setting is primarily designed to handle borders with rounded corners.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Edge Cleanup Radius</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a>, Default: 2px</td></tr>
+   <tr><td>Defines how aggressively artifacts on the edge of the border will be removed. An empty or zero value will disable edge cleanup.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Border Adjust</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td></tr>
+   <tr><td>The amount by which to expand the border on each side.  Positive values will increase the thickness of the detected border, and negative values will
+decrease it.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Preprocessing</td>
+  </tr>
+  <tr>    <td>Binarization</td>
+    <td><table>
+   <tr><td>Type: <a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+   <tr><td>If enabled, border detection will be performed on a binarized version of the input image.  Otherwise, border detection will be
+performed on the original image. The objective in tuning binarization settings is to produce an image where the border is black, and the image background
+is white.  
+(See <a href='../Miscellaneous/Binarize.htm'>Binarize</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Miscellaneous/Binarize.htm'>Binarize</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Unit_Border.htm'>Unit Border</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Licensing</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nGrooper Licensing");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Grooper Licensing<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Licensing</h1>
+<p>Grooper licensing is distributed to running applications by an instance 
+ of Grooper License Server, a web service which is installed using the 
+ Services Tab in Grooper Configuration. &#160;The service can be configured 
+ to run on any available port number (the default port number is 13900).</p>
+<p>&#160;</p>
+<p>At run time, applications must know how to communicate with the license 
+ server. &#160;This is accomplished by configuring a License Server object 
+ in Grooper Administration which contains connection information for the 
+ running instance of Grooper License Server, and designating that License 
+ Server as the &quot;active&quot; license server by setting the License 
+ Server property of the Grooper Root object. &#160;</p>
+<h2>Licensing Setup</h2>
+<p>The general procedure for installing Grooper licensing is as follows:</p>
+<p>&#160;</p>
+<ol>
+	<li style="list-style: decimal;"><p>In Grooper Configuration, use the 
+	 Services Tab to install an instance of the License_Service on a server. 
+	 &#160;Remember the machine name and port number assigned to the service.</p></li>
+	<li style="list-style: decimal;"><p>In Grooper Administration, navigate 
+	 to 'Infrastructure • License Servers' and create a new License Server 
+	 object, configuring it with the machine name and port number for the 
+	 service created in Step 1.</p></li>
+	<li style="list-style: decimal;"><p>Use the property panel of the newly-created 
+	 License Server to install licensing using the serial number of license 
+	 file provided with your purchase of Grooper.</p></li>
+	<li style="list-style: decimal;"><p>Navigate to the Grooper Root object 
+	 and set the License Server property to the License Server object created 
+	 in Step 2.</p></li>
+</ol>
+<h2>License Types</h2>
+<p>Grooper licensing includes the following types of licenses.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Server</u></span><span> 
+	 - The total number of concurrent servers which will run </span><span 
+	 style="text-decoration: underline; "><u>any</u></span><span> Grooper application, 
+	 including Administration and Dashboard. &#160;A &quot;server&quot; 
+	 is defined as any machine with a server operating system installed.</span></li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Concurrent 
+	 Users</u></span> - The total number of concurrent users who can be logged 
+	 in to Grooper at any given time. &#160;All attended processing modules 
+	 acquire a concurrent user license when they connect to Grooper. &#160;Grooper 
+	 Administration, Grooper Configuration, and Grooper Dashboard do not 
+	 require concurrent user licenses.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>OCR 
+	 Process</u></span> - The total number of concurrent OCR operations which 
+	 can be performed at any given time. &#160;This includes all running 
+	 threads for the Full Text OCR module, all running instances of the 
+	 Auto Orient OCR IP command, all running threads for the Extract module 
+	 performing zonal OCR, and all Scanner Profiles where the 'Auto Orient' 
+	 option is checked.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>Page 
+	 Volume</u></span> - The total number of pages which can be processed through 
+	 Grooper over a given time interval. This includes all pages scanned 
+	 or imported into Grooper, regardless of whether the associated batches 
+	 are test batches or production batches.</li>
+</ul>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

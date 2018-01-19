@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Reporting</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nReporting");
+addTocInfo("Getting Started\nGrooper Concepts\nReporting\nProject_Billing");
+
+
+	if(bc == 1)
+{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; <a href=\"Reporting.htm\">Reporting<\/a> &gt; Project_Billing<\/p>");
+}
+else{
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Reporting<\/p>");
+}
+
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Reporting </h1>
+<p>Grooper's reporting subsystem is used to generate reports which provide 
+ insight into the efficiency of capture operations and the productivity 
+ of users who work in Grooper. &#160;The product ships with a variety of 
+ pre-defined reports, and provides full support for the development of 
+ custom reports.</p>
+<p>&#160;</p>
+<p>Reports are defined using a Report 
+ object. &#160;Report objects contain the report definition, any scripting 
+ logic necessary to generate the report, and a set of properties which 
+ configure the report. &#160;For example, the Pages Scanned report is configured 
+ with the following properties:</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_SettingsExample.gif" alt="" style="border: none;" border="0" /></p>
+<p>&#160;</p>
+<p>Saved instances of these settings can be saved as Report 
+ Instance objects, which are displayed in applications using the Report 
+ Viewer Control. &#160;For example, the Pages Scanned report shown 
+ below contains 5 variations of the report which will be available for 
+ display: &#160;</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_ReportInstancesExample.gif" alt="" style="border: none;" border="0" /></p>
+<p>&#160;</p>
+<p>Report Instances 
+ are created using the Save_Instance 
+ command on the property panel for a Report 
+ object. &#160;Simply set the report properties as desired, and then click 
+ the Save Instance command and enter a descriptive name for the Report 
+ Instance.</p>
+<h2>Viewing Reports</h2>
+<p>Reports can be viewed through a variety of mechanism in Grooper, as 
+ outlined below:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>In 
+	 Grooper Administration</u></span> - When configuring settings for a Report, the report 
+	 can be previewed in the property panel for the Report 
+	 object by using the Run Report command. &#160;Saved Report 
+	 Instances can be viewed in the property panel for the Report 
+	 Instance object.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>In 
+	 Grooper Dashboard</u></span> - Grooper 
+	 Dashboard can be configured with a list of Report 
+	 Instances to be displayed in tabs at the bottom of the main window.</li>
+	<li><span style="font-weight: bold; text-decoration: underline; "><u>In 
+	 Grooper Kiosk</u></span> - The Grooper 
+	 Kiosk application displays full-screen reports and is designed 
+	 to be used with a wall-mounted display screen to display production 
+	 statistics in a production capture operation. &#160;The application 
+	 is configured with a list of Report 
+	 Instances which it will repeatedly cycle through. </li>
+</ul>
+<h2>Predefined Reports</h2>
+<p>The following predefined reports ship with Grooper.</p>
+<h3>Data Capture Automation</h3>
+<p>This report measures the automation rate of data extraction by displaying 
+ the percentage of records where a manual edit was required in the Data 
+ Review module.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_DataCaptureAutomation.jpg" class="ScreenShotBorder" alt="" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values:<br />
+		
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Batch Process</td>
+		<td>If set to a value, restricts the report to the indicated Batch 
+		 Process.</td>
+	</tr>
+</table>
+<h3>Data Review Operators</h3>
+<p>This report measures the amount of work performed by individual operators 
+ in the Data Review module in terms of keystrokes, records viewed, and 
+ records edited.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_DataReviewOperators.jpg" alt="" class="ScreenShotBorder" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values:<br />
+		
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Report Type</td>
+		<td>Indicates which metric should be displayed in the report. &#160;Can 
+		 be one of the following values:
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Keystrokes</u></span> 
+			 - The number of data entry keystrokes.</li>
+			<li><span style="text-decoration: underline; "><u>Records Viewed</u></span> 
+			 - The number of records viewed.</li>
+			<li><span style="text-decoration: underline; "><u>Records Edited</u></span> 
+			 - The number of records edited.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<h3>Pages Scanned</h3>
+<p>This report measures the number of pages scanned by specific users or 
+ on specific workstations over a period of time.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_PagesScanned.jpg" alt="" class="ScreenShotBorder" width="936" height="441" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values: 
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Show By</td>
+		<td>Indicates how results should be grouped. &#160;Can be one of 
+		 the following values:
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>User</u></span> 
+			 - Display results by user.</li>
+			<li><span style="text-decoration: underline; "><u>Machine</u></span> 
+			 - Display results by workstation.</li>
+			<li><span style="text-decoration: underline; "><u>Process</u></span> 
+			 - Display results by Batch Process.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<h3>Production Batches </h3>
+<p>Displays total counts for production batches, grouped by batch process, 
+ current step, pending module, or current status.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_ProductionBatches.jpg" alt="" class="ScreenShotBorder" width="859" height="394" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values: 
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Show By</td>
+		<td>Indicates how results should be grouped. &#160;Can be one of 
+		 the following values:
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>User</u></span> 
+			 - Display results by user.</li>
+			<li><span style="text-decoration: underline; "><u>Machine</u></span> 
+			 - Display results by workstation.</li>
+			<li><span style="text-decoration: underline; "><u>Process</u></span> 
+			 - Display results by Batch Process.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<h3><a name="Project_Billingbc-1"></a><a name="Project_Billing">Project Billing</a></h3>
+<p>Displays statistic quantities and billing totals for all processes assigned 
+ to a given Grooper Project.</p>
+<p>&#160;</p>
+<p><img src="images/Project_Billing_Report.jpg" alt="" class="ScreenShotBorder" width="876" height="289" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values:
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Grooper Project</td>
+		<td>The Grooper project to report on.</td>
+	</tr>
+	<tr>
+		<td>Report Columns</td>
+		<td>Columns can be optionally excluded from the report:
+		<p style="font-size: 10pt;">&#160;</p>
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Batch Process</u></span> 
+			 - Include and group by each Batch 
+			 Process.</li>
+			<li><span style="text-decoration: underline; "><u>Process Step</u></span> 
+			 - Include and group by each Batch 
+			 Process Step.</li>
+			<li><span style="text-decoration: underline; "><u>Rate</u></span>&#160;- 
+			 Include the associated cost value. If this column is included, 
+			 a report total will be included in the report footer.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<h3>Scan Operator Efficiency</h3>
+<p>This report measures the overall efficiency of scan operators by comparing 
+ the actual speed at which the scanner is running to the effective speed 
+ of the operator after the delays associated with out of paper conditions, 
+ paper jams, double feeds, and idle time are accounted for. &#160;Essentially, 
+ this report measures the percentage of time spent with a batch open where 
+ the scanner is actually feeding documents. &#160;The more time an operator 
+ spends without the scanner running, the lower the efficiency rating.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_ScanOperatorEfficiency.jpg" alt="" class="ScreenShotBorder" /></p>
+<p>&#160;</p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values:<br />
+		
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Batch Process</td>
+		<td>If set to a value, restricts the report to the indicated Batch 
+		 Process.</td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3>Scan Volume</h3>
+<p>This report measures the total system scan volume over a period of time, 
+ grouped by day, week, or month.</p>
+<p>&#160;</p>
+<p><img src="images/Reporting_ScanVolume.jpg" alt="" class="ScreenShotBorder" width="631" height="514" /></p>
+<p>The properties for this report are outlined below.</p>
+<p>&#160;</p>
+<table class="ObjectProperties" cellspacing="0">
+	<col style="width: 25.443%;" />
+	<col style="width: 74.557%;" />
+	<tr class="Header">
+		<td>Property Name</td>
+		<td>Description</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Range</td>
+		
+	</tr>
+	<tr>
+		<td>Range Type</td>
+		<td>Controls the period of time for which the report is run. &#160;Can 
+		 be one of the following values:<br />
+		
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Specific Dates</u></span> 
+			 - Use the specific dates provided in Start Date and End Date.</li>
+			<li><span style="text-decoration: underline; "><u>Today</u></span> 
+			 - Runs report for the current date.</li>
+			<li><span style="text-decoration: underline; "><u>Yesterday</u></span>&#160;- 
+			 Runs report for the current date minus one day.</li>
+			<li><span style="text-decoration: underline; "><u>MTD</u></span> - 
+			 Runs report for the start of the current month to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>YTD</u></span>&#160;- 
+			 Runs report for the start of the current year to the current 
+			 date.</li>
+			<li><span style="text-decoration: underline; "><u>Past7Days</u></span>&#160;- 
+			 Runs report for past 7 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past30Days</u></span>&#160;- 
+			 Runs report for past 30 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past60Days</u></span>&#160;- 
+			 Runs report for past 60 days.</li>
+			<li><span style="text-decoration: underline; "><u>Past90Days</u></span>&#160;- 
+			 Runs report for past 90 days.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+	<tr>
+		<td>Start Date</td>
+		<td>If Range Type is set to 'SpecificDates', the start date for 
+		 the report.</td>
+	</tr>
+	<tr>
+		<td>End Date</td>
+		<td>If Range Type is set to 'SpecificDates', the end date for the 
+		 report.</td>
+	</tr>
+	<tr class="Category">
+		<td colspan="2">Report Settings</td>
+		
+	</tr>
+	<tr>
+		<td>Show By</td>
+		<td>Indicates how results should be grouped. &#160;Can be one of 
+		 the following values:<br />
+		
+		<ul style="list-style: disc;">
+			<li><span style="text-decoration: underline; "><u>Day</u></span> - 
+			 Display results by day.</li>
+			<li><span style="text-decoration: underline; "><u>Week</u></span> 
+			 - Display results by week.</li>
+			<li><span style="text-decoration: underline; "><u>Month</u></span> 
+			 - Display results by month.</li>
+		</ul>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<h3>Kiosk Reports</h3>
+<p>The Kiosk Reports folder contains variations of the reports listed above 
+ which are formatted for the 16:9 aspect ratio of the standard wide-screen 
+ display. &#160;These reports are designed to be used with the Grooper 
+ Kiosk application.</p>
+<h2>Custom Reports</h2>
+<p>Grooper's reporting subsystem is based on <a href="http://msdn.microsoft.com/en-us/library/bb885185.aspx" 
+												 target="_blank">Microsoft 
+ Reports</a>, and reports are created using the <a href="http://msdn.microsoft.com/en-us/library/bb558708.aspx" 
+													 target="_blank">Report 
+ Designer</a> in Microsoft Visual Studio through Grooper's <a href="Scripting.htm">scripting 
+ interface</a>. &#160;The script for report generation is defined on the 
+ Report object. &#160;For 
+ information on how to create a custom report, refer to the documentation 
+ for the Report object, 
+ or the <a href="../How_To_Guide/How_To_Guide.htm">How To Guide</a>.</p>
+<h2>See Also</h2>
+<p>Report</p>
+<p>Report Instance</p>
+<p>&#160;</p>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

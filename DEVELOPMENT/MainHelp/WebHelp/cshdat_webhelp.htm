@@ -1,0 +1,981 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Grooper Documentation</title>
+
+<meta name="generator" content="Adobe RoboHelp 11" />
+<meta name="description" content="WebHelp 5.50" />
+<script  src="whutils.js" charset="utf-8" charset="utf-8"></script>
+</head>
+<body>
+<script language="JavaScript">
+<!--
+
+var gArrayCsh = new Array();
+
+var gstrWindowOption = "";
+var gstrURL = "";
+var gbWithNavPane = false;
+
+function CshEntityItem(strAliasId, nTopicNum, strUrl) 
+{
+    this.strAliasId = strAliasId;
+    this.nTopicNum = nTopicNum;
+    this.strUrl = strUrl;
+}
+
+
+//Try to get to topic number from hash string
+function GetTopicNumberAuto(strMayBeNumber)
+{
+   var nNum = -1;
+   if (strMayBeNumber.length >= 1)
+   {
+		var strTmp = strMayBeNumber;
+		var iEnd = strTmp.length;
+		for (var i=0; i<iEnd; i++)
+		{
+			  var ch = strTmp.charAt(i);
+			  if (!((ch == "0") || (ch == "1") ||
+			        (ch == "2") || (ch == "3") ||
+			        (ch == "4") || (ch == "5") ||
+			        (ch == "6") || (ch == "7") ||
+			        (ch == "8") || (ch == "9")))
+			      return GetTopicNumberById(strTmp);
+		}
+		nNum = parseInt(strTmp);
+   }
+   return nNum;
+}
+
+function GetTopicNumber(strHashString)
+{
+	var nTopicEndPos = strHashString.indexOf(',')
+	if (nTopicEndPos == -1) { // no window option.
+		return GetTopicNumberOnly(strHashString);
+	}
+	else {
+		var strWindowOption = strHashString.substring(nTopicEndPos + 1, strHashString.length);
+		var strWithNavPane = 'withnavpane=true';
+		if (strWindowOption.toLowerCase().indexOf(strWithNavPane) == 0)
+		{
+			if (strWindowOption.length > strWithNavPane.length)
+				gstrWindowOption = strWindowOption.substring(strWithNavPane.length + 1);
+			else
+				gstrWindowOption = "";
+			gbWithNavPane = true;
+		}
+		else
+			gstrWindowOption = strWindowOption;
+		return GetTopicNumberOnly(strHashString.substring(0, nTopicEndPos));		
+	}
+}
+
+function GetTopicNumberOnly(strTopicString)
+{
+	var nEqualPos = strTopicString.indexOf('=');
+	if (nEqualPos == -1) {
+		return GetTopicNumberAuto(strTopicString);
+	}
+	else {
+		var strValue=strTopicString.substring(nEqualPos + 1, strTopicString.length);
+		if (strTopicString.toLowerCase().indexOf("topicnumber") == 0) {
+			return parseInt(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("topicid") == 0) {
+			return GetTopicNumberById(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("remoteurl") == 0) {
+			if(IsInternal(strValue))
+				gstrURL = strValue;
+			return -1;
+		}
+
+	}
+}
+
+//Find HomePage of the WebHelp system
+// we try to get the topic from remote project if it exists.
+function RedirectToHomePage()
+{
+	if (parent && parent != this && parent.goNext)
+	{
+		var sHome = parent.goNext();
+		if (sHome != "")
+			RedirectTo(sHome);
+	}
+}
+
+function getHomePage()
+{
+	if (parent && parent != this && parent.getRelHomePage)
+	{
+		return parent.getRelHomePage(document.location.href);
+	}
+	return "";
+}
+
+function addRemoteProject(strPath)
+{
+	if (parent && parent != this && parent.addProject)
+	{
+		parent.addProject(strPath);
+	}
+}
+
+//Redirect page to...
+function RedirectTo(strUrl)
+{
+   if (gstrWindowOption.length != 0) {
+		var wnd = window.open(strUrl, "HelpStub", gstrWindowOption);
+		// close current window and rename the stub window to current window.
+		wnd.focus();
+		if (parent)
+			parent.close();
+   }
+   else {
+	parent.document.location.href = strUrl;
+	window.focus();
+  }
+}
+
+//Prompt the user that we can not find...
+function FailToFind(strMsg)
+{
+    RedirectToHomePage();
+}
+
+//Find topic by topic number (defined in h file)
+function FindTopicByTopicNum(nTopicNum)
+{
+	var i = 0;
+	var iEnd = gArrayCsh.length;
+	for (i=0; i<iEnd; i++)
+	{
+		if (gArrayCsh[i].nTopicNum == nTopicNum)
+		{
+			var strURL = gArrayCsh[i].strUrl;
+			if (gbWithNavPane)
+			{
+				var strHomePage = getHomePage();
+				if (strHomePage.length != 0)
+					strURL = strHomePage + strURL;
+			}	
+			RedirectTo(strURL);
+			return true;
+		}
+	}
+	FailToFind("Fail to find topic assocaite with topic number: " + nTopicNum);
+	return false;
+}
+
+//Find topic by topic id (alias id defined in ali file)
+function GetTopicNumberById(strTopicId)
+{
+   var i = 0;
+   var iEnd = gArrayCsh.length;
+   for (i=0; i<iEnd; i++)
+   {
+	if (gArrayCsh[i].strAliasId == strTopicId)
+	{
+	    return gArrayCsh[i].nTopicNum;
+	 }
+   }
+   gstrURL = "";
+   return -1;
+}
+
+//Set Context-sensitive help entity...
+function SetCsh(n, strAliasId, nTopicNum, strUrl)
+{
+   gArrayCsh[n] = new CshEntityItem(strAliasId,nTopicNum,strUrl);
+}
+
+
+function getHash()
+{
+	if (parent && parent != this)
+		return parent.location.hash;
+	else
+		return "";
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+  SetCsh(0,"CMIS_Batch_Transfer",18,"Administrator_Reference/Activity_Types/Miscellaneous/CMIS_Batch_Transfer.htm");
+  SetCsh(1,"Image_Processing",25,"Administrator_Reference/Activity_Types/Object_Application_Execution/Image_Processing.htm");
+  SetCsh(2,"Separation",27,"Administrator_Reference/Activity_Types/Object_Application_Execution/Separation.htm");
+  SetCsh(3,"Batch_Object_Types",44,"Administrator_Reference/Batch_Object_Types/Batch_Object_Types.htm");
+  SetCsh(4,"Color_Trac_Capture_Device",54,"Administrator_Reference/Capture_Device_Types/Color_Trac_Capture_Device.htm");
+  SetCsh(5,"Array",69,"Administrator_Reference/Collation_Provider_Types/Array.htm");
+  SetCsh(6,"Absolute",106,"Administrator_Reference/Edge_Adjustment_Types/Absolute.htm");
+  SetCsh(7,"Control_Sheet",123,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Control_Sheet.htm");
+  SetCsh(8,"CMIS_Content_Type",137,"Administrator_Reference/Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm");
+  SetCsh(9,"IP_Profile",150,"Administrator_Reference/Grooper_Node_Types/Profiles/IP_Profile.htm");
+  SetCsh(10,"ABBYY_FineReader_Settings",158,"Administrator_Reference/Grooper_Object_Types/ABBYY_FineReader_Settings.htm");
+  SetCsh(11,"Image_Viewer_Settings",199,"Administrator_Reference/Grooper_Object_Types/Image_Viewer_Settings.htm");
+  SetCsh(12,"Separation_Event",217,"Administrator_Reference/Grooper_Object_Types/Separation_Event.htm");
+  SetCsh(13,"Barcode_Detection",259,"Administrator_Reference/IP_Command_Types/Feature_Detection/Barcode_Detection.htm");
+  SetCsh(14,"Threshold",279,"Administrator_Reference/IP_Command_Types/Format_Conversion/Threshold.htm");
+  SetCsh(15,"Compute_Moments",281,"Administrator_Reference/IP_Command_Types/Image_Analysis/Compute_Moments.htm");
+  SetCsh(16,"Change_File_Attributes",310,"Administrator_Reference/Object_Command_Types/Change_File_Attributes.htm");
+  SetCsh(17,"Delete_File",319,"Administrator_Reference/Object_Command_Types/Delete_File.htm");
+  SetCsh(18,"Remove_Link",347,"Administrator_Reference/Object_Command_Types/Remove_Link.htm");
+  SetCsh(19,"Reset",351,"Administrator_Reference/Object_Command_Types/Reset.htm");
+  SetCsh(20,"Deskew",375,"Administrator_Reference/Object_Command_Types/Image/Deskew.htm");
+  SetCsh(21,"Tesseract_OCR",394,"Administrator_Reference/OCR_Engine_Types/Tesseract_OCR.htm");
+  SetCsh(22,"Project_Billing",407,"Administrator_Reference/Report_Types/System_Reports/Project_Billing.htm");
+  SetCsh(23,"Query_Report",408,"Administrator_Reference/Report_Types/System_Reports/Query_Report.htm");
+  SetCsh(24,"Int64",439,"Administrator_Reference/Storage_Type_Types/Int64.htm");
+  SetCsh(25,"Month_Names_Abbreviated",463,"Administrator_Reference/Variable_Provider_Types/Month_Names_Abbreviated.htm");
+  SetCsh(26,"Grooper_UI_Elements",520,"User_Interface_Reference/Grooper_UI_Elements/Grooper_UI_Elements.htm");
+  SetCsh(27,"Browse_For_SSH_Folder_Dialog",530,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Browse_For_SSH_Folder_Dialog.htm");
+  SetCsh(28,"Licensing_Serial_Number_Dialog",559,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Licensing_Serial_Number_Dialog.htm");
+  SetCsh(29,"Registration_Zone_Test_Dialog",578,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Registration_Zone_Test_Dialog.htm");
+  SetCsh(30,"BatchesFolder_General",596,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchesFolder_General.htm");
+  SetCsh(31,"BatchFolder_InstanceViewer",599,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchFolder_InstanceViewer.htm");
+  SetCsh(32,"CharacterExtractUnitTester",605,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CharacterExtractUnitTester.htm");
+  SetCsh(33,"CmisConnection_General",606,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CmisConnection_General.htm");
+  SetCsh(34,"ContentType_General",613,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ContentType_General.htm");
+  SetCsh(35,"DataModel_ExtractionTesting",621,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DataModel_ExtractionTesting.htm");
+  SetCsh(36,"GrooperRoot_Types",637,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Types.htm");
+  SetCsh(37,"ScannerProfileFolder_General",652,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ScannerProfileFolder_General.htm");
+  SetCsh(38,"CMIS_Query_Builder",668,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Query_Builder.htm");
+  SetCsh(39,"CMIS_Type_Property_Display",677,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Type_Property_Display.htm");
+  SetCsh(40,"CV_Classification_Model_Display",680,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CV_Classification_Model_Display.htm");
+  SetCsh(41,"Image_Viewer",691,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Image_Viewer.htm");
+  SetCsh(42,"Node_Tree_View",708,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Node_Tree_View.htm");
+  SetCsh(43,"Detect_Frames",16,"Administrator_Reference/Activity_Types/Microfilm_Processing/Detect_Frames.htm");
+  SetCsh(44,"Classify_Pages",34,"Administrator_Reference/Activity_Types/Unattended_Activities/Classify_Pages.htm");
+  SetCsh(45,"Extraction",38,"Administrator_Reference/Activity_Types/Unattended_Activities/Extraction.htm");
+  SetCsh(46,"Index_Navigator",50,"Administrator_Reference/Batch_View_Types/Index_Navigator.htm");
+  SetCsh(47,"Page_Type",130,"Administrator_Reference/Grooper_Node_Types/Content_Models/Page_Type.htm");
+  SetCsh(48,"Training_Page",131,"Administrator_Reference/Grooper_Node_Types/Content_Models/Training_Page.htm");
+  SetCsh(49,"Lookup_Options",203,"Administrator_Reference/Grooper_Object_Types/Lookup_Options.htm");
+  SetCsh(50,"IP_Command_Types",240,"Administrator_Reference/IP_Command_Types/IP_Command_Types.htm");
+  SetCsh(51,"Extract_Features",282,"Administrator_Reference/IP_Command_Types/Image_Analysis/Extract_Features.htm");
+  SetCsh(52,"Flow",298,"Administrator_Reference/Layout_Provider_Types/Flow.htm");
+  SetCsh(53,"Mail_Message",302,"Administrator_Reference/MIME_Type_Handler_Types/Mail_Message.htm");
+  SetCsh(54,"Assign_Document_Type",309,"Administrator_Reference/Object_Command_Types/Assign_Document_Type.htm");
+  SetCsh(55,"Clear_Children",372,"Administrator_Reference/Object_Command_Types/Contents/Clear_Children.htm");
+  SetCsh(56,"Insert",381,"Administrator_Reference/Object_Command_Types/Scan/Insert.htm");
+  SetCsh(57,"ISIS_Scanning_Options",397,"Administrator_Reference/Protocol_Settings_Types/ISIS_Scanning_Options.htm");
+  SetCsh(58,"Data_Review_Operators",403,"Administrator_Reference/Report_Types/System_Reports/Data_Review_Operators.htm");
+  SetCsh(59,"Event-Based_Separation",419,"Administrator_Reference/Separation_Provider_Types/Event-Based_Separation.htm");
+  SetCsh(60,"Digits",457,"Administrator_Reference/Variable_Provider_Types/Digits.htm");
+  SetCsh(61,"Month_Names_Genetive",464,"Administrator_Reference/Variable_Provider_Types/Month_Names_Genetive.htm");
+  SetCsh(62,"Grooper_Render_Printer_Concepts",482,"Getting_Started/Grooper_Concepts/Grooper_Render_Printer_Concepts.htm");
+  SetCsh(63,"Estimate_System_Sizing_Metrics",494,"Getting_Started/How_To_Guide/Configuration_and_Setup/Estimate_System_Sizing_Metrics.htm");
+  SetCsh(64,"Delete_Blank_Pages",501,"Getting_Started/How_To_Guide/Scanning/Delete_Blank_Pages.htm");
+  SetCsh(65,"Upgrade_Notes",512,"Upgrade_Notes/Upgrade_Notes.htm");
+  SetCsh(66,"Grooper_Administration",513,"User_Interface_Reference/Grooper_Administration.htm");
+  SetCsh(67,"Reset_Steps_Dialog",580,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Reset_Steps_Dialog.htm");
+  SetCsh(68,"BatchFolder_General",597,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchFolder_General.htm");
+  SetCsh(69,"ContentType_DataElementProfiles",612,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ContentType_DataElementProfiles.htm");
+  SetCsh(70,"DataConnection_General",618,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DataConnection_General.htm");
+  SetCsh(71,"GrooperRoot_Events",631,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Events.htm");
+  SetCsh(72,"GrooperRoot_Scripts",635,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Scripts.htm");
+  SetCsh(73,"Batch_Event_Viewer",658,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Event_Viewer.htm");
+  SetCsh(74,"CMIS_Repository_Browser",672,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Repository_Browser.htm");
+  SetCsh(75,"Data_Display_Timer",682,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Data_Display_Timer.htm");
+  SetCsh(76,"Instance_Text_Viewer",699,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Instance_Text_Viewer.htm");
+  SetCsh(77,"Database_Export",36,"Administrator_Reference/Activity_Types/Unattended_Activities/Database_Export.htm");
+  SetCsh(78,"Detect_Language",37,"Administrator_Reference/Activity_Types/Unattended_Activities/Detect_Language.htm");
+  SetCsh(79,"Batch_Folder",45,"Administrator_Reference/Batch_Object_Types/Batch_Processing/Batch_Folder.htm");
+  SetCsh(80,"Split",76,"Administrator_Reference/Collation_Provider_Types/Split.htm");
+  SetCsh(81,"Repository_Connection",85,"Administrator_Reference/Database_Connection_Settings_Types/Repository_Connection.htm");
+  SetCsh(82,"Data_Column",92,"Administrator_Reference/Data_Element_Types/Data_Extraction/Data_Column.htm");
+  SetCsh(83,"Data_Table",96,"Administrator_Reference/Data_Element_Types/Data_Extraction/Data_Table.htm");
+  SetCsh(84,"Field_Class_Instance",99,"Administrator_Reference/Data_Instance_Types/Field_Class_Instance.htm");
+  SetCsh(85,"Table_Instance",103,"Administrator_Reference/Data_Instance_Types/Table_Instance.htm");
+  SetCsh(86,"Table_Row_Instance",104,"Administrator_Reference/Data_Instance_Types/Table_Row_Instance.htm");
+  SetCsh(87,"Batch",117,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch.htm");
+  SetCsh(88,"Project",124,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Project.htm");
+  SetCsh(89,"Lexicon",125,"Administrator_Reference/Grooper_Node_Types/Collections/Lexicon.htm");
+  SetCsh(90,"CMIS_DateTime_Property_Definition",166,"Administrator_Reference/Grooper_Object_Types/CMIS_DateTime_Property_Definition.htm");
+  SetCsh(91,"MIME_Type_Handler",205,"Administrator_Reference/Grooper_Object_Types/MIME_Type_Handler.htm");
+  SetCsh(92,"Multi_Line_Settings",206,"Administrator_Reference/Grooper_Object_Types/Multi_Line_Settings.htm");
+  SetCsh(93,"Scanner_Settings",215,"Administrator_Reference/Grooper_Object_Types/Scanner_Settings.htm");
+  SetCsh(94,"Contrast_Stretch",253,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Contrast_Stretch.htm");
+  SetCsh(95,"Clone_To_Production",312,"Administrator_Reference/Object_Command_Types/Clone_To_Production.htm");
+  SetCsh(96,"Go_To_Next_Issue",328,"Administrator_Reference/Object_Command_Types/Go_To_Next_Issue.htm");
+  SetCsh(97,"Merge_Pages",334,"Administrator_Reference/Object_Command_Types/Merge_Pages.htm");
+  SetCsh(98,"Remove_Native_Version",348,"Administrator_Reference/Object_Command_Types/Remove_Native_Version.htm");
+  SetCsh(99,"Reprocess",350,"Administrator_Reference/Object_Command_Types/Reprocess.htm");
+  SetCsh(100,"Append",380,"Administrator_Reference/Object_Command_Types/Scan/Append.htm");
+  SetCsh(101,"Replace",382,"Administrator_Reference/Object_Command_Types/Scan/Replace.htm");
+  SetCsh(102,"Mail_Recipient",385,"Administrator_Reference/Object_Command_Types/Send_To/Mail_Recipient.htm");
+  SetCsh(103,"Export_to_Compressed_Archive",388,"Administrator_Reference/Object_Command_Types/Share/Export_to_Compressed_Archive.htm");
+  SetCsh(104,"ESP_Auto_Separation",418,"Administrator_Reference/Separation_Provider_Types/ESP_Auto_Separation.htm");
+  SetCsh(105,"String",441,"Administrator_Reference/Storage_Type_Types/String.htm");
+  SetCsh(106,"Day_Names_Shortest",456,"Administrator_Reference/Variable_Provider_Types/Day_Names_Shortest.htm");
+  SetCsh(107,"Reporting_Project_Billing",486,"Getting_Started/Grooper_Concepts/Reporting.htm#Project_Billing");
+  SetCsh(108,"Batch_XML_Viewer_Dialog",527,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Batch_XML_Viewer_Dialog.htm");
+  SetCsh(109,"Browse_For_FTP_Folder_Dialog",528,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Browse_For_FTP_Folder_Dialog.htm");
+  SetCsh(110,"IMAP_Query_Editor_Dialog",555,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/IMAP_Query_Editor_Dialog.htm");
+  SetCsh(111,"Manual_Deskew_Dialog",561,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Manual_Deskew_Dialog.htm");
+  SetCsh(112,"OMR_Zone_Test_Dialog",570,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/OMR_Zone_Test_Dialog.htm");
+  SetCsh(113,"Provider_Import_Dialog",575,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Provider_Import_Dialog.htm");
+  SetCsh(114,"Select_Document_Type_Dialog",586,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Document_Type_Dialog.htm");
+  SetCsh(115,"Reference_Viewer",719,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Reference_Viewer.htm");
+  SetCsh(116,"Scan_Control",721,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Scan_Control.htm");
+  SetCsh(117,"Document_Export",9,"Administrator_Reference/Activity_Types/Export/Document_Export.htm");
+  SetCsh(118,"Consolidate_Pages",15,"Administrator_Reference/Activity_Types/Microfilm_Processing/Consolidate_Pages.htm");
+  SetCsh(119,"Detect_Pages",17,"Administrator_Reference/Activity_Types/Microfilm_Processing/Detect_Pages.htm");
+  SetCsh(120,"Deduplicate",19,"Administrator_Reference/Activity_Types/Miscellaneous/Deduplicate.htm");
+  SetCsh(121,"Content_Action",35,"Administrator_Reference/Activity_Types/Unattended_Activities/Content_Action.htm");
+  SetCsh(122,"Batch_Page",46,"Administrator_Reference/Batch_Object_Types/Batch_Processing/Batch_Page.htm");
+  SetCsh(123,"Table_Profile",90,"Administrator_Reference/Data_Element_Profile_Types/Table_Profile.htm");
+  SetCsh(124,"Data_Instance_Types",97,"Administrator_Reference/Data_Instance_Types/Data_Instance_Types.htm");
+  SetCsh(125,"Batches_Folder",118,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batches_Folder.htm");
+  SetCsh(126,"Field_Class",135,"Administrator_Reference/Grooper_Node_Types/Data_Extraction/Field_Class.htm");
+  SetCsh(127,"Unit_Size",232,"Administrator_Reference/Grooper_Object_Types/Unit_Size.htm");
+  SetCsh(128,"Auto_Border_Crop",241,"Administrator_Reference/IP_Command_Types/Border_Cleanup/Auto_Border_Crop.htm");
+  SetCsh(129,"Solarize",257,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Solarize.htm");
+  SetCsh(130,"Measure_Entropy",284,"Administrator_Reference/IP_Command_Types/Image_Analysis/Measure_Entropy.htm");
+  SetCsh(131,"Randomize_Defects",297,"Administrator_Reference/IP_Command_Types/Miscellaneous/Randomize_Defects.htm");
+  SetCsh(132,"Generate_Table",325,"Administrator_Reference/Object_Command_Types/Generate_Table.htm");
+  SetCsh(133,"Move_Next",336,"Administrator_Reference/Object_Command_Types/Move_Next.htm");
+  SetCsh(134,"Object_Command_Types",341,"Administrator_Reference/Object_Command_Types/Object_Command_Types.htm");
+  SetCsh(135,"Resume",352,"Administrator_Reference/Object_Command_Types/Resume.htm");
+  SetCsh(136,"Test_Batch",387,"Administrator_Reference/Object_Command_Types/Send_To/Test_Batch.htm");
+  SetCsh(137,"Batch_Statistics",401,"Administrator_Reference/Report_Types/System_Reports/Batch_Statistics.htm");
+  SetCsh(138,"Table_Extract_Method_Types",446,"Administrator_Reference/Table_Extract_Method_Types/Table_Extract_Method_Types.htm");
+  SetCsh(139,"Currency_Group_Separators",451,"Administrator_Reference/Variable_Provider_Types/Currency_Group_Separators.htm");
+  SetCsh(140,"Letters",459,"Administrator_Reference/Variable_Provider_Types/Letters.htm");
+  SetCsh(141,"Data_Extraction",476,"Getting_Started/Grooper_Concepts/Data_Extraction.htm");
+  SetCsh(142,"Install_a_Stand-Alone_Instance_of_Grooper",496,"Getting_Started/How_To_Guide/Configuration_and_Setup/Install_a_Stand-Alone_Instance_of_Grooper.htm");
+  SetCsh(143,"CMIS_Query_Dialog",532,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/CMIS_Query_Dialog.htm");
+  SetCsh(144,"Context_Zone_Editor_Dialog",533,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Context_Zone_Editor_Dialog.htm");
+  SetCsh(145,"Placeholder_Editor_Dialog",572,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Placeholder_Editor_Dialog.htm");
+  SetCsh(146,"Select_Allowed_Characters_Dialog",583,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Allowed_Characters_Dialog.htm");
+  SetCsh(147,"Select_Batch_Process_Step_Dialog",584,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Batch_Process_Step_Dialog.htm");
+  SetCsh(148,"BatchPage_General",600,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchPage_General.htm");
+  SetCsh(149,"ContentType_ClassificationTesting",611,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ContentType_ClassificationTesting.htm");
+  SetCsh(150,"Machine_General",644,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/Machine_General.htm");
+  SetCsh(151,"OcrProfile_General",646,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/OcrProfile_General.htm");
+  SetCsh(152,"UnattendedActivityTester",654,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/UnattendedActivityTester.htm");
+  SetCsh(153,"Batch_Multi_View",662,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Multi_View.htm");
+  SetCsh(154,"Batch_Processing_History_Viewer",663,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Processing_History_Viewer.htm");
+  SetCsh(155,"Code_Editor",678,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Code_Editor.htm");
+  SetCsh(156,"Machine_Viewer",703,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Machine_Viewer.htm");
+  SetCsh(157,"Node_File_Code_Editor",706,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Node_File_Code_Editor.htm");
+  SetCsh(158,"Node_Property_Grid",707,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Node_Property_Grid.htm");
+  SetCsh(159,"Type_Viewer",729,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Type_Viewer.htm");
+  SetCsh(160,"X9.37_Merge",42,"Administrator_Reference/Activity_Types/Unattended_Activities/X9.37_Merge.htm");
+  SetCsh(161,"TWAIN",61,"Administrator_Reference/Capture_Protocol_Types/TWAIN.htm");
+  SetCsh(162,"Combine",71,"Administrator_Reference/Collation_Provider_Types/Combine.htm");
+  SetCsh(163,"Single_Instance",75,"Administrator_Reference/Collation_Provider_Types/Single_Instance.htm");
+  SetCsh(164,"FTP_Link",80,"Administrator_Reference/Content_Link_Types/Ftp_Link.htm");
+  SetCsh(165,"Batch_Processing_Folder",120,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Processing_Folder.htm");
+  SetCsh(166,"OCR_Profile",152,"Administrator_Reference/Grooper_Node_Types/Profiles/OCR_Profile.htm");
+  SetCsh(167,"CMIS_HTML_Property_Definition",170,"Administrator_Reference/Grooper_Object_Types/CMIS_HTML_Property_Definition.htm");
+  SetCsh(168,"Grooper_Voting_OCR_Settings",194,"Administrator_Reference/Grooper_Object_Types/Grooper_Voting_OCR_Settings.htm");
+  SetCsh(169,"Image_Info",198,"Administrator_Reference/Grooper_Object_Types/Image_Info.htm");
+  SetCsh(170,"Index_Panel_Settings",201,"Administrator_Reference/Grooper_Object_Types/Index_Panel_Settings.htm");
+  SetCsh(171,"Paragraph_Marker",208,"Administrator_Reference/Grooper_Object_Types/Paragraph_Marker.htm");
+  SetCsh(172,"Region_Detector",211,"Administrator_Reference/Grooper_Object_Types/Region_Detector.htm");
+  SetCsh(173,"Skew_Correction_Params",222,"Administrator_Reference/Grooper_Object_Types/Skew_Correction_Params.htm");
+  SetCsh(174,"Transym_OCR_5_Settings",228,"Administrator_Reference/Grooper_Object_Types/Transym_OCR_5_Settings.htm");
+  SetCsh(175,"File_System_Import",235,"Administrator_Reference/Import_Provider_Types/File_System_Import.htm");
+  SetCsh(176,"Line_Detection",264,"Administrator_Reference/IP_Command_Types/Feature_Detection/Line_Detection.htm");
+  SetCsh(177,"Histogram",283,"Administrator_Reference/IP_Command_Types/Image_Analysis/Histogram.htm");
+  SetCsh(178,"Projection_Profile",285,"Administrator_Reference/IP_Command_Types/Image_Analysis/Projection_Profile.htm");
+  SetCsh(179,"Auto_Orient",288,"Administrator_Reference/IP_Command_Types/Image_Transforms/Auto_Orient.htm");
+  SetCsh(180,"Split_Document",357,"Administrator_Reference/Object_Command_Types/Split_Document.htm");
+  SetCsh(181,"Reprocess_Batch",369,"Administrator_Reference/Object_Command_Types/Batch_Operations/Reprocess_Batch.htm");
+  SetCsh(182,"Toggle_Display_Format",378,"Administrator_Reference/Object_Command_Types/Image/Toggle_Display_Format.htm");
+  SetCsh(183,"Printer",386,"Administrator_Reference/Object_Command_Types/Send_To/Printer.htm");
+  SetCsh(184,"Grooper_Voting",391,"Administrator_Reference/OCR_Engine_Types/Grooper_Voting.htm");
+  SetCsh(185,"License_Renewal_Service",428,"Administrator_Reference/Service_Instance_Types/License_Renewal_Service.htm");
+  SetCsh(186,"Header-Value",443,"Administrator_Reference/Table_Extract_Method_Types/Header-Value.htm");
+  SetCsh(187,"Month_Names",462,"Administrator_Reference/Variable_Provider_Types/Month_Names.htm");
+  SetCsh(188,"How_To_Guide",489,"Getting_Started/How_To_Guide/How_To_Guide.htm");
+  SetCsh(189,"Perform_Real-Time_Image_Cleanup",504,"Getting_Started/How_To_Guide/Scanning/Perform_Real-Time_Image_Cleanup.htm");
+  SetCsh(190,"frm_Published_Nodes_Manager",547,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/frm_Published_Nodes_Manager.htm");
+  SetCsh(191,"Generate_Pattern_Dialog",551,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Generate_Pattern_Dialog.htm");
+  SetCsh(192,"Node_Type_List_Editor_Dialog",566,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Node_Type_List_Editor_Dialog.htm");
+  SetCsh(193,"BatchFolder_IndexData",598,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchFolder_IndexData.htm");
+  SetCsh(194,"BatchProcessStep_General",601,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchProcessStep_General.htm");
+  SetCsh(195,"BatchProcess_General",602,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/BatchProcess_General.htm");
+  SetCsh(196,"FormType_General",626,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/FormType_General.htm");
+  SetCsh(197,"GrooperRoot_Stats",636,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Stats.htm");
+  SetCsh(198,"IpElementContainer_General",638,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/IpElementContainer_General.htm");
+  SetCsh(199,"Database_Table_Preview",681,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Database_Table_Preview.htm");
+  SetCsh(200,"Email_Viewer",686,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Email_Viewer.htm");
+  SetCsh(201,"OCR_Character_Viewer",710,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/OCR_Character_Viewer.htm");
+  SetCsh(202,"Ocr_Text_Viewer",713,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Ocr_Text_Viewer.htm");
+  SetCsh(203,"A2iA_CheckReader",31,"Administrator_Reference/Activity_Types/Unattended_Activities/A2iA_CheckReader.htm");
+  SetCsh(204,"Link_Action",39,"Administrator_Reference/Activity_Types/Unattended_Activities/Link_Action.htm");
+  SetCsh(205,"SFTP_Link",82,"Administrator_Reference/Content_Link_Types/SFTP_Link.htm");
+  SetCsh(206,"Field_Profile",88,"Administrator_Reference/Data_Element_Profile_Types/Field_Profile.htm");
+  SetCsh(207,"Data_Field",93,"Administrator_Reference/Data_Element_Types/Data_Extraction/Data_Field.htm");
+  SetCsh(208,"Database_Table",139,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Database_Table.htm");
+  SetCsh(209,"Profiles_Folder",153,"Administrator_Reference/Grooper_Node_Types/Profiles/Profiles_Folder.htm");
+  SetCsh(210,"Scanner_Profile_Folder",155,"Administrator_Reference/Grooper_Node_Types/Profiles/Scanner_Profile_Folder.htm");
+  SetCsh(211,"Command_Options",178,"Administrator_Reference/Grooper_Object_Types/Command_Options.htm");
+  SetCsh(212,"Data_Pattern",182,"Administrator_Reference/Grooper_Object_Types/Data_Pattern.htm");
+  SetCsh(213,"Folder_Content_Generator",188,"Administrator_Reference/Grooper_Object_Types/Folder_Content_Generator.htm");
+  SetCsh(214,"Instance_Filter",202,"Administrator_Reference/Grooper_Object_Types/Instance_Filter.htm");
+  SetCsh(215,"Create_Database",315,"Administrator_Reference/Object_Command_Types/Create_Database.htm");
+  SetCsh(216,"Goto_Next_Flagged_Item",326,"Administrator_Reference/Object_Command_Types/Goto_Next_Flagged_Item.htm");
+  SetCsh(217,"Intersect",330,"Administrator_Reference/Object_Command_Types/Intersect.htm");
+  SetCsh(218,"Load_Properties",332,"Administrator_Reference/Object_Command_Types/Load_Properties.htm");
+  SetCsh(219,"Move_Previous",338,"Administrator_Reference/Object_Command_Types/Move_Previous.htm");
+  SetCsh(220,"Subtract",359,"Administrator_Reference/Object_Command_Types/Subtract.htm");
+  SetCsh(221,"Truncate",362,"Administrator_Reference/Object_Command_Types/Truncate.htm");
+  SetCsh(222,"Publish_to_Grooper_Repository",389,"Administrator_Reference/Object_Command_Types/Share/Publish_to_Grooper_Repository.htm");
+  SetCsh(223,"Change_in_Value_Separation",415,"Administrator_Reference/Separation_Provider_Types/Change_in_Value_Separation.htm");
+  SetCsh(224,"Grooper_Content_Manager_CMIS_Server",425,"Administrator_Reference/Service_Instance_Types/Grooper_Content_Manager_CMIS_Server.htm");
+  SetCsh(225,"Storage_Type_Types",440,"Administrator_Reference/Storage_Type_Types/Storage_Type_Types.htm");
+  SetCsh(226,"Regular_Expression_Examples",470,"Getting_Started/Examples/Regular_Expression_Examples.htm");
+  SetCsh(227,"Modify_the_Flow_of_a_Batch_Process",492,"Getting_Started/How_To_Guide/Batch_Processing/Modify_the_Flow_of_a_Batch_Process.htm");
+  SetCsh(228,"Perform_Database_Lookups",498,"Getting_Started/How_To_Guide/Data_Extraction/Perform_Database_Lookups.htm");
+  SetCsh(229,"Browse_For_Mail_Folder_Dialog",529,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Browse_For_Mail_Folder_Dialog.htm");
+  SetCsh(230,"Data_Review_Flag_Page_Dialog",536,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Data_Review_Flag_Page_Dialog.htm");
+  SetCsh(231,"Pattern_Editor_Dialog",571,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Pattern_Editor_Dialog.htm");
+  SetCsh(232,"Select_Properties_Dialog",590,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Properties_Dialog.htm");
+  SetCsh(233,"AttendedActivityTester",595,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/AttendedActivityTester.htm");
+  SetCsh(234,"FieldClass_Weightings",624,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/FieldClass_Weightings.htm");
+  SetCsh(235,"Data_Pattern_Editor",684,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Data_Pattern_Editor.htm");
+  SetCsh(236,"Model_Display",704,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Model_Display.htm");
+  SetCsh(237,"Page_Viewer",716,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Page_Viewer.htm");
+  SetCsh(238,"Test_Batch_Source",724,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Test_Batch_Source.htm");
+  SetCsh(239,"Classification_Review",10,"Administrator_Reference/Activity_Types/Human_Review/Classification_Review.htm");
+  SetCsh(240,"Review",13,"Administrator_Reference/Activity_Types/Human_Review/Review.htm");
+  SetCsh(241,"Dispose_Batch",20,"Administrator_Reference/Activity_Types/Miscellaneous/Dispose_Batch.htm");
+  SetCsh(242,"Correct_OCR",28,"Administrator_Reference/Activity_Types/Ocr_Processing/Correct_OCR.htm");
+  SetCsh(243,"Full_Text_OCR",29,"Administrator_Reference/Activity_Types/Ocr_Processing/Full_Text_OCR.htm");
+  SetCsh(244,"Classify_Method_Types",66,"Administrator_Reference/Classify_Method_Types/Classify_Method_Types.htm");
+  SetCsh(245,"File_System_Link",79,"Administrator_Reference/Content_Link_Types/File_System_Link.htm");
+  SetCsh(246,"Batch_Process_Step",122,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm");
+  SetCsh(247,"IP_Step",151,"Administrator_Reference/Grooper_Node_Types/Profiles/IP_Step.htm");
+  SetCsh(248,"CMIS_ID_Property_Definition",171,"Administrator_Reference/Grooper_Object_Types/CMIS_ID_Property_Definition.htm");
+  SetCsh(249,"CMIS_Integer_Property_Definition",172,"Administrator_Reference/Grooper_Object_Types/CMIS_Integer_Property_Definition.htm");
+  SetCsh(250,"CMIS_String_Property_Definition",175,"Administrator_Reference/Grooper_Object_Types/CMIS_String_Property_Definition.htm");
+  SetCsh(251,"Control_Settings",179,"Administrator_Reference/Grooper_Object_Types/Control_Settings.htm");
+  SetCsh(252,"Embedded_Lexicon",186,"Administrator_Reference/Grooper_Object_Types/Embedded_Lexicon.htm");
+  SetCsh(253,"Mask_Settings",204,"Administrator_Reference/Grooper_Object_Types/Mask_Settings.htm");
+  SetCsh(254,"Orientation_Detection_Params",207,"Administrator_Reference/Grooper_Object_Types/Orientation_Detection_Params.htm");
+  SetCsh(255,"Region_Settings",212,"Administrator_Reference/Grooper_Object_Types/Region_Settings.htm");
+  SetCsh(256,"Shell_Execute_Info",220,"Administrator_Reference/Grooper_Object_Types/Shell_Execute_Info.htm");
+  SetCsh(257,"Size_Ex_F",221,"Administrator_Reference/Grooper_Object_Types/Size_Ex_F.htm");
+  SetCsh(258,"Blank_Page_Detection",260,"Administrator_Reference/IP_Command_Types/Feature_Detection/Blank_Page_Detection.htm");
+  SetCsh(259,"Execute_Profile",294,"Administrator_Reference/IP_Command_Types/Miscellaneous/Execute_Profile.htm");
+  SetCsh(260,"Extract_Channel",295,"Administrator_Reference/IP_Command_Types/Miscellaneous/Extract_Channel.htm");
+  SetCsh(261,"Copy_File",314,"Administrator_Reference/Object_Command_Types/Copy_File.htm");
+  SetCsh(262,"Create_Local_Resources_Folder",317,"Administrator_Reference/Object_Command_Types/Create_Local_Resources_Folder.htm");
+  SetCsh(263,"Delete_Message",320,"Administrator_Reference/Object_Command_Types/Delete_Message.htm");
+  SetCsh(264,"Generate_Control_Sheets",324,"Administrator_Reference/Object_Command_Types/Generate_Control_Sheets.htm");
+  SetCsh(265,"Normalize",340,"Administrator_Reference/Object_Command_Types/Normalize.htm");
+  SetCsh(266,"Rotate_Right",377,"Administrator_Reference/Object_Command_Types/Image/Rotate_Right.htm");
+  SetCsh(267,"Protocol_Settings_Types",398,"Administrator_Reference/Protocol_Settings_Types/Protocol_Settings_Types.htm");
+  SetCsh(268,"Currency_Decimal_Separators",449,"Administrator_Reference/Variable_Provider_Types/Currency_Decimal_Separators.htm");
+  SetCsh(269,"Letters_Upper",461,"Administrator_Reference/Variable_Provider_Types/Letters_Upper.htm");
+  SetCsh(270,"Grooper_Concepts",480,"Getting_Started/Grooper_Concepts/Grooper_Concepts.htm");
+  SetCsh(271,"Install_an_SSL_Certificate",495,"Getting_Started/How_To_Guide/Configuration_and_Setup/Install_an_SSL_Certificate.htm");
+  SetCsh(272,"Grooper_Administration_Options_Dialog",552,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Grooper_Administration_Options_Dialog.htm");
+  SetCsh(273,"Select_Node_Types_Dialog",588,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Node_Types_Dialog.htm");
+  SetCsh(274,"Batch_BatchViewer",603,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/Batch_BatchViewer.htm");
+  SetCsh(275,"ReportInstance_General",651,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ReportInstance_General.htm");
+  SetCsh(276,"Index_Panel",692,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm");
+  SetCsh(277,"Instance_Collection_Viewer",698,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Instance_Collection_Viewer.htm");
+  SetCsh(278,"Ip_Results_Viewer",701,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Ip_Results_Viewer.htm");
+  SetCsh(279,"Analyze_Strips",14,"Administrator_Reference/Activity_Types/Microfilm_Processing/Analyze_Strips.htm");
+  SetCsh(280,"Launch_Process",21,"Administrator_Reference/Activity_Types/Miscellaneous/Launch_Process.htm");
+  SetCsh(281,"Import_Capture_Device",55,"Administrator_Reference/Capture_Device_Types/Import_Capture_Device.htm");
+  SetCsh(282,"Database_Connection_Settings_Types",83,"Administrator_Reference/Database_Connection_Settings_Types/Database_Connection_Settings_Types.htm");
+  SetCsh(283,"Field_Instance",100,"Administrator_Reference/Data_Instance_Types/Field_Instance.htm");
+  SetCsh(284,"Section_Instance",101,"Administrator_Reference/Data_Instance_Types/Section_Instance.htm");
+  SetCsh(285,"Content_Category",126,"Administrator_Reference/Grooper_Node_Types/Content_Models/Content_Category.htm");
+  SetCsh(286,"Folder",147,"Administrator_Reference/Grooper_Node_Types/Miscellaneous/Folder.htm");
+  SetCsh(287,"Vertical_Tab_Marker",233,"Administrator_Reference/Grooper_Object_Types/Vertical_Tab_Marker.htm");
+  SetCsh(288,"Adjust_Saturation",245,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Adjust_Saturation.htm");
+  SetCsh(289,"Colorize",251,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Colorize.htm");
+  SetCsh(290,"Color_Detection",261,"Administrator_Reference/IP_Command_Types/Feature_Detection/Color_Detection.htm");
+  SetCsh(291,"Halftone_Removal",270,"Administrator_Reference/IP_Command_Types/Feature_Removal/Halftone_Removal.htm");
+  SetCsh(292,"Negative_Region_Removal",273,"Administrator_Reference/IP_Command_Types/Feature_Removal/Negative_Region_Removal.htm");
+  SetCsh(293,"Dilate_Erode",293,"Administrator_Reference/IP_Command_Types/Miscellaneous/Dilate_Erode.htm");
+  SetCsh(294,"Add_Selection_to_New_Folder",306,"Administrator_Reference/Object_Command_Types/Add_Selection_to_New_Folder.htm");
+  SetCsh(295,"Save_Properties",355,"Administrator_Reference/Object_Command_Types/Save_Properties.htm");
+  SetCsh(296,"Unmark",364,"Administrator_Reference/Object_Command_Types/Unmark.htm");
+  SetCsh(297,"Add_Multiple_Items",371,"Administrator_Reference/Object_Command_Types/Contents/Add_Multiple_Items.htm");
+  SetCsh(298,"Prime_OCR",393,"Administrator_Reference/OCR_Engine_Types/Prime_OCR.htm");
+  SetCsh(299,"Fixed",412,"Administrator_Reference/Section_Extract_Method_Types/Fixed.htm");
+  SetCsh(300,"Geometric",413,"Administrator_Reference/Section_Extract_Method_Types/Geometric.htm");
+  SetCsh(301,"Grooper_CMIS_Server",424,"Administrator_Reference/Service_Instance_Types/Grooper_CMIS_Server.htm");
+  SetCsh(302,"Double",435,"Administrator_Reference/Storage_Type_Types/Double.htm");
+  SetCsh(303,"Group_Vocabulary_Provider",458,"Administrator_Reference/Variable_Provider_Types/Group_Vocabulary_Provider.htm");
+  SetCsh(304,"Installing_Grooper_Grooper_Database_Initialization_Wizard",509,"Getting_Started/Installation_Guide/Installing_Grooper.htm#Grooper_Database_Initialization_Wizard");
+  SetCsh(305,"Batch_Properties_Dialog",526,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Batch_Properties_Dialog.htm");
+  SetCsh(306,"Context_Zone_List_Editor_Dialog",534,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Context_Zone_List_Editor_Dialog.htm");
+  SetCsh(307,"Folder_Path_Editor_Dialog",545,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Folder_Path_Editor_Dialog.htm");
+  SetCsh(308,"Process_Activities_Dialog",573,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Process_Activities_Dialog.htm");
+  SetCsh(309,"Shell_Execute_Info_Dialog",591,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Shell_Execute_Info_Dialog.htm");
+  SetCsh(310,"ContentType_SeparationTesting",614,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ContentType_SeparationTesting.htm");
+  SetCsh(311,"ControlSheet_General",616,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ControlSheet_General.htm");
+  SetCsh(312,"GrooperNode_Contents",628,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperNode_Contents.htm");
+  SetCsh(313,"NodeView_Controls",645,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/NodeView_Controls.htm");
+  SetCsh(314,"OcrProfile_Testing",647,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/OcrProfile_Testing.htm");
+  SetCsh(315,"CMIS_Type_Drop_Down",676,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Type_Drop_Down.htm");
+  SetCsh(316,"Collation_Pattern_Editor",679,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Collation_Pattern_Editor.htm");
+  SetCsh(317,"Document_Viewer",685,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Document_Viewer.htm");
+  SetCsh(318,"Checkify",32,"Administrator_Reference/Activity_Types/Unattended_Activities/Checkify.htm");
+  SetCsh(319,"PDF_Text_Extract",41,"Administrator_Reference/Activity_Types/Unattended_Activities/PDF_Text_Extract.htm");
+  SetCsh(320,"CMIS_Link",77,"Administrator_Reference/Content_Link_Types/CMIS_Link.htm");
+  SetCsh(321,"Content_Link_Types",78,"Administrator_Reference/Content_Link_Types/Content_Link_Types.htm");
+  SetCsh(322,"Document_Instance",98,"Administrator_Reference/Data_Instance_Types/Document_Instance.htm");
+  SetCsh(323,"Table_Cell_Instance",102,"Administrator_Reference/Data_Instance_Types/Table_Cell_Instance.htm");
+  SetCsh(324,"Data_Type",134,"Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Type.htm");
+  SetCsh(325,"CMIS_Repository",138,"Administrator_Reference/Grooper_Node_Types/Infrastructure/CMIS_Repository.htm");
+  SetCsh(326,"CMIS_Folder",169,"Administrator_Reference/Grooper_Object_Types/CMIS_Folder.htm");
+  SetCsh(327,"Date_Range",183,"Administrator_Reference/Grooper_Object_Types/Date_Range.htm");
+  SetCsh(328,"Font_Formatting_Detection_Params",192,"Administrator_Reference/Grooper_Object_Types/Font_Formatting_Detection_Params.htm");
+  SetCsh(329,"Header_Detector",196,"Administrator_Reference/Grooper_Object_Types/Header_Detector.htm");
+  SetCsh(330,"Session_Query_Criteria",218,"Administrator_Reference/Grooper_Object_Types/Session_Query_Criteria.htm");
+  SetCsh(331,"Task_Filter",224,"Administrator_Reference/Grooper_Object_Types/Task_Filter.htm");
+  SetCsh(332,"Unit_Rectangle",231,"Administrator_Reference/Grooper_Object_Types/Unit_Rectangle.htm");
+  SetCsh(333,"Auto_White_Balance",249,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Auto_White_Balance.htm");
+  SetCsh(334,"Color_Dropout",252,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Color_Dropout.htm");
+  SetCsh(335,"Swap_Channels",258,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Swap_Channels.htm");
+  SetCsh(336,"Corner_Detection",262,"Administrator_Reference/IP_Command_Types/Feature_Detection/Corner_Detection.htm");
+  SetCsh(337,"Hole_Punch_Removal",271,"Administrator_Reference/IP_Command_Types/Feature_Removal/Hole_Punch_Removal.htm");
+  SetCsh(338,"Layout_Provider_Types",300,"Administrator_Reference/Layout_Provider_Types/Layout_Provider_Types.htm");
+  SetCsh(339,"Go_To_Next_Invalid_Document",327,"Administrator_Reference/Object_Command_Types/Go_To_Next_Invalid_Document.htm");
+  SetCsh(340,"Save_Content",354,"Administrator_Reference/Object_Command_Types/Save_Content.htm");
+  SetCsh(341,"Undo_Image_Cleanup",379,"Administrator_Reference/Object_Command_Types/Image/Undo_Image_Cleanup.htm");
+  SetCsh(342,"Transym_OCR_5",396,"Administrator_Reference/OCR_Engine_Types/Transym_OCR_5.htm");
+  SetCsh(343,"Section_Extract_Method_Types",414,"Administrator_Reference/Section_Extract_Method_Types/Section_Extract_Method_Types.htm");
+  SetCsh(344,"Separation_Provider_Types",421,"Administrator_Reference/Separation_Provider_Types/Separation_Provider_Types.htm");
+  SetCsh(345,"Undo_Separation",422,"Administrator_Reference/Separation_Provider_Types/Undo_Separation.htm");
+  SetCsh(346,"ApplicationXtender_CMIS_Server",423,"Administrator_Reference/Service_Instance_Types/ApplicationXtender_CMIS_Server.htm");
+  SetCsh(347,"Alpha_Provider",447,"Administrator_Reference/Variable_Provider_Types/Alpha_Provider.htm");
+  SetCsh(348,"Currency_Decimal_Digits",448,"Administrator_Reference/Variable_Provider_Types/Currency_Decimal_Digits.htm");
+  SetCsh(349,"Currency_Symbols",453,"Administrator_Reference/Variable_Provider_Types/Currency_Symbols.htm");
+  SetCsh(350,"Day_Names",454,"Administrator_Reference/Variable_Provider_Types/Day_Names.htm");
+  SetCsh(351,"Data_Instance_Objects",478,"Getting_Started/Grooper_Concepts/Data_Instance_Objects.htm");
+  SetCsh(352,"Configure_Visual_Classification",493,"Getting_Started/How_To_Guide/Classification_and_Separation/Configure_Visual_Classification.htm");
+  SetCsh(353,"Validate_Data_Using_a_Script",499,"Getting_Started/How_To_Guide/Data_Extraction/Validate_Data_Using_a_Script.htm");
+  SetCsh(354,"Enable_Undo",503,"Getting_Started/How_To_Guide/Scanning/Enable_Undo.htm");
+  SetCsh(355,"Use_Separator_Sheets",505,"Getting_Started/How_To_Guide/Scanning/Use_Separator_Sheets.htm");
+  SetCsh(356,"Installation_Prerequisites",506,"Getting_Started/Installation_Guide/Installation_Prerequisites.htm");
+  SetCsh(357,"Grooper_Unattended_Client_Module",518,"User_Interface_Reference/Grooper_Unattended_Client_Module.htm");
+  SetCsh(358,"Node_List_Editor_Dialog",564,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Node_List_Editor_Dialog.htm");
+  SetCsh(359,"Repair_Branch_Dialog",579,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Repair_Branch_Dialog.htm");
+  SetCsh(360,"Select_Nodes_Dialog",587,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Nodes_Dialog.htm");
+  SetCsh(361,"Validation_Errors_Dialog",593,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Validation_Errors_Dialog.htm");
+  SetCsh(362,"IpStep_General",639,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/IpStep_General.htm");
+  SetCsh(363,"Project_General",649,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/Project_General.htm");
+  SetCsh(364,"RedactionPreview",650,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/RedactionPreview.htm");
+  SetCsh(365,"SeparationProfile_Testing",653,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/SeparationProfile_Testing.htm");
+  SetCsh(366,"ACL_Editor",655,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/ACL_Editor.htm");
+  SetCsh(367,"CMIS_Repository_Searcher",673,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Repository_Searcher.htm");
+  SetCsh(368,"CMIS_Tree_Viewer",675,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Tree_Viewer.htm");
+  SetCsh(369,"Index_Panel_Field",694,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel_Field.htm");
+  SetCsh(370,"Index_Panel_Field_Grid",695,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel_Field_Grid.htm");
+  SetCsh(371,"Index_Panel_Table",697,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel_Table.htm");
+  SetCsh(372,"Tree_Editor",727,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Tree_Editor.htm");
+  SetCsh(373,"Administrator_Reference",4,"Administrator_Reference/Administrator_Reference.htm");
+  SetCsh(374,"Section_Profile",89,"Administrator_Reference/Data_Element_Profile_Types/Section_Profile.htm");
+  SetCsh(375,"Data_Element_Types",91,"Administrator_Reference/Data_Element_Types/Data_Element_Types.htm");
+  SetCsh(376,"Data_Extraction_Folder",132,"Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Extraction_Folder.htm");
+  SetCsh(377,"Border",162,"Administrator_Reference/Grooper_Object_Types/Border.htm");
+  SetCsh(378,"CMIS_Boolean_Property_Definition",165,"Administrator_Reference/Grooper_Object_Types/CMIS_Boolean_Property_Definition.htm");
+  SetCsh(379,"CMIS_Repository_Searcher_Settings",174,"Administrator_Reference/Grooper_Object_Types/CMIS_Repository_Searcher_Settings.htm");
+  SetCsh(380,"CMIS_Type_Descriptor",176,"Administrator_Reference/Grooper_Object_Types/CMIS_Type_Descriptor.htm");
+  SetCsh(381,"Document_Structure_Params",184,"Administrator_Reference/Grooper_Object_Types/Document_Structure_Params.htm");
+  SetCsh(382,"Field_Sense_Settings",187,"Administrator_Reference/Grooper_Object_Types/Field_Sense_Settings.htm");
+  SetCsh(383,"Folder_PDF_Generator",190,"Administrator_Reference/Grooper_Object_Types/Folder_PDF_Generator.htm");
+  SetCsh(384,"Folder_TIF_Generator",191,"Administrator_Reference/Grooper_Object_Types/Folder_TIF_Generator.htm");
+  SetCsh(385,"Prime_OCR_Settings",209,"Administrator_Reference/Grooper_Object_Types/Prime_OCR_Settings.htm");
+  SetCsh(386,"Sample_Image_Collection",214,"Administrator_Reference/Grooper_Object_Types/Sample_Image_Collection.htm");
+  SetCsh(387,"FTP_Import",236,"Administrator_Reference/Import_Provider_Types/FTP_Import.htm");
+  SetCsh(388,"Auto_Border_Invert",242,"Administrator_Reference/IP_Command_Types/Border_Cleanup/Auto_Border_Invert.htm");
+  SetCsh(389,"Streak_Removal",276,"Administrator_Reference/IP_Command_Types/Feature_Removal/Streak_Removal.htm");
+  SetCsh(390,"Auto_Deskew",286,"Administrator_Reference/IP_Command_Types/Image_Transforms/Auto_Deskew.htm");
+  SetCsh(391,"Clear_Flag",311,"Administrator_Reference/Object_Command_Types/Clear_Flag.htm");
+  SetCsh(392,"Create_Data_Model",316,"Administrator_Reference/Object_Command_Types/Create_Data_Model.htm");
+  SetCsh(393,"Import_from_Compressed_Archive",329,"Administrator_Reference/Object_Command_Types/Import_from_Compressed_Archive.htm");
+  SetCsh(394,"Open",342,"Administrator_Reference/Object_Command_Types/Open.htm");
+  SetCsh(395,"Purge_Training",345,"Administrator_Reference/Object_Command_Types/Purge_Training.htm");
+  SetCsh(396,"Rotate_Left",376,"Administrator_Reference/Object_Command_Types/Image/Rotate_Left.htm");
+  SetCsh(397,"ABBYY_FineReader",390,"Administrator_Reference/OCR_Engine_Types/ABBYY_FineReader.htm");
+  SetCsh(398,"Transym_OCR_4",395,"Administrator_Reference/OCR_Engine_Types/Transym_OCR_4.htm");
+  SetCsh(399,"Report_Types",400,"Administrator_Reference/Report_Types/Report_Types.htm");
+  SetCsh(400,"Divider",411,"Administrator_Reference/Section_Extract_Method_Types/Divider.htm");
+  SetCsh(401,"Decimal",434,"Administrator_Reference/Storage_Type_Types/Decimal.htm");
+  SetCsh(402,"Currency_Group_Digits",450,"Administrator_Reference/Variable_Provider_Types/Currency_Group_Digits.htm");
+  SetCsh(403,"Currency_Labels",452,"Administrator_Reference/Variable_Provider_Types/Currency_Labels.htm");
+  SetCsh(404,"Grooper_Tree_Structure",483,"Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm");
+  SetCsh(405,"Apply_a_Modified_Batch_Process",490,"Getting_Started/How_To_Guide/Batch_Processing/Apply_a_Modified_Batch_Process.htm");
+  SetCsh(406,"Scan_Index_Export",500,"Getting_Started/How_To_Guide/Getting_Started_Tutorials/Scan_Index_Export.htm");
+  SetCsh(407,"Release_Notes",511,"Getting_Started/Installation_Guide/Release_Notes.htm");
+  SetCsh(408,"Extraction_Test_Results_Dialog",539,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Extraction_Test_Results_Dialog.htm");
+  SetCsh(409,"Field_Profile_Test_Dialog",541,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Field_Profile_Test_Dialog.htm");
+  SetCsh(410,"Fuzzy_Match_Visualizer_Dialog",549,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Fuzzy_Match_Visualizer_Dialog.htm");
+  SetCsh(411,"Import_Objects_Dialog",556,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Import_Objects_Dialog.htm");
+  SetCsh(412,"Node_Reference_Editor_Dialog",565,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Node_Reference_Editor_Dialog.htm");
+  SetCsh(413,"ContentType_Weightings",615,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/ContentType_Weightings.htm");
+  SetCsh(414,"GrooperRoot_Locks",634,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Locks.htm");
+  SetCsh(415,"Data_Element_Profile_Manager",683,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Data_Element_Profile_Manager.htm");
+  SetCsh(416,"Extract_Document_Viewer",687,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Extract_Document_Viewer.htm");
+  SetCsh(417,"Script_Manager",722,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Script_Manager.htm");
+  SetCsh(418,"Vector_Comparison_Display",730,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Vector_Comparison_Display.htm");
+  SetCsh(419,"Object_Command_List",6,"Administrator_Reference/Object_Command_List.htm");
+  SetCsh(420,"Execute_Command",24,"Administrator_Reference/Activity_Types/Object_Application_Execution/Execute_Command.htm");
+  SetCsh(421,"Scan_Viewer",51,"Administrator_Reference/Batch_View_Types/Scan_Viewer.htm");
+  SetCsh(422,"Capture_Device_Types",53,"Administrator_Reference/Capture_Device_Types/Capture_Device_Types.htm");
+  SetCsh(423,"Capture_Zone_Types",62,"Administrator_Reference/Capture_Zone_Types/Capture_Zone_Types.htm");
+  SetCsh(424,"Lexical",67,"Administrator_Reference/Classify_Method_Types/Lexical.htm");
+  SetCsh(425,"Mail_Link",81,"Administrator_Reference/Content_Link_Types/Mail_Link.htm");
+  SetCsh(426,"ODBC_Connection_Settings",84,"Administrator_Reference/Database_Connection_Settings_Types/ODBC_Connection_Settings.htm");
+  SetCsh(427,"Sql_Connection_Settings",86,"Administrator_Reference/Database_Connection_Settings_Types/Sql_Connection_Settings.htm");
+  SetCsh(428,"Anchor",107,"Administrator_Reference/Edge_Adjustment_Types/Anchor.htm");
+  SetCsh(429,"Grooper_Node_Types",116,"Administrator_Reference/Grooper_Node_Types/Grooper_Node_Types.htm");
+  SetCsh(430,"Batch_Process_Folder",121,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process_Folder.htm");
+  SetCsh(431,"Data_Format",133,"Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Format.htm");
+  SetCsh(432,"Data_Connection",140,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Data_Connection.htm");
+  SetCsh(433,"Report_Instance",157,"Administrator_Reference/Grooper_Node_Types/Reports/Report_Instance.htm");
+  SetCsh(434,"Batch_Scan_Control_Settings",159,"Administrator_Reference/Grooper_Object_Types/Batch_Scan_Control_Settings.htm");
+  SetCsh(435,"Import_Provider_Types",237,"Administrator_Reference/Import_Provider_Types/Import_Provider_Types.htm");
+  SetCsh(436,"Mail_Import",238,"Administrator_Reference/Import_Provider_Types/Mail_Import.htm");
+  SetCsh(437,"Crop",244,"Administrator_Reference/IP_Command_Types/Border_Cleanup/Crop.htm");
+  SetCsh(438,"Auto_Adjust_Levels",247,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Auto_Adjust_Levels.htm");
+  SetCsh(439,"Posterize",256,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Posterize.htm");
+  SetCsh(440,"Blob_Removal",269,"Administrator_Reference/IP_Command_Types/Feature_Removal/Blob_Removal.htm");
+  SetCsh(441,"Line_Removal",272,"Administrator_Reference/IP_Command_Types/Feature_Removal/Line_Removal.htm");
+  SetCsh(442,"Rotate",290,"Administrator_Reference/IP_Command_Types/Image_Transforms/Rotate.htm");
+  SetCsh(443,"Horizontal",299,"Administrator_Reference/Layout_Provider_Types/Horizontal.htm");
+  SetCsh(444,"Expand_Attachments",322,"Administrator_Reference/Object_Command_Types/Expand_Attachments.htm");
+  SetCsh(445,"New_Folder",339,"Administrator_Reference/Object_Command_Types/New_Folder.htm");
+  SetCsh(446,"Rebuild_Training",346,"Administrator_Reference/Object_Command_Types/Rebuild_Training.htm");
+  SetCsh(447,"TWAIN_Scanning_Options",399,"Administrator_Reference/Protocol_Settings_Types/TWAIN_Scanning_Options.htm");
+  SetCsh(448,"Control_Sheet_Separation",416,"Administrator_Reference/Separation_Provider_Types/Control_Sheet_Separation.htm");
+  SetCsh(449,"Service_Instance_Types",429,"Administrator_Reference/Service_Instance_Types/Service_Instance_Types.htm");
+  SetCsh(450,"Task_Processing",431,"Administrator_Reference/Service_Instance_Types/Task_Processing.htm");
+  SetCsh(451,"Int32",438,"Administrator_Reference/Storage_Type_Types/Int32.htm");
+  SetCsh(452,"Installation_Prerequisites_Grooper_Advanced_Scripting",507,"Getting_Started/Installation_Guide/Installation_Prerequisites.htm#Grooper_Advanced_Scripting");
+  SetCsh(453,"Grooper_Kiosk",517,"User_Interface_Reference/Grooper_Kiosk.htm");
+  SetCsh(454,"Add_Sample_Image_Dialog",522,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Add_Sample_Image_Dialog.htm");
+  SetCsh(455,"Attributes_Editor_Dialog",525,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Attributes_Editor_Dialog.htm");
+  SetCsh(456,"Data_Review_Testing_Dialog",537,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Data_Review_Testing_Dialog.htm");
+  SetCsh(457,"File_Name_Editor_Dialog",543,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/File_Name_Editor_Dialog.htm");
+  SetCsh(458,"frm_Export_Node_List_Editor",546,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/frm_Export_Node_List_Editor.htm");
+  SetCsh(459,"Object_Command_Configuration_Editor_Dialog",567,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Object_Command_Configuration_Editor_Dialog.htm");
+  SetCsh(460,"Reference_List_Dialog",577,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Reference_List_Dialog.htm");
+  SetCsh(461,"Scanner_Condition_Dialog",582,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Scanner_Condition_Dialog.htm");
+  SetCsh(462,"GrooperRoot_Licensing",633,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_Licensing.htm");
+  SetCsh(463,"Advanced_Properties_Viewer",656,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Advanced_Properties_Viewer.htm");
+  SetCsh(464,"Batch_List",660,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_List.htm");
+  SetCsh(465,"Billing_Items_Viewer",666,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Billing_Items_Viewer.htm");
+  SetCsh(466,"CMIS_Query_Control",669,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Query_Control.htm");
+  SetCsh(467,"Index_Panel_Section",696,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel_Section.htm");
+  SetCsh(468,"Instance_Viewer",700,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Instance_Viewer.htm");
+  SetCsh(469,"License_Manager",702,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/License_Manager.htm");
+  SetCsh(470,"TF-IDF_Model_Display",726,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/TF-IDF_Model_Display.htm");
+  SetCsh(471,"Tree_Viewer",728,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Tree_Viewer.htm");
+  SetCsh(472,"Train_Lexicon",23,"Administrator_Reference/Activity_Types/Miscellaneous/Train_Lexicon.htm");
+  SetCsh(473,"Classify_Folders",33,"Administrator_Reference/Activity_Types/Unattended_Activities/Classify_Folders.htm");
+  SetCsh(474,"Classification_Viewer",49,"Administrator_Reference/Batch_View_Types/Classification_Viewer.htm");
+  SetCsh(475,"Collation_Provider_Types",70,"Administrator_Reference/Collation_Provider_Types/Collation_Provider_Types.htm");
+  SetCsh(476,"Pattern-Based",74,"Administrator_Reference/Collation_Provider_Types/Pattern-Based.htm");
+  SetCsh(477,"Data_Section",95,"Administrator_Reference/Data_Element_Types/Data_Extraction/Data_Section.htm");
+  SetCsh(478,"CMIS_Decimal_Property_Definition",167,"Administrator_Reference/Grooper_Object_Types/CMIS_Decimal_Property_Definition.htm");
+  SetCsh(479,"Data_Instance",181,"Administrator_Reference/Grooper_Object_Types/Data_Instance.htm");
+  SetCsh(480,"Horizontal_Tab_Marker",197,"Administrator_Reference/Grooper_Object_Types/Horizontal_Tab_Marker.htm");
+  SetCsh(481,"Rectangle",210,"Administrator_Reference/Grooper_Object_Types/Rectangle.htm");
+  SetCsh(482,"Scan_Control_Settings",216,"Administrator_Reference/Grooper_Object_Types/Scan_Control_Settings.htm");
+  SetCsh(483,"Tesseract_OCR_Settings",225,"Administrator_Reference/Grooper_Object_Types/Tesseract_OCR_Settings.htm");
+  SetCsh(484,"Invert",255,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Invert.htm");
+  SetCsh(485,"Auto_QA",280,"Administrator_Reference/IP_Command_Types/Image_Analysis/Auto_QA.htm");
+  SetCsh(486,"Resize",289,"Administrator_Reference/IP_Command_Types/Image_Transforms/Resize.htm");
+  SetCsh(487,"Binarize",291,"Administrator_Reference/IP_Command_Types/Miscellaneous/Binarize.htm");
+  SetCsh(488,"Train_Document",361,"Administrator_Reference/Object_Command_Types/Train_Document.htm");
+  SetCsh(489,"Unclassify",363,"Administrator_Reference/Object_Command_Types/Unclassify.htm");
+  SetCsh(490,"Infer_Grid",444,"Administrator_Reference/Table_Extract_Method_Types/Infer_Grid.htm");
+  SetCsh(491,"Letters_Lower",460,"Administrator_Reference/Variable_Provider_Types/Letters_Lower.htm");
+  SetCsh(492,"Vocabulary",467,"Administrator_Reference/Variable_Provider_Types/Vocabulary.htm");
+  SetCsh(493,"Batch_Processing",471,"Getting_Started/Grooper_Concepts/Batch_Processing.htm");
+  SetCsh(494,"Grooper_Tree_Structure_Values",484,"Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm#Values");
+  SetCsh(495,"Edit_CMIS_Connection_Dialog",538,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Edit_CMIS_Connection_Dialog.htm");
+  SetCsh(496,"Find_Objects_Dialog",544,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Find_Objects_Dialog.htm");
+  SetCsh(497,"Generate_Content_Type_Dialog",550,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Generate_Content_Type_Dialog.htm");
+  SetCsh(498,"Licensing_Contact_Info_Dialog",558,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Licensing_Contact_Info_Dialog.htm");
+  SetCsh(499,"Publishing_Errors_Dialog",576,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Publishing_Errors_Dialog.htm");
+  SetCsh(500,"Select_CMIS_Folder_Dialog",585,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_CMIS_Folder_Dialog.htm");
+  SetCsh(501,"DataElement_General",619,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DataElement_General.htm");
+  SetCsh(502,"DataFormat_General",620,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DataFormat_General.htm");
+  SetCsh(503,"LicenseServer_General",641,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/LicenseServer_General.htm");
+  SetCsh(504,"Batch_Details_Viewer",657,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Details_Viewer.htm");
+  SetCsh(505,"Batch_Info_Viewer",659,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Info_Viewer.htm");
+  SetCsh(506,"Batch_Manager",661,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Manager.htm");
+  SetCsh(507,"Filtered_Tree_Viewer",688,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Filtered_Tree_Viewer.htm");
+  SetCsh(508,"Test_Image_Source",725,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Test_Image_Source.htm");
+  SetCsh(509,"Activity_Types",7,"Administrator_Reference/Activity_Types/Activity_Types.htm");
+  SetCsh(510,"Render_Document",30,"Administrator_Reference/Activity_Types/Rendering/Render_Document.htm");
+  SetCsh(511,"MIME_Type_Action",40,"Administrator_Reference/Activity_Types/Unattended_Activities/MIME_Type_Action.htm");
+  SetCsh(512,"ISIS_Capture_Device",56,"Administrator_Reference/Capture_Device_Types/ISIS_Capture_Device.htm");
+  SetCsh(513,"Capture_Protocol_Types",58,"Administrator_Reference/Capture_Protocol_Types/Capture_Protocol_Types.htm");
+  SetCsh(514,"Ordered_Array",73,"Administrator_Reference/Collation_Provider_Types/Ordered_Array.htm");
+  SetCsh(515,"Classification_Viewer_Settings",164,"Administrator_Reference/Grooper_Object_Types/Classification_Viewer_Settings.htm");
+  SetCsh(516,"CMIS_Document",168,"Administrator_Reference/Grooper_Object_Types/CMIS_Document.htm");
+  SetCsh(517,"CMIS_URI_Property_Definition",177,"Administrator_Reference/Grooper_Object_Types/CMIS_URI_Property_Definition.htm");
+  SetCsh(518,"Table_Detection_Params",223,"Administrator_Reference/Grooper_Object_Types/Table_Detection_Params.htm");
+  SetCsh(519,"Transym_OCR_4_Settings",227,"Administrator_Reference/Grooper_Object_Types/Transym_OCR_4_Settings.htm");
+  SetCsh(520,"Unit_Range",230,"Administrator_Reference/Grooper_Object_Types/Unit_Range.htm");
+  SetCsh(521,"SFTP_Import",239,"Administrator_Reference/Import_Provider_Types/SFTP_Import.htm");
+  SetCsh(522,"Adjust_Tint",246,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Adjust_Tint.htm");
+  SetCsh(523,"Gamma_Adjust",254,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Gamma_Adjust.htm");
+  SetCsh(524,"Sticky_Note_Detection",267,"Administrator_Reference/IP_Command_Types/Feature_Detection/Sticky_Note_Detection.htm");
+  SetCsh(525,"Auto_Deskew_Basic",287,"Administrator_Reference/IP_Command_Types/Image_Transforms/Auto_Deskew_Basic.htm");
+  SetCsh(526,"MIME_Type_Handler_Types",303,"Administrator_Reference/MIME_Type_Handler_Types/MIME_Type_Handler_Types.htm");
+  SetCsh(527,"Download_System_Files",321,"Administrator_Reference/Object_Command_Types/Download_System_Files.htm");
+  SetCsh(528,"Pause",343,"Administrator_Reference/Object_Command_Types/Pause.htm");
+  SetCsh(529,"Test_Connection",360,"Administrator_Reference/Object_Command_Types/Test_Connection.htm");
+  SetCsh(530,"Apply_Image_Cleanup",374,"Administrator_Reference/Object_Command_Types/Image/Apply_Image_Cleanup.htm");
+  SetCsh(531,"Data_Capture_Automation",402,"Administrator_Reference/Report_Types/System_Reports/Data_Capture_Automation.htm");
+  SetCsh(532,"Day_Names_Abbreviated",455,"Administrator_Reference/Variable_Provider_Types/Day_Names_Abbreviated.htm");
+  SetCsh(533,"Getting_Started",468,"Getting_Started/Getting_Started.htm");
+  SetCsh(534,"Document_Separation",479,"Getting_Started/Grooper_Concepts/Document_Separation.htm");
+  SetCsh(535,"Scripting_Scriptable_Node_Types",488,"Getting_Started/Grooper_Concepts/Scripting.htm#Scriptable_Node_Types");
+  SetCsh(536,"Grooper_Attended_Client_Module",514,"User_Interface_Reference/Grooper_Attended_Client_Module.htm");
+  SetCsh(537,"Grooper_Dashboard",516,"User_Interface_Reference/Grooper_Dashboard.htm");
+  SetCsh(538,"Image_File_Import_Dialog",554,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Image_File_Import_Dialog.htm");
+  SetCsh(539,"Machine_Update_Results_Dialog",560,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Machine_Update_Results_Dialog.htm");
+  SetCsh(540,"New_Item_Dialog",563,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/New_Item_Dialog.htm");
+  SetCsh(541,"OCR_Results_Viewer_Dialog",569,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/OCR_Results_Viewer_Dialog.htm");
+  SetCsh(542,"Property_Grid_Dialog",574,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Property_Grid_Dialog.htm");
+  SetCsh(543,"Select_Page_Dialog",589,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Select_Page_Dialog.htm");
+  SetCsh(544,"Validate_Branch_Dialog",592,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Validate_Branch_Dialog.htm");
+  SetCsh(545,"GrooperNode_Advanced",627,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperNode_Advanced.htm");
+  SetCsh(546,"GrooperNode_General",629,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperNode_General.htm");
+  SetCsh(547,"Page_Classification_Tester",715,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Page_Classification_Tester.htm");
+  SetCsh(548,"Report_Viewer",720,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Report_Viewer.htm");
+  SetCsh(549,"Spawn_Batch",22,"Administrator_Reference/Activity_Types/Miscellaneous/Spawn_Batch.htm");
+  SetCsh(550,"Attended_Client_Types",43,"Administrator_Reference/Attended_Client_Types/Attended_Client_Types.htm");
+  SetCsh(551,"Batch_View_Types",48,"Administrator_Reference/Batch_View_Types/Batch_View_Types.htm");
+  SetCsh(552,"TWAIN_Capture_Device",57,"Administrator_Reference/Capture_Device_Types/TWAIN_Capture_Device.htm");
+  SetCsh(553,"Field_Zone",63,"Administrator_Reference/Capture_Zone_Types/Field_Zone.htm");
+  SetCsh(554,"Visual",68,"Administrator_Reference/Classify_Method_Types/Visual.htm");
+  SetCsh(555,"Data_Element_Profile_Types",87,"Administrator_Reference/Data_Element_Profile_Types/Data_Element_Profile_Types.htm");
+  SetCsh(556,"Edge_Adjustment_Types",108,"Administrator_Reference/Edge_Adjustment_Types/Edge_Adjustment_Types.htm");
+  SetCsh(557,"Export_Provider_Types",111,"Administrator_Reference/Export_Provider_Types/Export_Provider_Types.htm");
+  SetCsh(558,"SFTP_Export",115,"Administrator_Reference/Export_Provider_Types/SFTP_Export.htm");
+  SetCsh(559,"Document_Type",128,"Administrator_Reference/Grooper_Node_Types/Content_Models/Document_Type.htm");
+  SetCsh(560,"File_Store",141,"Administrator_Reference/Grooper_Node_Types/Infrastructure/File_Store.htm");
+  SetCsh(561,"Machines_Folder",145,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Machines_Folder.htm");
+  SetCsh(562,"Grooper_Root",148,"Administrator_Reference/Grooper_Node_Types/Miscellaneous/Grooper_Root.htm");
+  SetCsh(563,"Separation_Profile",156,"Administrator_Reference/Grooper_Node_Types/Profiles/Separation_Profile.htm");
+  SetCsh(564,"Billing_Item",161,"Administrator_Reference/Grooper_Object_Types/Billing_Item.htm");
+  SetCsh(565,"Text_Preprocessor",226,"Administrator_Reference/Grooper_Object_Types/Text_Preprocessor.htm");
+  SetCsh(566,"Brightness_Contrast",250,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Brightness_Contrast.htm");
+  SetCsh(567,"Auto_Convert",277,"Administrator_Reference/IP_Command_Types/Format_Conversion/Auto_Convert.htm");
+  SetCsh(568,"Filter",296,"Administrator_Reference/IP_Command_Types/Miscellaneous/Filter.htm");
+  SetCsh(569,"PDF_Document",304,"Administrator_Reference/MIME_Type_Handler_Types/PDF_Document.htm");
+  SetCsh(570,"Append_to_Previous",307,"Administrator_Reference/Object_Command_Types/Append_to_Previous.htm");
+  SetCsh(571,"Delete",318,"Administrator_Reference/Object_Command_Types/Delete.htm");
+  SetCsh(572,"Mark_As_Reviewed",333,"Administrator_Reference/Object_Command_Types/Mark_As_Reviewed.htm");
+  SetCsh(573,"Save_Version",356,"Administrator_Reference/Object_Command_Types/Save_Version.htm");
+  SetCsh(574,"Scan_Operator_Efficiency",409,"Administrator_Reference/Report_Types/System_Reports/Scan_Operator_Efficiency.htm");
+  SetCsh(575,"Grooper_Licensing",426,"Administrator_Reference/Service_Instance_Types/Grooper_Licensing.htm");
+  SetCsh(576,"Import_Watcher",427,"Administrator_Reference/Service_Instance_Types/Import_Watcher.htm");
+  SetCsh(577,"URL",442,"Administrator_Reference/Storage_Type_Types/URL.htm");
+  SetCsh(578,"Classification",474,"Getting_Started/Grooper_Concepts/Classification.htm");
+  SetCsh(579,"Data_Extraction_ESP_Extraction",477,"Getting_Started/Grooper_Concepts/Data_Extraction.htm#ESP_Extraction");
+  SetCsh(580,"Install_Processing_Modules_as_Services",497,"Getting_Started/How_To_Guide/Configuration_and_Setup/Install_Processing_Modules_as_Services.htm");
+  SetCsh(581,"Grooper_Configuration",515,"User_Interface_Reference/Grooper_Configuration.htm");
+  SetCsh(582,"User_Interface_Reference",519,"User_Interface_Reference/User_Interface_Reference.htm");
+  SetCsh(583,"Add_Report_Instance_Dialog",521,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Add_Report_Instance_Dialog.htm");
+  SetCsh(584,"Adjust_Binary_Image_Dialog",523,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Adjust_Binary_Image_Dialog.htm");
+  SetCsh(585,"frm_Set_Password",548,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/frm_Set_Password.htm");
+  SetCsh(586,"LDAP_Security_Principal_Search_Dialog",557,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/LDAP_Security_Principal_Search_Dialog.htm");
+  SetCsh(587,"Object_List_Editor_Dialog",568,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Object_List_Editor_Dialog.htm");
+  SetCsh(588,"Sample_Images_Editor_Dialog",581,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Sample_Images_Editor_Dialog.htm");
+  SetCsh(589,"Batch_General",604,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/Batch_General.htm");
+  SetCsh(590,"FileStore_Utilities",625,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/FileStore_Utilities.htm");
+  SetCsh(591,"MachinesFolder_Services",643,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/MachinesFolder_Services.htm");
+  SetCsh(592,"Batch_Task_Status_Chart",664,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Task_Status_Chart.htm");
+  SetCsh(593,"Batch_Task_Viewer",665,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Batch_Task_Viewer.htm");
+  SetCsh(594,"Classification_Tester",667,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Classification_Tester.htm");
+  SetCsh(595,"Property_Grid",717,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Property_Grid.htm");
+  SetCsh(596,"Data_Review",11,"Administrator_Reference/Activity_Types/Human_Review/Data_Review.htm");
+  SetCsh(597,"Batch_Viewer",47,"Administrator_Reference/Batch_View_Types/Batch_Viewer.htm");
+  SetCsh(598,"Individual",72,"Administrator_Reference/Collation_Provider_Types/Individual.htm");
+  SetCsh(599,"Data_Model",94,"Administrator_Reference/Data_Element_Types/Data_Extraction/Data_Model.htm");
+  SetCsh(600,"CMIS_Export",110,"Administrator_Reference/Export_Provider_Types/CMIS_Export.htm");
+  SetCsh(601,"Batch_Process",119,"Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process.htm");
+  SetCsh(602,"Form_Type",129,"Administrator_Reference/Grooper_Node_Types/Content_Models/Form_Type.htm");
+  SetCsh(603,"Scanner_Profile",154,"Administrator_Reference/Grooper_Node_Types/Profiles/Scanner_Profile.htm");
+  SetCsh(604,"CMIS_Object",173,"Administrator_Reference/Grooper_Object_Types/CMIS_Object.htm");
+  SetCsh(605,"Culture_Data",180,"Administrator_Reference/Grooper_Object_Types/Culture_Data.htm");
+  SetCsh(606,"Embedded_Extractor",185,"Administrator_Reference/Grooper_Object_Types/Embedded_Extractor.htm");
+  SetCsh(607,"Folder_Level_Info",189,"Administrator_Reference/Grooper_Object_Types/Folder_Level_Info.htm");
+  SetCsh(608,"Group_Lookup_Options",195,"Administrator_Reference/Grooper_Object_Types/Group_Lookup_Options.htm");
+  SetCsh(609,"Row_Detector",213,"Administrator_Reference/Grooper_Object_Types/Row_Detector.htm");
+  SetCsh(610,"Auto_Color_Balance",248,"Administrator_Reference/IP_Command_Types/Color_Adjustment/Auto_Color_Balance.htm");
+  SetCsh(611,"Edge_Detection",263,"Administrator_Reference/IP_Command_Types/Feature_Detection/Edge_Detection.htm");
+  SetCsh(612,"Barcode_Removal",268,"Administrator_Reference/IP_Command_Types/Feature_Removal/Barcode_Removal.htm");
+  SetCsh(613,"Photo_Removal",274,"Administrator_Reference/IP_Command_Types/Feature_Removal/Photo_Removal.htm");
+  SetCsh(614,"Convert",278,"Administrator_Reference/IP_Command_Types/Format_Conversion/Convert.htm");
+  SetCsh(615,"Vertical",301,"Administrator_Reference/Layout_Provider_Types/Vertical.htm");
+  SetCsh(616,"Assign_Content_Type",308,"Administrator_Reference/Object_Command_Types/Assign_Content_Type.htm");
+  SetCsh(617,"Clone_To_Test",313,"Administrator_Reference/Object_Command_Types/Clone_To_Test.htm");
+  SetCsh(618,"Flag_Item",323,"Administrator_Reference/Object_Command_Types/Flag_Item.htm");
+  SetCsh(619,"Published_Nodes_Manager",344,"Administrator_Reference/Object_Command_Types/Published_Nodes_Manager.htm");
+  SetCsh(620,"Remove_PDF_Version",349,"Administrator_Reference/Object_Command_Types/Remove_PDF_Version.htm");
+  SetCsh(621,"Combine_Loose_Pages",368,"Administrator_Reference/Object_Command_Types/Batch_Operations/Combine_Loose_Pages.htm");
+  SetCsh(622,"Revert_To_Loose_Pages",370,"Administrator_Reference/Object_Command_Types/Batch_Operations/Revert_To_Loose_Pages.htm");
+  SetCsh(623,"Keystrokes",404,"Administrator_Reference/Report_Types/System_Reports/Keystrokes.htm");
+  SetCsh(624,"Scan_Volume",410,"Administrator_Reference/Report_Types/System_Reports/Scan_Volume.htm");
+  SetCsh(625,"EPI_Separation",417,"Administrator_Reference/Separation_Provider_Types/EPI_Separation.htm");
+  SetCsh(626,"Int16",437,"Administrator_Reference/Storage_Type_Types/Int16.htm");
+  SetCsh(627,"Row_Match",445,"Administrator_Reference/Table_Extract_Method_Types/Row_Match.htm");
+  SetCsh(628,"Batch_Processing_Task_Processing",473,"Getting_Started/Grooper_Concepts/Batch_Processing.htm#Task_Processing");
+  SetCsh(629,"Content_Management_System_Connectivity",475,"Getting_Started/Grooper_Concepts/Content_Management_System_Connectivity.htm");
+  SetCsh(630,"Reporting",485,"Getting_Started/Grooper_Concepts/Reporting.htm");
+  SetCsh(631,"Adjust_Color_Image_Dialog",524,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Adjust_Color_Image_Dialog.htm");
+  SetCsh(632,"Extract_Text_Dialog",540,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Extract_Text_Dialog.htm");
+  SetCsh(633,"CmisContentType_General",607,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CmisContentType_General.htm");
+  SetCsh(634,"CmisRepository_General",609,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CmisRepository_General.htm");
+  SetCsh(635,"DatabaseTable_General",617,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DatabaseTable_General.htm");
+  SetCsh(636,"PageType_General",648,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/PageType_General.htm");
+  SetCsh(637,"Form_Type_Viewer",689,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Form_Type_Viewer.htm");
+  SetCsh(638,"Fuzzy_Extraction_Visualizer",690,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Fuzzy_Extraction_Visualizer.htm");
+  SetCsh(639,"Index_Panel_Document",693,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel_Document.htm");
+  SetCsh(640,"OCR_Layout_Viewer",711,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/OCR_Layout_Viewer.htm");
+  SetCsh(641,"OCR_Results_Viewer",712,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/OCR_Results_Viewer.htm");
+  SetCsh(642,"Redaction",26,"Administrator_Reference/Activity_Types/Object_Application_Execution/Redaction.htm");
+  SetCsh(643,"Thumbnail_Viewer",52,"Administrator_Reference/Batch_View_Types/Thumbnail_Viewer.htm");
+  SetCsh(644,"ISIS",60,"Administrator_Reference/Capture_Protocol_Types/ISIS.htm");
+  SetCsh(645,"Text_Line_Instance",105,"Administrator_Reference/Data_Instance_Types/Text_Line_Instance.htm");
+  SetCsh(646,"Edge_of_Page",109,"Administrator_Reference/Edge_Adjustment_Types/Edge_of_Page.htm");
+  SetCsh(647,"FTP_Export",113,"Administrator_Reference/Export_Provider_Types/Ftp_Export.htm");
+  SetCsh(648,"CMIS_Connection",136,"Administrator_Reference/Grooper_Node_Types/Infrastructure/CMIS_Connection.htm");
+  SetCsh(649,"Machine",144,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Machine.htm");
+  SetCsh(650,"Batch_View_Configuration",160,"Administrator_Reference/Grooper_Object_Types/Batch_View_Configuration.htm");
+  SetCsh(651,"Index_Navigator_Settings",200,"Administrator_Reference/Grooper_Object_Types/Index_Navigator_Settings.htm");
+  SetCsh(652,"CMIS_Import",234,"Administrator_Reference/Import_Provider_Types/CMIS_Import.htm");
+  SetCsh(653,"Border_Fill",243,"Administrator_Reference/IP_Command_Types/Border_Cleanup/Border_Fill.htm");
+  SetCsh(654,"Classify_Image",292,"Administrator_Reference/IP_Command_Types/Miscellaneous/Classify_Image.htm");
+  SetCsh(655,"ZIP_Archive",305,"Administrator_Reference/MIME_Type_Handler_Types/ZIP_Archive.htm");
+  SetCsh(656,"Move_File",335,"Administrator_Reference/Object_Command_Types/Move_File.htm");
+  SetCsh(657,"Split_Folder",358,"Administrator_Reference/Object_Command_Types/Split_Folder.htm");
+  SetCsh(658,"View_XML",367,"Administrator_Reference/Object_Command_Types/View_XML.htm");
+  SetCsh(659,"Compressed_Archive",383,"Administrator_Reference/Object_Command_Types/Send_To/Compressed_Archive.htm");
+  SetCsh(660,"File_System",384,"Administrator_Reference/Object_Command_Types/Send_To/File_System.htm");
+  SetCsh(661,"OCR_Engine_Types",392,"Administrator_Reference/OCR_Engine_Types/OCR_Engine_Types.htm");
+  SetCsh(662,"Pages_Scanned",405,"Administrator_Reference/Report_Types/System_Reports/Pages_Scanned.htm");
+  SetCsh(663,"Pattern-Based_Separation",420,"Administrator_Reference/Separation_Provider_Types/Pattern-Based_Separation.htm");
+  SetCsh(664,"System_Maintenance_Service",430,"Administrator_Reference/Service_Instance_Types/System_Maintenance_Service.htm");
+  SetCsh(665,"Boolean",432,"Administrator_Reference/Storage_Type_Types/Boolean.htm");
+  SetCsh(666,"GUID",436,"Administrator_Reference/Storage_Type_Types/GUID.htm");
+  SetCsh(667,"Grooper_License_Server",481,"Getting_Started/Grooper_Concepts/Grooper_License_Server.htm");
+  SetCsh(668,"Build_a_Batch_Process",491,"Getting_Started/How_To_Guide/Batch_Processing/Build_a_Batch_Process.htm");
+  SetCsh(669,"Installing_Grooper",508,"Getting_Started/Installation_Guide/Installing_Grooper.htm");
+  SetCsh(670,"Installing_Grooper_Render_Printer",510,"Getting_Started/Installation_Guide/Installing_Grooper_Render_Printer.htm");
+  SetCsh(671,"New_Folder_Dialog",562,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/New_Folder_Dialog.htm");
+  SetCsh(672,"Zone_Editor_Dialog",594,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Zone_Editor_Dialog.htm");
+  SetCsh(673,"CmisRepository_Search",610,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CmisRepository_Search.htm");
+  SetCsh(674,"DataType_General",622,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/DataType_General.htm");
+  SetCsh(675,"GrooperNode_Scripting",630,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperNode_Scripting.htm");
+  SetCsh(676,"GrooperRoot_General",632,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/GrooperRoot_General.htm");
+  SetCsh(677,"MachinesFolder_General",642,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/MachinesFolder_General.htm");
+  SetCsh(678,"CMIS_Query_Editor",670,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Query_Editor.htm");
+  SetCsh(679,"CMIS_Result_Set_Viewer",674,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Result_Set_Viewer.htm");
+  SetCsh(680,"Node_Drop_Down",705,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Node_Drop_Down.htm");
+  SetCsh(681,"Node_View_Host",709,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Node_View_Host.htm");
+  SetCsh(682,"Property_Mapping_Control",718,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Property_Mapping_Control.htm");
+  SetCsh(683,"Start_Page",3,"Start_Page.htm");
+  SetCsh(684,"Grooper_Types_List",5,"Administrator_Reference/Grooper_Types_List.htm");
+  SetCsh(685,"Scan",8,"Administrator_Reference/Activity_Types/Attended_Activities/Scan.htm");
+  SetCsh(686,"Image_Review",12,"Administrator_Reference/Activity_Types/Human_Review/Image_Review.htm");
+  SetCsh(687,"Direct",59,"Administrator_Reference/Capture_Protocol_Types/Direct.htm");
+  SetCsh(688,"OMR_Zone",64,"Administrator_Reference/Capture_Zone_Types/OMR_Zone.htm");
+  SetCsh(689,"Registration_Zone",65,"Administrator_Reference/Capture_Zone_Types/Registration_Zone.htm");
+  SetCsh(690,"File_System_Export",112,"Administrator_Reference/Export_Provider_Types/File_System_Export.htm");
+  SetCsh(691,"Mail_Export",114,"Administrator_Reference/Export_Provider_Types/Mail_Export.htm");
+  SetCsh(692,"Content_Model",127,"Administrator_Reference/Grooper_Node_Types/Content_Models/Content_Model.htm");
+  SetCsh(693,"Infrastructure_Folder",142,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Infrastructure_Folder.htm");
+  SetCsh(694,"License_Server",143,"Administrator_Reference/Grooper_Node_Types/Infrastructure/License_Server.htm");
+  SetCsh(695,"Object_Library",146,"Administrator_Reference/Grooper_Node_Types/Infrastructure/Object_Library.htm");
+  SetCsh(696,"IP_Group",149,"Administrator_Reference/Grooper_Node_Types/Profiles/IP_Group.htm");
+  SetCsh(697,"Capture_Settings",163,"Administrator_Reference/Grooper_Object_Types/Capture_Settings.htm");
+  SetCsh(698,"Grooper_Object_Types",193,"Administrator_Reference/Grooper_Object_Types/Grooper_Object_Types.htm");
+  SetCsh(699,"Settings",219,"Administrator_Reference/Grooper_Object_Types/Settings.htm");
+  SetCsh(700,"Unit_Border",229,"Administrator_Reference/Grooper_Object_Types/Unit_Border.htm");
+  SetCsh(701,"Patch_Code_Detection",265,"Administrator_Reference/IP_Command_Types/Feature_Detection/Patch_Code_Detection.htm");
+  SetCsh(702,"Shape_Detection",266,"Administrator_Reference/IP_Command_Types/Feature_Detection/Shape_Detection.htm");
+  SetCsh(703,"Speck_Removal",275,"Administrator_Reference/IP_Command_Types/Feature_Removal/Speck_Removal.htm");
+  SetCsh(704,"Load_Content",331,"Administrator_Reference/Object_Command_Types/Load_Content.htm");
+  SetCsh(705,"Move_Objects_Here",337,"Administrator_Reference/Object_Command_Types/Move_Objects_Here.htm");
+  SetCsh(706,"Save_As...",353,"Administrator_Reference/Object_Command_Types/Save_As....htm");
+  SetCsh(707,"Update_Columns",365,"Administrator_Reference/Object_Command_Types/Update_Columns.htm");
+  SetCsh(708,"Update_Process",366,"Administrator_Reference/Object_Command_Types/Update_Process.htm");
+  SetCsh(709,"Adjust_Image",373,"Administrator_Reference/Object_Command_Types/Image/Adjust_Image.htm");
+  SetCsh(710,"Production_Batches",406,"Administrator_Reference/Report_Types/System_Reports/Production_Batches.htm");
+  SetCsh(711,"DateTime",433,"Administrator_Reference/Storage_Type_Types/DateTime.htm");
+  SetCsh(712,"Number_Provider",465,"Administrator_Reference/Variable_Provider_Types/Number_Provider.htm");
+  SetCsh(713,"Variable_Provider_Types",466,"Administrator_Reference/Variable_Provider_Types/Variable_Provider_Types.htm");
+  SetCsh(714,"Batch_Processing_Processing_Scope",472,"Getting_Started/Grooper_Concepts/Batch_Processing.htm#Processing_Scope");
+  SetCsh(715,"Scripting",487,"Getting_Started/Grooper_Concepts/Scripting.htm");
+  SetCsh(716,"Enable_ScanOnce",502,"Getting_Started/How_To_Guide/Scanning/Enable_ScanOnce.htm");
+  SetCsh(717,"CMIS_Object_Properties_Dialog",531,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/CMIS_Object_Properties_Dialog.htm");
+  SetCsh(718,"Data_Instance_Viewer_Dialog",535,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Data_Instance_Viewer_Dialog.htm");
+  SetCsh(719,"Field_Zone_Test_Dialog",542,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Field_Zone_Test_Dialog.htm");
+  SetCsh(720,"Grooper_Forms",553,"User_Interface_Reference/Grooper_UI_Elements/Grooper_Forms/Grooper_Forms.htm");
+  SetCsh(721,"CmisRepository_Browse",608,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/CmisRepository_Browse.htm");
+  SetCsh(722,"FieldClass_General",623,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/FieldClass_General.htm");
+  SetCsh(723,"Lexicon_General",640,"User_Interface_Reference/Grooper_UI_Elements/Grooper_NodeView_Controls/Lexicon_General.htm");
+  SetCsh(724,"CMIS_Query_Field_List",671,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/CMIS_Query_Field_List.htm");
+  SetCsh(725,"Other_Grooper_Controls",714,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Other_Grooper_Controls.htm");
+  SetCsh(726,"Service_Instance_Viewer",723,"User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Service_Instance_Viewer.htm");
+
+
+//-->
+</script>
+<script language="javascript">
+<!--
+//Find CSH according to hash string after this page
+if (getHash().length > 0)
+{
+   // VH 05/16/00 now support 
+   // TopicID=
+   // TopicNumber=
+   // RemoteURL=   
+   // and WindowsOptions
+   // with the format #a=xxx,b=xxx,c=xxx...
+   var strHashString = getHash().toString();
+   // change ? to : for remote URL. because java applet have some problem to pass a URL with two : inside the URL so we changed it. 
+   // so here need to change it back.
+   strHashString = strHashString.substring(1,strHashString.length);
+   strHashString = strHashString.replace("%072%057%057", "://");
+   var nTopicNum = GetTopicNumber(strHashString);
+
+   if (nTopicNum != -1)
+   {
+      FindTopicByTopicNum(nTopicNum);
+   }
+   else
+   {
+      if (gstrURL.length > 0) 
+	RedirectTo(gstrURL);
+      else
+      	RedirectToHomePage();
+   }
+}
+else
+{
+   RedirectToHomePage();
+}
+//-->
+</script>
+<noscript>
+ <p> Your browser does not support JavaScript. WebHelp Context-Sensitive Help requires JavaScript support to run.</p>
+</noscript>
+</body>
+</html>
+
+
+
+
+
+

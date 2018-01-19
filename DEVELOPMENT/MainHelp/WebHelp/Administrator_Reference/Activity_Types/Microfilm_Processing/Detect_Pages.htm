@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Detect Pages</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nMicrofilm Processing\nDetect Pages");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"Analyze_Strips.htm\">Microfilm Processing<\/a> &gt; Detect Pages<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Microfilm.DetectPages.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Detect Pages</h1></td>
+<table>
+</tr>
+</table>
+Category: Microfilm Processing. For each Frame Folder, this Activity detects and extracts Page Images from the Frame Image and creates child batch page objects under the Frame Folder.
+
+
+A prerequite for running this Activity is the <a href='Detect_Frames.htm'>Detect Frames</a> Activity. After running the <a href='Detect_Frames.htm'>Detect Frames</a> Activity, each Frame Folder contains a frame image that
+contains one or two pages. The Detect Pages Activity analyzes the frame image to detect the pages within it.
+
+
+<br/><br/><b>Inherits from:</b> Unattended Activity<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Image Cleanup Ip Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td></tr>
+   <tr><td>An <a href='../../Grooper_Node_Types/Profiles/IP_Profile.htm'>Ip Profile</a> to perform image cleanup on each page extracted using the Projection Profile Method. 
+This <a href='../../Grooper_Node_Types/Profiles/IP_Profile.htm'>Ip Profile</a> is expected to contain commands such as Black Border Removal and Deskew.
+
+(See <a href='../../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Microfilm Recording Method</td>
+    <td><table>
+   <tr><td>Type: RecordingMethod, Default: Either</td></tr>
+   <tr><td>Describes how page images have been recorded on each frame of the microfilm reel. Can be one of the following values:<br />
+<ul>
+<li><b>Simplex</b>: Each frame contains a single image.
+</li>
+<li><b>Duplex</b>: Each frame contains two images side by side.
+</li>
+<li><b>Either</b>: Each frame contains either one or two images.
+</li>
+</ul>
+ 
+This property is used to validate that each detected frame contains the expected number of page images.
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Test</td>
+    <td><table>
+   <tr><td>Type: DateTimeStyles, Default: None</td></tr>
+   <tr><td>
+A test value.
+ A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: Default formatting options must be used. This value represents the default style for the <see cref="M:System.DateTime.Parse(System.String)" />, <see cref="M:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)" />, and <see cref="M:System.DateTime.TryParse(System.String,System.DateTime@)" /> methods.
+</li>
+<li><b>AllowLeadingWhite</b>: Leading white-space characters must be ignored during parsing, except if they occur in the <see cref="T:System.Globalization.DateTimeFormatInfo" /> format patterns.
+</li>
+<li><b>AllowTrailingWhite</b>: Trailing white-space characters must be ignored during parsing, except if they occur in the <see cref="T:System.Globalization.DateTimeFormatInfo" /> format patterns.
+</li>
+<li><b>AllowInnerWhite</b>: Extra white-space characters in the middle of the string must be ignored during parsing, except if they occur in the <see cref="T:System.Globalization.DateTimeFormatInfo" /> format patterns.
+</li>
+<li><b>AllowWhiteSpaces</b>: Extra white-space characters anywhere in the string must be ignored during parsing, except if they occur in the <see cref="T:System.Globalization.DateTimeFormatInfo" /> format patterns. This value is a combination of the <see cref="F:System.Globalization.DateTimeStyles.AllowLeadingWhite" />, <see cref="F:System.Globalization.DateTimeStyles.AllowTrailingWhite" />, and <see cref="F:System.Globalization.DateTimeStyles.AllowInnerWhite" /> values.
+</li>
+<li><b>NoCurrentDateDefault</b>: If the parsed string contains only the time and not the date, the parsing methods assume the Gregorian date with year = 1, month = 1, and day = 1. If this value is not used, the current date is assumed.
+</li>
+<li><b>AdjustToUniversal</b>: Date and time are returned as a Coordinated Universal Time (UTC). If the input string denotes a local time, through a time zone specifier or <see cref="F:System.Globalization.DateTimeStyles.AssumeLocal" />, the date and time are converted from the local time to UTC. If the input string denotes a UTC time, through a time zone specifier or <see cref="F:System.Globalization.DateTimeStyles.AssumeUniversal" />, no conversion occurs. If the input string does not denote a local or UTC time, no conversion occurs and the resulting <see cref="P:System.DateTime.Kind" /> property is <see cref="F:System.DateTimeKind.Unspecified" />.
+</li>
+<li><b>AssumeLocal</b>: If no time zone is specified in the parsed string, the string is assumed to denote a local time.
+</li>
+<li><b>AssumeUniversal</b>: If no time zone is specified in the parsed string, the string is assumed to denote a UTC.
+</li>
+<li><b>RoundtripKind</b>: The <see cref="T:System.DateTimeKind" /> field of a date is preserved when a <see cref="T:System.DateTime" /> object is converted to a string using the "o" or "r" standard format specifier, and the string is then converted back to a <see cref="T:System.DateTime" /> object.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

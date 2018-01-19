@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Modify the Flow of a Batch Process</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nBatch Processing\nModify the Flow of a Batch Process");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Build_a_Batch_Process.htm\">Batch Processing<\/a> &gt; Modify the Flow of a Batch Process<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Modify the Flow of a Batch Process</h1>
+<p>In some cases, it may be necessary to dynamically modify the flow of 
+ a Batch 
+ Process. &#160;This can be done easily using Grooper's <a href="../../Grooper_Concepts/Scripting.htm">Scripting</a> 
+ interface. &#160;</p>
+<p>&#160;</p>
+<p>For example, consider the Batch 
+ Process shown below, which contains a step called Rescan. &#160;When 
+ a batch comes out of Image Review, if there are pages flagged in the batch, 
+ we want the batch to go to Rescan. &#160;If not, we want the batch to 
+ proceed to the OCR step.</p>
+<p>&#160;</p>
+<p><img src="images/ModifyFlow_SampleBatchProcess.jpg" class="ScreenShot" alt="" border="0" /></p>
+<h2>Step 1: Add a Script to the Batch Process</h2>
+<ul style="list-style: disc;">
+	<li>In Grooper Administration, go to the Scripting 
+	 Tab for the Batch 
+	 Process.</li>
+	<li>Click the Create button. &#160;</li>
+</ul>
+<h2>Step 2: Add Code to the Script</h2>
+<ul style="list-style: disc;">
+	<li>Click the 'Edit in Visual Studio' button.</li>
+	<li>When Visual Studio appears, open ScriptingSession.vb</li>
+	<li>Create a handler for the BatchCompleting event of the BatchProcess 
+	 object, and enter the following code.</li>
+</ul>
+<p>&#160;</p>
+<div style="background-color: #ffffff; height: 200px; border: solid 1px #000000; 
+	 padding: 5px; float: none;">
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;</span></font></span>&#160;<span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #0000ff; background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Private</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Sub</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">BatchProcess_BatchCompleting(sender</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Object</font></span><span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #000000; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">,</font></span></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span>&#160;e</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">As</font></span> <span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">BatchProcess</font></span><span style="font-size: 9.5pt; 
+													 font-family: Consolas; 
+													 color: #000000; background: #ffffff; 
+													 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">.</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #2B91AF; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="#2b91af" style="font-size:9.500000pt;">BatchCompletingEventArgs</font></span><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Handles</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">BatchProcess.BatchCompleting</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Select</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #0000ff; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Case</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #000000; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">e.StepCompleted.Name</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Case</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #A31515; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Image 
+	 Review&quot;</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">If</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #000000; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">(e.Batch.HasFlaggedPages)</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Then</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;e.NextStep 
+	 = BatchProcess(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+								 color: #A31515; background: #ffffff; mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Rescan&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Else</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;e.NextStep 
+	 = BatchProcess(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+								 color: #A31515; background: #ffffff; mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;OCR&quot;</font></span><span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #000000; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">End</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #0000ff; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">If</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Case</font></span> <span style="font-size: 9.5pt; 
+												 font-family: Consolas; 
+												 color: #A31515; background: #ffffff; 
+												 mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Rescan&quot;</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span>&#160;e.NextStep 
+	 = BatchProcess(</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+								 color: #A31515; background: #ffffff; mso-highlight: white;"><font size="2" color="#a31515" style="font-size:9.500000pt;">&quot;Image 
+	 Review&quot;</font></span><span style="font-size: 9.5pt; font-family: Consolas; 
+								 color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;">)</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;&#160;&#160;</span></font></span>&#160;<span 
+	 style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; background: #ffffff; 
+	 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">End</font></span> <span style="font-size: 9.5pt; font-family: Consolas; 
+											 color: #0000ff; background: #ffffff; 
+											 mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Select</font></span></p>
+	<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+		 mso-layout-grid-align: none; text-autospace: none;"><span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #000000; background: #ffffff; mso-highlight: white;"><font size="2" color="black" style="font-size:9.500000pt;"><span 
+	 style="mso-spacerun: yes;">&#160;</span></font></span>&#160;<span style="font-size: 9.5pt; 
+	 font-family: Consolas; color: #0000ff; background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">End</font></span> 
+	 <span style="font-size: 9.5pt; font-family: Consolas; color: #0000ff; 
+			 background: #ffffff; mso-highlight: white;"><font size="2" color="blue" style="font-size:9.500000pt;">Sub</font></span></p>
+</div>
+<h2>Step 3: Save and Compile</h2>
+<ul style="list-style: disc;">
+	<li>Exit Visual Studio and save the project.</li>
+	<li>Click the Compile button.</li>
+</ul>
+<p>&#160;</p>
+<p>As shown in this exercise, setting the NextStep property of the BatchCompletingEventArgs 
+ allows the next step to be set to any step in the Batch 
+ Process,</p>
+<h2>See Also</h2>
+<p>Batch 
+ Process</p>
+<p><a href="../../Grooper_Concepts/Scripting.htm">Scripting</a></p>
+<p><a href="../../Grooper_Concepts/Batch_Processing.htm">Batch Processing</a></p>
+<p>Script 
+ Manager</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

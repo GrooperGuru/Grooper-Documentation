@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper Attended Client Module</title>
+<link rel="StyleSheet" href="../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nGrooper Attended Client Module");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../Index.htm", "", "&gt;", "Home", "../Start_Page.htm");
+document.write("<a href=\"User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; Grooper Attended Client Module<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper Attended Client Module</h1>
+<p>
+Grooper Attended Client provides a user interface for all Attended Activities. BatchView controls will be displayed in the current panel while processing. On the right is a viewer
+control for displaying specific batch pages in detail.
+ <div>There are multiple ways that this application can be opened:</div><ul><li style="padding: 5px 0px;">Case 1: Opened from BatchManager, a BatchId command line parameter will be present. In this case, the application is closed automatically
+when the final task for the Batch is completed, the task is closed (user clicks the 'Stop Processing' button), or the batch is deleted.</li><li style="padding: 5px 0px;">Case 2: Opened using a shortcut, installed by the installer. An ActivityType command line parameter will be present. In this case, the
+application sets a filter for the passed in ActivityType that cannot be modified. The application does not close automatically.</li><li style="padding: 5px 0px;">Case 3: Opened manually. In this case, the application can be used to process any task and does not close automatically.</li></ul>
+</p>
+<p><img src="../images/ScreenShots/GrooperClientAttended.frmMain.jpg" class="ScreenShot" /></p>
+<h2>Child Controls</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:25%;' />
+  <col style='width:75%'/>
+  <tr>
+     <th>Control Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Grooper_UI_Elements/Other_Grooper_Controls/Batch_Multi_View.htm'>Batch Multi View</a></td>
+     <td>
+A container control that hosts one or more child controls derived from <a href='../Administrator_Reference/Batch_View_Types/Batch_View_Types.htm'>BatchView</a>. If more than one child control is to be hosted, then the child controls
+are automatically added to a TabControl to provide a convenient tabbed UI for switching between the child controls.
+
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_UI_Elements/Other_Grooper_Controls/Data_Display_Timer.htm'>Data Display Timer</a></td>
+     <td>Displays statistics on a timer, typically while a background process is running.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_UI_Elements/Other_Grooper_Controls/Page_Viewer.htm'>Page Viewer</a></td>
+     <td>Displays image-based documents.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_UI_Elements/Other_Grooper_Controls/Image_Viewer.htm'>Image Viewer</a></td>
+     <td></td>
+  </tr>
+</table>
+<h2>Main Menu Commands</h2>
+<table class='ObjectProperties' width = '100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:10%'/>
+  <col style='width:60%'/>
+  <tr>
+     <th>&nbsp;</th>
+     <th>Command Name</th>
+     <th>Shortcut Keys</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Batch___Create.png" /></td>
+     <td>Batch / Create...</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+N</td>
+     <td>Create a new Grooper batch.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Batch___Delete.png" /></td>
+     <td>Batch / Delete</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+D</td>
+     <td>Delete the current Grooper batch.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Batch___Properties.png" /></td>
+     <td>Batch / Properties...</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+P</td>
+     <td>Display Properties of the current Batch
+</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+     <td>Help / About...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Display the About dialog box
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Help___Show_Help.png" /></td>
+     <td>Help / Show Help...</td>
+     <td style='text-align:center; vertical-align:middle;'></td>
+     <td>Display Grooper Help.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Complete_Task.png" /></td>
+     <td>Processing / Complete Task</td>
+     <td style='text-align:center; vertical-align:middle;'>F9</td>
+     <td>Complete the current task.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Exit.png" /></td>
+     <td>Processing / Exit</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+F4</td>
+     <td>Exit Attended Client.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Open_Task.png" /></td>
+     <td>Processing / Open Task...</td>
+     <td style='text-align:center; vertical-align:middle;'>Ctrl+O</td>
+     <td>Open a single existing task and process it.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Process_Tasks.png" /></td>
+     <td>Processing / Process Tasks</td>
+     <td style='text-align:center; vertical-align:middle;'>F5</td>
+     <td>Start processing existing tasks using timer.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Settings.png" /></td>
+     <td>Processing / Settings...</td>
+     <td style='text-align:center; vertical-align:middle;'>Alt+S</td>
+     <td>Display the Attended Client options dialog.
+</td>
+  </tr>
+  <tr>
+     <td style='text-align:center; vertical-align:middle;'><img src="../images/CommandIcons/GrooperClientAttended.frmMain.Processing___Stop.png" /></td>
+     <td>Processing / Stop</td>
+     <td style='text-align:center; vertical-align:middle;'>Shift+F5</td>
+     <td> 
+This does not actually stop the status timer, which continues to run
+It merely sets a flag determining if the polling timer automatically processes the next available task or not.
+
+</td>
+  </tr>
+</table>
+<h2>Additional Commands</h2>
+No commands defined
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

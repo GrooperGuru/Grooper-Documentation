@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Data Element Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nData Element Types\nData Element Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Data_Element_Types.htm\">Data Element Types<\/a> &gt; Data Element Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Data Element</h1>
+
+Represents an element of data.
+
+
+<h2>List of Data Element Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:20%'/>
+  <col style='width:80%'/>
+  <tr>    <th>Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Data Extraction</td>
+  </tr>
+<tr><td><img src='../../images/TypeIcons/Grooper.Core.DataColumn.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Column.htm'>Data Column</a>
+</td><td>Represents a column in a <a href='Data_Extraction/Data_Table.htm'>Data Table</a>.
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataField.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Field.htm'>Data Field</a>
+</td><td>Represents a field or table cell. Fields can be children of <a href='Data_Extraction/Data_Model.htm'>Data Model</a>, <a href='Data_Extraction/Data_Section.htm'>Data Section</a>, or <a href='Data_Extraction/Data_Table.htm'>Data Table</a> objects. When added as the
+child of a Data Model or Data Section the object represents a field.  When added as the child of a
+Data Table, the object represents a column in the table.  Fields object define characteristics such as:
+<ul><li>The appearance of the item in the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Index_Panel.htm'>Index Panel</a>.</li><li>The default ESP™ Extraction settings.  These settings can be overridden on individual content types.</li><li>Basic settings such as whether the field is required, visible, read only, displays a list, etc.</li><li>Validation mask settings which provide detailed control over what the user can enter.</li><li>Database lookup settings.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataModel.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Model.htm'>Data Model</a>
+</td><td>Defines the data elements for a content type. <p>A Data Model is a hierarchy of <a href='Data_Extraction/Data_Section.htm'>Data Section</a>, <a href='Data_Extraction/Data_Field.htm'>Data Field</a>, <a href='Data_Extraction/Data_Table.htm'>Data Table</a>, and <a href='Data_Extraction/Data_Column.htm'>Data Column</a> objects which define the internal data structure
+of a content type.  A Data Model can be as simple as a list of fields (i.e. Invoice Date, Invoice Number, Invoice Amount,  and
+PO Number), or can be a complex hierarchy of sections, subsections, tables, and fields.  Data Models are created as children of
+the various Content Types in a <a href='../Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a>, using the 'Create Data Model' command, found on the property panel of the content type.</p><p>Data Models inherit the Data Elements defined on parent Content Types.  As such, a derived type may not have data element
+names which conflict those defined on a base type.</p>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataSection.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Section.htm'>Data Section</a>
+</td><td>A Data Section allows the content of a document to be subdivided into sections for further processing.  Sections can be used for a variety of purposes, including but not limited to the following:
+<ul><li>To identify and extract repeating sections of a document.</li><li>To break a document down into a hierarchy of sections and subsections, representing the structure of the document's content.</li><li>To reorder text flow in situations where a document has multiple columns of information.</li><li>To simplify data extraction on complex documents.</li></ul>
+</td></tr><tr><td><img src='../../images/TypeIcons/Grooper.Core.DataTable.Normal.png' height = '16' width = '16' style='float: left';/>&nbsp;&nbsp;<a href='Data_Extraction/Data_Table.htm'>Data Table</a>
+</td><td> Data Table objects are used to describe tabular data for the purposes of <a href='../../Getting_Started/Grooper_Concepts/Data_Extraction.htm'>Data Extraction</a> and <a href='../Activity_Types/Human_Review/Data_Review.htm'>Data Review</a>.
+The columns in the table are defined by adding child <a href='Data_Extraction/Data_Field.htm'>Data Field</a> elements to a Data Table object.
+</td></tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

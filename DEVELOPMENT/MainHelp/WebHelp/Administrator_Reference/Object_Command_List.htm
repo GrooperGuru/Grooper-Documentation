@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Object Command List</title>
+<link rel="StyleSheet" href="../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nObject Command List");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../Index.htm", "", "&gt;", "Home", "../Start_Page.htm");
+document.write("<a href=\"Administrator_Reference.htm\">Administrator Reference<\/a> &gt; Object Command List<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Object Command List</h1>
+Object Commands perform specialized tasks on one or more Grooper Objects.
+The following list displays all Object Commands currently defined in Grooper:
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:1%'/>
+  <col style='width:20%'/>
+  <col style='width:24%'/>
+  <col style='width:55%'/>
+  <tr>    <th></th>
+    <th>Display Name</th>
+    <th>Applies To</th>
+    <th>Description</th>
+  </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.AddMultiple.Add.png /></td>
+      <td><a href='Object_Command_Types/Contents/Add_Multiple_Items.htm'>Add Multiple Items</a></td>
+      <td><a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a></td>
+      <td>Creates multiple items as children of the selected object.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.AddToNewFolder.Normal.png /></td>
+      <td><a href='Object_Command_Types/Add_Selection_to_New_Folder.htm'>Add Selection to New Folder</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Creates a new folder and moves all the selected <a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Pages</a> inside it.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.AdjustImage.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Adjust_Image.htm'>Adjust Image</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Displays a UI allowing the user to edit the display properties of the image. For black and white images, the threshold may be adjusted.  For grayscale and color images, the brightness and contrast may be adjusted.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.ScanAppend.Normal.png /></td>
+      <td><a href='Object_Command_Types/Scan/Append.htm'>Append</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a></td>
+      <td>Starts the scanning process, appending newly-scanned pages to the end of the currently selected folder.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.AppendToPrevious.Normal.png /></td>
+      <td><a href='Object_Command_Types/Append_to_Previous.htm'>Append to Previous</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Append the selected object(s) to the previous folder. If the selected object is a folder, the contents of the selected folder will be appended to the previous folder, and the
+selected folder will be removed. If the selected object is one or more pages, t...</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.IpProfile.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Apply_Image_Cleanup.htm'>Apply Image Cleanup</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Activity_Types/Human_Review/Image_Review.htm'>Image Review</a>, <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td>
+      <td>Applies an <a href='Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to one or more pages.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.AssignContentType.Normal.png /></td>
+      <td><a href='Object_Command_Types/Assign_Content_Type.htm'>Assign Content Type</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Assigns a Content Type to the currently selected folder.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.AssignContentType.Normal.png /></td>
+      <td><a href='Object_Command_Types/Assign_Document_Type.htm'>Assign Document Type</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a></td>
+      <td>Assigns a <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> to the currently selected folder.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FileSystemLink_ChangeAttributes.Normal.png /></td>
+      <td><a href='Object_Command_Types/Change_File_Attributes.htm'>Change File Attributes</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Changes the file attributes on the linked file.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.ClearChildren.Normal.png /></td>
+      <td><a href='Object_Command_Types/Contents/Clear_Children.htm'>Clear Children</a></td>
+      <td><a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a></td>
+      <td>Deletes all children of the selected object(s).
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ClearFlag.Normal.png /></td>
+      <td><a href='Object_Command_Types/Clear_Flag.htm'>Clear Flag</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></td>
+      <td>Clears any existing flags on selected items.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Clone.Normal.png /></td>
+      <td><a href='Object_Command_Types/Clone_To_Production.htm'>Clone To Production</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, <a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td>
+      <td>Clones the batch into production, and launches it into a <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Clone.Normal.png /></td>
+      <td><a href='Object_Command_Types/Clone_To_Test.htm'>Clone To Test</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td>
+      <td>Clones this production batch to the 'Production Clones' folder of the test branch.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Separate.Normal.png /></td>
+      <td><a href='Object_Command_Types/Batch_Operations/Combine_Loose_Pages.htm'>Combine Loose Pages</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Combines each range of contiguous loose pages into a new document, and attempts to classify each.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.mime_zip.Normal.png /></td>
+      <td><a href='Object_Command_Types/Send_To/Compressed_Archive.htm'>Compressed Archive</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+      <td>Exports the selected folders or documents to a ZIP archive.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Copy.Normal.png /></td>
+      <td><a href='Object_Command_Types/Copy_File.htm'>Copy File</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Writes a copy of the native file version to the file system. If a file with the same name already exists in the target folder, it will be overwritten.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DataModel.Add.png /></td>
+      <td><a href='Object_Command_Types/Create_Data_Model.htm'>Create Data Model</a></td>
+      <td>Content Type</td>
+      <td>Creates a new data model object on this content type.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Database.Add.png /></td>
+      <td><a href='Object_Command_Types/Create_Database.htm'>Create Database</a></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td>
+      <td>Creates a new database on the database server.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Folder.Add.png /></td>
+      <td><a href='Object_Command_Types/Create_Local_Resources_Folder.htm'>Create Local Resources Folder</a></td>
+      <td>Content Type</td>
+      <td>Creates a new data model object on this content type.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Crop.Normal.png /></td>
+      <td><a href='IP_Command_Types/Border_Cleanup/Crop.htm'>Crop</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Crops the displayed page to the current selection.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Delete.Normal.png /></td>
+      <td><a href='Object_Command_Types/Delete.htm'>Delete</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Deletes the CMIS document associated with the link and removes the link.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.delete.Normal.png /></td>
+      <td><a href='Object_Command_Types/Delete_File.htm'>Delete File</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Deletes the linked file from the file system. Note:  This will also delete the link from the batchfolder, since it is no longer valid.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.delete.Normal.png /></td>
+      <td><a href='Object_Command_Types/Delete_File.htm'>Delete File</a></td>
+      <td><a href="Content_Link_Types/Ftp_Link.htm">FTP Link</a></td>
+      <td>Deletes the linked file from the Ftp server. Note:  This will also delete the link from the batchfolder, since it is no longer valid.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.delete.Normal.png /></td>
+      <td><a href='Object_Command_Types/Delete_File.htm'>Delete File</a></td>
+      <td><a href='Content_Link_Types/SFTP_Link.htm'>SFTP Link</a></td>
+      <td>Deletes the linked file from the SSH/SFTP file server. Note:  This will also delete the link from the batchfolder, since it is no longer valid.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.MailLink_DeleteMessage.Normal.png /></td>
+      <td><a href='Object_Command_Types/Delete_Message.htm'>Delete Message</a></td>
+      <td><a href='Content_Link_Types/Mail_Link.htm'>Mail Link</a></td>
+      <td>Delete the linked Mail server object from the mail server. Note:  This will also delete the link from the batchfolder, since it is no longer valid.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ManualDeskew.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Deskew.htm'>Deskew</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Deskew Image. This command is provided for the shortcut key.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Browse.Add.png /></td>
+      <td><a href='Object_Command_Types/Download_System_Files.htm'>Download System Files</a></td>
+      <td><a href='Grooper_Node_Types/Miscellaneous/Folder.htm'>Folder</a></td>
+      <td>Downloads and installs the (system) files associated with this folder.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Browse.Normal.png /></td>
+      <td><a href='Object_Command_Types/Expand_Attachments.htm'>Expand Attachments</a></td>
+      <td><a href='Content_Link_Types/Mail_Link.htm'>Mail Link</a></td>
+      <td>Expands all attachments as children of the folder object.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Browse.Normal.png /></td>
+      <td><a href='Object_Command_Types/Expand_Attachments.htm'>Expand Attachments</a></td>
+      <td><a href='MIME_Type_Handler_Types/Mail_Message.htm'>Mail Message</a></td>
+      <td>Expands all attachments as children of the folder object.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.mime_zip.Normal.png /></td>
+      <td><a href='Object_Command_Types/Share/Export_to_Compressed_Archive.htm'>Export to Compressed Archive</a></td>
+      <td><a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a></td>
+      <td>Exports a set of Grooper nodes to a ZIP archive.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Browse.Normal.png /></td>
+      <td><a href='Object_Command_Types/Send_To/File_System.htm'>File System</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+      <td>Exports the selected folders or documents to a file system directory.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.FlagItem.Normal.png /></td>
+      <td><a href='Object_Command_Types/Flag_Item.htm'>Flag Item</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></td>
+      <td>Marks the selected items as flagged.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.ControlSheet.Add.png /></td>
+      <td><a href='Object_Command_Types/Generate_Control_Sheets.htm'>Generate Control Sheets</a></td>
+      <td>Content Type, <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a></td>
+      <td>Creates a new data model object on this content type.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DatabaseTable.Add.png /></td>
+      <td><a href='Object_Command_Types/Generate_Table.htm'>Generate Table</a></td>
+      <td>Content Type, <a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td>
+      <td>Generates a new database table from a Grooper Content Type.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Document_Error.Normal.png /></td>
+      <td><a href='Object_Command_Types/Go_To_Next_Invalid_Document.htm'>Go To Next Invalid Document</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a></td>
+      <td>Load the next invalid document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.NextItem.Normal.png /></td>
+      <td><a href='Object_Command_Types/Go_To_Next_Issue.htm'>Go To Next Issue</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Sets the selection to the next loose page or un-classified <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.GotoFlag.Normal.png /></td>
+      <td><a href='Object_Command_Types/Goto_Next_Flagged_Item.htm'>Goto Next Flagged Item</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Moves the focused item to the first flagged page of the batch (if any).
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.ImportNode.Normal.png /></td>
+      <td><a href='Object_Command_Types/Import_from_Compressed_Archive.htm'>Import from Compressed Archive</a></td>
+      <td><a href='Grooper_Node_Types/Miscellaneous/Grooper_Root.htm'>Grooper Root</a></td>
+      <td>Imports objects from a Grooper ZIP archive file to the currently open Repository.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.scan_insert.Normal.png /></td>
+      <td><a href='Object_Command_Types/Scan/Insert.htm'>Insert</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a></td>
+      <td>Starts the scanning process, inserting new pages immediately before or after the current selection.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Lexicon_Intersect.Normal.png /></td>
+      <td><a href='Object_Command_Types/Intersect.htm'>Intersect</a></td>
+      <td><a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+      <td>Creates a new lexicon containing all entries which appear both in this lexicon and a reference lexicon.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Content_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Content.htm'>Load Content</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Loads the linked file and stores it locally in Grooper.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Content_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Content.htm'>Load Content</a></td>
+      <td><a href="Content_Link_Types/Ftp_Link.htm">FTP Link</a></td>
+      <td>Loads the linked file and stores it as the native document version.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Content_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Content.htm'>Load Content</a></td>
+      <td><a href='Content_Link_Types/Mail_Link.htm'>Mail Link</a></td>
+      <td>Loads the content from the linked Mail server object to the Grooper object.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Content_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Content.htm'>Load Content</a></td>
+      <td><a href='Content_Link_Types/SFTP_Link.htm'>SFTP Link</a></td>
+      <td>Loads the linked file and stores it as the native document version.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Content_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Content.htm'>Load Content</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Loads the content of the linked CMIS document and saves it to the Grooper document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Properties_Load.Normal.png /></td>
+      <td><a href='Object_Command_Types/Load_Properties.htm'>Load Properties</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Reads properties from the CMIS document and applies them to the Grooper document. Uses the Import Mappings defined on the <a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.mime_mail.Normal.png /></td>
+      <td><a href='Object_Command_Types/Send_To/Mail_Recipient.htm'>Mail Recipient</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Grooper_Object_Types/Folder_Content_Generator.htm'>Folder Content Generator</a></td>
+      <td>Launches the default mail client, creating an email with the selected folders or documents attached.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Accept.Normal.png /></td>
+      <td><a href='Object_Command_Types/Mark_As_Reviewed.htm'>Mark As Reviewed</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Activity_Types/Human_Review/Image_Review.htm'>Image Review</a></td>
+      <td>Marks one or more pages as reviewed.  If the page was previously flagged, the flag will be removed.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.ClassifyPages.Normal.png /></td>
+      <td><a href='Object_Command_Types/Merge_Pages.htm'>Merge Pages</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Inserts the selected pages into a new folder, optionally classified as a content type.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.move_to_folder.Normal.png /></td>
+      <td><a href='Object_Command_Types/Move_File.htm'>Move File</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Writes the native file version to the file system.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.move_next.Normal.png /></td>
+      <td><a href='Object_Command_Types/Move_Next.htm'>Move Next</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a></td>
+      <td>Go to the next document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.FileStore_MoveObjects.Normal.png /></td>
+      <td><a href='Object_Command_Types/Move_Objects_Here.htm'>Move Objects Here</a></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Store</a>, <a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a></td>
+      <td>Tests the connection to the file store.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.move_previous.Normal.png /></td>
+      <td><a href='Object_Command_Types/Move_Previous.htm'>Move Previous</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a></td>
+      <td>Go to the previous document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Folder.Add.png /></td>
+      <td><a href='Object_Command_Types/New_Folder.htm'>New Folder</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Adds a new <a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Lexicon_Normalize.Normal.png /></td>
+      <td><a href='Object_Command_Types/Normalize.htm'>Normalize</a></td>
+      <td><a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+      <td>Normalizes character data in the lexicon to the character set of the configured language. This command can be used to normalize imported lexicon data where words are spelled using characters from another language.  For example,
+consider the Russian word ...</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.open.Normal.png /></td>
+      <td><a href='Object_Command_Types/Open.htm'>Open</a></td>
+      <td><a href='Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></td>
+      <td>Opens the document in the native application. If changes are saved to the document while it is open, the document in Grooper will updated to reflect the changes.  If the document is
+printed to the Grooper Render Printer while it is open, the PDf version ...</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Pause.Normal.png /></td>
+      <td><a href='Object_Command_Types/Pause.htm'>Pause</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td>
+      <td>Set the batch to a paused state.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Print.Normal.png /></td>
+      <td><a href='Object_Command_Types/Send_To/Printer.htm'>Printer</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></td>
+      <td>Prints the selected items to a printer device.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.server.Normal.png /></td>
+      <td><a href='Object_Command_Types/Share/Publish_to_Grooper_Repository.htm'>Publish to Grooper Repository</a></td>
+      <td><a href='Grooper_Node_Types/Grooper_Node_Types.htm'>Grooper Node</a>, <a href='Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td>
+      <td>Publishes a set of Grooper Nodes to a Target Grooper Repository.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.PublishingManager.Normal.png /></td>
+      <td><a href='Object_Command_Types/Published_Nodes_Manager.htm'>Published Nodes Manager</a></td>
+      <td><a href='Grooper_Node_Types/Miscellaneous/Grooper_Root.htm'>Grooper Root</a></td>
+      <td>Displays the Published Nodes Manager, which allows previously published nodes to be unpublished or republished.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ContentType_Purge.Normal.png /></td>
+      <td><a href='Object_Command_Types/Purge_Training.htm'>Purge Training</a></td>
+      <td>Content Type</td>
+      <td>Purges all classification training and samples from this item and all items below it.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.PurgeTraining.Normal.png /></td>
+      <td><a href='Object_Command_Types/Purge_Training.htm'>Purge Training</a></td>
+      <td><a href='Data_Element_Types/Data_Element_Types.htm'>Data Element</a></td>
+      <td>Purges all classification training and samples from this item and all items below it.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ContentType_Rebuild.Normal.png /></td>
+      <td><a href='Object_Command_Types/Rebuild_Training.htm'>Rebuild Training</a></td>
+      <td>Content Type</td>
+      <td>Rebuilds classification training for this item and all items below it.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.DeleteLink.Normal.png /></td>
+      <td><a href='Object_Command_Types/Remove_Link.htm'>Remove Link</a></td>
+      <td><a href='Content_Link_Types/Content_Link_Types.htm'>Content Link</a></td>
+      <td>Deletes the link between this object and the external content it is currently linked to.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.RemoveNativeVersion.Normal.png /></td>
+      <td><a href='Object_Command_Types/Remove_Native_Version.htm'>Remove Native Version</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a></td>
+      <td>Deletes the locally-stored native file version from this folder object.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.RemovePdfVersion.Normal.png /></td>
+      <td><a href='Object_Command_Types/Remove_PDF_Version.htm'>Remove PDF Version</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></td>
+      <td>Deletes the Grooper-generated PDF version from this item.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.rescan.Normal.png /></td>
+      <td><a href='Object_Command_Types/Scan/Replace.htm'>Replace</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a></td>
+      <td>Replace the currently selected pages with the result of a scan operation.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Reprocess.Normal.png /></td>
+      <td><a href='Object_Command_Types/Reprocess.htm'>Reprocess</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Index_Navigator.htm'>Index Navigator</a></td>
+      <td>Reprocess documents through extraction.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Reprocess.Normal.png /></td>
+      <td><a href='Object_Command_Types/Batch_Operations/Reprocess_Batch.htm'>Reprocess Batch</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Reprocess all or part of the batch through <a href='../Getting_Started/Grooper_Concepts/Classification.htm'>Classification</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Editor_Undo.Normal.png /></td>
+      <td><a href='Object_Command_Types/Reset.htm'>Reset</a></td>
+      <td><a href='Grooper_Object_Types/Grooper_Object_Types.htm'>Grooper Object</a>, <a href='../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Property_Grid.htm'>Property Grid</a></td>
+      <td>Reset the selected property back to its default value.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Play.Normal.png /></td>
+      <td><a href='Object_Command_Types/Resume.htm'>Resume</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td>
+      <td>Resumes processing on the batch at the current step.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.RevertToLoosePages.Normal.png /></td>
+      <td><a href='Object_Command_Types/Batch_Operations/Revert_To_Loose_Pages.htm'>Revert To Loose Pages</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Moves all descendant page objects to the root of the selected folder, and then deletes all descendant folders.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.RotateLeft.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Rotate_Left.htm'>Rotate Left</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a></td>
+      <td>Rotate Page Left. This command is provided for the statistics collection and the shortcut key.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.RotateRight.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Rotate_Right.htm'>Rotate Right</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a></td>
+      <td>Rotate Page Right. This command is provided for the statistics collection and the shortcut key.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.SaveAs.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_As....htm'>Save As...</a></td>
+      <td><a href='Grooper_Object_Types/MIME_Type_Handler.htm'>MIME Type Handler</a></td>
+      <td>Saves the native file version to a file system location.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Content_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Content.htm'>Save Content</a></td>
+      <td><a href='Content_Link_Types/File_System_Link.htm'>File System Link</a></td>
+      <td>Overwrites the file system content with the content stored in Grooper.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Content_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Content.htm'>Save Content</a></td>
+      <td><a href="Content_Link_Types/Ftp_Link.htm">FTP Link</a></td>
+      <td>Writes the native file version to the Ftp file server
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Messaging.Content_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Content.htm'>Save Content</a></td>
+      <td><a href='Content_Link_Types/SFTP_Link.htm'>SFTP Link</a></td>
+      <td>Writes the native file version to the SSH/SFTP file server
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Content_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Content.htm'>Save Content</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Updates the content of the linked CMIS document with the content of the Grooper document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Properties_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Properties.htm'>Save Properties</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Writes the Grooper document properties to the CMIS document. Uses the export mappings defined on the <a href='Grooper_Node_Types/Infrastructure/CMIS_Content_Type.htm'>CMIS Content Type</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.CMIS.Version_Save.Normal.png /></td>
+      <td><a href='Object_Command_Types/Save_Version.htm'>Save Version</a></td>
+      <td><a href='Content_Link_Types/CMIS_Link.htm'>CMIS Link</a></td>
+      <td>Adds a new version of the linked CMIS document from the content of the Grooper document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Capture.scanner_start_small.Normal.png /></td>
+      <td><a href='Activity_Types/Attended_Activities/Scan.htm'>Scan</a></td>
+      <td><a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a>, <a href='Batch_View_Types/Scan_Viewer.htm'>Scan Viewer</a></td>
+      <td>Starts the scanning process, appending newly-scanned pages to the end of the batch.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.SplitDocument.Normal.png /></td>
+      <td><a href='Object_Command_Types/Split_Document.htm'>Split Document</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Splits a folder or document at the currently selected page, optionally assigning a content type to the new document.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.folder_split.Normal.png /></td>
+      <td><a href='Object_Command_Types/Split_Folder.htm'>Split Folder</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Batch_View_Types/Batch_Viewer.htm'>Batch Viewer</a></td>
+      <td>Splits the content of the parent folder at the currently selected node, moving all items from the selected node to the end of the folder into a new folder.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Lexicon_Subtract.Normal.png /></td>
+      <td><a href='Object_Command_Types/Subtract.htm'>Subtract</a></td>
+      <td><a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+      <td>Removes all entries from this lexicon which appear in a reference lexicon.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Batch.Normal.png /></td>
+      <td><a href='Object_Command_Types/Send_To/Test_Batch.htm'>Test Batch</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, <a href='Batch_Object_Types/Batch_Object_Types.htm'>Batch Object</a></td>
+      <td>Appends a copy of the selected items to a test batch.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.FileStore_TestConnection.Normal.png /></td>
+      <td><a href='Object_Command_Types/Test_Connection.htm'>Test Connection</a></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/File_Store.htm'>File Store</a></td>
+      <td>Tests the connection to the file store.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Database.Lightning.png /></td>
+      <td><a href='Object_Command_Types/Test_Connection.htm'>Test Connection</a></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td>
+      <td>Tests the data connection by making a connection to the server.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.ToggleImageFormat.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Toggle_Display_Format.htm'>Toggle Display Format</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a></td>
+      <td>Toggle the display format of the selected page between Color, Grayscale, and Binary.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.TrainDocument.Normal.png /></td>
+      <td><a href='Object_Command_Types/Train_Document.htm'>Train Document</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Assign a <a href='Grooper_Node_Types/Content_Models/Document_Type.htm'>Document Type</a> for the selected document and train the <a href='Grooper_Node_Types/Content_Models/Content_Model.htm'>Content Model</a> with its features.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Lexicon_Truncate.Normal.png /></td>
+      <td><a href='Object_Command_Types/Truncate.htm'>Truncate</a></td>
+      <td><a href='Grooper_Node_Types/Collections/Lexicon.htm'>Lexicon</a></td>
+      <td>Truncates the lexicon to the top N entries.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Declassify.Normal.png /></td>
+      <td><a href='Object_Command_Types/Unclassify.htm'>Unclassify</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>, <a href='Batch_View_Types/Classification_Viewer.htm'>Classification Viewer</a></td>
+      <td>Removes the selected folder and inserts its contents into the parent at the same position the folder was located.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Undo.Normal.png /></td>
+      <td><a href='Object_Command_Types/Image/Undo_Image_Cleanup.htm'>Undo Image Cleanup</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a></td>
+      <td>Replace the selected page(s) with its Undo Image.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Activities.Accept.Delete.png /></td>
+      <td><a href='Object_Command_Types/Unmark.htm'>Unmark</a></td>
+      <td><a href='Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a>, <a href='Activity_Types/Human_Review/Image_Review.htm'>Image Review</a></td>
+      <td>Marks one or more pages as reviewed.  If the page was previously flagged, the flag will be removed.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Database.Lightning.png /></td>
+      <td><a href='Object_Command_Types/Update_Columns.htm'>Update Columns</a></td>
+      <td><a href='Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td>
+      <td>Updates the columns associated with this Database Table. Use this command to update a table definition after changes have been made on the database server.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Batch_UpdateProcess.Normal.png /></td>
+      <td><a href='Object_Command_Types/Update_Process.htm'>Update Process</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>, <a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a></td>
+      <td>Updates the <a href='Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a> associated with this batch to the latest published version, and assigns a starting <a href='Grooper_Node_Types/Batch_Processing/Batch_Process_Step.htm'>Batch Process Step</a>.
+</td>
+    </tr>    <tr>      <td align='center'><img src=../images/TypeIcons/Grooper.Core.Browse.Normal.png /></td>
+      <td><a href='Object_Command_Types/View_XML.htm'>View XML</a></td>
+      <td><a href='Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td>
+      <td>Opens the selected batch in an XML view. Useful for comparing a batch to its control before and after changes are made.
+</td>
+    </tr></table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

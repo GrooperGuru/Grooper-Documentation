@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Install a Stand-Alone Instance of Grooper</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nConfiguration and Setup\nInstall a Stand-Alone Instance of Grooper");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Install_a_Stand-Alone_Instance_of_Grooper.htm\">Configuration and Setup<\/a> &gt; Install a Stand-Alone Instance of Grooper<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Install a Stand-Alone Instance of Grooper</h1>
+<p>This guide discusses how to install a stand-alone instance of Grooper.&#160;A 
+ stand-alone instance is one which typically only involves a single workstation, 
+ and uses a local instance of SQL Server Express installed from the Data Sources 
+ Tab of &#160;Grooper 
+ Configuration. &#160;</p>
+<h2>Step 1: Install Grooper</h2>
+<ul style="list-style: disc;">
+	<li>Run the <a href="../../Installation_Guide/Installing_Grooper.htm">Grooper 
+	 Installer</a>.</li>
+</ul>
+<h2>Step 2: Run Grooper Configuration</h2>
+<ul style="list-style: disc;">
+	<li>Launch Grooper 
+	 Configuration.</li>
+	<li>When the confirmation prompt shown below appears, click Yes. &#160;This 
+	 will launch the Database Initialization Wizard.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_Confirmation.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 3: Start the Database Initialization Wizard</h2>
+<ul style="list-style: disc;">
+	<li><p>Click Next on the Welcome screen.</p></li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_Welcome.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 4: Specify Default Service Credentials</h2>
+<ul style="list-style: disc;">
+	<li>Enter the default service credentials. &#160;(Optional) &#160;This 
+	 is the user account under which services will be installed by default. 
+	 &#160;Setting this value prevents the information from having to be 
+	 re-entered each time a service is installed using the Services 
+	 Tab of Grooper 
+	 Configuration.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_ServiceCredentials.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 5: Install SQL Server Express</h2>
+<ul style="list-style: disc;">
+	<li>On the Database Connection screen, click 'Install Local Database 
+	 Instance'.</li>
+	<li>This will launch the installer for the SQL Server Express 2014. 
+	 &#160;This installation can take several minutes.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_DatabaseConnection.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 6: Review and Accept Database Connection Settings</h2>
+<ul style="list-style: disc;">
+	<li>Once the installation of SQL Server Express has completed, the 
+	 connection settings will be populated automatically, as shown below. 
+	 &#160;</li>
+	<li>Click Next to test the connection to the database and move to the 
+	 next step.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_DatabaseConnectionAfterInstall.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 7: Set the Storage Path</h2>
+<ul style="list-style: disc;">
+	<li>Set the storage path to be used by Grooper for content files. &#160;If 
+	 this instance of Grooper is only to be accessed from the local machine, 
+	 a local path can be used. &#160;Otherwise, a UNC path must be used.</li>
+	<li>Click Next.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_FileStore.jpg" alt="" style="border: none;" border="0" /></p>
+<h2>Step 8: Apply the Configuration</h2>
+<ul style="list-style: disc;">
+	<li>Click the Apply Configuration button to start the database initialization 
+	 process.</li>
+	<li>Once completed, your new instance of Grooper is ready to use. &#160;Launch 
+	 Grooper Administration to validate that Grooper is now functional.</li>
+</ul>
+<p>&#160;</p>
+<p><img src="images/InstallStandAlone_ApplyConfiguration.jpg" alt="" style="border: none;" border="0" /></p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

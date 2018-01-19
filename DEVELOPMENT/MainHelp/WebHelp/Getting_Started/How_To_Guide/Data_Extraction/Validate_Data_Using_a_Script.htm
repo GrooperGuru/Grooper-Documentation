@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Validate Data Using a Script</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nHow To Guide\nData Extraction\nValidate Data Using a Script");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"../How_To_Guide.htm\">How To Guide<\/a> &gt; <a href=\"Perform_Database_Lookups.htm\">Data Extraction<\/a> &gt; Validate Data Using a Script<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Validate Data Using a Script</h1>
+<p>In many cases, custom validation of the data fields associated with 
+ documents is required. &#160;Grooper's <a href="../../Grooper_Concepts/Scripting.htm">scripting 
+ interface</a> for <a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a> objects provides a simple and easy to use mechanism for gaining 
+ control at critical points of the data extraction and data review process. 
+ &#160;For a complete list of scripting events raised by a <a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a>, refer to the documentation for the <a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a> object.</p>
+<p>&#160;</p>
+<p style="font-style: italic;">NOTE: This exercise requires that a copy 
+ of Visual Studio 2012 Professional or higher be installed on the local 
+ workstation.</p>
+<p style="font-style: italic;">&#160;</p>
+<p>For this exercise, assume we have a <a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a> for invoices as shown below. &#160;When the users tabs out of 
+ the PO Number field, we want to validate this with a web service call. 
+ &#160;If the PO Number is found, we want to populate the Vendor No field. 
+ &#160;If it is not found, we want to indicate an error on the PO Number 
+ field.</p>
+<p>&#160;</p>
+<p><img src="Images/ValidateDate_DataModelExample.gif" alt="" style="border: none;" 
+		 border="0" /></p>
+<h2>Step 1: Create a Script on the Data Model</h2>
+<ul style="list-style: disc;">
+	<li>In Grooper Administration, navigate to the <a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+	 Model</a>.</li>
+	<li>On the Scripting Tab, click the Create button.</li>
+	<li>After the script is created, click the Edit in Visual Studio button.</li>
+</ul>
+<h2>Step 2: Edit the Script Code</h2>
+<ul style="list-style: disc;">
+	<li>Open ScriptingSession.vb, and add an event handler for the FieldExit 
+	 event.</li>
+	<li>Enter the code shown below, inserting your own logic for the LookupPO() 
+	 method.</li>
+</ul>
+<p><img src="Images/DataModel_FieldExit_example.png" alt="" style="border-left-style: Solid; 
+		 border-left-width: 1px; border-right-style: Solid; border-right-width: 1px; 
+		 border-top-style: Solid; border-top-width: 1px; border-bottom-style: Solid; 
+		 border-bottom-width: 1px;" border="1" /></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p>The first statement in the DataModel_FieldExit event handler retrieves 
+ a reference to the root <a href="../../Grooper_Concepts/Data_Instance_Objects.htm">DataInstance</a>, 
+ which will be used to access fields other than the current field. &#160;From 
+ the root instance, any root-level field in the Data Model can be accessed 
+ by name as shown above where the value of the Vendor No field is set.</p>
+<h2>Step 3 - Save and Compile</h2>
+<ul style="list-style: disc;">
+	<li>Exit Visual Studio and save the project.</li>
+	<li>Use the compile command to compile the script.</li>
+	<li>Please note that Grooper Administration must be restarted for the 
+	 script changes to take effect.</li>
+</ul>
+<h2>See Also</h2>
+<p><a href="../../Grooper_Concepts/Data_Instance_Objects.htm">Data Instances 
+ Overview Topic</a></p>
+<p><a href="../../Grooper_Concepts/Data_Extraction.htm">Data Extraction 
+ Overview Topic</a></p>
+<p><a href="../../Grooper_Concepts/Scripting.htm">Scripting Overview Topic</a></p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Model.htm">Data 
+ Model</a></p>
+<p><a href="../../../Administrator_Reference/Grooper_Node_Types/Data_Extraction/Data_Field.htm">Data 
+ Field</a></p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>DataPattern</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Developer Reference\nGrooper Core\nDataPattern");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../index.htm", "", ">", "Home", "../Grooper/Grooper_Namespace_Reference.htm");
+document.write("<a href=\"../Grooper/BorderExF.htm\">Developer Reference<\/a> > <a href=\"UnattendedActivity.htm\">Grooper Core<\/a> > DataPattern<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../../index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<?rh-placeholder type="header" ?>
+<h1>DataPattern</h1>
+<p>Defines an extractor which returns all instances of data matching a regular expression.
+
+Includes settings which control how the input will be preprocessed, and how extracted values
+will be validated and filtered into a final result set.
+
+</p><br/><b>Namespace:</b> &nbsp;<a href='Grooper.Core_Namespace_Reference.htm'>Grooper.Core</a><br/><b>Inherits from:</b> <a href='../Grooper/EmbeddedObject.htm'>EmbeddedObject</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:25%'/>
+  <col style='width:25%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Property Name</th>
+     <th>Property Type</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>AlignOutput</td>
+     <td>Boolean</td>
+     <td>If an Output Format is specified and this property is True, then the output value will be re-aligned with the original OCR results. In cases where the Output Format is being using for correction, ensures that literal characters from the output format are lined
+up with their closest OCR counterpart.
+</td>
+  </tr>
+  <tr>
+     <td>CaseSensitive</td>
+     <td>Boolean</td>
+     <td>Determines whether the regular expression will be evaluated with case-sensitivity on or off.
+</td>
+  </tr>
+  <tr>
+     <td>ExpressionLexicon</td>
+     <td><a href='Lexicon.htm'>Lexicon</a></td>
+     <td>A <a href='Lexicon.htm'>Lexicon</a> containing @Variables to be used in the regular expression.
+</td>
+  </tr>
+  <tr>
+     <td>Filter</td>
+     <td><a href='InstanceFilter.htm'>InstanceFilter</a></td>
+     <td>Specifies options for filtering output instances.
+</td>
+  </tr>
+  <tr>
+     <td>FuzzyMatchWeightings</td>
+     <td><a href='EmbeddedLexicon.htm'>EmbeddedLexicon</a></td>
+     <td>When Extraction Mode is set to FuzzyRegEx, specifies a lexicon containing fuzzy match weightings. Fuzzy match weightings allow the cost of swapping characters to be customized, to account for OCR engine confusion between characters which have
+a similar visual appearance.  By default during fuzzy matching, swapping a character has a cost of 1.  This would cause DBGRBBS and DEGREES to have a distance
+of 3, as 3 character swaps are required.  With a word length of 6, this produces a 50% match.  However, if we adjust weightings so that it only costs
+0.25 to convert a B to an E, the distance is now 0.75, producing an 87.5% match.
+<p>Each lexicon entry specifies a cost for converting character A to character B.  Therefore, each entry must contain exactly two characters in the key.  The first character
+represents the OCR character being matched, and is case-sensitive.  The second character represents the lexicon character, and is NOT case-sensitive.  The value indicates
+a percentage of the base cost which should be used.   In the example weightings shown below, the first entry specifies a cost of 0.25 to convert a 1 to an I</p><p>
+1I=0.25<br />
+lI=0.25<br />
+BE=0.25<br />
+EB=0.25<br />
+3B=0.50<br /></p><p>The base cost of swapping characters can be modified by adding a Swap entry as shown below.  It is not necessary to adjust the individual entries when changing this value,
+as the individual entries will be automatically scaled by the base cost. For example, the actual cost of swapping 1 for I will be 0.50 (base cost of 2.0 * 0.25).</p><p>
+Swap=2.0<br />
+1I=0.25<br />
+lI=0.25<br />
+BE=0.25<br />
+EB=0.25<br />
+3B=0.50<br /></p>
+</td>
+  </tr>
+  <tr>
+     <td>GroupOptions</td>
+     <td>List(Of GroupLookupOptions)</td>
+     <td>Defines lookup, translation, and fuzzy matching options for named groups within the regular expression. To specify lookup options for the captured value as a whole, use the 'Lookup Options' property.
+</td>
+  </tr>
+  <tr>
+     <td>IsEmpty</td>
+     <td>Boolean</td>
+     <td>Returns a boolean indicating whether the connected object is empty.
+</td>
+  </tr>
+  <tr>
+     <td>ListContent</td>
+     <td>String</td>
+     <td>Provides a shortcut to edit the local vocabulary entries stored in Lookup Options.
+</td>
+  </tr>
+  <tr>
+     <td>LookAheadPattern</td>
+     <td>String</td>
+     <td>A non-capturing regular expression defining a pattern which must occur immediately before the main pattern.
+</td>
+  </tr>
+  <tr>
+     <td>LookBehindPattern</td>
+     <td>String</td>
+     <td>A non-capturing regular expression defining a pattern which must occur immediately after the main pattern.
+</td>
+  </tr>
+  <tr>
+     <td>MainGroupOptions</td>
+     <td>LookupOptions</td>
+     <td>Defines lookup, translation, and fuzzy matching options for the captured value. To specify lookup options for a named group within the regular expression, use the 'Group Lookup Options' property.
+</td>
+  </tr>
+  <tr>
+     <td>MatchMode</td>
+     <td>FuzzyMatchMode</td>
+     <td>Defines how multiple overlapping matches are resolved when FuzzyRegEx is in use.
+Can be one of the following values:<br />
+<ul>
+<li><b>LeastCost</b>: Matches the least cost (highest confidence) result.  If the confidence of two results are equal, then the longer result will be matched.  If both results
+also have the same length, then the item appearing first in the text flow will be matched.
+</li>
+<li><b>BestValue</b>: Matches the longest result which is below the minimum confidence.  If two overlapping results have the same length, then the result with the highest
+confidence will be matched.  If both results have equal confidence, then the result appearing first in the text flow will be matched.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>MaxResults</td>
+     <td>Int32</td>
+     <td>If set, limits the number of results returned.  A value of zero indicates no limit. In cases where only the first match is needed, setting this property to a value of 1 will improve performance.
+</td>
+  </tr>
+  <tr>
+     <td>MinimumSimilarity</td>
+     <td>Double</td>
+     <td>When Extraction Mode is set to FuzzyRegEx, specifies the minimum similarity for fuzzy matches.
+</td>
+  </tr>
+  <tr>
+     <td>Mode</td>
+     <td>ExtractionMode</td>
+     <td>Specifies the extraction mode.
+Can be one of the following values:<br />
+<ul>
+<li><b>RegEx</b>: Normal regular expression mode.  Finds all instances which are a 100% match for the regular expression.  RegEx mode
+supports the full suntax and feature set of <a href="https://msdn.microsoft.com/en-us/library/az24scfc.aspx" target="_blank">Microsoft
+.Net Framework Regular Expressions</a>.
+</li>
+<li><b>FuzzyRegEx</b>: Fuzzy regular expression mode.  Finds all instances which match the regular expression to a specific percentage of similarity. FuzzyRegEx mode supports <em>most</em> of the syntax and features of RegEx mode, with a handful of exceptions noted below.
+<p>Processing time for FuzzyRegEx is proportional to the <em>perplexity</em> of the regular expression.  Perplexity is the number of possible
+permutations of the pattern, which in turn defines the number of passes which must be made through the content.</p><p>For example, A{1,2}B{1,2}C{1,2} has a perplexity of 2 * 2 * 2 = 8.  (ABC, ABCC, ABBC, ABBCC, AABC, AABCC, AABBC, AABBCC).  If we
+allow each element to range from {1,4}, the perplexity is 4 * 4 * 4 = 64. The expression [0-9]{4} (miles|kilometers) has a perplexity
+of 2.  If we change it to [0-9]{1,5} (miles|kilometers), the perplexity becomes 10. </p><p>Note that FuzzyRegEx supports an option which is unavailable in RegEx.  (?r) will turn on required mode, and (?-r) will turn it
+off.  At the start of a FuzzyRegEx, required mode always defaults to off.  Once turned on, required mode will stay on until it is turned
+off.  This mechanism can be used, for example, to require the start of a new line.</p><p>The following regular expression features are NOT supported in FuzzyRegEx mode:
+<ul><li>Quantifiers: + and *.  Also, the 'few times as possible' construct (i.e. \w*?) is not supported.</li><li>Character Escapes: \a \b \e \nnn \cX \cx \unnnn.</li><li>Character Classes: \p{name} abd \P{name}</li><li>Grouping Constructs: Only basic named and unnamed group constructs are supported </li><li>Other: Anchors other than ^ and $, Backreference Constructs, and Alternation Constructs are unsupported.</li></ul></p>
+</li>
+<li><b>FuzzyList</b>: Fuzzy list mode.  Finds all instances which match an entry in the vocabulary.  In this mode, no Value Pattern is required, since the values to be
+matched are specified as lexicon entries. To configure fuzzy list mode, edit the lookup Lookup Options as follows: (1) define one or more vocabulary entries; and (2) specify
+the required match percentage.  The extractor will return all instances which match an entry in the lexicon to the specified degree of similarity.
+</li>
+</ul>
+</td>
+  </tr>
+  <tr>
+     <td>nGramFormatString</td>
+     <td>String</td>
+     <td>When nGram extraction is active, defines an optional format string which transforms the final output value. A .Net composite format string where {0} indicates the entire match, {1} indicates nGram element 1, {2} indicates nGram element 2,
+and so on.  For example, an nGram match on "quick brown fox" with the format string "phrase_{1}_{2}_{3}" would produce the output value
+"phrase_quick_brown_fox".
+</td>
+  </tr>
+  <tr>
+     <td>nGramSize</td>
+     <td>Int32</td>
+     <td>When set to a value greater than 1, enables nGram capture mode.  The output will include all possible cominations of N
+contiguous elements.  "Contigous" is defined as any two matches where the nGram Separator expression matches the text between them. An nGram is a sequence of words: 1 word is a unigram, 2 words are a bigram, 3 words are a trigram, and so on.  Example:
+<ul><li>Input: The quick brown fox jumped over the log.</li><li>Pattern: \w+</li><li>Output - nGram Size 1: The, quick, brown, fox, jumped, over, the, log</li><li>Output - nGram Size 3: The quick brown, quick brown fox, brown fox jumped, fox jumped over, jumped over the, over the log.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td>OutputFormat</td>
+     <td>String</td>
+     <td>An optional format string which indicates the output format for the data. <p>The output format can contain (a) literal characters and (b) placeholders for groups captured in the regular expression.
+Placeholders take the general form {GroupName}, and can be expanded to include a typecast and format {GroupName:TypeCast:FormatSpecifier}.  Examples:</p><ul><li>{LastName}, {FirstName} - Outputs 'Smith, John' in a case where the value of LastName is 'Smith' and the value of FirstName is 'John'.</li><li>{ItemNo:Integer:0000} - Outputs '0192' in a case where the value of 'ItemNo' is '192'.</li></ul><b>TypeCast</b><p>Valid typecasts include DateTime, Decimal, Double, Integer, and String.  If an extracted value cannot be converted to the specified type, the value
+will be excluded from the output.  Two special typecasts are provided to assist with translation of values captured with the @Number and
+@Alpha variables.  A typecast of 'Number' will convert all alpha characters which resemble numbers to their numeric equivalents.  A typecase of 'Alpha'
+will perform the exact inverse of this operation, converting all numeric characters which resemble alpha characters to their alpha equivalents.</p><b>GroupName</b><p>The GroupName must reference a named group defined within the regular expression.</p><b>FormatSpecifier</b><p>A valid .Net format specifier for the type indicated in the typecast. Please see the following links for complete documentation:</p><ul><li><a href="https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx" target="_blank">Standard DateTime Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx" target="_blank">Custom DateTime Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx" target="_blank">Standard Numeric Formats</a></li><li><a href="https://msdn.microsoft.com/en-us/library/0c899ak8(v=vs.110).aspx" target="_blank">Custom Numeric Formats</a></li></ul><p>Commonly-Used Format Strings</p><table><tr><th>Type</th><th>Specifier</th><th>Description</th><th>Example</th></tr><tr><td>DateTime</td><td>d</td><td>Short date format</td><td>6/15/2009 </td></tr><tr><td>DateTime</td><td>D</td><td>Long date format</td><td>Monday, June 15, 2009</td></tr><tr><td>DateTime</td><td>f</td><td>Full date/time (short time)</td><td> Monday, June 15, 2009 1:45 PM</td></tr><tr><td>DateTime</td><td>F</td><td>Full date/time (long time)</td><td>Monday, June 15, 2009 1:45:30 PM</td></tr><tr><td>Numeric</td><td>c0</td><td>Currency (Precision 0)</td><td>$123</td></tr><tr><td>Numeric</td><td>c2</td><td>Currency (Precision 2)</td><td>$123.45</td></tr><tr><td>Numeric</td><td>n0</td><td>Number (Precision 0)</td><td>123</td></tr><tr><td>Numeric</td><td>n2</td><td>Number (Precision 2)</td><td>123.45</td></tr></table>
+</td>
+  </tr>
+  <tr>
+     <td>Owner</td>
+     <td><a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>OwnerNode</td>
+     <td><a href='../Grooper/GrooperNode.htm'>GrooperNode</a></td>
+     <td>Returns the node that owns the connected object, if any.
+</td>
+  </tr>
+  <tr>
+     <td>PreprocessingOptions</td>
+     <td>TextPreprocessor</td>
+     <td>Specifies options for processing text prior to running the regular expression.
+</td>
+  </tr>
+  <tr>
+     <td>RegionalSettings</td>
+     <td>RegionSettings</td>
+     <td>Defines multilanguage options used for data extraction.
+</td>
+  </tr>
+  <tr>
+     <td>RemoveControlCharacters</td>
+     <td>Boolean</td>
+     <td>If enabled, all control characters except SPACE will be converted to SPACE characters. CR/LF pairs will be replaced by a single SPACE character.
+</td>
+  </tr>
+  <tr>
+     <td>RestrictZone</td>
+     <td>Boolean</td>
+     <td>If enabled, restricts the bounding zone to the data included in the output format. Restricts the highlight zone for the extracted data to the zone covered by the data elements used in the output format.
+This is useful in situations where surrounding data is used to identify the target data, but is not actually part of the field value.
+</td>
+  </tr>
+  <tr>
+     <td>Root</td>
+     <td><a href='../Grooper/GrooperRoot.htm'>GrooperRoot</a></td>
+     <td>Returns the root node
+</td>
+  </tr>
+  <tr>
+     <td>SeparatorExpression</td>
+     <td>String</td>
+     <td>When nGram extraction is active, this regular expression defines allowable separators. If the pattern is blank, the default behavior is to allow nGrams which are separated by 0 characters or 1 space character.
+</td>
+  </tr>
+  <tr>
+     <td>ValuePattern</td>
+     <td>String</td>
+     <td>A regular expression pattern which identifies data to be extracted. Regular expressions take the general form character set{quantifier}.  For example:
+<ul><li>[0-9]{5} will find all numeric values with a length of 5 characters.</li><li>[0-9]{5,8} will find all numeric values with a length of 5 to 8 characters.</li><li>A-Z{3,12} will find all alpha values with a length of 3 to 12 characters.</li><li>[0-9A-Z]{6} will find all alphanumeric values with a length of 6.</li></ul>
+Grooper's regular expression implementation is based on Microsoft .Net Framework regular expressions, which are extensively discussed
+in Microsoft documentation.  See <a href="https://msdn.microsoft.com/en-us/library/hs600312.aspx" target="_blank">.Net Framework Regular Expressions</a> or
+<a href="https://msdn.microsoft.com/en-us/library/az24scfc.aspx" target="_blank">Regular Expression Language - Quick Reference</a> for a good
+starting point.
+</td>
+  </tr>
+</table>
+<br/><h2>Methods</h2>
+<table class='ObjectProperties' width='100%' style='cellspacing=0;'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Method Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td>Equals(obj As Object) As Boolean</td>
+     <td>Determines whether the specified object is equal to the current object.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>obj</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Object</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The object to compare with the current object. </td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ExecuteExpression(Source As <a href='DataInstance.htm'>DataInstance</a>, Expression As String) As DataInstanceCollection</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Source</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Expression</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>FindInstances(Input As <a href='DataInstance.htm'>DataInstance</a>) As DataInstanceCollection</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Input</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='DataInstance.htm'>DataInstance</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetHashCode() As Int32</td>
+     <td>Serves as a hash function for a particular type. 
+</td>
+  </tr>
+  <tr>
+     <td>GetListPattern(Culture As <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a>) As String</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Culture</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>GetReferences() As List`1</td>
+     <td>Returns a list of GrooperNode objects referenced in the properties of this object. Derives classes may override this method to
+</td>
+  </tr>
+  <tr>
+     <td>GetType() As Type</td>
+     <td>Gets the type of the current instance.
+</td>
+  </tr>
+  <tr>
+     <td>IsType(Type As Type) As Boolean</td>
+     <td>Returns true if the object is of the type specified, or if it derives from the type specfied.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Type</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Type</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The type to check.</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ProcessPattern(Culture As <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a>, ValidationMode As Boolean) As String</td>
+     <td>Substitutes variable values for variable names in the pattern.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Culture</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>ValidationMode</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ProcessPatternString(Expression As String, Culture As <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a>) As String</td>
+     <td><table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Expression</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: String</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>Culture</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper_Globalization/CultureData.htm'>CultureData</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetDatabase(Database As GrooperDb)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Database</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: GrooperDb</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>SetOwner(Owner As <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a>, SkipInitialization As Boolean)</td>
+     <td>Sets the owner of the connected object with another object that implements the IConnected interface.
+<table class='ParamList' width='100%'>
+  <col style='width:100%'/>
+  <tr>
+     <td><b>Parameters</b></td>
+  </tr>
+  <tr>
+     <td><i>Owner</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: <a href='../Grooper/ConnectedObject.htm'>ConnectedObject</a></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+     <td><i>SkipInitialization</i></td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: Boolean</td>
+  </tr>
+  <tr>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+     <td>ToString() As String</td>
+     <td>Returns a string value representation of the connected object.
+</td>
+  </tr>
+  <tr>
+     <td>Uninitialize()</td>
+     <td>Destroys the regular expression.
+</td>
+  </tr>
+  <tr>
+     <td>ValidatePattern() As ValidationErrorList</td>
+     <td></td>
+  </tr>
+  <tr>
+     <td>ValidateProperties() As ValidationErrorList</td>
+     <td>Validates the properties of the object, returning a list of validation errors. Derived classes may override this method to add validation logic.  Classes which override this message should always call MyBase.ValidateProperties() and
+return any error messages from the base class along with those added.
+</td>
+  </tr>
+  <tr>
+     <td>ValidateProps() As ValidationErrorList</td>
+     <td></td>
+  </tr>
+</table>
+<br/><h2>Commands</h2>
+<table class='ObjectProperties' width='100%' cellspacing='0'>
+  <col style='width:5%;' />
+  <col style='width:25%'/>
+  <col style='width:70%'/>
+  <tr>    <th>&nbsp;</th>
+    <th>Command Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+    <td style='text-align:center; vertical-align:middle;'>     <img src='..\..\images\CommandIcons\Grooper.PropertyGrid_Reset.png' height='16' width='16' /></td>
+    <td>Reset</td>
+    <td>Reset the selected property back to its default value.
+
+
+</td>
+</tr>
+</table>
+<br/>
+<?rh-placeholder type="footer" ?>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Document Separation</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nDocument Separation");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Document Separation<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Document Separation</h1>
+<p>Document separation is the process of transforming a Batch 
+ of raw pages into a hierarchy of folders which represent individual documents. 
+ &#160;Separation is most commonly needed when documents are acquired through 
+ scanning, or when raw pages are imported into Grooper. &#160;&#160;This 
+ process is typically a precursor to <a href="Classification.htm">classifying</a> 
+ the folders as a content 
+ type.</p>
+<p>Separation logic in Grooper is defined by a Separation 
+ Profile object, and can be applied in one of two ways:</p>
+<ol style="list-style: decimal;">
+	<li>In real time during scanning, by specifying a Separation 
+	 Profile in the settings of the Scan 
+	 activity.</li>
+	<li>Offline as a back-end process, by adding the Separation 
+	 activity as a step 
+	 in the Batch 
+	 Process.</li>
+</ol>
+<p>Separation profiles provide a variety of separation mechanisms, some 
+ of which can be used in real time during scanning, while others cannot. 
+ &#160;Any separation methods which relies on results from the Full 
+ Text OCR activity cannot be executed in real time during scanning, 
+ as no OCR has been performed on the documents yet. &#160;As such, these 
+ separation methods must be performed offline by including a Separation 
+ activity in the batch process. &#160;The table below provides an overview 
+ of commonly-used separation use cases, along with notes on how they can 
+ be implemented.</p>
+<table class="ObjectProperties" style="border-collapse: separate; border-collapse: separate;" 
+		 cellspacing="0" width="100%" border="1">
+	<col style="width: 33.333%;" />
+	<col style="width: 8.66%;" />
+	<col style="width: 58.007%;" />
+	<tr>
+		<th>Use Case</th>
+		<th >Real Time</th>
+		<th>Notes</th>
+	</tr>
+	<tr>
+		<td>Use patch codes, barcodes, or &#160;fixed-page separation.</td>
+		<td >Yes</td>
+		<td>Select 'Events' separation method and define Separation 
+		 Events which trigger separation. </td>
+	</tr>
+	<tr>
+		<td>Use Grooper Control 
+		 Sheets.</td>
+		<td >Yes</td>
+		<td>Select 'Control Sheets' separation method. &#160;Define and 
+		 print Control 
+		 Sheets. </td>
+	</tr>
+	<tr>
+		<td>Separate based on the visual detection of a shape</td>
+		<td >Yes</td>
+		<td>Select the 'Events' separation method, and define a Separation 
+		 Event for each shape name which should trigger separation. 
+		 &#160;If running in real time, the IP 
+		 Profile assigned to the Scan 
+		 activity must include one or more Shape 
+		 Detection commands configured to generate the appropriate 
+		 shape names. &#160;If running offline in the Separation 
+		 activity, an Image 
+		 Processing activity must be inserted into the batch process 
+		 to run the Shape 
+		 Detection commands beforehand.</td>
+	</tr>
+	<tr>
+		<td>Separate based on visual page classification</td>
+		<td >Yes</td>
+		<td>Enable real-time classification on the Separation 
+		 Profile, ensuring that the Content 
+		 Model assigned for real-time classification uses Visual classification. 
+		 &#160;Select the 'Events' separation method, and define a Separation 
+		 Event for each content type which should trigger separation.</td>
+	</tr>
+	<tr>
+		<td>Separate based on lexical page classification</td>
+		<td >No</td>
+		<td>Insert Full 
+		 Text OCR and Classify 
+		 Pages activities into the batch process before Separation. 
+		 &#160;Select the 'Events' separation method, and define a Separation 
+		 Event for each content type which should trigger separation. 
+		 </td>
+	</tr>
+	<tr>
+		<td ><p>Separate when a repeating value found on each page changes.</p></td>
+		<td >No</td>
+		<td >Insert a Full 
+		 Text OCR activity into the batch process before Separation. 
+		 &#160;Define a Data 
+		 Type to extract the value. &#160;Select the 'ChangeInValue' 
+		 separation method and select the defined data type.</td>
+	</tr>
+	<tr>
+		<td >Separate using page numbers found on the document pages.</td>
+		<td >No</td>
+		<td >Insert a Full 
+		 Text OCR activity into the batch process before Separation. 
+		 &#160;Define a Data 
+		 Type which returns a 1-based page number when executed on 
+		 each page. &#160;Select the 'EPI' separation method and select 
+		 the defined data type.</td>
+	</tr>
+	<tr>
+		<td >Separate based on lexical rules</td>
+		<td >No</td>
+		<td >Insert a Full 
+		 Text OCR activity into the batch process before Separation. 
+		 &#160;Define a Data 
+		 Type which returns a value when separation should occur, and 
+		 returns nothing when separation should not occur. Select the 'Pattern-Based' 
+		 separation method and select the defined data type.</td>
+	</tr>
+	<tr>
+		<td>Using previous training, automatically separate a batch into 
+		 documents.</td>
+		<td >No</td>
+		<td>Insert Full 
+		 Text OCR and Classify 
+		 Pages activities into the batch process before Separation. 
+		 Select the &quot;EspAutoSeparation&quot; separation method.</td>
+	</tr>
+</table>
+<h2>See Also</h2>
+<p>Separation 
+ Activity</p>
+<p>Scan 
+ Activity</p>
+<p>Separation 
+ Profile</p>
+<p>&#160;</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

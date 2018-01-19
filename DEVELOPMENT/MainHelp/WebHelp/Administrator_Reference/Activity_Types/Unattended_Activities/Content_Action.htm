@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Content Action</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nUnattended Activities\nContent Action");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"A2iA_CheckReader.htm\">Unattended Activities<\/a> &gt; Content Action<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Activities.ContentAction.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Content Action</h1></td>
+<table>
+</tr>
+</table>
+Performs an action on the content associated with <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> objects.
+
+In the scope of this activity, "content" refers to the sequence of pages assocated with a <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>.  For example,
+this activity can be used to split multipage content into individual page objects, or to merge child page objects into
+a single multipage file stored on the folder.
+
+<br/><br/><b>Inherits from:</b> Unattended Activity<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Action</td>
+    <td><table>
+   <tr><td>Type: CollateAction, Default: Split</td></tr>
+   <tr><td>The action to perform. Can be one of the following values:<br />
+<ul>
+<li><b>Split</b>: Splits a <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a>'s multipage content to individual <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> objects.   This action will delete all of the folder's existing children and replace them with pages generated from
+a multipage file stored on the folder.  Split can generate pages any folder which has a PDF version, or which
+has an image-based native version.  Pages generated with the Split action will have a primary image rendered
+to represent the page, but also retain a copy of the native PDF page, which can be used in a subsequent Merge action.
+
+</li>
+<li><b>Merge</b>: Merges the contents of all child objects to a multipage file, and saves it on the <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>BatchFolder</a> object. The format of the output file is controlled by the Merge Output Format property.  A Merge action will overwrite any
+existing PDF or native file versions.
+</li>
+<li><b>ClearChildren</b>: Deletes all child folders and pages.
+</li>
+<li><b>ClearContent</b>: Deletes any existing native file versions and PDF file versions from the <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object.
+</li>
+<li><b>RepairPDF</b>: Detects and attempts to repair corrupted PDF files.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Split Options</td>
+  </tr>
+  <tr>    <td>Render Resolution</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 200</td></tr>
+   <tr><td>The resolution to use when rendering PDF pages as images. This resolution setting only applies when native Pdf files contain minor corruption and must be rendered (printed).
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Target Image Format</td>
+    <td><table>
+   <tr><td>Type: TargetColorFormat, Default: Auto</td></tr>
+   <tr><td>The color format in which PDF page images should be generated. Can be one of the following values:<br />
+<ul>
+<li><b>Auto</b>: The output color format will be determined automatically.
+</li>
+<li><b>Color</b>: All pages will be rendered as color images.
+</li>
+<li><b>Grayscale</b>: All pages will be rendered as grayscale images.
+</li>
+<li><b>Binary</b>: All pages will be rendered as binary (black and white) images.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Auto Color Depth Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../../IP_Command_Types/Format_Conversion/Auto_Convert.htm'>Auto Convert</a></td></tr>
+   <tr><td>Color detection settings to be used when the Target Image Format is set to AutoGray or AutoBW.
+(See <a href='../../IP_Command_Types/Format_Conversion/Auto_Convert.htm'>Auto Convert</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Split Damaged PDFs As Images</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Allows damaged PDFs which cannot be split using normal methods to be split as images. In some cases, it may not be possible to open a damaged PDF and extract the pages, but it may be possible to render the
+document pages to an image.  If this option is enabled, when normal splitting fails, and attempt will be made to split the file
+as images.  If this option is disabled, an error will be raised when normal splitting fails.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Page Limit</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 500</td></tr>
+   <tr><td>Documents with a page count higher than this value will generate an error.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Merge Options</td>
+  </tr>
+  <tr>    <td>Merge Output Format</td>
+    <td><table>
+   <tr><td>Type: MergeOutputFileFormat, Default: PDF</td></tr>
+   <tr><td>The output format for the merge operation. Can be one of the following values:<br />
+<ul>
+<li><b>PDF</b>: Generate a PDF file.
+</li>
+<li><b>TIF</b>: Generate a TIF file.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>PDF Options</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Folder_PDF_Generator.htm'>Folder PDF Generator</a></td></tr>
+   <tr><td>If enabled, PDF pages generated from Grooper pages will be generated as searchable PDF pages.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>TIFF Options</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Object_Types/Folder_TIF_Generator.htm'>Folder TIF Generator</a></td></tr>
+   <tr><td>If enabled, PDF pages generated from Grooper pages will be generated as searchable PDF pages.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../IP_Command_Types/Format_Conversion/Auto_Convert.htm'>Auto Convert</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Folder_PDF_Generator.htm'>Folder PDF Generator</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Folder_TIF_Generator.htm'>Folder TIF Generator</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

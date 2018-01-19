@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Service Instance Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nService Instance Types\nService Instance Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Service_Instance_Types.htm\">Service Instance Types<\/a> &gt; Service Instance Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Service Instance</h1>
+Service Instances represent processes which may be installed as Grooper services, such as the <a href='Grooper_Licensing.htm'>Grooper Licensing</a> service or the <a href='Task_Processing.htm'>Task Processing</a> service.
+
+Service instances must be installed from <a href='../../User_Interface_Reference/Grooper_Configuration.htm'>Grooper Configuration</a>, using the Service Manager Control on the "Services" tab.  After initial installation, service
+instances may be started, stopped, or configured using the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Service_Instance_Viewer.htm'>Service Instance Viewer</a> control in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>.  The Service Instance Viewer can be accessed
+from the property panel of any <a href='../Grooper_Node_Types/Infrastructure/Machine.htm'>Machine</a> object in Grooper.  To manage all services for an entire Grooper repository, use the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Service_Instance_Viewer.htm'>Service Instance Viewer</a> found on the
+<a href='../Grooper_Node_Types/Infrastructure/Machines_Folder.htm'>Machines Folder</a> (immediately below the <a href='../Grooper_Node_Types/Infrastructure/Infrastructure_Folder.htm'>Infrastructure Folder</a>).
+
+<h2>List of Service Instance Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='ApplicationXtender_CMIS_Server.htm'>ApplicationXtender CMIS Server</a></td>
+     <td>Exposes an EMC ApplicationXtender repository over CMIS. For a specific AX data source, exposes each of the AX applications as a CMIS repository.  Each repository has a single content type
+with properties matching the field layout of the corresponding AX application.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_CMIS_Server.htm'>Grooper CMIS Server</a></td>
+     <td>Provides web-based connectivity to a Grooper repository over the CMIS protocol.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Content_Manager_CMIS_Server.htm'>Grooper Content Manager CMIS Server</a></td>
+     <td>Exposes a Grooper Content Manager repository over CMIS. Each Grooper Content Manager project corresponds to a CMIS repository.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Licensing.htm'>Grooper Licensing</a></td>
+     <td>Distributes runtime licenses to Grooper applications. An instance of Grooper Licensing is required in all deployment scenarios with the exception of a stand-alone installation.  In a
+stand-alone system, simply install licenses into the pre-installed 'Local' <a href='../Grooper_Node_Types/Infrastructure/License_Server.htm'>License Server</a> object in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>.<br /><br />
+To install licensing in a client-server environment, the following steps must be completed:
+<ul><li>Using <a href='../../User_Interface_Reference/Grooper_Configuration.htm'>Grooper Configuration</a>, install an instance of Grooper Licensing and start it.  Remember the host name and port number on which the service is running.</li><li>Using <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>, create a new <a href='../Grooper_Node_Types/Infrastructure/License_Server.htm'>License Server</a> object and configure it with the host name and port number of the service.</li><li>Use the 'Activate Online' command of the <a href='../Grooper_Node_Types/Infrastructure/License_Server.htm'>License Server</a> object, and enter the appropriate Grooper serial number.</li><li>The view should refresh to display the newly-installed licenses.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Import_Watcher.htm'>Import Watcher</a></td>
+     <td>Import Watcher is a service which polls an <a href='../Import_Provider_Types/Import_Provider_Types.htm'>Import Provider</a> for new documents, and imports them based on rules.
+</td>
+  </tr>
+  <tr>
+     <td><a href='License_Renewal_Service.htm'>License Renewal Service</a></td>
+     <td>Performs usage reporting when the Grooper pay-as-you-go licensing model is in use.
+</td>
+  </tr>
+  <tr>
+     <td><a href='System_Maintenance_Service.htm'>System Maintenance Service</a></td>
+     <td>Provides Grooper system maintenance services. A timer service that clears Log and Stat entries older than the specified retention periods.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Task_Processing.htm'>Task Processing</a></td>
+     <td>The Task Processing service executes Unattended Activities, which perform the work associated with a step in a <a href='../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a>.
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

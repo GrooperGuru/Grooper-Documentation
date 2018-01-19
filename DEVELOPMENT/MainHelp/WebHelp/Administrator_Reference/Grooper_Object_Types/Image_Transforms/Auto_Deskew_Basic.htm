@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Auto Deskew Basic</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nGrooper Object Types\nImage Transforms\nAuto Deskew Basic");
+addButton("show",BTN_IMG,"Show","","","","",0,0,"../../../whd_show0.gif","../../../whd_show2.gif","../../../whd_show1.gif");
+addButton("hide",BTN_IMG,"Hide","","","","",0,0,"../../../whd_hide0.gif","../../../whd_hide2.gif","../../../whd_hide1.gif");
+addButton("prev",BTN_IMG,"<<","","","","",0,0,"../../../whd_prev0.gif","../../../whd_prev2.gif","../../../whd_prev1.gif");
+addButton("next",BTN_IMG,">>","","","","",0,0,"../../../whd_next0.gif","../../../whd_next2.gif","../../../whd_next1.gif");
+
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", ">", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> > <a href=\"../Grooper_Object_Types.htm\">Grooper Object Types<\/a> > <a href=\"Auto_Deskew.htm\">Image Transforms<\/a> > Auto Deskew Basic<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.IP.AutoDeskewBasic.Normal.png' height = '32' width = '32' /></td>
+<td><h1>Auto Deskew Basic</h1></td>
+<table>
+</tr>
+</table>
+Automatically deskews a document image.
+
+Speed can be improved by reducing the Angle Limit, reducing the Precision, or by limiting the Area of Interest to a smaller rectangular area
+containing the horizontally aligned text area. The Coverage property can also be decreased to increase speed; however, doing so could
+result in loss of accuracy. For guaranteed accuracy, set the Coverage property to 100.
+
+<br/><br/><b>Inherits from:</b> <a href='../../IP_Command_Types/IP_Command_Types.htm'>IP Command</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Area of Interest (inches)</td>
+    <td><table>
+   <tr><td>Type: <a href='../Rectangle.htm'>Rectangle</a>, Default: (0,0):(0,0)</td></tr>
+   <tr><td>The rectangular area that will be used for determining the skew angle (specified in inches)
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Background Color</td>
+    <td><table>
+   <tr><td>Type: Color, Default: White</td></tr>
+   <tr><td>The background color to use for filling areas left empty by the deskew process. The background color is only relevant when the Crop Mode is set to None or OriginalSize.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Coverage %</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 8, Range: 0 - 100</td></tr>
+   <tr><td>Represents the percentage of the image that will be randomly sampled when determining the skew angle. Given the random nature of the coverage, low values result in much faster performance than 100% coverage
+with generally the same results. A default value of 8 was derived after tests with many images. This results in
+accurate skew angle detection with fast speed. This property is exposed for edge cases where 8 is not sufficient. When
+accuracy is of utmost importance at the expense of speed, set this value to 100.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Crop Mode</td>
+    <td><table>
+   <tr><td>Type: DeskewCropMode, Default: FullCrop</td></tr>
+   <tr><td>A value indicating the method of cropping the resulting de-skewed image. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: Do not crop the deskewed image. The resulting image will be larger than the source image.
+</li>
+<li><b>FullCrop</b>: Crop all of the excess rotated area. The resulting image will be smaller than the source image.
+</li>
+<li><b>OriginalSize</b>: Crop the deskewed image so that it is exactly the same size as the original image.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Extract Boundary</td>
+    <td><table>
+   <tr><td>Type: <a href='../Boolean.htm'>Boolean</a>, Default: True</td></tr>
+   <tr><td>Enables or disables the Extract Boundary property. If enabled, will pre-process the image by removing solid filled areas. Disabling this option will improve performance at the
+expense of accuracy. If the target images are known not to have solid filled areas, then this option may be safely disabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Angle Limit</td>
+    <td><table>
+   <tr><td>Type: <a href='../Double.htm'>Double</a>, Default: 5°, Range: 0° - 90°</td></tr>
+   <tr><td>The maximum skew angle that will be detected. Decreasing this value improves performance, while increasing improves the chance that a drastically skewed image will be straightened.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Precision</td>
+    <td><table>
+   <tr><td>Type: <a href='../Int32.htm'>Int32</a>, Default: 4, Range: 1 - 64</td></tr>
+   <tr><td>This value is the inverse of the smallest angle increment that the algorithm will find For example: <br /><br />
+1 = 1 degree precision <br />
+2 = 1/2 degree precision <br />
+4 = 1/4 degree precision, etc. <br /><br />
+The smaller the value the more time it takes to calculate the de-skew angle.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Command Info</td>
+  </tr>
+  <tr>    <td>Command Type</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The type of IP command.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Supported Pixel Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../String.htm'>String</a></td></tr>
+   <tr><td>The pixel formats supported by this command.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Rectangle.htm'>Rectangle</a></td></tr>
+</table>
+<h2>Auto Deskew Basic Example</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:50%'/>
+  <col style='width:50%'/>
+  <tr>
+     <th>Original Image</th>
+     <th>Result Image</th>
+  </tr>
+  <tr>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.AutoDeskewBasic_Original_Image.jpg' /></td></p></td>
+     <td><p align='center'><img class='ScreenShotBorder' src='../../../images/IP_Commands/Grooper.Ip.AutoDeskewBasic_Result_Image.jpg' /></td></p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

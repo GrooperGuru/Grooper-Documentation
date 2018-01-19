@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Batch Page</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nBatch Object Types\nBatch Processing\nBatch Page");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Batch_Object_Types.htm\">Batch Object Types<\/a> &gt; <a href=\"Batch_Folder.htm\">Batch Processing<\/a> &gt; Batch Page<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Core.BatchPage.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Batch Page</h1></td>
+<table>
+</tr>
+</table>
+The Batch Page object represents a logical page within a <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>.
+
+Page objects can be created from individual images, such as during scanning or image file import. Page objects can also be created when an
+electronic document is imported. During electronic document import, Grooper automatically creates individual page images for display purposes.
+<br /><br />
+A Batch Page object can have multiple image files associated with it. For example, by default each page image stores two images: the primary image file and a thumbnail image file.  
+Additional image files may be created during batch processing, in cases where image cleanup such as line removal needs to be applied to images for the purposes
+of OCR, but without affecting the display image.  Certain processing modules, such as the Image Processing module, allow the output image to be written to a separate
+image file, and other modules, such as Full Text OCR, allow the use of an alternate input image. The list of allowed alternate image file names is defined as a property
+of the <a href='../../Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Process</a> object.
+<br /><br />
+Page objects also store additional files which contain OCR results, and a variety of values which indicate the results of image processing commands. For example,
+the Color Detect IP command stores a boolean value named "IsColor" to the Batch Page object. The Read Barcodes IP command stores an array of BarcodeInstance objects
+to the "Barcodes" value. The Blank Page Detect IP command stores a boolean value named "IsBlank".
+
+<br/><br/><b>Inherits from:</b> <a href='../Batch_Object_Types.htm'>Batch Object</a><br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Image Information</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>&nbsp;</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Flag Region</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The region of the page associated with the flag.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Flagged</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates that the item has been flagged for review.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Flag Reason</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The reason why the item has been flagged.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Has PDF Version</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Indicates whether this folder has a PDF version of its contents.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Description</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Generic property allowing an administrator to document the purpose of this Grooper Node.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>ScanOnce™</td>
+  </tr>
+  <tr>    <td>Display Pixel Format</td>
+    <td><table>
+   <tr><td>Type: SimplePixelFormat, Default: None</td></tr>
+   <tr><td>The color format in which this page will be displayed. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: None.
+</li>
+<li><b>Grayscale</b>: 8-Bit Grayscale
+</li>
+<li><b>Color</b>: 24-Bit Color
+</li>
+<li><b>Binary</b>: Black and White
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Threshold Method</td>
+    <td><table>
+   <tr><td>Type: BinarizationMethod, Default: Dynamic</td></tr>
+   <tr><td>The threshold method to be used when displaying this page in black and white. Can be one of the following values:<br />
+<ul>
+<li><b>Simple</b>: Thresholds an image to black and white using a fixed threshold value between 0 and 255.
+</li>
+<li><b>Auto</b>: Selects a threshold value automatically based on histogram analysis.
+</li>
+<li><b>Adaptive</b>: Thesholds pixels based on the intensity of pixels in the local neighborhood.
+</li>
+<li><b>Dynamic</b>: Performs adaptive thresholding, while preserving dark areas on the page.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Threshold</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 127, Range: 0 - 255</td></tr>
+   <tr><td>The threshold to be used when displaying this page in black and white.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Brightness</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0, Range: -100 - 100</td></tr>
+   <tr><td>The brightness value to use when displaying this page in grayscale or color.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Contrast</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0, Range: -100 - 100</td></tr>
+   <tr><td>The contrast value to use when displaying this page in grayscale or color.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Text Extraction</td>
+  </tr>
+  <tr>    <td>OCR Data</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The OCR data associated with this object.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Culture</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>The OCR data associated with this object.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Object_Types/Culture_Data.htm'>Culture Data</a></td></tr>
+<tr><td><a href='../../Grooper_Object_Types/Image_Info.htm'>Image Info</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Classifying Documents</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Getting Started\nGrooper Concepts\nClassifying Documents");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Getting_Started.htm\">Getting Started<\/a> &gt; <a href=\"Grooper_Concepts.htm\">Grooper Concepts<\/a> &gt; Classifying Documents<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Classification</h1>
+<p>Classification is the process of assigning a document type to documents, 
+ and is an important topic for a variety of reasons. In some cases, determining 
+ the type of a document is a prerequisite to deciding what type of information 
+ should be extracted from the document. In other cases, classification 
+ may be performed simply to allow users of a content management system 
+ to retrieve documents by document type. It can also be used to validate 
+ transactional packets of documents to ensure that all required documents 
+ are present. Classification may also be performed at the page level, and 
+ then used to assemble pages into documents automatically, eliminating 
+ the need to insert separator sheets before scanning. &#160;</p>
+<p>Classification can be performed manually by Grooper users, or it may 
+ be performed automatically using Grooper's automated classification and 
+ machine learning capabilities. &#160;</p>
+<h2>Content Models</h2>
+<p>Grooper uses an entity called a Content 
+ Model to define the various categories and types of documents will 
+ be processed, and to define the data elements Grooper will interact with 
+ on those documents. Content models can be as simple as a flat list of 
+ document types, or as complex as the records management taxonomy of a 
+ large organization.</p>
+<p>For example, in a scenario where mortgage files are being processed, 
+ the Content Model could be defined as a simple list of document types, 
+ as shown at the left, or defined in a hierarchical fashion, with the document 
+ types grouped into categories, as shown at the right.</p>
+<table class="ObjectProperties" cellspacing="0" width="100%">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Simple 
+		 Content Model</p></td>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Hierarchical 
+		 Content Model</p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/ContentModel_SimpleExample.jpg" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/ContentModel_ComplexExample.jpg" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</table>
+<p>Grouping document types into categories can help make a Content Model 
+ with a large number of document types more manageable. It can also enable 
+ Grooper to classify documents to varying degrees of detail. For instance, 
+ using the scenario above, if the desired end result is to have a mortgage 
+ file where all documents are classified into the 5 categories rather than 
+ the individual document types, Grooper can be configured to classify the 
+ documents only to that level of detail and no further.</p>
+<p>A Content Model can also describe the structure of data inside its various 
+ document types through inclusion of a Data 
+ Model. A Data Model can be added at any level of the Content Model, 
+ and each content type inherits the data model of its parent. In the example 
+ shown below, all document types in the 'Mortgage Files' Content Model 
+ will inherit the Data Fields Loan No, Last Name, First Name, Loan Date, 
+ and Maturity Date.</p>
+<table class="ObjectProperties" cellspacing="0" width="100%">
+	<col style="width: 37.973%;" />
+	<col style="width: 62.027%;" />
+	<tr>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Content 
+		 Model with Data Model Added</p></td>
+		<td><p style="text-align: center; font-weight: bold; font-size: 10pt;">Index 
+		 Panel Preview</p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/Classification_WithDataModel.jpg" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center; font-size: 10pt;"><img src="images/Classification_DataModelExample.gif" class="ScreenShot" alt="" border="0" /></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>For more information on Data Models, refer to the documentation for 
+ the Data 
+ Model object, or read the <a href="Data_Extraction.htm">Data Extraction</a> 
+ topic concepts topic.</p>
+<h2>What is Classification?</h2>
+<p>Classification in Grooper is the process of assigning a content type 
+ (Document 
+ Type or Form 
+ Type) to a Batch 
+ Folder. When a folder in a batch is assigned a content type, it is 
+ thereafter considered a document, and will be displayed in the Batch 
+ Viewer using a document icon rather than a folder icon, as shown in 
+ the example below.</p>
+<p>&#160;</p>
+<p><img src="images/Classification_ClassifyExample.jpg" alt="" style="border: none;" border="0" /></p>
+<p>Once a folder within a batch has been assigned a content type and becomes 
+ a document, it can be indexed using the field layout defined in the content 
+ type's Data 
+ Model.</p>
+<h2>Classification Methods</h2>
+<p>Documents can be classified in Grooper through a variety of mechanisms 
+ as outlined below.</p>
+<ul style="list-style: disc;">
+	<li><span style="text-decoration: underline; "><u>Manual Classification</u></span> 
+	 - Users can manually classify folders by right-clicking any Batch 
+	 Folder in the Batch 
+	 Viewer control, and using the 'Assign Content Type' command. </li>
+	<li><span style="text-decoration: underline; "><u>Using a Separation Profile</u></span> 
+	 - A Separation 
+	 Profile can be used to perform classification as a part of the 
+	 separation process..</li>
+	<li><span style="text-decoration: underline; "><u>ESP™ Lexical Classification</u></span> 
+	 - Classifies documents automatically based on their lexical content, 
+	 using a combination of training provided by human operators and/or 
+	 specific lexical rules defined by administrators. &#160;Lexical classification 
+	 requires full text OCR, and as such, cannot be performed in real time 
+	 during scanning.&#160;</li>
+	<li><span style="text-decoration: underline; "><u>ESP™ Visual Classification</u></span> 
+	 - Grooper can automatically classify documents based on how they look, 
+	 using training derived from human intervention. &#160;Visual classification 
+	 does not require full text OCR, and can be used in real time during 
+	 scanning.</li>
+</ul>
+<h3>ESP ™ Lexical Classification Basics</h3>
+<p>Lexical classification classifies documents based on their text content. 
+ &#160;As such, the Full 
+ Text OCR activity must be executed on a batch before any form of lexical 
+ classification or training can be performed.</p>
+<p>Grooper provides two methods of lexical classification which interoperate 
+ to provide both flexibility and detailed control over how documents are 
+ classified.</p>
+<ul style="list-style: disc;">
+	<li><span style="text-decoration: underline; "><u>Supervised Machine Learning</u></span>. 
+	 &#160;The system is trained with examples of each document type, and 
+	 classifies documents based on what it has learned from previous training. 
+	 &#160;Training can be performed ahead of time by system administrators, 
+	 or it can be performed by end users when documents are not recognized 
+	 properly. &#160;When training is performed, Grooper learns features 
+	 from the full-text content of the documents which are used to make 
+	 future classification decisions. &#160;The specific set of features 
+	 used for training is based on the configuration of the Content 
+	 Model in use.</li>
+	<li><span style="text-decoration: underline; "><u>Lexical Rules</u></span> 
+	 - Administrators can define specific lexical rules for each Document 
+	 Type. &#160;When lexical rules are defined, they execute before 
+	 and override any classification decisions from the machine learning 
+	 engine. &#160;This form of classification can be used in place of 
+	 Supervised Machine Learning for small document sets, but is primarily 
+	 used to supplement Supervised Machine Learning in cases where similar 
+	 document types may vary be only a few words.</li>
+</ul>
+<h3>ESP™ Visual Classification Basics</h3>
+<p>Visual classification is based on the way a document looks rather than 
+ the text it contains. &#160;As such, it does not require full text OCR 
+ and can run in real time during scanning. &#160;Visual classification 
+ is based on supervised machine learning, and works using the same training 
+ mechanism as lexical classification. &#160;</p>
+<p>Features for visual classification are generated using the Extract 
+ Features IP command, which divides an image into an N x N matrix of 
+ cells and generates a measurement for each cell. &#160;The measurements 
+ taken for each cell can be based on a variety of factors depending on 
+ the application, but the general end result is a set of features which 
+ describe how the document looks. &#160;This set of features is fed into 
+ the supervised machine learning engine just like the lexical features 
+ described above.</p>
+<h2>Folder Classification</h2>
+<p>When a Batch 
+ Folder is processed through the Classify 
+ Folders activity, the classification engine extracts classification 
+ features from the document, and compares this set of features to the training 
+ for each possible document type. &#160;The result of each comparison is 
+ a similarity value, and the overall output from the Classify 
+ Folders activity is a list of Document 
+ Type candidates, ordered by similarity. &#160;If the top candidate 
+ meets the Minimum Similarity / Minimum Difference criteria specified on 
+ the Content 
+ Model, then the document will be confidently classified as that type.</p>
+<p>The figure below provides an example candidate list from a classification 
+ operation.</p>
+<p style="text-align: center;"><img src="images/ContentModel_SimilarityScores.gif" class="ScreenShot" alt="" border="0" /></p>
+<p>In this example, the following two criteria must be met in order to 
+ the document to be confidently classified as a Flood Hazard Notice:</p>
+<ul style="list-style: disc;">
+	<li>The similarity score of the top candidate must be greater than 
+	 or equal to the Minimum Similarity property of the Content 
+	 Model.</li>
+	<li>The difference between the top candidate and the 2nd candidate 
+	 must be greater than or equal to the Minimum Difference property of 
+	 the Content 
+	 Model.</li>
+</ul>
+<h2>Page Classification</h2>
+<p>When a Batch 
+ Page is processed through the Classify 
+ Pages activity, the processed applied is almost identical to what 
+ happens during folder classification. &#160;The classification engine 
+ extracts features for each page, and compares those against the features 
+ on all possible Page 
+ Types. &#160;&#160;The output is a candidate list order by similarity, 
+ as shown below. &#160;This candidate list is stored on the page object.</p>
+<p style="text-align: center;"><img src="images/Classification_PageTypeCandidates.jpg" class="ScreenShot" alt="" border="0" /></p>
+<p>Page classification is not an end result, but rather an intermediate 
+ step performed to enable <a href="Document_Separation.htm">Document Separation</a>. 
+ In the case of offline separation in a batch process, the Classify 
+ Pages activity in a batch process should always be followed by a Separation 
+ activity. &#160;&#160;</p>
+<p>Once a list of page type candidates is present, separation can be performed 
+ using the 'EspAutoSeparation' method, or using the 'Events' separation 
+ method with one or more 'Content Type' Separation 
+ Events. &#160;For example, consider a 10-page batch where the most 
+ similar page type candidate for each page is as follows:</p>
+<table class="ObjectProperties" cellspacing="0" width="100%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr style="text-align: center;">
+		<th>Batch Page</th>
+		<th>Candidate Doc Type</th>
+		<th>Candidate Page Number</th>
+		<th>Similarity</th>
+	</tr>
+	<tr>
+		<td>Page 1</td>
+		<td>Flood Hazard Notice</td>
+		<td>Page 1 of 1</td>
+		<td>98%</td>
+	</tr>
+	<tr>
+		<td>Page 2</td>
+		<td>IRS 1040</td>
+		<td>Page 1 of 2</td>
+		<td>82%</td>
+	</tr>
+	<tr>
+		<td>Page 3</td>
+		<td>IRS 1040</td>
+		<td>Page 2 of 2</td>
+		<td>87%</td>
+	</tr>
+	<tr>
+		<td>Page 4</td>
+		<td>Evidence of Insurance</td>
+		<td>Page 1 of 3</td>
+		<td>95%</td>
+	</tr>
+	<tr>
+		<td>Page 5</td>
+		<td>Evidence of Insurance</td>
+		<td>Page 2 of 3</td>
+		<td>84%</td>
+	</tr>
+	<tr>
+		<td>Page 6</td>
+		<td>Evidence of Insurance</td>
+		<td>Page 3 of 3</td>
+		<td>99%</td>
+	</tr>
+	<tr>
+		<td>Page 7</td>
+		<td>Letter of Protection</td>
+		<td>Page 1 of 1</td>
+		<td>91%</td>
+	</tr>
+	<tr>
+		<td>Page 8</td>
+		<td>Purchase Agreement</td>
+		<td>Page 1 of 3</td>
+		<td>79%</td>
+	</tr>
+	<tr>
+		<td>Page 9</td>
+		<td>Purchase Agreement</td>
+		<td>Page 2 of 3</td>
+		<td>81%</td>
+	</tr>
+	<tr>
+		<td>Page 10</td>
+		<td>Purchase Agreement</td>
+		<td>Page 3 of 3</td>
+		<td>85%</td>
+	</tr>
+</table>
+<p>Using the EspAutoSeparation method, Grooper will separate this batch 
+ into documents as shown below. The Minimum Similarity property of the 
+ Content 
+ Model object controls how similar the individual pages must be to 
+ a previously trained page type in order for separation to occur.</p>
+<table class="ObjectProperties" cellspacing="0" width="100%">
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<col style="width: 25%;" />
+	<tr style="text-align: center;">
+		<th>Document</th>
+		<th>Doc Type</th>
+		<th>Page Number</th>
+		<th>Similarity</th>
+	</tr>
+	<tr>
+		<td>Document 1</td>
+		<td>Flood Hazard Notice</td>
+		<td>Page 1</td>
+		<td>98%</td>
+	</tr>
+	<tr>
+		<td rowspan="2">Document 2</td>
+		<td rowspan="2">IRS 1040</td>
+		<td>Page 1</td>
+		<td>82%</td>
+	</tr>
+	<tr>
+		<td>Page 2</td>
+		<td>87%</td>
+	</tr>
+	<tr>
+		<td rowspan="3">Document 3</td>
+		<td rowspan="3">Evidence of Insurance</td>
+		<td>Page 1</td>
+		<td>95%</td>
+	</tr>
+	<tr>
+		<td>Page 2</td>
+		<td>84%</td>
+	</tr>
+	<tr>
+		<td>Page 3</td>
+		<td>99%</td>
+	</tr>
+	<tr>
+		<td>Document 4</td>
+		<td>Letter of Protection</td>
+		<td>Page 1</td>
+		<td>91%</td>
+	</tr>
+	<tr>
+		<td rowspan="3">Document 5</td>
+		<td rowspan="3">Purchase Agreement</td>
+		<td>Page 1</td>
+		<td>79%</td>
+	</tr>
+	<tr>
+		<td>Page 2</td>
+		<td>81%</td>
+	</tr>
+	<tr>
+		<td>Page 3</td>
+		<td>85%</td>
+	</tr>
+</table>
+<h2>See Also</h2>
+<p>Content 
+ Model</p>
+<p>Data 
+ Model</p>
+<p>Classify 
+ Folders Activity</p>
+<p>Classify 
+ Pages Activity</p>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

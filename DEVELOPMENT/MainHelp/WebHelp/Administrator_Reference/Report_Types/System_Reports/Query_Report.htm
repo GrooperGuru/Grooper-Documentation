@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Query Report</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nReport Types\nSystem Reports\nQuery Report");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Report_Types.htm\">Report Types<\/a> &gt; <a href=\"Batch_Statistics.htm\">System Reports<\/a> &gt; Query Report<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Query Report</h1>
+Represents a Tabular Grooper Report based on data returned by an SQL Query.
+
+<br/><br/><b>Inherits from:</b> Table Report<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Report Settings</td>
+  </tr>
+  <tr>    <td>Database Connection</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td></tr>
+   <tr><td>Data Connection to be used to execute the Report Query.
+(See <a href='../../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Query Statement</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Database Query returning the data to display in the Report.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Appearance</td>
+  </tr>
+  <tr>    <td>Page Layout</td>
+    <td><table>
+   <tr><td>Type: LayoutType, Default: Widescreen</td></tr>
+   <tr><td>Page Size for the report. Can be one of the following values:<br />
+<ul>
+<li><b>Widescreen</b></li>
+<li><b>Letter</b></li>
+<li><b>Landscape</b></li>
+</ul>
+ Set to Letter or Landscape if printing is intended. Set to Widescreen if displaying on a monitor is intended.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Column Widths</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Optional comma-delimited list of column widths in inches. For example, to indicate 2 inches for the first column and 1/2 inch for the second column, enter the following value:<br />2, 0.5
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Column Formats</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Optional comma-delimited list of Fomat Specifiers. For example, to indicate Currency to two decimal places for the third column, enter the following value:<br />"","",C2<br /><br />
+See the following articles for detailed Format Specifier information:
+<ul><li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" target="_blank">Standard Numeric</a></li><li><a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank">Standard Date and Time</a></li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 10, Range: 1 - 200</td></tr>
+   <tr><td>Font Size in points for the column header cells.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Font Size</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 10, Range: 1 - 200</td></tr>
+   <tr><td>Font Size in points for the table data cells.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Center Table</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If this property is set to True, the table will be centered horizontally on the report page.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Header Row Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Background color for the Header Row.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Row Background Color</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Background color for the Data Rows.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../../Grooper_Node_Types/Infrastructure/Data_Connection.htm'>Data Connection</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

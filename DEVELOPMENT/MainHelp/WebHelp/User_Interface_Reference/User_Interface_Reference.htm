@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>User Interface Reference</title>
+<link rel="StyleSheet" href="../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("User Interface Reference\nUser Interface Reference");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../Index.htm", "", "&gt;", "Home", "../Start_Page.htm");
+document.write("<a href=\"User_Interface_Reference.htm\">User Interface Reference<\/a> &gt; User Interface Reference<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h2>User Interface Reference</h2>
+<p>The following sections provide documentation for individual Grooper client applications as well as links to all of the Grooper Control and Form UI Elements.</p>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Administration.htm'>Grooper Administration</a></td>
+     <td>Grooper Administration is a browser for the <a href='../Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm'>Grooper Tree Structure</a>, used by administrators to configure and manage objects in a
+Grooper repository. This application uses an explorer-style view, where the tree structure is displayed in a panel on the left, and a panel
+on the right displays the properties of the currently selected node.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Configuration.htm'>Grooper Configuration</a></td>
+     <td>Grooper Configuration provides a user interface for configuring machine-specific settings on a Grooper workstation or server. This application is used to perform the following administrative tasks:
+<ul><li>Creating and managing database connections from the local machine to Grooper repositories.</li><li>Installing a local instance of SQL Server Express to accommodate stand-alone installations of Grooper.</li><li>Initializing new Grooper databases.</li><li>Installing and managing services which will run on the local machine.</li><li>Configuring various settings which apply to the local machine.</li></ul><p>In general, Grooper Configuration is used to perform configuration work which is specific to a workstation or server, while [Grooper
+Administration] is used for configuring objects in the <a href='../Getting_Started/Grooper_Concepts/Grooper_Tree_Structure.htm'>Grooper Tree Structure</a> which apply to all workstations and servers. After installing
+a new Grooper workstation or server, run Grooper Configuration to connect it to a Grooper repository.</p>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Dashboard.htm'>Grooper Dashboard</a></td>
+     <td>Grooper Dashboard provides batch management and reporting capabilities for production batches. This application is used by managers, supervisors, and end users to view and manage production batches as they are processed through
+Grooper <a href='../Administrator_Reference/Grooper_Node_Types/Batch_Processing/Batch_Process.htm'>Batch Processes</a>. Typical uses for Grooper Daskboard include the following:
+<ul><li>Monitor system throughput and user productivity.</li><li>Create, edit, or delete batches.</li><li>Import batches of documents into Grooper using an <a href='../Administrator_Reference/Import_Provider_Types/Import_Provider_Types.htm'>Import Provider</a>.</li><li>View reports and analytics.</li><li>Identify and resolve batch processing errors.</li><li>Start, stop, or edit Grooper services.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Kiosk.htm'>Grooper Kiosk</a></td>
+     <td>Grooper Kiosk provides kiosk-style display of reports. Designed to run in full screen mode on a wall-mounted display, Grooper Kiosk can be used to provide real-time analytics feedback to
+workers in production document processing centers.  Please note that it may be necessary to set the Windows Taskbar to Auto Hide mode, in order to
+remove the start menu and task bar from the display screen.
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Attended_Client_Module.htm'>Grooper Attended Client Module</a></td>
+     <td>
+Grooper Attended Client provides a user interface for all Attended Activities. BatchView controls will be displayed in the current panel while processing. On the right is a viewer
+control for displaying specific batch pages in detail.
+ <div>There are multiple ways that this application can be opened:</div><ul><li style="padding: 5px 0px;">Case 1: Opened from BatchManager, a BatchId command line parameter will be present. In this case, the application is closed automatically
+when the final task for the Batch is completed, the task is closed (user clicks the 'Stop Processing' button), or the batch is deleted.</li><li style="padding: 5px 0px;">Case 2: Opened using a shortcut, installed by the installer. An ActivityType command line parameter will be present. In this case, the
+application sets a filter for the passed in ActivityType that cannot be modified. The application does not close automatically.</li><li style="padding: 5px 0px;">Case 3: Opened manually. In this case, the application can be used to process any task and does not close automatically.</li></ul>
+</td>
+  </tr>
+  <tr>
+     <td><a href='Grooper_Unattended_Client_Module.htm'>Grooper Unattended Client Module</a></td>
+     <td>Grooper Unattended Client performs production task processing in a desktop application. Provides an alternative to running production tasks using the <a href='../Administrator_Reference/Service_Instance_Types/Task_Processing.htm'>Task Processing</a> service.
+</td>
+  </tr>
+  <tr>
+     <td><a href="Grooper_UI_Elements/Grooper_UI_Elements.htm">Grooper User Interface Elements</a></td>
+     <td>A list of custom User Interface Elements, including NodeViews, Controls, and Forms.</td>
+  </tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

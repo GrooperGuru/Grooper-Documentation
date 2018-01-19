@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Import Capture Device</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nCapture Device Types\nImport Capture Device");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Capture_Device_Types.htm\">Capture Device Types<\/a> &gt; Import Capture Device<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Import Capture Device</h1>
+Implements a virtual scanner by importing from a file system directory.
+
+This scanner device does not use an actual document scanner.  Instead, it is configured with a file system path.  Each time a scan is initiated,
+the contents of the folder are imported as a linear stream of images, simulating the stream of images which come from a document scanner.
+
+<br/><br/><b>Inherits from:</b> Direct Capture Device<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Import Settings</td>
+  </tr>
+  <tr>    <td>Import Source</td>
+    <td><table>
+   <tr><td>Type: ImportType, Default: FileSystem</td></tr>
+   <tr><td>The source from which files will be imported. Can be one of the following values:<br />
+<ul>
+<li><b>FileSystem</b>: Simulate a scanner by importing files from a directory.
+</li>
+<li><b>TestBatch</b>: Simulate a scanner by importing files from a test <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>batch</a>.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Source Batch</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a></td></tr>
+   <tr><td>The <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>batch</a> from which files will be imported.
+(See <a href='../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Import Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The path from which files will be imported.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Delete Files</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>If true, files will be deleted upon successful import.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Color Format Conversion</td>
+    <td><table>
+   <tr><td>Type: SimplePixelFormat, Default: None</td></tr>
+   <tr><td>The color format to convert each page to.  If set to None, pages will be imported in the color format of the source file. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: None.
+</li>
+<li><b>Grayscale</b>: 8-Bit Grayscale
+</li>
+<li><b>Color</b>: 24-Bit Color
+</li>
+<li><b>Binary</b>: Black and White
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Scanning Speed</td>
+    <td><table>
+   <tr><td>Type: ScanningSpeed, Default: Speed_Unlimited</td></tr>
+   <tr><td>Throttles the import speed to simulate the speed of a document scanner. Can be one of the following values:<br />
+<ul>
+<li><b>Speed_Unlimited</b>: Speed throttling disabled.  Images will be imported as fast as possible.
+</li>
+<li><b>Speed_25ipm</b>: 25 images per minute
+</li>
+<li><b>Speed_50ipm</b>: 50 images per minute
+</li>
+<li><b>Speed_100ipm</b>: 100 images per minute
+</li>
+<li><b>Speed_150ipm</b>: 150 images per minute
+</li>
+<li><b>Speed_200ipm</b>: 200 images per minute
+</li>
+<li><b>Speed_250ipm</b>: 250 images per minute
+</li>
+<li><b>Speed_300ipm</b>: 300 images per minute
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

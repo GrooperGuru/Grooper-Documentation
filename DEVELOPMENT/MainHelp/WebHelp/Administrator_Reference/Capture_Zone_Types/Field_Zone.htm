@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Field Zone</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nCapture Zone Types\nField Zone");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Capture_Zone_Types.htm\">Capture Zone Types<\/a> &gt; Field Zone<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Field Zone</h1>
+Field Zones associate a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> with a region of the document, and optionally specify zonal extraction parameters.
+
+Field Zones can use OCR or barcode recognition to read a field value from the zone.<br /><br />
+They are created as the child of an Extraction Profile, and can have <a href='Registration_Zone.htm'>Registration Zones</a> as children.
+
+<br/><br/><b>Inherits from:</b> Extract Zone<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Extraction</td>
+  </tr>
+  <tr>    <td>Extraction Type</td>
+    <td><table>
+   <tr><td>Type: ZonalExtractionType, Default: None</td></tr>
+   <tr><td>The type of data extraction to be used with this zone. Can be one of the following values:<br />
+<ul>
+<li><b>None</b>: No zonal extraction will be performed.  This zone simply establishes the zoom area when the user tabs into the field.
+</li>
+<li><b>Barcode</b>: The zone will use barcode recognition to read a barcode value.
+</li>
+<li><b>OCR</b>: The zone will use OCR to read a text value.
+</li>
+<li><b>FullText</b>: The zone will be re-extracted from existing full text OCR, if it exists.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>OCR Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td></tr>
+   <tr><td>The <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a> to be used for zonal data extraction.
+(See <a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Barcode Detection Settings</td>
+    <td><table>
+   <tr><td>Type: <a href='../IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a></td></tr>
+   <tr><td>The settings to be used for barcode recognition.
+(See <a href='../IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Apply Field Extractor</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Controls whether the extractor for the field will be executed on the OCR results obtained from the zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Shape Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The name of a Shape to be used as the region for this zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Zone Location</td>
+  </tr>
+  <tr>    <td>Page No</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The page number associated with this zone. A negative value indicates on offset starting at the end of the document.  For example, -1 indicates the last page of the document
+-2 indicates the 2nd to last page of the document, and etc.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Bounds</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Object_Types/Rectangle.htm'>Rectangle</a>, Default: (0,0):(0,0)</td></tr>
+   <tr><td>The location of the zone.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Image Cleanup</td>
+  </tr>
+  <tr>    <td>IP Profile</td>
+    <td><table>
+   <tr><td>Type: <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td></tr>
+   <tr><td>The <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a> to run prior to zonal extraction. This IP Profile performs <em>temporary</em> image cleanup prior to extraction.  It does not permanently alter the image.
+(See <a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a>)</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../IP_Command_Types/Feature_Detection/Barcode_Detection.htm'>Barcode Detection</a></td></tr>
+<tr><td><a href='../Grooper_Node_Types/Profiles/IP_Profile.htm'>IP Profile</a></td></tr>
+<tr><td><a href='../Grooper_Node_Types/Profiles/OCR_Profile.htm'>OCR Profile</a></td></tr>
+<tr><td><a href='../Grooper_Object_Types/Rectangle.htm'>Rectangle</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

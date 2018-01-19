@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Capture Zone Types</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nCapture Zone Types\nCapture Zone Types");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Capture_Zone_Types.htm\">Capture Zone Types<\/a> &gt; Capture Zone Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Capture Zone</h1>
+Capture Zones associate regions on a page with Data Elements in a <a href='../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, and are used to facilitate zonal data capture.
+
+Capture Zones are created as children of the Data Element Profiles stored on Content Types, using the <a href='../../User_Interface_Reference/Grooper_UI_Elements/Other_Grooper_Controls/Data_Element_Profile_Manager.htm'>Data Element Profile Manager</a>
+control in <a href='../../User_Interface_Reference/Grooper_Administration.htm'>Grooper Administration</a>.
+
+<h2>List of Capture Zone Types</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>
+     <th>Name</th>
+     <th>Description</th>
+  </tr>
+  <tr>
+     <td><a href='Field_Zone.htm'>Field Zone</a></td>
+     <td>Field Zones associate a <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> with a region of the document, and optionally specify zonal extraction parameters. Field Zones can use OCR or barcode recognition to read a field value from the zone.<br /><br />
+They are created as the child of an Extraction Profile, and can have <a href='Registration_Zone.htm'>Registration Zones</a> as children.
+</td>
+  </tr>
+  <tr>
+     <td><a href='OMR_Zone.htm'>OMR Zone</a></td>
+     <td>OMR Zones are used for Optical Mark Recognition (OMR), to read the state of checkboxes and determine if they are checked or unchecked. OMR Zones work by measuring the black pixel ratio in each zone.<br /><br />
+There are 3 possible configurations for OMR zones:<br /><ul><li><b>Single Checkbox</b> - Create a single OMR zone.  Tune the OMR Threshold and specify a negative value and a positive value.</li><li><b>Check One</b> - Define a list on the <a href='../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Field</a> containing an entry for each possible output value, and define an OMR zone for each checkbox.
+Set the Zone Processing property of the <a href='../Data_Element_Profile_Types/Field_Profile.htm'>Field Profile</a> to BestConfidence.  Set <u>both</u> the OMR Negative Value and the OMR Positive Value to
+the list value associated with the checkbox.</li><li><b>Check All That Apply</b> - Create an OMR zone for each checkbox.  Set the Zone Processing property of the <a href='../Data_Element_Profile_Types/Field_Profile.htm'>Field Profile</a> to BestConfidence, and
+define a Separator String if desired.</li></ul>
+OMR Zones are created as the child of an Extraction Profile.  They can have <a href='Registration_Zone.htm'>Registration Zones</a> as children.
+
+</td>
+  </tr>
+  <tr>
+     <td><a href='Registration_Zone.htm'>Registration Zone</a></td>
+     <td>Registration zones are used to align <a href='Field_Zone.htm'>Field Zones</a> and <a href='OMR_Zone.htm'>OMR Zones</a> prior to zonal extraction. When documents are scanned, pages shift slightly, causing alignment issues with zonal extraction.  Registration zones correct this
+shift by aligning zones relative to other elements on the page.<br /><br />
+Registration zones cannot have children.  Registration zones can be children of <a href='Field_Zone.htm'>Field Zones</a> or <a href='OMR_Zone.htm'>OMR Zones</a>.
+</td>
+  </tr>
+</table>
+
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

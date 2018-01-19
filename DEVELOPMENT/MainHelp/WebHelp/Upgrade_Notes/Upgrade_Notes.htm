@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Upgrade_Notes</title>
+<link rel="StyleSheet" href="../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Upgrade Notes\nUpgrade_Notes");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../Index.htm", "", "&gt;", "Home", "../Start_Page.htm");
+document.write("<a href=\"Upgrade_Notes.htm\">Upgrade Notes<\/a> &gt; Upgrade_Notes<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Upgrade Notes</h1><h3>Notes for upgrading from version 2.60 to version 2.70</h3>
+
+<h4><font color="red">Procedure for Upgrading (Recommended):</font></h4>
+<ol>
+  <li>Stop all Grooper services.  </li>
+  <li>Run the Upgrade by clicking Continue.</li>
+  <li>Recompile all scripts from the Scripts tab on the Root Node in Grooper Administration.</li>
+  <li>Restart Grooper Services.</li>
+  <li>Pause and resume all Batches with a Status of Ready or Working. <i>Note: Batches in a ready or working state before the upgrade may no longer process correctly after the upgrade unless they are first paused and resumed.</i></li>
+</ol>
+
+<h4>Architectural Changes:</h4>
+<ul style="list-style-type:disc">
+  <li>
+    Created new assemblies and reorganized the location of many classes. This could effect existing scripts. The following new assemblies have been created:
+    <ul>
+      <li>Grooper.Core</li>
+      <li>Grooper.CMIS</li>
+      <li>Grooper.IP</li>
+      <li>Grooper.OCR</li>
+      <li>Grooper.Capture</li>
+      <li>Grooper.Reporting</li>
+    </ul>
+  </li>
+  <li>
+    Redaction Profiles - Redaction Profiles have been removed from Grooper.  The settings of existing Redaction Profiles have been 
+    applied directly to any Redaction Activity that was referencing a Redaction Profile.
+  </li>
+  <li>
+    IP Profile Changes
+    <ul>
+      <li>IP Commands have been converted to IP Steps.</li>
+      <li>IP Command Execution Conditions have been converted to IP Step Should Execute Expressions.</li>
+      <li>
+        Notable settings changes (while an effort has been made to accurately transfer applicable settings, it is recommended that the following IP Steps
+        are reviewed and tested before production use):
+        <ul>
+          <li><b>Auto Border Crop</b></li>
+          <li><b>Blob Removal</b></li>
+          <li><b>Border Fill</b></li>
+          <li><b>Crop</b></li>
+          <li><b>Document Despeckle</b> - No longer has a 'Region of Interest' property.</li>
+          <li><b>Edge Dectection</b></li>
+          <li><b>Extract Features</b></li>
+          <li><b>Filter</b></li>
+          <li><b>Halftone Removal</b> - No longer has a 'Blank Out Regions' property.  Several new properties are available for accurately identifying halftone regions.</li>
+          <li><b>Hole Punch Removal</b></li>
+          <li><b>Inverted Region Dropout</b> - (formerly Invert Dark Regions) All properties have changed.</li>
+          <li><b>Line Detection</b></li>
+          <li><b>Line Removal</b> - Max Entropy property removed - no longer required.</li>
+          <li><b>Median Noise Filter</b> - This has been replaced with <b>Filter</b>.  However, if Median Noise Filter was being used for Despeckle, it may be better to use <b>Speck Removal</b>.</li>
+          <li><b>Read Barcodes</b> - Added support for Truncated PDF417.</li>
+        </ul>
+      </li>
+      <li>
+        Internal Type Name changes.  All IP Commands have had the 'Ip' prefix and 'Command' (or 'Cmd') suffix removed.  The following have also had been renamed and/or converted:
+        <ul>
+          <li><b>IpAutoOrientOcrCommand</b> is now 'AutoOrient'.</li>
+          <li><b>IpLineDetectHoughCommand</b> is now 'LineDetect'.</li>
+          <li><b>IpAutoCropCommand</b> is now 'AutoBorderCrop'.</li>
+          <li><b>IpCropBordersCommand</b> is now 'Crop'.</li>
+          <li><b>IpAutoNegateCommand</b> is now 'NegatedRegionRemoval'.</li>
+          <li><b>IpAutoInvertTextCommand</b> is now 'NegatedRegionRemoval'.</li>
+          <li><b>IpInvertDarkRegionsCommand</b> is now 'NegatedRegionRemoval'.</li>
+          <li><b>IpDocumentDespeckleCommand</b> is now 'SpeckRemoval'.</li>
+          <li><b>IpChangePixelFormatCommand</b> is now 'Convert'.</li>
+          <li><b>IpAutoColorDepthCommand</b> is now 'AutoConvert'.</li>
+          <li><b>IpGrayscaleDepthCommand</b> is now 'AutoConvert'.</li>
+          <li><b>IpRandomizeImageDefectsCommand</b> is now 'RandomizeDefects'.</li>
+          <li><b>IpScanLineRemovalCommand</b> is now 'LineRemoval'.</li>
+          <li><b>IpBrightnessHistgramStretchCommand</b> is now 'Histogram'.</li>
+          <li><b>IpMedianNoiseFilterCommand</b> is now 'Filter'.</li>
+          <li><b>IpImageAnalysisCommand</b> is now 'AutoQA'.</li>
+        </ul>
+      </li>
+      <li>
+        The following commands have been deleted and do not have an upgrade path:
+        <ul>
+          <li><b>IpDifferenceOfGaussianCommand</b></li>
+          <li><b>IpDocumentOutlineCommand</b></li>
+          <li><b>IpDocumentThinningCommand</b></li>
+          <li><b>IpAutoBitDepthCommand</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Grooper Reporting - Grooper System Reports have been converted from scripts to native Grooper Objects. This new architecture will make it easier to create custom reports. In order to 
+      preserve script code, existing non-system reports will be moved to Infrastructure\Object Libraries\Legacy Reports. These custom reports will ultimately need to be 
+      re-written using the new Report Definition or Simple Report Definition base classes.
+  </li>
+  <li>
+    Render Document Activity - Lexicon properties (FileExtensionMappings and ExcludedFileExtensions) converted to EmbeddedLexicons.
+  </li>
+  <li>
+    File Import (ImportProvider) - Lexicon properties (AllowedFileExtensions and ExcludedFileExtensions) converted to EmbeddedLexicons.
+  </li>
+</ul>
+<h4>Miscellaneous:</h4>
+<ul style="list-style-type:disc">
+  <li>System objects have been removed from Grooper installations.  The most updated version of system objects for each Grooper version can be found on Grooper Central (**grooper central url**). </li>
+</ul>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

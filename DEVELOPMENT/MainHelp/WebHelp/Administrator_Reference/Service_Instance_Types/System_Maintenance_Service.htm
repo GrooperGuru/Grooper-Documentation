@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>System Maintenance Service</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nService Instance Types\nSystem Maintenance Service");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Service_Instance_Types.htm\">Service Instance Types<\/a> &gt; System Maintenance Service<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>System Maintenance Service</h1>
+Provides Grooper system maintenance services.
+
+A timer service that clears Log and Stat entries older than the specified retention periods.
+
+<br/><br/><b>Inherits from:</b> Timer Service<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Retention Settings</td>
+  </tr>
+  <tr>    <td>Log Retention Period</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>Specifies the retention period for log entries, in days. A value of 0 indicates that all log entries should be retained indefinitely.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Stat Retention Period</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>Specifies the retention period for batch processing statistics, in days. A value of 0 indicates that all batch processing statistics should be retained indefinitely.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Timer Service Settings</td>
+  </tr>
+  <tr>    <td>Timer Interval (seconds)</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The amount of time, in seconds, between each Tick event.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Scheduling</td>
+  </tr>
+  <tr>    <td>Enable Scheduling</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Enable or disable Scheduling Options
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Days of Week</td>
+    <td><table>
+   <tr><td>Type: DaysOfWeek, Default: 0</td></tr>
+   <tr><td>A variable determining whether the service should run or not on each day of the week A combination of the following flags:<br />
+<ul>
+<li><b>Sunday</b></li>
+<li><b>Monday</b></li>
+<li><b>Tuesday</b></li>
+<li><b>Wednesday</b></li>
+<li><b>Thursday</b></li>
+<li><b>Friday</b></li>
+<li><b>Saturday</b></li>
+</ul>
+ If StartTime and EndTime are left at their default values of 12:00:00 AM, then time of day will not be considered for service scheduling.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Start Time</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Earliest time the service is permitted to run each day If StartTime and EndTime are left at their default values of 12:00:00 AM, then time of day will not be considered for service scheduling.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>End Time</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>Latest time the service is permitted to run each day
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Service Settings</td>
+  </tr>
+  <tr>    <td>Repository</td>
+    <td><table>
+   <tr><td>Type: <a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+   <tr><td>The repository to which this service instance in bound. Service instances are bound permanently to a Grooper repository.  To change to repository, delete the service instance and reinstall it using the desired repository.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Service Display Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The display name for the service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Thread Priority</td>
+    <td><table>
+   <tr><td>Type: ThreadPriority, Default: Lowest</td></tr>
+   <tr><td>The priority level with which threads will be created. Can be one of the following values:<br />
+<ul>
+<li><b>Lowest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with any other priority.
+</li>
+<li><b>BelowNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Normal priority and before those with Lowest priority.
+</li>
+<li><b>Normal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with AboveNormal priority and before those with BelowNormal priority. Threads have Normal priority by default.
+</li>
+<li><b>AboveNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Highest priority and before those with Normal priority.
+</li>
+<li><b>Highest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled before threads with any other priority.
+</li>
+</ul>
+ If the service is running on a workstation, a priority lower than normal will help prevent the service from impacting the user interface responsiveness.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>User Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The user account under which the service should run. The account specified must:
+<ul><li>Have the Logon as Service permission on the machine on which the service is to run.</li><li>Have access to the Grooper database, if Windows security is being used for SQL connections.</li><li>Have access to the Grooper file store location.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Password</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The password for the user account under which the service should run.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

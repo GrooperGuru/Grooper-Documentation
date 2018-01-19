@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Grooper CMIS Server</title>
+<link rel="StyleSheet" href="../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nService Instance Types\nGrooper CMIS Server");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../Index.htm", "", "&gt;", "Home", "../../Start_Page.htm");
+document.write("<a href=\"../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"Service_Instance_Types.htm\">Service Instance Types<\/a> &gt; Grooper CMIS Server<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<h1>Grooper CMIS Server</h1>
+Provides web-based connectivity to a Grooper repository over the CMIS protocol.
+
+<br/><br/><b>Inherits from:</b> Web Service<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Web Service Settings</td>
+  </tr>
+  <tr>    <td>Connection URL</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>Convenience string property containing the full URL path for this web service. The URL path is constructed by combining the Host Name, Port Number and URL Path property values and observing the HTTPS Enabled property.
+For example, this property's string value can easily be copied to the clipboard, and pasted into the URL property for a <a href='../Grooper_Node_Types/Infrastructure/CMIS_Connection.htm'>CMIS Connection</a>.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>HTTPS Enabled</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Controls whether the HTTPS protocol is enabled.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Host Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The host name to be used for this web service instance.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Port Number</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The port number to be used for the web service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>URL Path</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The web server path on which the CMIS server should be hosted.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Enable Debugging</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/Boolean.htm'>Boolean</a>, Default: False</td></tr>
+   <tr><td>Controls whether exception detail is returned by this web service when an exception occurs.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Service Settings</td>
+  </tr>
+  <tr>    <td>Repository</td>
+    <td><table>
+   <tr><td>Type: <a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+   <tr><td>The repository to which this service instance in bound. Service instances are bound permanently to a Grooper repository.  To change to repository, delete the service instance and reinstall it using the desired repository.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Service Display Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The display name for the service.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Thread Priority</td>
+    <td><table>
+   <tr><td>Type: ThreadPriority, Default: Lowest</td></tr>
+   <tr><td>The priority level with which threads will be created. Can be one of the following values:<br />
+<ul>
+<li><b>Lowest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with any other priority.
+</li>
+<li><b>BelowNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Normal priority and before those with Lowest priority.
+</li>
+<li><b>Normal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with AboveNormal priority and before those with BelowNormal priority. Threads have Normal priority by default.
+</li>
+<li><b>AboveNormal</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled after threads with Highest priority and before those with Normal priority.
+</li>
+<li><b>Highest</b>: The <see cref="T:System.Threading.Thread" /> can be scheduled before threads with any other priority.
+</li>
+</ul>
+ If the service is running on a workstation, a priority lower than normal will help prevent the service from impacting the user interface responsiveness.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>User Name</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The user account under which the service should run. The account specified must:
+<ul><li>Have the Logon as Service permission on the machine on which the service is to run.</li><li>Have access to the Grooper database, if Windows security is being used for SQL connections.</li><li>Have access to the Grooper file store location.</li></ul>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Password</td>
+    <td><table>
+   <tr><td>Type: <a href='../Storage_Type_Types/String.htm'>String</a></td></tr>
+   <tr><td>The password for the user account under which the service should run.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td><a href='../Database_Connection_Settings_Types/Repository_Connection.htm'>Repository Connection</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

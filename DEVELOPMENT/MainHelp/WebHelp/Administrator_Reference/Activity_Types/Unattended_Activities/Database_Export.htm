@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Database Export</title>
+<link rel="StyleSheet" href="../../../default.css" type="text/css" /><script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../../../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../../../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../../../whtopic.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	addTocInfo("Administrator Reference\nActivity Types\nUnattended Activities\nDatabase Export");
+
+
+	document.write("<p style=\"text-align:left\"> ");
+AddMasterBreadcrumbs("../../../Index.htm", "", "&gt;", "Home", "../../../Start_Page.htm");
+document.write("<a href=\"../../Administrator_Reference.htm\">Administrator Reference<\/a> &gt; <a href=\"../Activity_Types.htm\">Activity Types<\/a> &gt; <a href=\"A2iA_CheckReader.htm\">Unattended Activities<\/a> &gt; Database Export<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+    
+onLoadHandler = function()
+{
+	if (window.setRelStartPage)
+	{
+    setTimeout("setRelStartPage('../../../Index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+    }
+} 
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+	autoSync(1);
+	sendSyncInfo();
+	sendAveInfoOut();
+}
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<script type="text/javascript" src="../../../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<table class="PageHeader" cellspacing="0" width="100%">
+		<col style="width: 50%;" />
+		<col style="width: 50%;" />
+		<tr>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">Grooper 2.70 
+			 Documentation</td>
+			<td style="padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;">
+   <p style="text-align: right; margin: 0px;"><img src="../../../images/GrooperLogo.png" alt="" style="border: none; 
+			 margin: 0px;" width="190" height="64" border="0" /></p></td>
+		</tr>
+	</table>
+	<hr align="center" />
+</div>
+
+
+<table>
+<tr>
+<td><img src='../../../images/TypeIcons/Grooper.Activities.DatabaseExport.Normal.png' height = '16' width = '16' style='vertical-align:middle' /></td>
+<td><h1>Database Export</h1></td>
+<table>
+</tr>
+</table>
+Exports metadata from a <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> object to a <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>.
+
+Allows <a href='../../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a> from multiple levels of a <a href='../../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a> to be mapped to columns in a <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>.
+
+<br/><br/><b>Inherits from:</b> Unattended Activity<br/><h2>Properties</h2>
+<table class='ObjectProperties' cellspacing='0'>
+  <col style='width:25%'/>
+  <col style='width:75%'/>
+  <tr>    <th>Property Name</th>
+    <th>Description</th>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>General</td>
+  </tr>
+  <tr>    <td>Content Type</td>
+    <td><table>
+   <tr><td>Type: Content Type</td></tr>
+   <tr><td>The Content Type to be exported.
+(See Content Type)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Parent Content Types</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>A list of Content Types which may appear on parent folders of the folders being exported.. During export, an exception will be thrown if the <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> being exported does not have parent folders which are classified as the specified types.  The order of the list in
+relation to the hierarchial level of the parent is not relevant.
+<p>Setting this property allows field values stored on parent folders to be mapped to output values.  For example. consider a batch containing legal documents where
+level 1 folders are classified as Case File, and level 2 folders are classified as Pleading.  Case File defines fields Case No, Plaintiff, and
+Defendant.  Pleading defines fields Title and Filed Date. To output all 5 fields to flat database row, run this activity at level 2, specify
+Pleading as the Content Type, and add Case File to the list of parent content types.</p>
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Data Element</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a></td></tr>
+   <tr><td>The data element to export. For the purposes of this activity, a data element refers to a <a href='../../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>, <a href='../../Data_Element_Types/Data_Extraction/Data_Section.htm'>Data Section</a>, or <a href='../../Data_Element_Types/Data_Extraction/Data_Table.htm'>Data Table</a> object.
+(See <a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Database Table</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td></tr>
+   <tr><td>The database table to which metadata should be exported.
+(See <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>)</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Column Mappings</td>
+    <td><table>
+   <tr><td></td></tr>
+   <tr><td>When exporting metadata to a <a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a>, defines the mappings between <a href='../../Data_Element_Types/Data_Extraction/Data_Field.htm'>Data Fields</a> in a Grooper <a href='../../Data_Element_Types/Data_Extraction/Data_Model.htm'>Data Model</a>
+and columns in the database table.
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>
+     <td class='Category' colspan='2'>Error Handling</td>
+  </tr>
+  <tr>    <td>Error Disposition</td>
+    <td><table>
+   <tr><td>Type: IssueDisposition, Default: Flag, Log</td></tr>
+   <tr><td>Determines what happens when an error occurs processing an activity. A combination of the following flags:<br />
+<ul>
+<li><b>None</b>: The issue will be ignored, and the item will complete successfully.
+</li>
+<li><b>Flag</b>: The associated <a href='../../Batch_Object_Types/Batch_Processing/Batch_Folder.htm'>Batch Folder</a> or <a href='../../Batch_Object_Types/Batch_Processing/Batch_Page.htm'>Batch Page</a> will be flagged.
+</li>
+<li><b>Log</b>: The issue will be logged to the Grooper log.
+</li>
+<li><b>Stop</b>: The <a href='../../Grooper_Node_Types/Batch_Processing/Batch.htm'>Batch</a> will be set to error.
+</li>
+</ul>
+
+</td></tr>
+</table>
+</td>
+  </tr>  <tr>    <td>Maximum Consecutive Errors</td>
+    <td><table>
+   <tr><td>Type: <a href='../../Storage_Type_Types/Int32.htm'>Int32</a>, Default: 0</td></tr>
+   <tr><td>The maximum number of consecutive errors, after which a critical stop will be raised. A critical stop will cause services to stop running.
+</td></tr>
+</table>
+</td>
+  </tr></table>
+
+<h2>Related Types</h2>
+<table class='NoBorder'>
+<tr><td>Content Type</td></tr>
+<tr><td><a href='../../Data_Element_Types/Data_Element_Types.htm'>Data Element</a></td></tr>
+<tr><td><a href='../../Grooper_Node_Types/Infrastructure/Database_Table.htm'>Database Table</a></td></tr>
+</table>
+
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
